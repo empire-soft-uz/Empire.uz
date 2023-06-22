@@ -15,7 +15,8 @@ const AboutUs = () => {
                     <Text
                         color={COLORS.grey}
                         family="FuturaBook"
-                        text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.' />
+                        text='“Empire Studio” shapes the future of market-leading brands. We transform outdated customer-facing software into pioneering, beautifully crafted solutions that lead the evolution of web technologies and exceed customer expectations.
+Contact us for trusted support to keep up with the tech and trends you need to modernise your core digital business.' />
                 </div>
                 <div className={styles.imageBox}>
                     <img src={ASSETS.person} alt="" />
