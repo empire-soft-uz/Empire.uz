@@ -1,0 +1,38 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 12.5%;
+    height: 140px;
+    gap: 12px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.borderOn {
+    border: 1px solid #2E2E2E;
+}
+
+.borderOff {
+    border: 1px solid #1DAC87;
+}
+
+.image{
+    width: 67px;
+    height: 65px;
+}
+.grayOn{
+    filter: grayscale(100%);
+}
+
+.grayOff{
+    filter: grayscale(0);
+}
+
+.container:hover{
+    border: 1px solid #1DAC87;
+}
+.container:hover .image {
+    filter: grayscale(0);
+}

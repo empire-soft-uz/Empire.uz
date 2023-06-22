@@ -1,0 +1,11 @@
+.input{
+    color: #7F7F7F;
+    border: none;
+    border-bottom: 1px solid #2E2E2E !important;
+    outline: none;
+    padding: 8px 0;
+    background-color: transparent;
+    width: 100%;
+    font-family: "FuturaBook";
+    font-size: 18px;
+}

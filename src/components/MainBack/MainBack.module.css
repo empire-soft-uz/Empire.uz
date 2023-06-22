@@ -1,0 +1,50 @@
+.container {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+.backOne{
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+}
+.backTwo{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    height: 400px;
+}
+
+.textBox{
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    flex-direction: column;
+    height: 100%;
+    padding: 0 25%;
+    z-index: 1;
+    padding-top: 220px;
+}
+
+.DownBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 60px;
+    border: 2px solid #1DAC87;
+    border-radius: 20px;
+    margin-top: 150px;
+    cursor: pointer;
+}
+
+.blur{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    background: linear-gradient(180deg, #167A60 0%, #29A7C3 100%);
+    filter: blur(180px);
+}

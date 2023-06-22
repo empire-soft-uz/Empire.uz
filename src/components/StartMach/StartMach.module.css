@@ -1,0 +1,97 @@
+.container{
+    width: 75%;
+    padding: 20px 60px;
+    background: #000302;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+.title{
+    text-align: center;
+    padding: 20px 18%;
+}
+
+.blur{
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    top: 0;
+    left: 35%;
+    background: linear-gradient(180deg, #167A60 0%, #29A7C3 100%);
+    filter: blur(250px);
+    border-radius: 100px;
+    z-index: 3;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+}
+
+.btn{
+    padding: 6px 18px;
+    background-color: transparent;
+    border: none;
+    color: #7F7F7F;
+    border: 1px solid #2E2E2E;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn:hover{
+    border: 1px solid #1DAC87 !important;
+    color: #1DAC87;
+}
+
+.work{
+    position: relative;
+    z-index: 4;
+}
+
+.categoryTime{
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.developer{
+    margin-top: 30px;
+}
+
+.upload{
+    width: 100%;
+    height: 130px;
+    border: 1px solid #2E2E2E;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.label{
+    cursor: pointer;
+}
+
+.fileInput{
+    visibility: hidden;
+    display: none;
+}
+
+.dateBox{
+    padding: 15px 0;
+    margin-top: 10px;
+}
+
+.date{
+    width: 200px;
+    padding: 5px 0;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #2E2E2E;
+    background-color: #000302;
+    color: #7F7F7F !important;
+}

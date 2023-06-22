@@ -1,0 +1,45 @@
+.container{
+    position: relative;
+    height: 100%;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15vh;
+}
+
+.cardsBox{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px 18%;
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.back1{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 350px;
+    height: 350px;
+}
+.back2{
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    width: 400px;
+    height: 400px;
+}

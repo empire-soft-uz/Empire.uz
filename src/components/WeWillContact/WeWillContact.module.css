@@ -1,0 +1,35 @@
+.container{
+    width: 75%;
+    height: 80%;
+    padding: 20px 60px;
+    background: #000302;
+    border-radius: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+.title{
+    text-align: center;
+    padding: 20px 18%;
+    margin-top: 50px;
+}
+
+.blur{
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    top: 0;
+    left: 35%;
+    background: linear-gradient(180deg, #167A60 0%, #29A7C3 100%);
+    filter: blur(250px);
+    border-radius: 100px;
+    z-index: 3;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}

@@ -1,0 +1,17 @@
+.container{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.img{
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.textBox{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}

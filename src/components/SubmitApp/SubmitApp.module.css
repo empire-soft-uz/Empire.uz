@@ -1,0 +1,92 @@
+.container {
+    position: relative;
+    padding: 20px 18%;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.back{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 350px;
+}
+
+.blur{
+    position: absolute;
+    width: 75%;
+    height: 200px;
+    left: -150px;
+    bottom: -80px;
+    background: #030404;
+    filter: blur(50px);
+    border-radius: 100px;
+    z-index: 3;
+}
+
+.blurPerson{
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    left: 40px;
+    top:  50px;
+    background: linear-gradient(180deg, #167A60 0%, #29A7C3 100%);
+    filter: blur(150px);
+    z-index: 1;
+}
+
+.leftBox{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    width: 45%;
+    z-index: 2;
+    padding-top: 50px;
+}
+
+.leftBox img{
+    position: relative;
+    z-index: 2;
+}
+
+.back{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 4;
+}
+
+.rightBox{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 45%;
+    gap: 30px;
+    padding-top: 50px;
+}
+
+.submit{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.arrowRight{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    border: 2px solid #1DAC87;
+    border-radius: 50%;
+    margin-top: 20px;
+    cursor: pointer;
+}
