@@ -1,4 +1,4 @@
-import { makeAutoObservable, toJS } from "mobx";
+import { makeAutoObservable, runInAction, toJS } from "mobx";
 
 type tags = {
     id: number,
@@ -9,6 +9,21 @@ type tags = {
 type work = {
     id: number,
     title: string
+}
+
+type findDevFormType = {
+    workEmail: string,
+    confirmEmail: string,
+    job: string;
+    workRate: string;
+    howLong: string;
+    file: string;
+    startDate: string
+}
+
+type formType = {
+    name: string;
+    email: string;
 }
 
 export default class TagStore {
@@ -22,25 +37,97 @@ export default class TagStore {
         id: 0,
         title: ""
     }
+
     howLong: work = {
         id: 0,
         title: ""
     }
 
 
+    findDevForm: findDevFormType = {
+        workEmail: '',
+        confirmEmail: '',
+        job: '',
+        workRate: '',
+        howLong: '',
+        file: '',
+        startDate: ''
+    }
+
+    findDeveloper = (item: findDevFormType) => {
+        this.findDevForm = item
+    }
+
+    setfindDevForm = (value: string, key: keyof findDevFormType) => {
+        this.findDevForm[key] = value as never
+    }
+
+    clearFindDevForm = () => {
+        this.findDevForm = {
+            workEmail: '',
+            confirmEmail: '',
+            job: '',
+            workRate: '',
+            howLong: '',
+            file: '',
+            startDate: ''
+        }
+    }
+
     chooseTag = (item: tags) => {
         if (this.tags.some(i => i.id === item.id)) return;
         this.tags = [...this.tags, item]
+        this.setfindDevForm(this.tags.map((e) => e.name).toString() as string, "job")
     }
 
     removeTag = (id: number) => {
         this.tags = this.tags.filter((e) => e.id !== id)
+        this.setfindDevForm(this.tags.filter((e) => e.id !== id).map((e) => e.name).toString() as string, "job")
     }
 
     choseWorkRate = (item: work) => {
         this.workRate = item
+        this.setfindDevForm(item.title, "workRate")
     }
+
     choseHowlong = (item: work) => {
         this.howLong = item
+        this.setfindDevForm(item.title, "howLong")
+    }
+
+    form: formType = {
+        name: '',
+        email: ''
+    }
+
+    setForm = (value: string, key: keyof formType) => {
+        this.form[key] = value as never
+    }
+
+    clearForm = () => {
+        this.form = {
+            name: '',
+            email: ''
+        }
+    }
+
+    validationForm: boolean = false;
+    validationFormText: string = '';
+
+    validation = () => {
+        if (this.form.name === '') {
+            runInAction(() => {
+                this.validationForm = true;
+            })
+        }
+        if (this.form.email === '') {
+            runInAction(() => {
+                this.validationForm = true;
+            })
+        } else {
+            runInAction(() => {
+                this.validationForm = false;
+            })
+        }
     }
 }

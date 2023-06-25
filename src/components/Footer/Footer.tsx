@@ -18,7 +18,9 @@ const Footer = () => {
                 <a href="#about-us" className='href'>
                     <Text cursor='pointer' text='About us' color={COLORS.white} />
                 </a>
-                <Text cursor='pointer' text='Blog' color={COLORS.white} />
+                <a href="/blog" className='href'>
+                    <Text cursor='pointer' text='Blog' color={COLORS.white} />
+                </a>
             </div>
             <img className={styles.back} src={ASSETS.back6} />
         </div>

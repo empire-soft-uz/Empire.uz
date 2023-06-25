@@ -9,4 +9,7 @@ export const ASSETS = {
     man: require("../assets/images/man.png"),
     roytman: require("../assets/images/roytman.png"),
     react: require("../assets/images/react.png"),
+    blog1: require("../assets/images/blog1.png"),
+    blog2: require("../assets/images/blog2.png"),
+    bloginfo: require("../assets/images/bloginfo.png"),
 }

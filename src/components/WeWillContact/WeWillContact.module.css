@@ -4,7 +4,7 @@
     padding: 20px 60px;
     background: #000302;
     border-radius: 20px;
-    position: absolute;
+    position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -13,7 +13,7 @@
 
 .title{
     text-align: center;
-    padding: 20px 18%;
+    padding: 20px 20%;
     margin-top: 50px;
 }
 
@@ -31,5 +31,5 @@
 .footer{
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 70px;
 }

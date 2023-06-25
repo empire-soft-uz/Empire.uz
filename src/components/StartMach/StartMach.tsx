@@ -1,8 +1,10 @@
 import { Backdrop } from '@mui/material'
+import { message } from 'antd'
+import axios from 'axios'
 import { toJS } from 'mobx'
 import { observer } from 'mobx-react-lite'
 import React from 'react'
-import { PlusIcon } from '../../assets/icons/Icons'
+import { ArrowBackIcon, PlusIcon } from '../../assets/icons/Icons'
 import useRootStore from '../../Hooks/useRootStore'
 import { COLORS } from '../../utils/color'
 import { HowLong, WorkRate } from '../../utils/dateBase'
@@ -12,11 +14,38 @@ import styles from "./StartMach.module.css"
 
 const StartMach = () => {
     const { visiable, hide, show } = useRootStore().visibleStore
-    const { choseWorkRate, workRate, choseHowlong, howLong } = useRootStore().tagsStore
+    const { choseWorkRate, workRate, choseHowlong, howLong, findDevForm, setfindDevForm, clearFindDevForm } = useRootStore().tagsStore
+    console.log("findDevForm", toJS(findDevForm));
+    const data = `Time To Build The Future%0A Work Email: ${findDevForm.workEmail}%0A Confirm Email: ${findDevForm.confirmEmail}%0A Job: ${findDevForm.job}%0A Work Rate: ${findDevForm.workRate}%0A How Long: ${findDevForm.howLong}%0A Start Date: ${findDevForm.startDate}%0A
+    `
 
-    const next = () => {
+    const sendBot = async () => {
+        // setLoading(true)
+        if (findDevForm.workEmail.length <= 1) {
+            message.error('Please enter your work email')
+            return
+        }
+        await axios({
+            method: 'post',
+            url: `https://api.telegram.org/bot6257527521:AAGKNc12U7SmVDG-ulTTcoP1BQxDeGCoS-4/sendMessage?chat_id=-1001934192696&text=${data}`,
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(res => {
+            message.success('We will contact you')
+            hide("smartMach")
+            show("weWillContact")
+            clearFindDevForm()
+        }).catch(err => {
+            message.error(`${err}`)
+        })
+
+        // setLoading(false)
+    }
+
+    const back = () => {
+        show("findDeveloper")
         hide("smartMach")
-        show("weWillContact")
     }
 
     return (
@@ -28,6 +57,9 @@ const StartMach = () => {
             ></Backdrop>
             <div className={styles.container} style={{ display: visiable.smartMach ? "block" : "none" }}>
                 <div className={styles.title}>
+                    <div className={styles.arrowBack} onClick={back}>
+                        <ArrowBackIcon />
+                    </div>
                     <Text text='START MACHING NOW!' lineHeight={60} size={50} />
                 </div>
                 <div className={styles.blur}></div>
@@ -74,10 +106,18 @@ const StartMach = () => {
                     </div>
                 </div>
                 <div className={styles.dateBox}>
-                    <input placeholder='Start Date' className={styles.date} type="date" />
+                    <input value={findDevForm.startDate}
+                        placeholder='Start Date'
+                        className={styles.date} type="date"
+                        onChange={(e) => setfindDevForm(e.target.value, "startDate")}
+                    />
                 </div>
                 <div className={styles.footer}>
-                    <ArrowRightButton onClick={next} />
+                    <ArrowRightButton
+                        disabled={findDevForm.workRate.length === 0 &&
+                            findDevForm.howLong.length === 0 &&
+                            findDevForm.startDate.length === 0 ? true : false} onClick={sendBot}
+                    />
                 </div>
             </div>
         </>

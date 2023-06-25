@@ -8,6 +8,11 @@ import styles from "./WeWillContact.module.css"
 
 const WeWillContact = () => {
     const { visiable, hide } = useRootStore().visibleStore
+    const next = () => {
+        hide('findDeveloper')
+        hide("smartMach")
+        hide("weWillContact")
+    }
     return (
         <>
             <Backdrop
@@ -17,11 +22,11 @@ const WeWillContact = () => {
             ></Backdrop>
             <div className={styles.container} style={{ display: visiable.weWillContact ? "block" : "none" }}>
                 <div className={styles.title}>
-                    <Text text='START MACHING NOW!' lineHeight={60} size={60} />
+                    <Text text='We will contact you' lineHeight={60} size={70} />
                 </div>
                 <div className={styles.blur}></div>
                 <div className={styles.footer}>
-                    <ArrowRightButton onClick={() => hide("weWillContact")} />
+                    <ArrowRightButton onClick={next} />
                 </div>
             </div>
         </>

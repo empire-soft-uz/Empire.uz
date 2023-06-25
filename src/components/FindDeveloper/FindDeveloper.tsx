@@ -1,4 +1,7 @@
 import { Backdrop } from '@mui/material'
+import { message } from 'antd'
+import axios from 'axios'
+import { toJS } from 'mobx'
 import { observer } from 'mobx-react-lite'
 import React from 'react'
 import { CloseBig, CloseSmall } from '../../assets/icons/Icons'
@@ -12,11 +15,9 @@ import styles from "./FindDeveloper.module.css"
 
 const FindDeveloper = () => {
     const { visiable, hide, show } = useRootStore().visibleStore
-    const { chooseTag, tags, removeTag } = useRootStore().tagsStore
-
+    const { chooseTag, tags, removeTag, setfindDevForm, findDevForm } = useRootStore().tagsStore
     const next = () => {
         show("smartMach")
-        hide("findDeveloper")
     }
 
     return (
@@ -34,8 +35,16 @@ const FindDeveloper = () => {
                 </div>
                 <div className={styles.blur}></div>
                 <div className={styles.inputBox}>
-                    <Input placeholder='Work Email Address' />
-                    <Input placeholder='Confirm Email' />
+                    <Input
+                        placeholder='Work Email Address'
+                        value={findDevForm.workEmail}
+                        onChange={(e) => setfindDevForm(e.target.value, "workEmail")}
+                    />
+                    <Input
+                        placeholder='Confirm Email'
+                        value={findDevForm.confirmEmail}
+                        onChange={(e) => setfindDevForm(e.target.value, "confirmEmail")}
+                    />
                 </div>
                 <div className={styles.tabs}>
                     {tags.map((e, index) => {
@@ -62,8 +71,13 @@ const FindDeveloper = () => {
                         )
                     })}
                 </div>
-                <div className={styles.footer}>
-                    <ArrowRightButton onClick={next} />
+                <div className={styles.footer} onClick={next}>
+                    <ArrowRightButton disabled={
+                        findDevForm.workEmail.length === 0 &&
+                            findDevForm.confirmEmail.length === 0 &&
+                            findDevForm.job.length === 0 ? true : false}
+                        onClick={next}
+                    />
                 </div>
             </div>
         </>

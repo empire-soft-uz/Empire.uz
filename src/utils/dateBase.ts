@@ -168,37 +168,37 @@ export const ProgrammingLanguages = [
     {
         id: 1,
         image: ASSETS.react,
-        name: "React"
+        name: "React "
     },
     {
         id: 2,
         image: ASSETS.react,
-        name: "React"
+        name: "React "
     },
     {
         id: 3,
         image: ASSETS.react,
-        name: "React"
+        name: "React "
     },
     {
         id: 4,
         image: ASSETS.react,
-        name: "React"
+        name: "React "
     },
     {
         id: 5,
         image: ASSETS.react,
-        name: "React"
+        name: "React "
     },
     {
         id: 6,
         image: ASSETS.react,
-        name: "React"
+        name: "React "
     },
     {
         id: 7,
         image: ASSETS.react,
-        name: "React"
+        name: "React "
     },
 ]
 
@@ -233,5 +233,80 @@ export const HowLong = [
     {
         id: 3,
         title: "Less than 1 month"
+    },
+]
+
+export const BlogData = [
+    {
+        id: 1,
+        title: 'Как наружняя реклама влияет на потребителя',
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        date: '01.02',
+        image: ASSETS.blog2,
+        infoImage: ASSETS.bloginfo
+    },
+    {
+        id: 2,
+        title: 'Как наружняя реклама влияет на потребителя',
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        date: '01.02',
+        image: ASSETS.blog1,
+        infoImage: ASSETS.bloginfo
+    },
+    {
+        id: 3,
+        title: 'Как наружняя реклама влияет на потребителя',
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        date: '01.02',
+        image: ASSETS.blog2,
+        infoImage: ASSETS.bloginfo
+    },
+    {
+        id: 4,
+        title: 'Как наружняя реклама влияет на потребителя',
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        date: '01.02',
+        image: ASSETS.blog1,
+        infoImage: ASSETS.bloginfo
+    },
+    {
+        id: 5,
+        title: 'Как наружняя реклама влияет на потребителя',
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        date: '01.02',
+        image: ASSETS.blog2,
+        infoImage: ASSETS.bloginfo
+    },
+    {
+        id: 6,
+        title: 'Как наружняя реклама влияет на потребителя',
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        date: '01.02',
+        image: ASSETS.blog1,
+        infoImage: ASSETS.bloginfo
+    },
+    {
+        id: 7,
+        title: 'Как наружняя реклама влияет на потребителя',
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        date: '01.02',
+        image: ASSETS.blog2,
+        infoImage: ASSETS.bloginfo
+    },
+    {
+        id: 8,
+        title: 'Как наружняя реклама влияет на потребителя',
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        date: '01.02',
+        image: ASSETS.blog1,
+        infoImage: ASSETS.bloginfo
+    },
+    {
+        id: 9,
+        title: 'Как наружняя реклама влияет на потребителя',
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        date: '01.02',
+        image: ASSETS.blog2,
+        infoImage: ASSETS.bloginfo
     },
 ]

@@ -4,8 +4,17 @@
     height: 10vh;
     width: 100%;
     align-items: center;
-    padding: 0 20%;
-    /* position: fixed; */
+    padding: 0 18%;
+    position: fixed;
+    z-index: 5;
+    transition: all 0.3s ease;
+}
+
+.changeOn{
+    background-color: #000;
+}
+.changeOff{
+    background-color: transparent;
 }
 
 .rightBox{

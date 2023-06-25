@@ -2,16 +2,18 @@ import React from 'react'
 import { ArrowRight } from '../../assets/icons/Icons'
 import styles from "./ArrowRightButton.module.css"
 interface Props {
-    onClick?: () => void
+    onClick?: () => void;
+    disabled?: boolean
 }
 
 const ArrowRightButton: React.FC<Props> = ({
-    onClick
+    onClick,
+    disabled
 }) => {
     return (
-        <div className={styles.arrowRight} onClick={onClick}>
+        <button disabled={disabled} style={{ cursor: disabled ? "not-allowed" : "pointer" }} className={styles.arrowRight} onClick={onClick}>
             <ArrowRight />
-        </div>
+        </button>
     )
 }
 

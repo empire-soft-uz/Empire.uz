@@ -1,0 +1,43 @@
+.container{
+    min-height: 100vh;
+    background-color: #010100;
+    position: relative;
+}
+
+.content{
+    padding: 20px 18%;
+    position: relative;
+    padding-top: 12vh;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-top: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.backOne{
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    height: 400px;
+}
+.backTwo{
+    position: absolute;
+    left: 0;
+    top: 40%;
+    z-index: 1;
+    height: 400px;
+}
+
+
+.footer{
+    width: 100%;
+    /* height: 100%; */
+    position: relative;
+    bottom: 0;
+}

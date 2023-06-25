@@ -1,5 +1,10 @@
-import React from 'react'
+import { message } from 'antd'
+import axios from 'axios'
+import { toJS } from 'mobx'
+import { observer } from 'mobx-react-lite'
+import React, { useState } from 'react'
 import { ArrowRight } from '../../assets/icons/Icons'
+import useRootStore from '../../Hooks/useRootStore'
 import { ASSETS } from '../../utils/assetsRequires'
 import ArrowRightButton from '../ArrowRightButton/ArrowRightButton'
 import Input from '../Input/Input'
@@ -7,6 +12,35 @@ import Text from '../Text/Text'
 import styles from "./SubmitApp.module.css"
 
 const SubmitApp = () => {
+    const [loading, setLoading] = useState(false)
+    const { form, setForm, clearForm } = useRootStore().tagsStore
+    const data = `
+    ${form.name} submitted his application%0A Name: ${form.name}%0A Email: ${form.email}%0A He wants to contact us%0A
+    `
+    console.log("form", toJS(form));
+
+
+    const sendBot = async () => {
+        setLoading(true)
+        if (form.name.length <= 1) {
+            message.error('Please enter your name')
+            return
+        }
+        await axios({
+            method: 'post',
+            url: `https://api.telegram.org/bot6257527521:AAGKNc12U7SmVDG-ulTTcoP1BQxDeGCoS-4/sendMessage?chat_id=-1001934192696&text=${data}`,
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(res => {
+            message.success('We will contact you')
+            clearForm()
+        }).catch(err => {
+            message.error(`${err}`)
+        })
+        setLoading(false)
+    }
+
     return (
         <div className={styles.container}>
             <div className={styles.header}>
@@ -19,9 +53,17 @@ const SubmitApp = () => {
                 <div className={styles.blur}></div>
                 <div className={styles.blurPerson}></div>
                 <div className={styles.rightBox}>
-                    <Input placeholder='Name Surname' />
-                    <Input placeholder='Email' />
-                    <div className={styles.submit}>
+                    <Input
+                        onChange={(e) => setForm(e.target.value, "name")}
+                        placeholder='Name Surname'
+                        value={form.name}
+                    />
+                    <Input
+                        placeholder='Email'
+                        value={form.email}
+                        onChange={(e) => setForm(e.target.value, "email")}
+                    />
+                    <div className={styles.submit} onClick={sendBot}>
                         <ArrowRightButton />
                     </div>
                 </div>
@@ -31,4 +73,4 @@ const SubmitApp = () => {
     )
 }
 
-export default SubmitApp
+export default observer(SubmitApp)
