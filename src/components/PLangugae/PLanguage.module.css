@@ -36,3 +36,12 @@
 .container:hover .image {
     filter: grayscale(0);
 }
+
+@media (max-width: 576px) {
+    .container {
+        width: 220px;
+    }
+    .image{
+        margin: 0 20px;
+    }
+}

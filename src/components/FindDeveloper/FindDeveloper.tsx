@@ -17,7 +17,8 @@ const FindDeveloper = () => {
     const { visiable, hide, show } = useRootStore().visibleStore
     const { chooseTag, tags, removeTag, setfindDevForm, findDevForm } = useRootStore().tagsStore
     const next = () => {
-        show("smartMach")
+        show("calendly")
+        hide("findDeveloper")
     }
 
     return (
@@ -31,26 +32,26 @@ const FindDeveloper = () => {
                     <CloseBig />
                 </div>
                 <div className={styles.title}>
-                    <Text text='Time To Build The Future' lineHeight={60} size={50} />
+                    <Text text='Time To Build The Future' lineHeight={60} textSize="fifty" />
                 </div>
                 <div className={styles.blur}></div>
                 <div className={styles.inputBox}>
                     <Input
+                        placeholder='Enter your phone number'
+                        value={findDevForm.confirmEmail}
+                        onChange={(e) => setfindDevForm(e.target.value, "confirmEmail")}
+                    />
+                    <Input
                         placeholder='Work Email Address'
                         value={findDevForm.workEmail}
                         onChange={(e) => setfindDevForm(e.target.value, "workEmail")}
-                    />
-                    <Input
-                        placeholder='Confirm Email'
-                        value={findDevForm.confirmEmail}
-                        onChange={(e) => setfindDevForm(e.target.value, "confirmEmail")}
                     />
                 </div>
                 <div className={styles.tabs}>
                     {tags.map((e, index) => {
                         return (
                             <div className={styles.item} key={index}>
-                                <Text text={e.name} family='FuturaBook' size={20} />
+                                <Text text={e.name} family='FuturaBook' textSize='twenty' />
                                 <div onClick={() => removeTag(e.id)} className={styles.close}>
                                     <CloseSmall />
                                 </div>

@@ -21,7 +21,7 @@ const PLanguage: React.FC<Props> = ({
     return (
         <div className={`${styles.container} ${choosed ? styles.borderOn : styles.borderOff}`} onClick={onPress}>
             <img className={`${styles.image} ${choosed ? styles.grayOn : styles.grayOff}`} src={image} />
-            <Text text={name} color={COLORS.grey} />
+            <Text textSize='sixteen' text={name} color={COLORS.grey} />
         </div>
     )
 }

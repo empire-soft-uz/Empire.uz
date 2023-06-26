@@ -3,7 +3,6 @@ import styles from "./Text.module.css"
 interface Props {
     text: string;
     color?: string;
-    size?: number;
     margin?: string;
     family?: string;
     positon?: any;
@@ -14,13 +13,13 @@ interface Props {
     onPress?: () => void;
     lineHeight?: number;
     id?: string
+    textSize: 'fourteen' | 'sixteen' | 'eighteen' | 'twenty' | 'twentyTwo' | 'twentyEight' | 'thirtySix' | 'forty' | 'fifty' | 'sixty' | 'seventy'
 }
 
 const Text: React.FC<Props> = ({
     text,
     color,
     margin,
-    size,
     family,
     positon,
     zIndex,
@@ -29,17 +28,17 @@ const Text: React.FC<Props> = ({
     whiteSpace,
     cursor,
     onPress,
-    lineHeight
+    lineHeight,
+    textSize
 }) => {
     return (
         <p
             id={id}
-            className={styles.text}
+            className={`${styles.text} ${styles[textSize]}`}
             onClick={onPress}
             style={{
-                fontSize: `${size}px`,
                 margin: margin,
-                color: color,
+                color: color ? color : "#fff",
                 fontFamily: family,
                 position: positon,
                 zIndex: zIndex,

@@ -62,7 +62,7 @@ const OurServices = () => {
     return (
         <div className={styles.container} id="services">
             <div className={styles.top}>
-                <Text text='OUR SERVICES' size={40} />
+                <Text text='OUR SERVICES' textSize='forty' />
             </div>
             <div className={styles.tabBox}>
                 <div className={styles.tabItem}
@@ -74,7 +74,7 @@ const OurServices = () => {
                     <Text
                         text='Services'
                         transform="uppercase"
-                        size={28}
+                        textSize='twentyEight'
                         color={card === router.first ? COLORS.green : COLORS.grey}
                     />
                 </div>
@@ -86,7 +86,7 @@ const OurServices = () => {
                 >
                     <Text
                         text="Developers for your business"
-                        size={28}
+                        textSize='twentyEight'
                         transform="uppercase"
                         color={card === router.second ? COLORS.green : COLORS.grey}
                     />

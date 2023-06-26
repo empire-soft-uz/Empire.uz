@@ -29,7 +29,7 @@
 
 .backTwo{
     position: absolute;
-    top: 60vh;
+    bottom: 30vh;
     right: 0;
     height: 400px;
 }
@@ -57,4 +57,26 @@
     position: relative;
     transition: border .3s ease;
     bottom: -1px;
+}
+
+
+@media (max-width: 576px){
+    .container{
+        padding: 50px 5% 20px 5%;
+    }
+    .tabItem{
+        width: 100%;
+    }
+
+    .tabBox{
+        width: 100%;
+    }
+    .backOne{
+        width: 200px;
+        height: 200px;
+    }
+    .backTwo{
+        width: 200px;
+        height: 300px;
+    }
 }

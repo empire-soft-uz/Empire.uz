@@ -6,7 +6,9 @@ interface Props {
     titleColor?: string;
     onPress?: () => void;
     btnType: 'outline' | 'primary',
-    padding?: string
+    padding?: string,
+    width?: string,
+    margin?: string;
 }
 
 const Button: React.FC<Props> = ({
@@ -14,16 +16,20 @@ const Button: React.FC<Props> = ({
     title,
     titleColor,
     btnType,
-    padding
+    padding,
+    margin,
+    width
 }) => {
     return (
         <div
             style={{
-                padding: padding
+                padding: padding,
+                width: width,
+                margin: margin
             }}
             className={`${styles[btnType]}`} onClick={onPress}
         >
-            <Text size={18} text={title} color={titleColor} />
+            <Text textSize='eighteen' text={title} color={titleColor} />
         </div>
     )
 }

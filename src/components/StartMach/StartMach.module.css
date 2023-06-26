@@ -83,6 +83,19 @@
 
 .label{
     cursor: pointer;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.notes{
+    outline: none;
+    background-color: transparent;
+    border: 1px solid #2E2E2E;
+    border-radius: 10px;
+    padding: 5px;
+    resize: none;
+    width: 100%;
 }
 
 .fileInput{
@@ -103,4 +116,33 @@
     border-bottom: 1px solid #2E2E2E;
     background-color: #000302;
     color: #7F7F7F !important;
+}
+
+@media (max-width: 576px){
+    .container{
+        width: 100vw;
+        height: 100vh;
+        padding: 20px 5%;
+        border-radius: 0;
+        overflow-x: auto;
+    }
+    .blur{
+        position: absolute;
+        width: 300px;
+        height: 250px;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(180deg, #167A60 0%, #29A7C3 100%);
+        filter: blur(250px);
+        border-radius: 100px;
+        z-index: 3;
+    }
+    
+    .categoryTime{
+       overflow-y: scroll;
+    }
+    .btn{
+       white-space: nowrap;
+    }
 }

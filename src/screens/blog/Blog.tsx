@@ -44,7 +44,7 @@ const Blog = () => {
                     text={blogsInfo.text}
                 /> :
                     <>
-                        <Text text='Blog' family='FuturaBold' transform={"uppercase"} size={40} />
+                        <Text text='Blog' family='FuturaBold' transform={"uppercase"} textSize="forty" />
                         <div className={styles.cards}>
                             {BlogData.map((e, index) => {
                                 return index % 2 === 0 ? (

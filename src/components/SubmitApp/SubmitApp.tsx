@@ -14,11 +14,7 @@ import styles from "./SubmitApp.module.css"
 const SubmitApp = () => {
     const [loading, setLoading] = useState(false)
     const { form, setForm, clearForm } = useRootStore().tagsStore
-    const data = `
-    ${form.name} submitted his application%0A Name: ${form.name}%0A Email: ${form.email}%0A He wants to contact us%0A
-    `
-    console.log("form", toJS(form));
-
+    const data = `${form.name} submitted his application%0A Name: ${form.name}%0A Email: ${form.email}%0A He wants to contact us%0A`
 
     const sendBot = async () => {
         setLoading(true)
@@ -44,13 +40,13 @@ const SubmitApp = () => {
     return (
         <div className={styles.container}>
             <div className={styles.header}>
-                <Text text='Submit your application' transform={"uppercase"} size={40} />
+                <Text text='Submit your application' transform={"uppercase"} textSize='forty' />
             </div>
             <div className={styles.content}>
                 <div className={styles.leftBox}>
                     <img src={ASSETS.man} />
+                    <div className={styles.blur}></div>
                 </div>
-                <div className={styles.blur}></div>
                 <div className={styles.blurPerson}></div>
                 <div className={styles.rightBox}>
                     <Input

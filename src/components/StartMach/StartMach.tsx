@@ -3,7 +3,7 @@ import { message } from 'antd'
 import axios from 'axios'
 import { toJS } from 'mobx'
 import { observer } from 'mobx-react-lite'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { ArrowBackIcon, PlusIcon } from '../../assets/icons/Icons'
 import useRootStore from '../../Hooks/useRootStore'
 import { COLORS } from '../../utils/color'
@@ -15,7 +15,6 @@ import styles from "./StartMach.module.css"
 const StartMach = () => {
     const { visiable, hide, show } = useRootStore().visibleStore
     const { choseWorkRate, workRate, choseHowlong, howLong, findDevForm, setfindDevForm, clearFindDevForm } = useRootStore().tagsStore
-    console.log("findDevForm", toJS(findDevForm));
     const data = `Time To Build The Future%0A Work Email: ${findDevForm.workEmail}%0A Confirm Email: ${findDevForm.confirmEmail}%0A Job: ${findDevForm.job}%0A Work Rate: ${findDevForm.workRate}%0A How Long: ${findDevForm.howLong}%0A Start Date: ${findDevForm.startDate}%0A
     `
 
@@ -42,9 +41,30 @@ const StartMach = () => {
 
         // setLoading(false)
     }
+    // const getTotal = async () => {
+    //     const res = await axios({
+    //         method: 'get',
+    //         url: "http://localhost:8080/api/main",
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         }
+    //     }).then(res => {
+    //         message.success('We will contact you')
+    //         hide("smartMach")
+    //         show("weWillContact")
+    //         clearFindDevForm()
+    //         console.log("res", res);
+    //     }).catch(err => {
+    //         message.error(`${err}`)
+    //     })
+    // }
+    // useEffect(() => {
+    //     getTotal()
+    // }, [])
+
 
     const back = () => {
-        show("findDeveloper")
+        show("calendly")
         hide("smartMach")
     }
 
@@ -60,11 +80,11 @@ const StartMach = () => {
                     <div className={styles.arrowBack} onClick={back}>
                         <ArrowBackIcon />
                     </div>
-                    <Text text='START MACHING NOW!' lineHeight={60} size={50} />
+                    <Text text='START MACHING NOW!' lineHeight={60} textSize='fifty' />
                 </div>
                 <div className={styles.blur}></div>
                 <div className={styles.work}>
-                    <Text text='Work Rate' color={COLORS.grey} size={18} family="FuturaBook" />
+                    <Text text='Work Rate' color={COLORS.grey} textSize='eighteen' family="FuturaBook" />
                     <div className={styles.categoryTime}>
                         {WorkRate.map((e, index) => {
                             return (
@@ -80,7 +100,7 @@ const StartMach = () => {
                     </div>
                 </div>
                 <div className={styles.developer}>
-                    <Text text='How Long Will You Need This Developer?' color={COLORS.grey} size={18} family="FuturaBook" />
+                    <Text text='How Long Will You Need This Developer?' color={COLORS.grey} textSize='eighteen' family="FuturaBook" />
                     <div className={styles.categoryTime}>
                         {HowLong.map((e, index) => {
                             return (
@@ -97,12 +117,13 @@ const StartMach = () => {
                     </div>
                 </div>
                 <div className={styles.developer}>
-                    <Text text='Notes/Files' color={COLORS.grey} size={18} family="FuturaBook" />
-                    <div className={styles.upload}>
-                        <label className={styles.label}>
-                            <PlusIcon />
-                            <input className={styles.fileInput} type="file" />
-                        </label>
+                    <label className={styles.label}>
+                        <Text text='Files' color={COLORS.grey} textSize='eighteen' family="FuturaBook" />
+                        <PlusIcon />
+                        <input className={styles.fileInput} type="file" />
+                    </label>
+                    <div className={styles.notesBox}>
+                        <textarea rows={4} className={styles.notes} placeholder='Note something' />
                     </div>
                 </div>
                 <div className={styles.dateBox}>

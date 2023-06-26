@@ -1,4 +1,6 @@
 import React from 'react'
+import { ArrowBackIcon } from '../../assets/icons/Icons'
+import useRootStore from '../../Hooks/useRootStore'
 import { ASSETS } from '../../utils/assetsRequires'
 import { COLORS } from '../../utils/color'
 import Text from '../Text/Text'
@@ -17,19 +19,29 @@ const BlogInfo: React.FC<Props> = ({
     text,
     title
 }) => {
+    const { blogInfoExit } = useRootStore().blogsStore
     return (
         <div className={styles.container}>
+            <div
+                onClick={blogInfoExit}
+                style={{
+                    padding: "15px 15px 15px 0",
+                    cursor: "pointer"
+                }}
+            >
+                <ArrowBackIcon />
+            </div>
             <div className={styles.imageBox}>
                 <img className={styles.img} src={imageUrl} />
                 <div className={styles.date}>
-                    <Text text={date} />
+                    <Text textSize='sixteen' text={date} />
                 </div>
             </div>
             <div className={styles.textBox}>
-                <Text margin='20px 0 0 0' size={18} text={title} />
-                <Text margin='20px 0 0 0' color={COLORS.grey} family='FuturaBook' size={14} text={text} />
-                <Text margin='20px 0 0 0' color={COLORS.grey} family='FuturaBook' size={14} text={text} />
-                <Text margin='20px 0 0 0' color={COLORS.grey} family='FuturaBook' size={14} text={text} />
+                <Text margin='20px 0 0 0' textSize='eighteen' text={title} />
+                <Text margin='20px 0 0 0' color={COLORS.grey} family='FuturaBook' textSize='fourteen' text={text} />
+                <Text margin='20px 0 0 0' color={COLORS.grey} family='FuturaBook' textSize='fourteen' text={text} />
+                <Text margin='20px 0 0 0' color={COLORS.grey} family='FuturaBook' textSize='fourteen' text={text} />
             </div>
         </div>
     )

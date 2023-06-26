@@ -22,7 +22,7 @@ const WeWillContact = () => {
             ></Backdrop>
             <div className={styles.container} style={{ display: visiable.weWillContact ? "block" : "none" }}>
                 <div className={styles.title}>
-                    <Text text='We will contact you' lineHeight={60} size={70} />
+                    <Text text='We will contact you' lineHeight={60} textSize='seventy' />
                 </div>
                 <div className={styles.blur}></div>
                 <div className={styles.footer}>

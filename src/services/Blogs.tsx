@@ -31,4 +31,8 @@ export default class BlogsStore {
         this.blogsInfo = data
         this.setBlogsinfo = true
     }
+
+    blogInfoExit = () => {
+        this.setBlogsinfo = false
+    }
 }

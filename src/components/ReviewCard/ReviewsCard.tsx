@@ -22,8 +22,8 @@ const ReviewsCard: React.FC<Props> = ({
 }) => {
     return (
         <div className={styles.container}>
-            <Text text={title} transform={"uppercase"} size={22} />
-            <Text family='FuturaBook' color={COLORS.grey} text={comment} />
+            <Text text={title} transform={"uppercase"} textSize='twentyTwo' />
+            <Text textSize='sixteen' family='FuturaBook' color={COLORS.grey} text={comment} />
             <RowItem imageUrl={image} text={name} comment={job} />
         </div>
     )

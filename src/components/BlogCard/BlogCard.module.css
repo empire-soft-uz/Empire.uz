@@ -28,3 +28,9 @@
     bottom: 20px;
     left: 20px;
 }
+
+@media(max-width: 576px) {
+    .container{
+        width: 100%;
+    }
+}

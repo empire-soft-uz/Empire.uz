@@ -9,7 +9,7 @@ const OurAdventages = () => {
     return (
         <div className={styles.container} id="our-advantages">
             <div className={styles.header}>
-                <Text text='our advantages' transform={"uppercase"} size={40} />
+                <Text text='our advantages' transform={"uppercase"} textSize='forty' />
             </div>
             <div className={styles.cardsBox}>
                 {AdventagesData.map((e, index) => {

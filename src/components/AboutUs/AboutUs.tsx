@@ -8,15 +8,17 @@ const AboutUs = () => {
     return (
         <div className={styles.container} id="about-us">
             <div className={styles.header}>
-                <Text text='ABOUT US' size={40} />
+                <Text text='ABOUT US' textSize={"forty"} />
             </div>
             <div className={styles.content}>
                 <div className={styles.leftBox}>
                     <Text
+                        textSize='sixteen'
                         color={COLORS.grey}
+                        margin="20px 0"
                         family="FuturaBook"
                         text='“Empire Studio” shapes the future of market-leading brands. We transform outdated customer-facing software into pioneering, beautifully crafted solutions that lead the evolution of web technologies and exceed customer expectations.
-Contact us for trusted support to keep up with the tech and trends you need to modernise your core digital business.' />
+                                Contact us for trusted support to keep up with the tech and trends you need to modernise your core digital business.' />
                 </div>
                 <div className={styles.imageBox}>
                     <img src={ASSETS.person} alt="" />

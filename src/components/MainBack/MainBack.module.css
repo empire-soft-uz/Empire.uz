@@ -24,7 +24,7 @@
     text-align: center;
     flex-direction: column;
     height: 100%;
-    padding: 0 25%;
+    padding: 220px 25% 0 25%;
     z-index: 1;
     padding-top: 220px;
 }
@@ -47,4 +47,28 @@
     height: 300px;
     background: linear-gradient(180deg, #167A60 0%, #29A7C3 100%);
     filter: blur(180px);
+}
+
+@media (max-width: 576px){
+   .container{
+       height: 100%;
+   }
+    .backOne{
+        width: 200px;
+        height: 300px;
+    }
+    .backTwo{
+        width: 200px;
+        height: 300px;
+    }
+    .textBox{
+        padding: 120px 5% 0 5%;
+    }
+    .blur{
+        width: 300px;
+        height: 200px;
+    }
+    .DownBox{
+        margin-top: 60px;
+    }
 }

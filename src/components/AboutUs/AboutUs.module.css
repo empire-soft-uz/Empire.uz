@@ -65,3 +65,37 @@
     background: linear-gradient(180deg, #167A60 0%, #29A7C3 100%);
     filter: blur(150px);
 }
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 5%;
+    }
+    .content{
+        flex-direction: column;
+        height: 100%;
+    }
+    .imageBox{
+        width: 100%;
+        justify-content: center;
+    }
+    .imageBox img{
+        width: 300px;
+        height: 400px;
+    }
+    .leftBox{
+        width: 100%;
+    }
+    .blur{
+        position: absolute;
+        width: 100%;
+        height: 200px;
+        right: 0;
+        bottom: -110px;
+        filter: blur(32px);
+        border-radius: 100px;
+        z-index: 3;
+    }
+    .back{
+        height: 200px;
+    }
+}

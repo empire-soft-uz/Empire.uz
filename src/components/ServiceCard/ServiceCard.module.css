@@ -1,6 +1,11 @@
 .container {
     width: 48%;
-    height: 200px;
     border: 1px solid #2E2E2E;
     padding: 20px;
+}
+
+@media (max-width: 576px) {
+    .container{
+        width: 100%;
+    }
 }

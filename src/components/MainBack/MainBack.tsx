@@ -12,7 +12,7 @@ const MainBack = () => {
             <div className={styles.textBox}>
                 <Text
                     text='We develop complex projects - simply. Sharing our team'
-                    size={60}
+                    textSize='sixty'
                     positon="relative"
                     zIndex='2'
                 />
@@ -25,7 +25,7 @@ const MainBack = () => {
             </div>
             <img className={styles.backOne} src={ASSETS.back1} alt="back" />
             <img className={styles.backTwo} src={ASSETS.back2} alt="back" />
-        </div>
+        </div >
     )
 }
 

@@ -1,6 +1,7 @@
 import { observer } from 'mobx-react-lite'
 import React from 'react'
 import AboutUs from '../../components/AboutUs/AboutUs'
+import Calendly from '../../components/Calendly/Calendly'
 import FindDeveloper from '../../components/FindDeveloper/FindDeveloper'
 import Footer from '../../components/Footer/Footer'
 import MainBack from '../../components/MainBack/MainBack'
@@ -23,6 +24,7 @@ const Home = () => {
             <Reviews />
             <Footer />
             <FindDeveloper />
+            <Calendly />
             <StartMach />
             <WeWillContact />
         </div>

@@ -4,6 +4,8 @@ type modal = {
     findDeveloper: boolean
     smartMach: boolean
     weWillContact: boolean
+    drawer: boolean
+    calendly: boolean;
 }
 
 export default class VisibleStore {
@@ -14,7 +16,9 @@ export default class VisibleStore {
     visiable: modal = {
         findDeveloper: false,
         smartMach: false,
-        weWillContact: false
+        weWillContact: false,
+        drawer: false,
+        calendly: false
     }
 
     show = (key: keyof modal) => {

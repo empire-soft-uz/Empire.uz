@@ -1,0 +1,56 @@
+.container{
+    width: 75%;
+    height: 80vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 60px;
+    background: #010100;
+    border-radius: 20px;
+    z-index: 5;
+}
+.arrowRight{
+    position: absolute;
+    right: 70px;
+    top: 30px;
+    cursor: pointer;
+    z-index: 10;
+    transform: rotate(180deg);
+}
+.arrowLeft{
+    position: absolute;
+    left: 60px;
+    top: 30px;
+    cursor: pointer;
+    z-index: 10;
+}
+.calendlyBox{
+    background-color: black;
+    height: 100%;
+}
+
+@media (max-width: 576px) {
+    .container{
+        width: 100vw;
+        height: 100vh;
+        padding: 0;
+        border-radius: 0;
+        overflow-x: auto;
+    }
+    .arrowRight{
+        position: absolute;
+        right: 20px;
+        top: 30px;
+        cursor: pointer;
+        z-index: 10;
+        transform: rotate(180deg);
+    }
+    .arrowLeft{
+        position: absolute;
+        left: 20px;
+        top: 30px;
+        cursor: pointer;
+        z-index: 10;
+    }
+}

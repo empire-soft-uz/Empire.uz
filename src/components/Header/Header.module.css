@@ -16,10 +16,27 @@
 .changeOff{
     background-color: transparent;
 }
-
 .rightBox{
     display: flex;
     align-items: center;
     gap: 30px;
 }
+.drawer{
+    display: none;
+}
 
+@media (max-width: 576px){
+    .container{
+        padding: 0 5%;
+    }
+    .drawer{
+        display: flex;
+        gap: 20px;
+    }
+    .rightBox{
+        display: none;
+    }
+    .btnBox{
+        display: flex;
+    }
+}

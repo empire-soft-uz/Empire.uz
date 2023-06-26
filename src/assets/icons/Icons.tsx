@@ -78,16 +78,24 @@ export const CloseSmall = () => {
 
 export const PlusIcon = () => {
     return (
-        <svg width="44" height="42" viewBox="0 0 44 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="24" height="22" viewBox="0 0 44 42" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0.3 24V17.4H18.4V0.199995H25.6V17.4H43.7V24H25.6V41.2H18.4V24H0.3Z" fill="#7F7F7F" fillOpacity="0.29" />
         </svg>
     )
 }
 
-export const ArrowBackIcon = () => {
+export const ArrowBackIcon = ({ color }: any) => {
     return (
-        <svg className="svg-icon" style={{ width: "2.5em", height: "2em", verticalAlign: "middle", fill: "#fff", overflow: "hidden" }} viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <svg className="svg-icon" style={{ width: "2.5em", height: "2em", verticalAlign: "middle", fill: color ? color : "#fff", overflow: "hidden" }} viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
             <path d="M853.333333 469.333333H334.08l238.293333-238.293333L512 170.666667 170.666667 512l341.333333 341.333333 60.373333-60.373333L334.08 554.666667H853.333333v-85.333334z" />
+        </svg>
+    )
+}
+
+export const MenuIcon = () => {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" fill='#fff' viewBox="0 0 50 50" width="35px" height="35px">
+            <path d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z" />
         </svg>
     )
 }

@@ -41,3 +41,18 @@
     position: relative;
     bottom: 0;
 }
+
+@media (max-width: 576px) {
+    .content{
+        padding: 10vh 5% 20px 5%;
+    }
+    .backOne{
+        height: 300px;
+    }
+    .cards{
+        margin-top: 20px;
+    }
+    .backTwo{
+        height: 300px;
+    }
+}

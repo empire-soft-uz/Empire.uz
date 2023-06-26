@@ -12,7 +12,7 @@ const IconComp: React.FC<Props> = (props) => {
     return (
         <div className={styles.container}>
             <props.icon />
-            <Text text={props.name} transform={"uppercase"} />
+            <Text textSize='sixteen' text={props.name} transform={"uppercase"} />
         </div>
     )
 }

@@ -20,9 +20,9 @@ const RowItem: React.FC<Props> = (props) => {
                 {props.icon ? <props.icon /> : null}
             </div>
             <div className={styles.textBox}>
-                <Text text={props.text} size={20} />
+                <Text text={props.text} textSize='twenty' />
                 {props.comment ?
-                    <Text text={props.comment} color={COLORS.grey} size={16} family="FuturaBook" />
+                    <Text text={props.comment} color={COLORS.grey} textSize='sixteen' family="FuturaBook" />
                     : null
                 }
             </div>

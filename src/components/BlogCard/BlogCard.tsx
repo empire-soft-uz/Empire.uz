@@ -19,10 +19,10 @@ const BlogCard: React.FC<Props> = ({
         <div className={styles.container} onClick={onPress}>
             <img className={styles.image} src={image} />
             <div className={styles.textBox}>
-                <Text size={18} margin='0 0 20px 0' lineHeight={18} text={text} />
+                <Text textSize='eighteen' margin='0 0 20px 0' lineHeight={18} text={text} />
             </div>
             <div className={styles.date}>
-                <Text size={14} text={date} family='FuturaBook' />
+                <Text textSize='fourteen' text={date} family='FuturaBook' />
             </div>
         </div>
     )

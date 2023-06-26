@@ -5,7 +5,9 @@
 
 .header{
     display: flex;
+    width: 100%;
     justify-content: center;
+    text-align: center;
 }
 
 .content{
@@ -62,7 +64,7 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    z-index: 4;
+    z-index: 1;
 }
 
 .rightBox{
@@ -89,4 +91,57 @@
     border-radius: 50%;
     margin-top: 20px;
     cursor: pointer;
+}
+
+@media (max-width: 576px) {
+    .container{
+        padding: 50px 5% 20px 5%;
+        height: 100%;
+    }
+    .content{
+        flex-direction: column;
+        z-index: 4;
+    }
+
+    .leftBox{
+        width: 100%;
+        justify-content: center;
+    }
+    .leftBox img{
+        width: 300px;
+        height: 350px;
+    }
+    .rightBox{
+        width: 100%;
+        position: relative;
+        z-index: 4;
+    }
+
+    .back{
+        height: 300px;
+    }
+
+    .blur{
+        position: absolute;
+        width: 100%;
+        height: 150px;
+        left: 0;
+        right: 0;
+        bottom: -70px;
+        background: #030404;
+        filter: blur(25px);
+        border-radius: 100px;
+        z-index: 3;
+    }
+
+    .blurPerson{
+        position: absolute;
+        width: 250px;
+        height: 150px;
+        left: 40px;
+        top:  50px;
+        background: linear-gradient(180deg, #167A60 0%, #29A7C3 100%);
+        filter: blur(150px);
+        z-index: 1;
+    }
 }

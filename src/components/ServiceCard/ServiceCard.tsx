@@ -20,6 +20,7 @@ const ServiceCard: React.FC<Props> = ({
         <div className={styles.container}>
             <RowItem text={name} icon={icon} />
             <Text
+                textSize='sixteen'
                 margin='0 0 0 60px'
                 color={COLORS.grey}
                 text={text}

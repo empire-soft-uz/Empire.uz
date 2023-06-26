@@ -26,8 +26,8 @@ const DevelopersCard: React.FC<Props> = ({
                 <img src={ASSETS.roytman} />
             </div>
             <div className={styles.title}>
-                <Text text={name} size={20} />
-                <Text family='FuturaBook' text={job} size={16} color={COLORS.grey} />
+                <Text text={name} textSize="twenty" />
+                <Text family='FuturaBook' text={job} textSize="sixteen" color={COLORS.grey} />
             </div>
             <div style={{
                 marginTop: "15px"

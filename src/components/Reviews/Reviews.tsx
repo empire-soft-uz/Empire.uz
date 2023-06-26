@@ -16,7 +16,7 @@ const Reviews = () => {
     return (
         <div className={styles.container}>
             <div className={styles.header}>
-                <Text text='Reviews about us' transform={"uppercase"} size={40} />
+                <Text text='Reviews about us' transform={"uppercase"} textSize='forty' />
             </div>
             <div className={styles.cardsBox}>
                 <div className={styles.cards} >

@@ -22,6 +22,7 @@ const AdventagesCard: React.FC<Props> = ({
             <Text
                 color={COLORS.grey}
                 text={text}
+                textSize="sixteen"
                 family="FuturaBook"
                 margin='10px 0 0 0'
             />

@@ -9,6 +9,23 @@
     text-decoration: none;
 }
 
+.ant-drawer-title{
+  color: #fff;
+  text-align: start;
+}
+
+.ant-drawer-header{
+  color: #fff;
+}
+
+.lmtWIHO_gkbTeeyuvoJC {
+  background-color: #000;
+}
+.lmtWIHO_gkbTeeyuvoJC.mOUYF5ZmuNL6I7t0mSFg {
+    background-color: #000;
+    width: 100vh;
+}
+
 @font-face {
   font-family: "FuturaBold";
   src: url("./assets/fonts/FuturaPTBold.otf") format("truetype");
