@@ -164,41 +164,85 @@ export const ReviewsData :{
     },
     ]
 
-export const ProgrammingLanguages = [
+export const ProgrammingLanguages:{
+    id: number,
+    image: string,
+    name: string,
+}[] = [
     {
         id: 1,
-        image: ASSETS.react,
+        image: "./icons/react.svg",
         name: "React "
     },
     {
         id: 2,
-        image: ASSETS.react,
-        name: "React "
+        image: "./icons/android.svg",
+        name: "Android "
     },
     {
         id: 3,
-        image: ASSETS.react,
-        name: "React "
+        image: "./icons/js.svg",
+        name: "Js "
     },
     {
         id: 4,
-        image: ASSETS.react,
-        name: "React "
+        image: "./icons/flutter.svg",
+        name: "Flutter "
     },
     {
         id: 5,
-        image: ASSETS.react,
-        name: "React "
+        image: "./icons/css.svg",
+        name: "Css "
     },
     {
         id: 6,
-        image: ASSETS.react,
-        name: "React "
+        image: "./icons/c++.svg",
+        name: "C++ "
     },
     {
         id: 7,
-        image: ASSETS.react,
-        name: "React "
+        image: "./icons/firebase.svg",
+        name: "Firebase "
+    },
+    {
+        id: 8,
+        image: "./icons/nexticon.svg",
+        name: "Next "
+    },
+    {
+        id: 9,
+        image: "./icons/ts.svg",
+        name: "Ts "
+    },
+    {
+        id: 10,
+        image: "./icons/java.svg",
+        name: "Java "
+    },
+    {
+        id: 10,
+        image: "./icons/node.svg",
+        name: "Node Js "
+    },
+    {
+        id: 11,
+        image: "./icons/html.svg",
+        name: "Html "
+    },
+    {
+        id: 12,
+        image: "./icons/mongo.svg",
+        name: "Mongo "
+    },
+    {
+        id: 13,
+        image: "./icons/ruby.svg",
+        name: "Ruby "
+    },
+    {
+        id: 13,
+        image: "./icons/angular.svg",
+        name: "Angular "
     },
 ]
 

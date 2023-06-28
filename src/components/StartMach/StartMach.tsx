@@ -3,9 +3,10 @@ import { message } from 'antd'
 import axios from 'axios'
 import { toJS } from 'mobx'
 import { observer } from 'mobx-react-lite'
-import React, { useEffect } from 'react'
-import { ArrowBackIcon, PlusIcon } from '../../assets/icons/Icons'
+import React, { ChangeEvent, useEffect, useState } from 'react'
+import { ArrowBackIcon, FileUpload, PlusIcon } from '../../assets/icons/Icons'
 import useRootStore from '../../Hooks/useRootStore'
+import { storage } from '../../services/Firebase'
 import { COLORS } from '../../utils/color'
 import { HowLong, WorkRate } from '../../utils/dateBase'
 import ArrowRightButton from '../ArrowRightButton/ArrowRightButton'
@@ -14,59 +15,26 @@ import styles from "./StartMach.module.css"
 
 const StartMach = () => {
     const { visiable, hide, show } = useRootStore().visibleStore
-    const { choseWorkRate, workRate, choseHowlong, howLong, findDevForm, setfindDevForm, clearFindDevForm } = useRootStore().tagsStore
-    const data = `Time To Build The Future%0A Work Email: ${findDevForm.workEmail}%0A Confirm Email: ${findDevForm.confirmEmail}%0A Job: ${findDevForm.job}%0A Work Rate: ${findDevForm.workRate}%0A How Long: ${findDevForm.howLong}%0A Start Date: ${findDevForm.startDate}%0A
-    `
-
-    const sendBot = async () => {
-        // setLoading(true)
-        if (findDevForm.workEmail.length <= 1) {
-            message.error('Please enter your work email')
-            return
-        }
-        await axios({
-            method: 'post',
-            url: `https://api.telegram.org/bot6257527521:AAGKNc12U7SmVDG-ulTTcoP1BQxDeGCoS-4/sendMessage?chat_id=-1001934192696&text=${data}`,
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        }).then(res => {
-            message.success('We will contact you')
-            hide("smartMach")
-            show("weWillContact")
-            clearFindDevForm()
-        }).catch(err => {
-            message.error(`${err}`)
-        })
-
-        // setLoading(false)
-    }
-    // const getTotal = async () => {
-    //     const res = await axios({
-    //         method: 'get',
-    //         url: "http://localhost:8080/api/main",
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         }
-    //     }).then(res => {
-    //         message.success('We will contact you')
-    //         hide("smartMach")
-    //         show("weWillContact")
-    //         clearFindDevForm()
-    //         console.log("res", res);
-    //     }).catch(err => {
-    //         message.error(`${err}`)
-    //     })
-    // }
-    // useEffect(() => {
-    //     getTotal()
-    // }, [])
-
-
-    const back = () => {
+    const { choseWorkRate, workRate, choseHowlong, howLong, findDevForm, setfindDevForm } = useRootStore().tagsStore
+    const next = () => {
         show("calendly")
         hide("smartMach")
     }
+
+    const back = () => {
+        show("findDeveloper")
+        hide("smartMach")
+    }
+    // const [file, setFile] = useState('')
+
+    // const uploadFile = (e: ChangeEvent<HTMLInputElement>) => {
+    //     if (e.target.files?.length) {
+    //         const fileRef = storage.ref('/file/${ file.name}').put(e.target.files[0])
+    //             .on("state_changed", message.success("succes"))
+    //         fileRef()
+    //         console.log(file);
+    //     }
+    // }
 
     return (
         <>
@@ -119,17 +87,29 @@ const StartMach = () => {
                 <div className={styles.developer}>
                     <label className={styles.label}>
                         <Text text='Files' color={COLORS.grey} textSize='eighteen' family="FuturaBook" />
-                        <PlusIcon />
-                        <input className={styles.fileInput} type="file" />
+                        <FileUpload />
+                        <input
+                            className={styles.fileInput}
+                            type="file"
+                        // onChange={(e) => uploadFile(e)}
+                        />
                     </label>
                     <div className={styles.notesBox}>
-                        <textarea rows={4} className={styles.notes} placeholder='Note something' />
+                        <textarea
+                            rows={4}
+                            className={styles.notes}
+                            placeholder='Note something'
+                            value={findDevForm.note}
+                            onChange={(e) => setfindDevForm(e.target.value, "note")}
+                        />
                     </div>
                 </div>
                 <div className={styles.dateBox}>
-                    <input value={findDevForm.startDate}
+                    <input
+                        value={findDevForm.startDate}
                         placeholder='Start Date'
-                        className={styles.date} type="date"
+                        className={styles.date}
+                        type="date"
                         onChange={(e) => setfindDevForm(e.target.value, "startDate")}
                     />
                 </div>
@@ -137,7 +117,7 @@ const StartMach = () => {
                     <ArrowRightButton
                         disabled={findDevForm.workRate.length === 0 &&
                             findDevForm.howLong.length === 0 &&
-                            findDevForm.startDate.length === 0 ? true : false} onClick={sendBot}
+                            findDevForm.startDate.length === 0 ? true : false} onClick={next}
                     />
                 </div>
             </div>

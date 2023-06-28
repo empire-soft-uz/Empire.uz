@@ -15,10 +15,15 @@ import styles from "./FindDeveloper.module.css"
 
 const FindDeveloper = () => {
     const { visiable, hide, show } = useRootStore().visibleStore
-    const { chooseTag, tags, removeTag, setfindDevForm, findDevForm } = useRootStore().tagsStore
+    const { chooseTag, tags, removeTag, setfindDevForm, findDevForm, clearFindDevForm } = useRootStore().tagsStore
     const next = () => {
-        show("calendly")
+        show("smartMach")
         hide("findDeveloper")
+    }
+
+    const closeFind = () => {
+        hide("findDeveloper")
+        clearFindDevForm()
     }
 
     return (
@@ -28,7 +33,7 @@ const FindDeveloper = () => {
                 open={visiable.findDeveloper}
                 onClick={() => hide("findDeveloper")}></Backdrop>
             <div className={styles.container} style={{ display: visiable.findDeveloper ? "block" : "none" }}>
-                <div className={styles.closeModal} onClick={() => hide("findDeveloper")}>
+                <div className={styles.closeModal} onClick={closeFind}>
                     <CloseBig />
                 </div>
                 <div className={styles.title}>
@@ -37,9 +42,9 @@ const FindDeveloper = () => {
                 <div className={styles.blur}></div>
                 <div className={styles.inputBox}>
                     <Input
-                        placeholder='Enter your phone number'
-                        value={findDevForm.confirmEmail}
-                        onChange={(e) => setfindDevForm(e.target.value, "confirmEmail")}
+                        placeholder='Name'
+                        value={findDevForm.name}
+                        onChange={(e) => setfindDevForm(e.target.value, "name")}
                     />
                     <Input
                         placeholder='Work Email Address'
@@ -72,10 +77,10 @@ const FindDeveloper = () => {
                         )
                     })}
                 </div>
-                <div className={styles.footer} onClick={next}>
+                <div className={styles.footer}>
                     <ArrowRightButton disabled={
                         findDevForm.workEmail.length === 0 &&
-                            findDevForm.confirmEmail.length === 0 &&
+                            findDevForm.name.length === 0 &&
                             findDevForm.job.length === 0 ? true : false}
                         onClick={next}
                     />

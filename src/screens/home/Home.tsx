@@ -4,6 +4,7 @@ import AboutUs from '../../components/AboutUs/AboutUs'
 import Calendly from '../../components/Calendly/Calendly'
 import FindDeveloper from '../../components/FindDeveloper/FindDeveloper'
 import Footer from '../../components/Footer/Footer'
+import Loading from '../../components/Loading/Loading'
 import MainBack from '../../components/MainBack/MainBack'
 import OurAdventages from '../../components/OurAdventages/OurAdventages'
 import OurServices from '../../components/OurServices/OurServices'
@@ -27,6 +28,7 @@ const Home = () => {
             <Calendly />
             <StartMach />
             <WeWillContact />
+            <Loading />
         </div>
     )
 }

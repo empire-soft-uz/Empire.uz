@@ -48,10 +48,8 @@ const Header = () => {
                     <Text textSize='sixteen' cursor='pointer' text='Blog' color={COLORS.white} />
                 </a>
                 <Button onPress={() => show("findDeveloper")} btnType='outline' title='FIND A DEVELOPER' titleColor={COLORS.green} />
-                <TranslationDrop />
             </div>
             <div className={styles.drawer}>
-                <TranslationDrop />
                 <div onClick={() => show("drawer")}>
                     <MenuIcon />
                 </div>
