@@ -3,7 +3,7 @@ import { makeAutoObservable, runInAction, toJS } from "mobx";
 type tags = {
     id: number,
     name: string,
-    image: string
+    image: string,
 }
 
 type work = {
@@ -12,12 +12,13 @@ type work = {
 }
 
 type findDevFormType = {
+    name: string,
     workEmail: string,
-    confirmEmail: string,
     job: string;
     workRate: string;
     howLong: string;
     file: string;
+    note: string;
     startDate: string
 }
 
@@ -45,12 +46,13 @@ export default class TagStore {
 
 
     findDevForm: findDevFormType = {
+        name: '',
         workEmail: '',
-        confirmEmail: '',
         job: '',
         workRate: '',
         howLong: '',
         file: '',
+        note: '',
         startDate: ''
     }
 
@@ -64,13 +66,23 @@ export default class TagStore {
 
     clearFindDevForm = () => {
         this.findDevForm = {
+            name: '',
             workEmail: '',
-            confirmEmail: '',
             job: '',
             workRate: '',
             howLong: '',
             file: '',
+            note: '',
             startDate: ''
+        }
+        this.tags = []
+        this.howLong = {
+            id: 0,
+            title: ''
+        }
+        this.workRate = {
+            id: 0,
+            title: ''
         }
     }
 

@@ -12,12 +12,12 @@ import Text from '../Text/Text'
 import styles from "./SubmitApp.module.css"
 
 const SubmitApp = () => {
-    const [loading, setLoading] = useState(false)
     const { form, setForm, clearForm } = useRootStore().tagsStore
+    const { show, hide } = useRootStore().visibleStore
     const data = `${form.name} submitted his application%0A Name: ${form.name}%0A Email: ${form.email}%0A He wants to contact us%0A`
 
     const sendBot = async () => {
-        setLoading(true)
+        show("loading")
         if (form.name.length <= 1) {
             message.error('Please enter your name')
             return
@@ -29,12 +29,12 @@ const SubmitApp = () => {
                 'Content-Type': 'application/json'
             }
         }).then(res => {
-            message.success('We will contact you')
+            hide("loading")
             clearForm()
+            message.success('We will contact you')
         }).catch(err => {
             message.error(`${err}`)
         })
-        setLoading(false)
     }
 
     return (

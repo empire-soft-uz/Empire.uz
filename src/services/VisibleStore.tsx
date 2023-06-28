@@ -6,6 +6,7 @@ type modal = {
     weWillContact: boolean
     drawer: boolean
     calendly: boolean;
+    loading: boolean;
 }
 
 export default class VisibleStore {
@@ -18,7 +19,8 @@ export default class VisibleStore {
         smartMach: false,
         weWillContact: false,
         drawer: false,
-        calendly: false
+        calendly: false,
+        loading: false
     }
 
     show = (key: keyof modal) => {
