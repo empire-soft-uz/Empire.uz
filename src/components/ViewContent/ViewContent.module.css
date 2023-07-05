@@ -1,0 +1,28 @@
+.container{
+    padding: 25px;
+    width: 320px;
+    /* background-color: #000; */
+}
+.user{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.userImage{
+    min-width: 120px !important;
+    height: 120px;
+}
+.userImage img{
+    width: 100%;
+    height: 100%;
+}
+.center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 0;
+    gap: 6px;
+}
+.btnBox{
+    margin-top: 20px;
+}

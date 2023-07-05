@@ -9,7 +9,6 @@
     z-index: 5;
     transition: all 0.3s ease;
 }
-
 .changeOn{
     background-color: #000;
 }
@@ -24,8 +23,7 @@
 .drawer{
     display: none;
 }
-
-@media (max-width: 576px){
+@media (min-width: 120px){
     .container{
         padding: 0 5%;
     }
@@ -36,7 +34,36 @@
     .rightBox{
         display: none;
     }
-    .btnBox{
+}
+
+@media (min-width: 576px) {
+    .container{
+        padding: 0 10%;
+    }
+    .drawer{
         display: flex;
+        gap: 20px;
+    }
+    .rightBox{
+        display: none;
     }
 }
+@media (min-width: 767px) {
+.container{ 
+    padding: 0 10%;
+}
+.rightBox{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.drawer{
+    display: none;
+}
+}
+@media (min-width: 1200px) {
+.container{ 
+    padding: 0 18%;
+}
+}
+

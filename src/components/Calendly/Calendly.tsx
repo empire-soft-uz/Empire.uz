@@ -15,7 +15,7 @@ const Calendly = () => {
         show("smartMach")
         hide("calendly")
     }
-    const data = `Time To Build The Future%0A Name: ${findDevForm.name}%0A Work email: ${findDevForm.workEmail}%0A Languages: ${findDevForm.job}%0A Work Rate: ${findDevForm.workRate}%0A How Long: ${findDevForm.howLong}%0A File: ${findDevForm.file}%0A Note: ${findDevForm.note}%0A Start Date: ${findDevForm.startDate}%0A`
+    const data = `Time To Build The Future%0A Name: ${findDevForm.name}%0A Work email: ${findDevForm.workEmail}%0A Skills: ${findDevForm.job}%0A Work Rate: ${findDevForm.workRate}%0A How Long: ${findDevForm.howLong}%0A Note: ${findDevForm.note}%0A Start Date: ${findDevForm.startDate}%0A File: ${findDevForm.file}%0A`
 
     const sendBot = async () => {
         show("loading")

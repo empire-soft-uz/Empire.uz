@@ -1,9 +1,16 @@
 .container {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    width: 100px;
+    justify-content: center;
+    width: 120px;
+    padding: 5px 10px;
     height: 42px;
     border: 1px solid #2E2E2E;
-    border-radius: 10px;
+    border-radius: 8px;
+    gap: 5px;
+}
+
+.icons{
+    width: 35px;
+    height: 25px;
 }

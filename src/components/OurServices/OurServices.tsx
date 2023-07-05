@@ -8,37 +8,50 @@ import { ReviewsData, ServicesData } from '../../utils/dateBase'
 import { ASSETS } from '../../utils/assetsRequires'
 import { COLORS } from '../../utils/color'
 import DevelopersCard from '../DevelopersCard/DevelopersCard'
+import useRootStore from '../../Hooks/useRootStore'
+import { observer } from 'mobx-react-lite'
+import { toJS } from 'mobx'
+import { ReviewDataType } from '../../types/types'
 
-const FirstCard = () => (
-    <div className={styles.cardsBox}>
-        {ServicesData.map((e, index) => {
-            return (
-                <ServiceCard
-                    key={index}
-                    name={e.name}
-                    text={e.text}
-                    icon={e.icon}
-                />
-            )
-        })}
-    </div>
-)
-const SecondCard = () => (
-    <div className={styles.cardsBox}>
-        {ReviewsData.map((e, index) => {
-            return (
-                <DevelopersCard
-                    key={index}
-                    name={e.name}
-                    skillsIcon={e.skillsIcon}
-                    skillsName={e.skillsName}
-                    job={e.job}
-                />
-            )
-        })}
-    </div>
-)
-
+const FirstCard = () => {
+    return (
+        <div className={styles.cardsBox}>
+            {ServicesData.map((e, index) => {
+                return (
+                    <ServiceCard
+                        key={index}
+                        name={e.name}
+                        text={e.text}
+                        icon={e.icon}
+                    />
+                )
+            })}
+        </div>
+    )
+}
+const SecondCard = observer(() => {
+    const { show } = useRootStore().visibleStore
+    const { onViewProfile } = useRootStore().userStore
+    const Click = (item: ReviewDataType) => {
+        show("viewProfile")
+        onViewProfile(item)
+    }
+    return (
+        <div className={styles.cardsBox}>
+            {ReviewsData.map((e, index) => {
+                return (
+                    <DevelopersCard
+                        key={index}
+                        name={e.name}
+                        data={e.skills}
+                        job={e.job}
+                        onPress={() => Click(e)}
+                    />
+                )
+            })}
+        </div>
+    )
+})
 
 const router: {
     [key: string]: {
@@ -99,4 +112,4 @@ const OurServices = () => {
     )
 }
 
-export default OurServices
+export default observer(OurServices)

@@ -1,3 +1,4 @@
+import { observer } from 'mobx-react-lite'
 import React from 'react'
 import { PhpIcon } from '../../assets/icons/Icons'
 import { ASSETS } from '../../utils/assetsRequires'
@@ -10,15 +11,15 @@ import styles from "./DevelopersCard.module.css"
 interface Props {
     name: string;
     job: string;
-    skillsIcon: React.FC;
-    skillsName: string;
+    onPress?: () => void;
+    data?: any;
 }
 
 const DevelopersCard: React.FC<Props> = ({
     name,
     job,
-    skillsIcon,
-    skillsName
+    onPress,
+    data
 }) => {
     return (
         <div className={styles.container}>
@@ -30,18 +31,23 @@ const DevelopersCard: React.FC<Props> = ({
                 <Text family='FuturaBook' text={job} textSize="sixteen" color={COLORS.grey} />
             </div>
             <div style={{
-                marginTop: "15px"
+                marginTop: "15px",
             }}>
                 <Button padding='6px 50px' title='Expert in' btnType='primary' />
             </div>
             <div className={styles.skillsBox}>
-                <IconComp icon={skillsIcon} name={skillsName} />
+                {data.slice(0, 4).map((i: any, index: any) => {
+                    return (
+                        <IconComp key={index} icon={i.skillsIcon} name={i.skillsName} />
+                    )
+                })
+                }
             </div>
-            <button className={styles.viewBtn}>
+            <button className={styles.viewBtn} onClick={onPress}>
                 View Profile
             </button>
         </div>
     )
 }
 
-export default DevelopersCard
+export default observer(DevelopersCard)

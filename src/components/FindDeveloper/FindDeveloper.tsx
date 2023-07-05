@@ -29,7 +29,7 @@ const FindDeveloper = () => {
     return (
         <>
             <Backdrop
-                sx={{ color: '#fff', zIndex: 4 }}
+                sx={{ color: '#fff', zIndex: 6 }}
                 open={visiable.findDeveloper}
                 onClick={() => hide("findDeveloper")}></Backdrop>
             <div className={styles.container} style={{ display: visiable.findDeveloper ? "block" : "none" }}>

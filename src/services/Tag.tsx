@@ -19,7 +19,8 @@ type findDevFormType = {
     howLong: string;
     file: string;
     note: string;
-    startDate: string
+    startDate: string,
+    fileName: string;
 }
 
 type formType = {
@@ -51,9 +52,10 @@ export default class TagStore {
         job: '',
         workRate: '',
         howLong: '',
-        file: '',
         note: '',
-        startDate: ''
+        startDate: '',
+        file: '',
+        fileName: ''
     }
 
     findDeveloper = (item: findDevFormType) => {
@@ -73,7 +75,8 @@ export default class TagStore {
             howLong: '',
             file: '',
             note: '',
-            startDate: ''
+            startDate: '',
+            fileName: ''
         }
         this.tags = []
         this.howLong = {
