@@ -56,44 +56,44 @@ export const AdventagesData : {
     {
         id: 1,
         name: "Streamlined Design Process",
-        text: "Experience a seamless website creation journey with our streamlined design process. Our platform is tailored to ensure that you can effortlessly bring your vision to life, no matter your skill level. 
-            We are always eager to hear your thoughts and ideas. Share your feedback and suggestions with us, and together we can create the perfect website for you.",
+        text: `Experience a seamless website creation journey with our streamlined design process. Our platform is tailored to ensure that you can effortlessly bring your vision to life, no matter your skill level. 
+            We are always eager to hear your thoughts and ideas. Share your feedback and suggestions with us, and together we can create the perfect website for you.`,
         icon: Adventage
     },
         
     {
         id: 2,
         name: "Personalized Customization",
-        text: "Craft a distinctive online presence that reflects your unique style and personality. Our customizable templates and user-friendly tools empower you to create a website that showcases your individuality without any technical barriers.
-            Take advantage of our versatile design features and make your website stand out from the crowd.",
+        text: `Craft a distinctive online presence that reflects your unique style and personality. Our customizable templates and user-friendly tools empower you to create a website that showcases your individuality without any technical barriers.
+            Take advantage of our versatile design features and make your website stand out from the crowd.`,
         icon: Adventage
     },
     {
         id: 3,
         name: "Eco-conscious Approach",
-        text: "Our team is dedicated to making a positive impact on the environment by minimizing our carbon footprint and promoting sustainable practices.
-            By choosing to build your website with us, you are directly contributing to a greener future for our planet.",
+        text: `Our team is dedicated to making a positive impact on the environment by minimizing our carbon footprint and promoting sustainable practices.
+            By choosing to build your website with us, you are directly contributing to a greener future for our planet.`,
         icon: Adventage
     },
     {
         id: 4,
         name: "Mobile-Friendly Design",
-        text: "In today's digital landscape, mobile compatibility is key. Our platform ensures that your website looks great and functions smoothly on all devices, providing an optimal browsing experience for your visitors.
-            Stay ahead of the curve with our mobile-responsive designs and tools.",
+        text: `In today's digital landscape, mobile compatibility is key. Our platform ensures that your website looks great and functions smoothly on all devices, providing an optimal browsing experience for your visitors.
+            Stay ahead of the curve with our mobile-responsive designs and tools.`,
         icon: Adventage
     },
     {
         id: 5,
         name: "Robust Data Protection",
-        text: "We take the security of your website and the privacy of your visitors very seriously. With over a decade of experience in the industry, we provide a reliable and secure solution that keeps your data safe.
-            Rest easy knowing that your website and its data are protected by our state-of-the-art security measures.",
+        text: `We take the security of your website and the privacy of your visitors very seriously. With over a decade of experience in the industry, we provide a reliable and secure solution that keeps your data safe.
+            Rest easy knowing that your website and its data are protected by our state-of-the-art security measures.`,
         icon: Adventage
     },
     {
         id: 6,
         name: "Attentive Customer Support",
-        text: "Our dedicated customer support team is here to help you every step of the way. We believe in providing personalized, human assistance to ensure your website's success.
-            When you create a website with us, you can count on our friendly and knowledgeable staff to guide you through the process and address any concerns you may have.",
+        text: `Our dedicated customer support team is here to help you every step of the way. We believe in providing personalized, human assistance to ensure your website's success.
+            When you create a website with us, you can count on our friendly and knowledgeable staff to guide you through the process and address any concerns you may have.`,
         icon: Adventage
     },
     ]
