@@ -4,33 +4,38 @@ import styles from './Button.module.css'
 interface Props {
     title: string;
     titleColor?: string;
+    titleSize?: any;
     onPress?: () => void;
     btnType: 'outline' | 'primary',
     padding?: string,
     width?: string,
     margin?: string;
+    disabled?: boolean;
 }
 
 const Button: React.FC<Props> = ({
     onPress,
     title,
     titleColor,
+    titleSize,
     btnType,
     padding,
     margin,
-    width
+    width,
+    disabled
 }) => {
     return (
-        <div
+        <button
             style={{
                 padding: padding,
                 width: width,
-                margin: margin
+                margin: margin,
+                cursor: disabled ? "not-allowed" : "pointer"
             }}
             className={`${styles[btnType]}`} onClick={onPress}
         >
-            <Text textSize='eighteen' text={title} color={titleColor} />
-        </div>
+            <Text textSize={titleSize ? titleSize : "eighteen"} text={title} color={titleColor} />
+        </button>
     )
 }
 

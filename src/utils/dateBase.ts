@@ -1,13 +1,9 @@
-import React from "react";
+import React, { FC } from "react";
 import { Adventage, PhpIcon, UiIcon } from "../assets/icons/Icons";
+import { AdventagesDataType, ProgrammingLanguagesType, ReviewDataType, ServicesDataType } from "../types/types";
 import { ASSETS } from "./assetsRequires";
 
-export const ServicesData : {
-    id: number,
-    name: string,
-    text: string,
-    icon: React.FC
-}[] = [
+export const ServicesData : ServicesDataType[] = [
     {
         id: 1,
         name: "UX / UI Design",
@@ -47,12 +43,7 @@ export const ServicesData : {
     },
     ]
 
-export const AdventagesData : {
-    id: number,
-    name: string,
-    text: string,
-    icon: React.FC
-}[] = [
+export const AdventagesData : AdventagesDataType[] = [
     {
         id: 1,
         name: "QUALITY",
@@ -92,83 +83,181 @@ export const AdventagesData : {
     },
     ]
 
-export const ReviewsData :{
-    id: number,
-    title: string,
-    name: string,
-    comment: string,
-    image: string,
-    job: string,
-    skillsIcon: React.FC,
-    skillsName: string
-}[] = [
+export const ReviewsData :ReviewDataType[] = [
     {
         id: 1,
         title: "The best developers only for you",
         name: "Raphael Roytman",
         comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        salary: "$34 /h",
+        whereFrom: "Toshkent Uzbekistan",
+        totalExperience: "8 Years Of Experience",
+        expert: "Expert React Developer",
+        expertSkill: "React",
         image: ASSETS.roytman,
         job: "Fullstack Developer",
-        skillsIcon: PhpIcon,
-        skillsName: "Php",
-        },
-    {
-        id: 2,
-        title: "The best developers only for you",
-        name: "Raphael Roytman",
-        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-        image: ASSETS.roytman,
-        job: "Fullstack Developer",
-        skillsIcon: PhpIcon,
-        skillsName: "Php",
-        },
-    {
-        id: 3,
-        title: "The best developers only for you",
-        name: "Raphael Roytman",
-        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        image: ASSETS.roytman,
-        job: "Fullstack Developer",
-         skillsIcon: PhpIcon,
-        skillsName: "Php",
-        },
-    {
-        id: 4,
-        title: "The best developers only for you",
-        name: "Raphael Roytman",
-        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        image: ASSETS.roytman,
-        job: "Fullstack Developer",
-         skillsIcon: PhpIcon,
-        skillsName: "Php",
-        },
-    {
-        id: 5,
-        title: "The best developers only for you",
-        name: "Raphael Roytman",
-        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-        image: ASSETS.roytman,
-        job: "Fullstack Developer",
-         skillsIcon: PhpIcon,
-        skillsName: "Php",
-        },
-    {
-        id: 6,
-        title: "The best developers only for you",
-        name: "Raphael Roytman",
-        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        image: ASSETS.roytman,
-        job: "Fullstack Developer",
-         skillsIcon: PhpIcon,
-        skillsName: "Php",
+        education: "Kyiv Polytechnic Institute",
+        eduBranch: "Studies my masters in computer science with a focus on human computer interaction.",
+        result: "9/10",
+        strengths:[
+            {
+                item: "Excellent in frontend React apps"
+            },
+            {
+                item: "Great communicator"
+            },
+            {
+                item: "Good experience with new libraries like Next.js & Nuxt.js"
+            }
+        ],
+        skills: [
+            {
+                id: 1,
+                skillsIcon: "./icons/react.svg",
+                skillsName: "React ",
+                experience: "8 years",
+                expertise: true,
+            },
+            {
+                id: 2,
+                skillsIcon: "./icons/android.svg",
+                skillsName: "Android ",
+                experience: "8 years",
+                expertise: false,
+            },
+            {
+                id: 3,
+                skillsIcon: "./icons/js.svg",
+                skillsName: "Js ",
+                experience: "8 years",
+                expertise: false,
+            },
+            {
+                id: 4,
+                skillsIcon: "./icons/flutter.svg",
+                skillsName: "Flutter ",
+                experience: "5 years",
+                expertise: true,
+            },
+            {
+                id: 5,
+                skillsIcon: "./icons/css.svg",
+                skillsName: "Css ",
+                experience: "4 years",
+                expertise: true,
+            },
+            {
+                id: 6,
+                skillsIcon: "./icons/c++.svg",
+                skillsName: "C++ ",
+                experience: "6 years",
+                expertise: true
+            },
+        ],
+        experience:[
+            {
+                title: "Senior Frontend Developer",
+                type: "Freelance",
+                time: "1 year 11 months",
+                info: [
+                    {
+                        text: "Developed the entire frontend for a new ecommerce store.",
+                    },
+                    {
+                        text: "Built a modern ecommerce store in Next.js a React framework."
+                    }
+                ],
+                skills: [
+                    {
+                        icon: "./icons/android.svg",
+                        name: "Android ",
+                    },
+                    {
+                        icon: "./icons/js.svg",
+                        name: "Js ",
+                    },
+                    {
+                        icon: "./icons/flutter.svg",
+                        name: "Flutter ",
+                    },
+                    {
+                        icon: "./icons/css.svg",
+                        name: "Css ",
+                    },
+                    {
+                        icon: "./icons/c++.svg",
+                        name: "C++ ",
+                    },
+                ]
+            },
+            {
+                title: "Freelance FullStack Developer",
+                type: "Ecommerce",
+                time: "1 year 4 months",
+                info: [
+                    {
+                        text: "I have been a fullstack freelancer for several years and have over 10 projects completed.",
+                    }
+                ],
+                skills: [
+                    {
+                        icon: "./icons/android.svg",
+                        name: "Android ",
+                    },
+                    {
+                        icon: "./icons/js.svg",
+                        name: "Js ",
+                    },
+                    {
+                        icon: "./icons/flutter.svg",
+                        name: "Flutter ",
+                    },
+                ]
+            },
+            {
+                title: "Senior Frontend Developer",
+                type: "Banking",
+                time: "8 months",
+                info: [
+                    {
+                        text: "Lead development of the frontend of a banking application",
+                    }
+                ],
+                skills: [
+                    {
+                        icon: "./icons/react.svg",
+                        name: "React",
+                    },
+                ]
+            },
+            {
+                title: "Fullstack Developer",
+                type: "Bank",
+                time: "2 years 2 months",
+                info: [
+                    {
+                        text: "Worked at a modern bank as a fullstack developer",
+                    },
+                    {
+                        text: "Worked primarily in PHP and React"
+                    }
+                ],
+                skills: [
+                    {
+                        icon: "./icons/php.svg",
+                        name: "Php",
+                    },
+                    {
+                        icon: "./icons/react.svg",
+                        name: "React",
+                    },
+                ]
+            }
+        ]
     },
-    ]
+]
 
-export const ProgrammingLanguages:{
-    id: number,
-    image: string,
-    name: string,
-}[] = [
+export const ProgrammingLanguages: ProgrammingLanguagesType[] = [
     {
         id: 1,
         image: "./icons/react.svg",

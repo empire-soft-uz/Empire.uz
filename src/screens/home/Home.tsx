@@ -11,6 +11,7 @@ import OurServices from '../../components/OurServices/OurServices'
 import Reviews from '../../components/Reviews/Reviews'
 import StartMach from '../../components/StartMach/StartMach'
 import SubmitApp from '../../components/SubmitApp/SubmitApp'
+import ViewProfile from '../../components/ViewProfile/ViewProfile'
 import WeWillContact from '../../components/WeWillContact/WeWillContact'
 import styles from "./home.styles.module.css"
 
@@ -28,6 +29,7 @@ const Home = () => {
             <Calendly />
             <StartMach />
             <WeWillContact />
+            <ViewProfile />
             <Loading />
         </div>
     )

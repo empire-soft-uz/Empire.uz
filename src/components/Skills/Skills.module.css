@@ -1,0 +1,22 @@
+.container{
+    width: 320px;
+    padding: 25px;
+    margin-top: 25px;
+}
+.itemsOne {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0;
+    gap: 10px;
+}
+.itemsTwo {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 5px 0;
+    gap: 10px;
+}
+.allSkills{
+    margin-top: 30px;
+}

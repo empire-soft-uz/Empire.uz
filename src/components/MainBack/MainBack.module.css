@@ -25,8 +25,7 @@
     flex-direction: column;
     height: 100%;
     padding: 220px 25% 0 25%;
-    z-index: 1;
-    padding-top: 220px;
+    z-index: 2;
 }
 
 .DownBox{
@@ -43,13 +42,14 @@
 
 .blur{
     position: absolute;
-    width: 400px;
+    width: 300px;
     height: 300px;
     background: linear-gradient(180deg, #167A60 0%, #29A7C3 100%);
     filter: blur(180px);
+    z-index: 1;
 }
 
-@media (max-width: 576px){
+@media (min-width: 120px){
    .container{
        height: 100%;
    }
@@ -62,7 +62,7 @@
         height: 300px;
     }
     .textBox{
-        padding: 120px 5% 0 5%;
+        padding: 200px 5% 0 5%;
     }
     .blur{
         width: 300px;
@@ -71,4 +71,43 @@
     .DownBox{
         margin-top: 60px;
     }
+}
+@media (min-width: 576px){
+.textBox{
+    padding: 180px 10% 0 10%;
+}
+}
+
+@media (min-width: 992px){
+.container {
+    height: 100vh;
+}
+.backOne{
+    height: 400px;
+    width: 300px;
+}
+.backTwo{
+    height: 400px;
+}
+
+.textBox{
+    padding: 220px 20% 0 20%;
+}
+
+.DownBox{
+    margin-top: 150px;
+}
+
+.blur{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    background: linear-gradient(180deg, #167A60 0%, #29A7C3 100%);
+    filter: blur(180px);
+}    
+}
+@media (min-width:1200px){
+.textBox{
+    padding: 220px 25% 0 25%;
+}
 }

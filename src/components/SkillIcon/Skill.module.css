@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    width: auto;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 3px 10px;
+    gap: 3px;
+    height: 42px;
+    border: 1px solid #2E2E2E;
+    border-radius: 8px;
+}
+
+.logo{
+    width: 30px;
+    height: 20px;
+    object-fit: contain;
+}
+.primary{
+    background-color: #1DAC87;
+}
+.outline{
+    background-color: transparent;
+}

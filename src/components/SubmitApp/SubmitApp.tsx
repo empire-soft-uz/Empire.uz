@@ -46,8 +46,8 @@ const SubmitApp = () => {
                 <div className={styles.leftBox}>
                     <img src={ASSETS.man} />
                     <div className={styles.blur}></div>
+                    <div className={styles.blurPerson}></div>
                 </div>
-                <div className={styles.blurPerson}></div>
                 <div className={styles.rightBox}>
                     <Input
                         onChange={(e) => setForm(e.target.value, "name")}

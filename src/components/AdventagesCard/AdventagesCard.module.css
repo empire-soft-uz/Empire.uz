@@ -3,8 +3,18 @@
     border: 1px solid #2E2E2E;
     padding: 25px  25px 35px 25px;
 }
-@media (max-width: 576px){
+@media (min-width: 120px){
     .container{
         width: 100%;
+    }
+}
+@media (min-width: 576px){
+    .container{
+        width: 48%;
+    }
+}
+@media (min-width: 992px){
+    .container{
+        width: 32%;
     }
 }
