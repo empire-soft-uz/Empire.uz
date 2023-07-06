@@ -13,7 +13,13 @@ import { observer } from 'mobx-react-lite'
 import { toJS } from 'mobx'
 import { ReviewDataType } from '../../types/types'
 
-const FirstCard = () => {
+const FirstCard = observer(() => {
+    const { show } = useRootStore().visibleStore
+    const { setServiceSendMessage } = useRootStore().userStore
+    const OpenForm = (name: string) => {
+        show("writeToDev")
+        setServiceSendMessage(name, "job")
+    }
     return (
         <div className={styles.cardsBox}>
             {ServicesData.map((e, index) => {
@@ -23,18 +29,19 @@ const FirstCard = () => {
                         name={e.name}
                         text={e.text}
                         icon={e.icon}
+                        onPress={() => OpenForm(e.name)}
                     />
                 )
             })}
         </div>
     )
-}
+})
 const SecondCard = observer(() => {
     const { show } = useRootStore().visibleStore
-    const { onViewProfile } = useRootStore().userStore
-    const Click = (item: ReviewDataType) => {
+    const { onViewProfile, getUserData } = useRootStore().userStore
+    const Click = (id: number) => {
         show("viewProfile")
-        onViewProfile(item)
+        getUserData(id)
     }
     return (
         <div className={styles.cardsBox}>
@@ -45,7 +52,7 @@ const SecondCard = observer(() => {
                         name={e.name}
                         data={e.skills}
                         job={e.job}
-                        onPress={() => Click(e)}
+                        onPress={() => Click(e.id)}
                     />
                 )
             })}

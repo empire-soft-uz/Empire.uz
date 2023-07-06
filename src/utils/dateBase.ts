@@ -109,9 +109,7 @@ export const ReviewsData: ReviewDataType[] = [
     image: ASSETS.developer1,
     job: "Fullstack Developer",
     education: "INHA university in Tashkent",
-    eduBranch:
-      "Computer Science and Engineering(CSE)",
-    result: "9/10",
+    eduBranch: "Computer Science and Engineering(CSE)",
     strengths: [
       {
         item: "Excellent in frontend React apps",
@@ -267,6 +265,8 @@ export const ReviewsData: ReviewDataType[] = [
         ],
       },
     ],
+    communication: 9,
+    technicalSkill: 9,
   },
 ];
 

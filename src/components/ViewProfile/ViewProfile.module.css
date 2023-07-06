@@ -8,14 +8,18 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 5;
-    overflow-x: scroll;
+    z-index: 7;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 .closeModal{
     position: absolute;
     right: 30px;
     top: 30px;
     cursor: pointer;
+}
+.rightBox{
+    padding: 20px;
 }
 
 .pagination{
@@ -25,11 +29,138 @@
     gap: 20px;
 }
 .arrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
     color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #04110E;
+    color: #1DAC87;
+    border: none;
+    border: 1px solid #1DAC87;
+    border-radius: 50%;
 }
 .info{
     display: flex;
     gap: 20px;
     padding: 20px 0;
     margin-top: 30px;
+}
+
+@media (min-width: 120px){
+    .container{
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+    .pagination{
+        align-items: center;
+        margin-top: 40px;
+    }
+    .closeModal{
+        right: 10px;
+        top: 10px;
+    }
+    .info{
+        flex-direction: column;
+    }
+    .leftBox{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+@media (min-width: 576px){
+    .container{
+        width: 90%;
+        height: 90%;
+    }
+    .leftBox{
+        flex-direction: row;
+        align-items: start;
+    }
+}
+@media (min-width: 767px){
+    .container{
+        width: 85%;
+        height: 85%;
+    }
+    .leftBox{
+        flex-direction: row;
+        align-items: start;
+    }
+    .closeModal{
+        right: 30px;
+        top: 30px;
+    }
+    
+}
+@media (min-width: 992px){
+.container{
+    width: 90%;
+    height: 90vh;
+    padding: 20px 60px;
+    background: #04110E;
+    border-radius: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 7;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.closeModal{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    cursor: pointer;
+}
+.rightBox{
+    padding: 20px;
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.arrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #04110E;
+    color: #1DAC87;
+    border: none;
+    border: 1px solid #1DAC87;
+    border-radius: 50%;
+}
+.leftBox{
+    flex-direction: column;
+}
+.info{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+    
+}
+@media (min-width: 1200px){
+.container{
+    width: 80%;
+    height: 80vh;
+}
 }
