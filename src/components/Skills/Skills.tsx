@@ -14,7 +14,6 @@ interface Props {
 
 const Skills = () => {
     const { userData } = useRootStore().userStore
-    console.log("userData", toJS(userData));
 
     return (
         <div className={styles.container}>

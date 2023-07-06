@@ -13,6 +13,7 @@ import StartMach from '../../components/StartMach/StartMach'
 import SubmitApp from '../../components/SubmitApp/SubmitApp'
 import ViewProfile from '../../components/ViewProfile/ViewProfile'
 import WeWillContact from '../../components/WeWillContact/WeWillContact'
+import WriteToDeveloper from '../../components/WriteToDeveloper/WriteToDeveloper'
 import styles from "./home.styles.module.css"
 
 const Home = () => {
@@ -30,6 +31,7 @@ const Home = () => {
             <StartMach />
             <WeWillContact />
             <ViewProfile />
+            <WriteToDeveloper />
             <Loading />
         </div>
     )

@@ -26,3 +26,26 @@
 .btnBox{
     margin-top: 20px;
 }
+.technicalBox{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+}
+.dotsBox{
+    display: flex;
+    gap: 3px;
+}
+.dots{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #1DAC87;
+}
+
+@media(max-width: 576px){
+    .container{
+        width: 300px;
+    }
+
+}

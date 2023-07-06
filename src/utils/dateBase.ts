@@ -93,8 +93,180 @@ export const ReviewsData :ReviewDataType[] = [
     {
         id: 1,
         title: "The best developers only for you",
+        name: "Jone Jones",
+        comment: "Hey, my name is Sergey. I am from Kyiv and have been working with computers my whole life. Recently, I have been very interested in Go programming. In my free time I like to hangout with my family and take my dog on walks.",
+        salary: "$38 /h",
+        whereFrom: "Toshkent Uzbekistan",
+        totalExperience: "8 Years Of Experience",
+        expert: "Expert React Developer",
+        expertSkill: "React",
+        image: ASSETS.roytman,
+        job: "Fullstack Developer",
+        education: "Kyiv Polytechnic Institute",
+        eduBranch: "Studies my masters in computer science with a focus on human computer interaction.",
+        communication: 7,
+        technicalSkill: 9,
+        strengths:[
+            {
+                item: "Excellent in frontend React apps"
+            },
+            {
+                item: "Great communicator"
+            },
+            {
+                item: "Good experience with new libraries like Next.js & Nuxt.js"
+            }
+        ],
+        skills: [
+            {
+                id: 1,
+                skillsIcon: "./icons/react.svg",
+                skillsName: "React ",
+                experience: "8 years",
+                expertise: true,
+            },
+            {
+                id: 2,
+                skillsIcon: "./icons/android.svg",
+                skillsName: "Android ",
+                experience: "8 years",
+                expertise: false,
+            },
+            {
+                id: 3,
+                skillsIcon: "./icons/js.svg",
+                skillsName: "Js ",
+                experience: "8 years",
+                expertise: false,
+            },
+            {
+                id: 4,
+                skillsIcon: "./icons/flutter.svg",
+                skillsName: "Flutter ",
+                experience: "5 years",
+                expertise: true,
+            },
+            {
+                id: 5,
+                skillsIcon: "./icons/css.svg",
+                skillsName: "Css ",
+                experience: "4 years",
+                expertise: true,
+            },
+            {
+                id: 6,
+                skillsIcon: "./icons/c++.svg",
+                skillsName: "C++ ",
+                experience: "6 years",
+                expertise: true
+            },
+        ],
+        experience:[
+            {
+                title: "Senior Frontend Developer",
+                type: "Freelance",
+                time: "1 year 11 months",
+                info: [
+                    {
+                        text: "Developed the entire frontend for a new ecommerce store.",
+                    },
+                    {
+                        text: "Built a modern ecommerce store in Next.js a React framework."
+                    }
+                ],
+                skills: [
+                    {
+                        icon: "./icons/android.svg",
+                        name: "Android ",
+                    },
+                    {
+                        icon: "./icons/js.svg",
+                        name: "Js ",
+                    },
+                    {
+                        icon: "./icons/flutter.svg",
+                        name: "Flutter ",
+                    },
+                    {
+                        icon: "./icons/css.svg",
+                        name: "Css ",
+                    },
+                    {
+                        icon: "./icons/c++.svg",
+                        name: "C++ ",
+                    },
+                ]
+            },
+            {
+                title: "Freelance FullStack Developer",
+                type: "Ecommerce",
+                time: "1 year 4 months",
+                info: [
+                    {
+                        text: "I have been a fullstack freelancer for several years and have over 10 projects completed.",
+                    }
+                ],
+                skills: [
+                    {
+                        icon: "./icons/android.svg",
+                        name: "Android ",
+                    },
+                    {
+                        icon: "./icons/js.svg",
+                        name: "Js ",
+                    },
+                    {
+                        icon: "./icons/flutter.svg",
+                        name: "Flutter ",
+                    },
+                ]
+            },
+            {
+                title: "Senior Frontend Developer",
+                type: "Banking",
+                time: "8 months",
+                info: [
+                    {
+                        text: "Lead development of the frontend of a banking application",
+                    }
+                ],
+                skills: [
+                    {
+                        icon: "./icons/react.svg",
+                        name: "React",
+                    },
+                ]
+            },
+            {
+                title: "Fullstack Developer",
+                type: "Bank",
+                time: "2 years 2 months",
+                info: [
+                    {
+                        text: "Worked at a modern bank as a fullstack developer",
+                    },
+                    {
+                        text: "Worked primarily in PHP and React"
+                    }
+                ],
+                skills: [
+                    {
+                        icon: "./icons/php.svg",
+                        name: "Php",
+                    },
+                    {
+                        icon: "./icons/react.svg",
+                        name: "React",
+                    },
+                ]
+            }
+        ]
+    },
+    {
+        id: 2,
+        title: "The best developers only for you",
         name: "Raphael Roytman",
-        comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        comment: "Hey, my name is Sergey. I am from Kyiv and have been working with computers my whole life. Recently, I have been very interested in Go programming. In my free time I like to hangout with my family and take my dog on walks.",
         salary: "$34 /h",
         whereFrom: "Toshkent Uzbekistan",
         totalExperience: "8 Years Of Experience",
@@ -104,7 +276,180 @@ export const ReviewsData :ReviewDataType[] = [
         job: "Fullstack Developer",
         education: "Kyiv Polytechnic Institute",
         eduBranch: "Studies my masters in computer science with a focus on human computer interaction.",
-        result: "9/10",
+        communication: 10,
+        technicalSkill: 8,
+        strengths:[
+            {
+                item: "Excellent in frontend React apps"
+            },
+            {
+                item: "Great communicator"
+            },
+            {
+                item: "Good experience with new libraries like Next.js & Nuxt.js"
+            }
+        ],
+        skills: [
+            {
+                id: 1,
+                skillsIcon: "./icons/react.svg",
+                skillsName: "React ",
+                experience: "8 years",
+                expertise: true,
+            },
+            {
+                id: 2,
+                skillsIcon: "./icons/android.svg",
+                skillsName: "Android ",
+                experience: "8 years",
+                expertise: false,
+            },
+            {
+                id: 3,
+                skillsIcon: "./icons/js.svg",
+                skillsName: "Js ",
+                experience: "8 years",
+                expertise: false,
+            },
+            {
+                id: 4,
+                skillsIcon: "./icons/flutter.svg",
+                skillsName: "Flutter ",
+                experience: "5 years",
+                expertise: true,
+            },
+            {
+                id: 5,
+                skillsIcon: "./icons/css.svg",
+                skillsName: "Css ",
+                experience: "4 years",
+                expertise: true,
+            },
+            {
+                id: 6,
+                skillsIcon: "./icons/c++.svg",
+                skillsName: "C++ ",
+                experience: "6 years",
+                expertise: true
+            },
+        ],
+        experience:[
+            {
+                title: "Senior Frontend Developer",
+                type: "Freelance",
+                time: "1 year 11 months",
+                info: [
+                    {
+                        text: "Developed the entire frontend for a new ecommerce store.",
+                    },
+                    {
+                        text: "Built a modern ecommerce store in Next.js a React framework."
+                    }
+                ],
+                skills: [
+                    {
+                        icon: "./icons/android.svg",
+                        name: "Android ",
+                    },
+                    {
+                        icon: "./icons/js.svg",
+                        name: "Js ",
+                    },
+                    {
+                        icon: "./icons/flutter.svg",
+                        name: "Flutter ",
+                    },
+                    {
+                        icon: "./icons/css.svg",
+                        name: "Css ",
+                    },
+                    {
+                        icon: "./icons/c++.svg",
+                        name: "C++ ",
+                    },
+                ]
+            },
+            {
+                title: "Freelance FullStack Developer",
+                type: "Ecommerce",
+                time: "1 year 4 months",
+                info: [
+                    {
+                        text: "I have been a fullstack freelancer for several years and have over 10 projects completed.",
+                    }
+                ],
+                skills: [
+                    {
+                        icon: "./icons/android.svg",
+                        name: "Android ",
+                    },
+                    {
+                        icon: "./icons/js.svg",
+                        name: "Js ",
+                    },
+                    {
+                        icon: "./icons/flutter.svg",
+                        name: "Flutter ",
+                    },
+                ]
+            },
+            {
+                title: "Senior Frontend Developer",
+                type: "Banking",
+                time: "8 months",
+                info: [
+                    {
+                        text: "Lead development of the frontend of a banking application",
+                    }
+                ],
+                skills: [
+                    {
+                        icon: "./icons/react.svg",
+                        name: "React",
+                    },
+                ]
+            },
+            {
+                title: "Fullstack Developer",
+                type: "Bank",
+                time: "2 years 2 months",
+                info: [
+                    {
+                        text: "Worked at a modern bank as a fullstack developer",
+                    },
+                    {
+                        text: "Worked primarily in PHP and React"
+                    }
+                ],
+                skills: [
+                    {
+                        icon: "./icons/php.svg",
+                        name: "Php",
+                    },
+                    {
+                        icon: "./icons/react.svg",
+                        name: "React",
+                    },
+                ]
+            }
+        ]
+    },
+    {
+        id: 3,
+        title: "The best developers only for you",
+        name: "Harry Poter",
+        comment: "Hey, my name is Sergey. I am from Kyiv and have been working with computers my whole life. Recently, I have been very interested in Go programming. In my free time I like to hangout with my family and take my dog on walks.",
+        salary: "$34 /h",
+        whereFrom: "Toshkent Uzbekistan",
+        totalExperience: "8 Years Of Experience",
+        expert: "Expert React Developer",
+        expertSkill: "React",
+        image: ASSETS.roytman,
+        job: "Fullstack Developer",
+        education: "Kyiv Polytechnic Institute",
+        eduBranch: "Studies my masters in computer science with a focus on human computer interaction.",
+        communication: 10,
+        technicalSkill: 9,
         strengths:[
             {
                 item: "Excellent in frontend React apps"

@@ -9,7 +9,7 @@ const Footer = () => {
     return (
         <div className={styles.container}>
             <a href="/" className='href'>
-                <Text text='Logo' cursor='pointer' family='FuturaBold' color={COLORS.white} textSize='thirtySix' />
+                <img className={styles.logo} src="./icons/logo.svg" alt="Empire-soft" />
             </a>
             <div className={styles.rightBox}>
                 <a href="#services" className='href'>

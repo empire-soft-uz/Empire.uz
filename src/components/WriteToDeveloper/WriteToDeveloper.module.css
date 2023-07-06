@@ -1,0 +1,41 @@
+.container{
+    width: 500px;
+    height: 350px;
+    padding:30px;
+    background: #04110E;
+    border-radius: 20px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 8;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.closeModal{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    cursor: pointer;
+    z-index: 4;
+}
+
+@media (max-width: 576px){
+    .container{
+        width: 100vw;
+        height: 100vh;
+        padding: 20px 5%;
+        border-radius: 0;
+        overflow-x: auto;
+    }
+}
