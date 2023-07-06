@@ -2,12 +2,21 @@ import React from 'react'
 import useRootStore from '../../Hooks/useRootStore'
 import { ASSETS } from '../../utils/assetsRequires'
 import { COLORS } from '../../utils/color'
+import { ReviewsData } from '../../utils/dateBase'
 import Button from '../Button/Button'
 import Text from '../Text/Text'
 import styles from "./ViewContent.module.css"
 
 const ViewContent = () => {
-    const { userData } = useRootStore().userStore
+    const { userData, setServiceSendMessage } = useRootStore().userStore
+    const { show } = useRootStore().visibleStore
+    const OpenForm = (name: string) => {
+        show("writeToDev")
+        setServiceSendMessage(name, "job")
+    }
+    const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+
     return (
         <div className={styles.container}>
             <div className={styles.user}>
@@ -26,13 +35,31 @@ const ViewContent = () => {
                 <Text text={userData.salary} textSize={'twentyTwo'} />
             </div>
             <div className={styles.technical}>
-                <Text text={'Communication'} textSize={'eighteen'} />
-                <Text text={'Technical Skill'} textSize={'eighteen'} />
+                <div className={styles.technicalBox}>
+                    <Text text={'Communication'} textSize={'eighteen'} />
+                    <div className={styles.dotsBox}>
+                        {arr.map((e, index) => {
+                            return (
+                                <div style={{ backgroundColor: index < userData.communication ? "#1cd5a4" : "#124f3f" }} key={index} className={styles.dots} />
+                            )
+                        })}
+                    </div>
+                </div>
+                <div className={styles.technicalBox}>
+                    <Text text={'Technical Skill'} textSize={'eighteen'} />
+                    <div className={styles.dotsBox}>
+                        {arr.map((e, index) => {
+                            return (
+                                <div style={{ backgroundColor: index < userData.technicalSkill ? "#1cd5a4" : "#124f3f" }} key={index} className={styles.dots} />
+                            )
+                        })}
+                    </div>
+                </div>
             </div>
             <div className={styles.btnBox}>
-                <Button width='100%' title={'Message me'} btnType={'primary'} />
+                <Button onPress={() => OpenForm(userData.name)} width='100%' title={'Message me'} btnType={'primary'} />
             </div>
-        </div>
+        </div >
     )
 }
 

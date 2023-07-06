@@ -12,7 +12,8 @@ export type ReviewDataType = {
     job: string,
     education: string,
     eduBranch: string,
-    result: string,
+    communication: number,
+    technicalSkill: number,
     strengths: {
         item: string,
     }[],
@@ -50,7 +51,8 @@ export const ReviewDataInitial = {
     job: "",
     education: "",
     eduBranch: "",
-    result: "",
+    communication: 0,
+    technicalSkill: 0,
     strengths: [{
         item: "",
     }],
@@ -92,4 +94,16 @@ export type ServicesDataType = {
     name: string,
     text: string,
     icon: React.FC
+}
+export type ServiceSendDataType = {
+    id: number,
+    job: string,
+    name: string,
+    email: string,
+}
+export const ServiceSendDataInitial = {
+    id: 0,
+    job: '',
+    name: '',
+    email: '',
 }

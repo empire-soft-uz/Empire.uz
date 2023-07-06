@@ -12,6 +12,13 @@
 .changeOn{
     background-color: #000;
 }
+.logo{
+    width: 120px;
+    height: 55px;
+    object-fit: cover;
+    padding: 2px;
+    cursor: pointer;
+}
 .changeOff{
     background-color: transparent;
 }

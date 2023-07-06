@@ -26,6 +26,18 @@
     width: 100vh;
 }
 
+::-webkit-scrollbar {
+  width: 4px;
+  background-color: #000;
+  height: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1DAC87;
+  border-radius: 20px;
+}
+
+
 @font-face {
   font-family: "FuturaBold";
   src: url("./assets/fonts/FuturaPTBold.otf") format("truetype");

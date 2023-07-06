@@ -35,7 +35,7 @@ const Header = () => {
     return (
         <div className={`${styles.container} ${small ? styles.changeOn : styles.changeOff}`}>
             <a href="/" className='href'>
-                <Text cursor='pointer' text='Logo' family='FuturaBold' color={COLORS.white} textSize="thirtySix" />
+                <img className={styles.logo} src="./icons/logo.svg" alt="Empire-soft" />
             </a>
             <div className={styles.rightBox}>
                 <a href="/#services" className="href">

@@ -12,12 +12,12 @@ const ProfessionalExperience = () => {
             <Text text='Professional Experience' textSize='twenty' />
             {userData.experience.map((item, index) => {
                 return (
-                    <div className={styles.content}>
+                    <div className={styles.content} key={index}>
                         <div className={styles.title}>
                             <>
                                 <div className={styles.name}>
                                     <Text text={item.title} textSize='eighteen' />
-                                    <Text key={index} text={item.time} textSize='sixteen' color={COLORS.grey} />
+                                    <Text text={item.time} textSize='sixteen' color={COLORS.grey} />
                                 </div>
                                 <SkillIcon name={item.type} type={'outline'} />
                             </>
