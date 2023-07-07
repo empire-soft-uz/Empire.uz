@@ -13,4 +13,6 @@ export const ASSETS = {
     blog2: require("../assets/images/blog2.png"),
     bloginfo: require("../assets/images/bloginfo.png"),
     developer1: require("../assets/images/developer1.png"),
+    developer2: require("../assets/images/developer2.JPG"),
+
 }
