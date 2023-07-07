@@ -30,6 +30,10 @@
 .drawer{
     display: none;
 }
+.drawerLogo{
+    display: flex;
+    align-items: center; 
+}
 @media (min-width: 120px){
     .container{
         padding: 0 5%;

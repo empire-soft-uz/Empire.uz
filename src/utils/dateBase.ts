@@ -132,35 +132,35 @@ export const ReviewsData: ReviewDataType[] = [
       {
         id: 2,
         skillsIcon: "./icons/react.svg",
-        skillsName: "React ",
+        skillsName: "React",
         experience: "6+ years",
         expertise: true,
       },
       {
         id: 3,
         skillsIcon: "./icons/js.svg",
-        skillsName: "JS/TS",
+        skillsName: "Js/Ts",
         experience: "6+ years",
         expertise: true,
       },
       {
         id: 5,
         skillsIcon: "./icons/css.svg",
-        skillsName: "HTML/CSS ",
+        skillsName: "Html/Css",
         experience: "4 years",
         expertise: false,
       },
       {
         id: 6,
         skillsIcon: "./icons/firebase.svg",
-        skillsName: "Firebase ",
+        skillsName: "Firebase",
         experience: "4 years",
         expertise: false,
       },
       {
         id: 6,
         skillsIcon: "./icons/node.svg",
-        skillsName: "NodeJS ",
+        skillsName: "NodeJs",
         experience: "4 years",
         expertise: false,
       },
@@ -181,23 +181,23 @@ export const ReviewsData: ReviewDataType[] = [
         skills: [
           {
             icon: "./icons/android.svg",
-            name: "Android ",
+            name: "Android",
           },
           {
             icon: "./icons/js.svg",
-            name: "Js ",
+            name: "Js",
           },
           {
             icon: "./icons/flutter.svg",
-            name: "Flutter ",
+            name: "Flutter",
           },
           {
             icon: "./icons/css.svg",
-            name: "Css ",
+            name: "Css",
           },
           {
             icon: "./icons/c++.svg",
-            name: "C++ ",
+            name: "C++",
           },
         ],
       },
@@ -213,15 +213,15 @@ export const ReviewsData: ReviewDataType[] = [
         skills: [
           {
             icon: "./icons/android.svg",
-            name: "Android ",
+            name: "Android",
           },
           {
             icon: "./icons/js.svg",
-            name: "Js ",
+            name: "Js",
           },
           {
             icon: "./icons/flutter.svg",
-            name: "Flutter ",
+            name: "Flutter",
           },
         ],
       },
@@ -289,62 +289,62 @@ export const ProgrammingLanguages: ProgrammingLanguagesType[] = [
   {
     id: 4,
     image: "./icons/flutter.svg",
-    name: "Flutter ",
+    name: "Flutter",
   },
   {
     id: 5,
     image: "./icons/css.svg",
-    name: "Css ",
+    name: "Css",
   },
   {
     id: 6,
     image: "./icons/c++.svg",
-    name: "C++ ",
+    name: "C++",
   },
   {
     id: 7,
     image: "./icons/firebase.svg",
-    name: "Firebase ",
+    name: "Firebase",
   },
   {
     id: 8,
     image: "./icons/nexticon.svg",
-    name: "Next ",
+    name: "Next",
   },
   {
     id: 9,
     image: "./icons/ts.svg",
-    name: "Ts ",
+    name: "Ts",
   },
   {
     id: 10,
     image: "./icons/java.svg",
-    name: "Java ",
+    name: "Java",
   },
   {
     id: 10,
     image: "./icons/node.svg",
-    name: "Node Js ",
+    name: "Node Js",
   },
   {
     id: 11,
     image: "./icons/html.svg",
-    name: "Html ",
+    name: "Html",
   },
   {
     id: 12,
     image: "./icons/mongo.svg",
-    name: "Mongo ",
+    name: "Mongo",
   },
   {
     id: 13,
     image: "./icons/ruby.svg",
-    name: "Ruby ",
+    name: "Ruby",
   },
   {
     id: 13,
     image: "./icons/angular.svg",
-    name: "Angular ",
+    name: "Angular",
   },
 ];
 

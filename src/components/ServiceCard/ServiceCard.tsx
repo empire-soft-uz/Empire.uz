@@ -23,7 +23,7 @@ const ServiceCard: React.FC<Props> = ({
             <RowItem text={name} icon={icon} />
             <Text
                 textSize='sixteen'
-                margin='0 0 0 60px'
+                margin='5px 0 0 0'
                 color={COLORS.grey}
                 text={text}
                 family="FuturaBook"

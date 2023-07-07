@@ -5,6 +5,7 @@ import { ASSETS } from '../../utils/assetsRequires'
 import { COLORS } from '../../utils/color'
 import Button from '../Button/Button'
 import IconComp from '../IconComp/IconComp'
+import SkillIcon from '../SkillIcon/SkillIcon'
 import Text from '../Text/Text'
 import styles from "./DevelopersCard.module.css"
 
@@ -38,7 +39,7 @@ const DevelopersCard: React.FC<Props> = ({
             <div className={styles.skillsBox}>
                 {data.slice(0, 4).map((i: any, index: any) => {
                     return (
-                        <IconComp key={index} icon={i.skillsIcon} name={i.skillsName} />
+                        <SkillIcon key={index} logo={i.skillsIcon} name={i.skillsName} type={'outline'} />
                     )
                 })
                 }
