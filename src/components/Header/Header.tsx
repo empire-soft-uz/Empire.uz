@@ -66,13 +66,14 @@ const Header = () => {
                 headerStyle={{
                     justifyContent: "flex-start",
                     height: "8vh",
+                    marginTop: "20px"
                     // backgroundColor: "red"
                 }}
                 bodyStyle={{ padding: "0 0 0 50px" }}
                 onClose={() => hide("drawer")}
                 title={
-                    <a href="/" className='href' onClick={closeDrawer}>
-                        <Text cursor='pointer' text='Logo' family='FuturaBold' color={COLORS.white} textSize='fifty' />
+                    <a href="/" className={`href ${styles.drawerLogo}`} onClick={closeDrawer}>
+                        <img className={styles.logo} src="./icons/logo.svg" alt="Empire-soft" />
                     </a>
                 }
                 open={visiable.drawer}
