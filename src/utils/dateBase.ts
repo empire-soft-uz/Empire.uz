@@ -167,7 +167,7 @@ export const ReviewsData: ReviewDataType[] = [
     ],
     experience: [
       {
-        title: "Senior Frontend Developer",
+        title: " React Native/React developer",
         type: "Freelance",
         time: "1 year 11 months",
         info: [
@@ -242,15 +242,21 @@ export const ReviewsData: ReviewDataType[] = [
         ],
       },
       {
-        title: "Fullstack Developer",
-        type: "Bank",
+        title: "Frontend & Mobile developer",
+        type: "Fintech",
         time: "2 years 2 months",
         info: [
           {
-            text: "Worked at a modern bank as a fullstack developer",
+            text: `Developing and maintaining the app's codebase using appropriate
+programming languages, frameworks, and technologies`,
           },
           {
-            text: "Worked primarily in PHP and React",
+            text: `Collaborating with other developers, designers, and product owners to
+ensure a seamless integration of the app's front-end and back-end
+components`,
+          },
+          {
+            text: `Conducting regular code reviews to ensure high-quality, maintainable code`,
           },
         ],
         skills: [
