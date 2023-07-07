@@ -274,6 +274,191 @@ components`,
     communication: 9,
     technicalSkill: 9,
   },
+  {
+    id: 2,
+    title: "The best developers only for you",
+    name: "Sarvar Abdurakhimov ",
+    comment:
+      "Great experience with React Native and its ecosystem for over 4 years Hands-on knowledge of UX/UI concepts and practical experience in implementing design principles and rules in the web and mobile application development process  Hard working, responsible, punctual, and result-oriented  Able to perform multiple tasks, set priorities, and meet deadlines Strong debugging, analytical, and problem-solving abilities Ability to participate in individual or team software development process",
+    salary: "$28 /h",
+    whereFrom: "Toshkent Uzbekistan",
+    totalExperience: "4+ Years Of Experience",
+    expert: "Expert React-Native Developer",
+    expertSkill: "React-Native",
+    image: ASSETS.developer2,
+    job: "Senior React-Native Developer",
+    education: "Tashkent university of information technologies",
+    eduBranch: "Computer Science and Engineering(CSE)",
+    strengths: [
+      {
+        item: "Excellent in frontend React apps",
+      },
+      {
+        item: "Great communicator",
+      },
+      {
+        item: "Good experience with new libraries like Next.js & Nuxt.js",
+      },
+    ],
+    skills: [
+      {
+        id: 1,
+        skillsIcon: "./icons/Flutter.svg",
+        skillsName: "Flutter",
+        experience: "3+ years",
+        expertise: true,
+      },
+      {
+        id: 2,
+        skillsIcon: "./icons/react.svg",
+        skillsName: "React-Native",
+        experience: "4+ years",
+        expertise: true,
+      },
+      {
+        id: 3,
+        skillsIcon: "./icons/react.svg",
+        skillsName: "React",
+        experience: "4+ years",
+        expertise: true,
+      },
+      {
+        id: 4,
+        skillsIcon: "./icons/js.svg",
+        skillsName: "JS/TS",
+        experience: "4+ years",
+        expertise: true,
+      },
+      {
+        id: 5,
+        skillsIcon: "./icons/css.svg",
+        skillsName: "HTML/CSS",
+        experience: "4 years",
+        expertise: false,
+      },
+      {
+        id: 6,
+        skillsIcon: "./icons/firebase.svg",
+        skillsName: "Firebase",
+        experience: "4 years",
+        expertise: false,
+      },
+      {
+        id: 6,
+        skillsIcon: "./icons/node.svg",
+        skillsName: "NodeJs",
+        experience: "1 years",
+        expertise: false,
+      },
+    ],
+    experience: [
+      {
+        title: "Senior Software Engineer",
+        type: "Agency",
+        time: "1 year 3 months",
+        info: [
+          {
+            text: "Responsible for full app life-cycle: design, build, test, deploy, release to the app store and play market.",
+          },
+          {
+            text: " Collaborating with the product management, marketing, designers, and technology and architecture teams.",
+          },
+          {
+            text: " Using external data sources and APIs.",
+          },
+        ],
+        skills: [
+          {
+            icon: "./icons/js.svg",
+            name: "JS",
+          },
+          {
+            icon: "./icons/React.svg",
+            name: "React-Native",
+          },
+          {
+            icon: "./icons/firebase.svg",
+            name: "Firebase",
+          },
+        ],
+      },
+      {
+        title: "React Native Developer",
+        type: "Fintech",
+        time: "1 year 4 months",
+        info: [
+          {
+            text: "Built reusable components for the future use",
+          },
+          {
+            text: "Developed a well-structured, maintainable, and easy-to-understand applications while adhering to the defined coding standards",
+          },
+          {
+            text: "Collaborate with the design team, providing creative input and technical feasibility",
+          },
+          {
+            text: "Working with outside data sources and APIs",
+          },
+          {
+            text: "Working on creation of e-commerce, mobile applications that provide a superior online shopping experience for the customers, where the users can browse through the products, search for products and make a purchase easily using credit card payments using this app",
+          },
+        ],
+        skills: [
+          {
+            icon: "./icons/js.svg",
+            name: "JS",
+          },
+          {
+            icon: "./icons/React.svg",
+            name: "React-Native",
+          },
+          {
+            icon: "./icons/firebase.svg",
+            name: "Firebase",
+          },
+        ],
+      },
+      {
+        title: "Software Engineer and Team Lead",
+        type: "Agency",
+        time: "9 months",
+        info: [
+          {
+            text: "Managing several projects while working in a fast-paced atmosphere.",
+          },
+          {
+            text: "Created mobile applications for mobile devices and TV",
+          },
+          {
+            text: "Training, mentoring and collaborating with Junior Engineers while developing applications.",
+          },
+          {
+            text: "Third party integration with Saga, Crashlytics, Google Maps, Sentry, and CodePush.",
+          },
+        ],
+        skills: [
+          {
+            icon: "./icons/react.svg",
+            name: "React-Native",
+          },
+          {
+            icon: "./icons/js.svg",
+            name: "JS/TS",
+          },
+          {
+            icon: "./icons/css.svg",
+            name: "HTML/CSS",
+          },
+          {
+            icon: "./icons/firebase.svg",
+            name: "Firebase",
+          },
+        ],
+      },
+    ],
+    communication: 9,
+    technicalSkill: 9,
+  },
 ];
 
 export const ProgrammingLanguages: ProgrammingLanguagesType[] = [
