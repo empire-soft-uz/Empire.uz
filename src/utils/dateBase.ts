@@ -166,78 +166,192 @@ export const ReviewsData: ReviewDataType[] = [
       },
     ],
     experience: [
+        {
+            title: "React Native/React developer",
+            type: "Freelance",
+            time: "1 year 11 months",
+            info: [
+              {
+                text: `Designed and developed the user interface of a ProjectNexus app using
+React Native.`,
+              },
+              {
+                text: `Integrated the Blockchain into the app, working with smart contracts,
+creating wallets, and integrating with various Blockchain protocols.`,
+              },
+              {
+                text: `Implemented security measures to protect user data and transactions`,
+              },
+              {
+                text: `Collaborated with other members of the development team, including
+designers, back-end developers, and project managers, to ensure that the
+project is on track and meets the requirements`,
+              },
+              {
+                text: `Stayed up-to-date with the latest developments and best practices in
+React Native development to ensure that the app is using the most current
+and efficient technologies`,
+              },
+            ],
+            skills: [
+              {
+                icon: "./icons/react.svg",
+                name: "React-native",
+              },
+              {
+                icon:'./icons/svelte.svg',
+                name:"Svelte"
+              },
+              {
+                icon: "./icons/react.svg",
+                name: "React",
+              },
+              {
+                icon: "./icons/js.svg",
+                name: "JavaScript",
+              },
+              {
+                icon: "./icons/ts.svg",
+                name: "TypeScript",
+              },
+            ],
+          },    
       {
-        title: " React Native/React developer",
+        title: "React Native/React developer",
         type: "Freelance",
-        time: "1 year 11 months",
+        time: "2 years 4 months",
         info: [
           {
-            text: "Developed the entire frontend for a new ecommerce store.",
+            text: `Developed and maintained cross-platform mobile applications using
+React Native, Redux, and other modern technologies for iOS and Android`,
           },
           {
-            text: "Built a modern ecommerce store in Next.js a React framework.",
-          },
-        ],
-        skills: [
-          {
-            icon: "./icons/android.svg",
-            name: "Android",
+            text: `Implemented complex UI components, animations, and user interactions
+following design guidelines and best practices`,
           },
           {
-            icon: "./icons/js.svg",
-            name: "Js",
+            text: `Collaborated with backend developers to integrate RESTful APIs and
+enhance app functionality`,
           },
           {
-            icon: "./icons/flutter.svg",
-            name: "Flutter",
+            text: `Wrote and maintained unit tests using Jest and Enzyme to ensure code
+            stability and quality`,
           },
           {
-            icon: "./icons/css.svg",
-            name: "Css",
-          },
-          {
-            icon: "./icons/c++.svg",
-            name: "C++",
-          },
-        ],
-      },
-      {
-        title: "Freelance FullStack Developer",
-        type: "Ecommerce",
-        time: "1 year 4 months",
-        info: [
-          {
-            text: "I have been a fullstack freelancer for several years and have over 10 projects completed.",
-          },
-        ],
-        skills: [
-          {
-            icon: "./icons/android.svg",
-            name: "Android",
-          },
-          {
-            icon: "./icons/js.svg",
-            name: "Js",
-          },
-          {
-            icon: "./icons/flutter.svg",
-            name: "Flutter",
-          },
-        ],
-      },
-      {
-        title: "Senior Frontend Developer",
-        type: "Banking",
-        time: "8 months",
-        info: [
-          {
-            text: "Lead development of the frontend of a banking application",
+            text: `Participated in code reviews, providing and receiving constructive
+            feedback to improve overall code quality`,
           },
         ],
         skills: [
           {
             icon: "./icons/react.svg",
+            name: "React-native",
+          },
+          {
+            icon:'./icons/graph.svg',
+            name:"GraphQL"
+          },
+          {
+            icon:'./icons/firebase.svg',
+            name:"Firebase"
+          },
+          {
+            icon: "./icons/react.svg",
             name: "React",
+          },
+          {
+            icon: "./icons/js.svg",
+            name: "JavaScript",
+          },
+          {
+            icon: "./icons/ts.svg",
+            name: "TypeScript",
+          },
+        ],
+      },
+      {
+        title: "Software Developer",
+        type: "Agency",
+        time: "10 months",
+        info: [
+          {
+            text: `Active mobile app development and maintaining`,
+          },
+          {
+            text: `Implementing app's features such as:
+    static and animated UIs elements
+    REST API back-end interaction
+    web-socket based features`,
+          },
+          {
+            text: `Code reviews`,
+          },
+          {
+            text: `New team's member on-boarding and knowledge transfer`,
+          },
+          {
+            text: `Close communication with Back-end, QA and BA teams to achieve a more
+    preferable results`,
+          },
+        ],
+        skills: [
+          {
+            icon: "./icons/react.svg",
+            name: "React-native",
+          },
+          {
+            icon: "./icons/react.svg",
+            name: "React",
+          },
+          {
+            icon: "./icons/js.svg",
+            name: "JavaScript",
+          },
+          {
+            icon: "./icons/ts.svg",
+            name: "TypeScript",
+          },
+        ],
+      },
+      {
+        title: "Mobile developer",
+        type: "Banking",
+        time: "7 months",
+        info: [
+          {
+            text: `Develop and maintain the mobile application using React Native
+framework`,
+          },
+          {
+            text: `Collaborate with team members to ensure seamless integration and user
+experience`,
+          },
+          {
+            text: `Implement and maintain security features and optimize app performance`,
+          },
+          {
+            text: `Troubleshoot issues and provide technical support to team members`,
+          },
+          {
+            text: `Stay up-to-date with new mobile development technologies`,
+          },
+        ],
+        skills: [
+          {
+            icon: "./icons/react.svg",
+            name: "React-native",
+          },
+          {
+            icon: "./icons/react.svg",
+            name: "React",
+          },
+          {
+            icon: "./icons/js.svg",
+            name: "JavaScript",
+          },
+          {
+            icon: "./icons/ts.svg",
+            name: "TypeScript",
           },
         ],
       },
@@ -261,12 +375,20 @@ components`,
         ],
         skills: [
           {
-            icon: "./icons/php.svg",
-            name: "Php",
+            icon: "./icons/react.svg",
+            name: "React-native",
           },
           {
             icon: "./icons/react.svg",
             name: "React",
+          },
+          {
+            icon: "./icons/js.svg",
+            name: "JavaScript",
+          },
+          {
+            icon: "./icons/html.svg",
+            name: "HTML/CSS",
           },
         ],
       },
