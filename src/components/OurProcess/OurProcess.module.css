@@ -10,6 +10,8 @@
     align-items: center;
     justify-content: center;
     height: 15vh;
+    position: relative;
+    z-index: 4;
 }
 .content{
     width: 100%;

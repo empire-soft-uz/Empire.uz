@@ -11,6 +11,7 @@ interface Props {
     width?: string,
     margin?: string;
     disabled?: boolean;
+    cursor?: string;
 }
 
 const Button: React.FC<Props> = ({
@@ -22,7 +23,8 @@ const Button: React.FC<Props> = ({
     padding,
     margin,
     width,
-    disabled
+    disabled,
+    cursor
 }) => {
     return (
         <button
@@ -30,7 +32,7 @@ const Button: React.FC<Props> = ({
                 padding: padding,
                 width: width,
                 margin: margin,
-                cursor: disabled ? "not-allowed" : "pointer"
+                cursor: disabled ? "not-allowed" : cursor ? cursor : "pointer"
             }}
             className={`${styles[btnType]}`} onClick={onPress}
         >

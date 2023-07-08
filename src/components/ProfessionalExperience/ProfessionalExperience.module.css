@@ -13,12 +13,17 @@
     gap: 20px;
     align-items: center;
 }
+.skillsBox{
+    position: relative;
+    overflow-x: auto;
+    max-width: 600px;
+}
 
 .skills{
+    position: relative;
     display: flex;
     padding: 5px 0;
     gap: 10px;
-    overflow-x: auto;
 }
 .ul{
     padding: 10px 0;
@@ -31,4 +36,17 @@
 .content{
     padding: 20px 0;
     border-bottom: 1px solid #1DAC87;
+}
+
+@media (max-width: 576px){
+    .title{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .skillType{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
 }

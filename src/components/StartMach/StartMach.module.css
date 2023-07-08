@@ -18,6 +18,7 @@
 
 .arrowBack{
     position: absolute;
+    z-index: 4;
     left: 0;
     top: 15px;
     padding: 10px 10px 10px 0;
@@ -65,6 +66,7 @@
     margin-top: 10px;
     display: flex;
     gap: 10px;
+    padding: 5px 0;
 }
 
 .developer{
@@ -79,7 +81,7 @@
     margin-top: 10px;
     /* background-color: #167A60; */
     flex-wrap: nowrap;
-    overflow-x: scroll;
+    overflow-x: auto;
     margin-bottom: 15px;
 }
 .links{
@@ -147,6 +149,9 @@
         border-radius: 0;
         overflow-x: auto;
     }
+    .title{
+        padding: 10px 10%;
+    }
     .blur{
         position: absolute;
         width: 300px;
@@ -161,7 +166,7 @@
     }
     
     .categoryTime{
-       overflow-y: scroll;
+       overflow-x: auto;
     }
     .btn{
        white-space: nowrap;

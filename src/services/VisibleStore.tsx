@@ -1,3 +1,4 @@
+import _ from "lodash";
 import { makeAutoObservable } from "mobx";
 
 type modal = {
@@ -29,10 +30,18 @@ export default class VisibleStore {
 
     show = (key: keyof modal) => {
         this.visiable[key] = true
+        if (this.visiable[key] === true)
+            document.body.style.overflow = 'hidden';
+
     }
 
     hide = (key: keyof modal) => {
         this.visiable[key] = false
+        _.mapKeys(this.visiable, (value, key) => {
+            if (value === false)
+                document.body.style.overflow = 'auto';
+            return
+        })
     }
 
     toggle = (key: keyof modal) => {

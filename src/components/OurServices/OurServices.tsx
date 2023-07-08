@@ -8,7 +8,7 @@ import { ReviewsData, ServicesData } from "../../utils/dateBase";
 import { ASSETS } from "../../utils/assetsRequires";
 import { COLORS } from "../../utils/color";
 import DevelopersCard from "../DevelopersCard/DevelopersCard";
-import useRootStore from "../../Hooks/useRootStore";
+import useRootStore from "../../hooks/useRootStore";
 import { observer } from "mobx-react-lite";
 import { toJS } from "mobx";
 import { ReviewDataType } from "../../types/types";
@@ -82,7 +82,7 @@ const OurServices = () => {
   return (
     <div className={styles.container} id="services">
       <div className={styles.top}>
-        <Text text="OUR SERVICES" textSize="forty" />
+        <Text text="OUR SERVICES" family="BenzinBold" textSize="thirtySix" />
       </div>
       <div className={styles.tabBox}>
         <div
@@ -98,7 +98,8 @@ const OurServices = () => {
           <Text
             text="Services"
             transform="uppercase"
-            textSize="twentyEight"
+            family="BenzinBold"
+            textSize="twentyTwo"
             color={card === router.first ? COLORS.green : COLORS.grey}
           />
         </div>
@@ -114,7 +115,8 @@ const OurServices = () => {
         >
           <Text
             text="Developers for your business"
-            textSize="twentyEight"
+            textSize="twentyTwo"
+            family="BenzinBold"
             transform="uppercase"
             color={card === router.second ? COLORS.green : COLORS.grey}
           />

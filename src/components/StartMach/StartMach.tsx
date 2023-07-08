@@ -5,7 +5,7 @@ import { toJS } from 'mobx'
 import { observer } from 'mobx-react-lite'
 import React, { ChangeEvent, useEffect, useState } from 'react'
 import { ArrowBackIcon, CloseSmall, FileUpload, PlusIcon } from '../../assets/icons/Icons'
-import useRootStore from '../../Hooks/useRootStore'
+import useRootStore from '../../hooks/useRootStore'
 import { storage } from '../../services/Firebase'
 import { COLORS } from '../../utils/color'
 import { HowLong, WorkRate } from '../../utils/dateBase'
@@ -61,7 +61,7 @@ const StartMach = () => {
     return (
         <>
             <Backdrop
-                sx={{ color: '#fff', zIndex: 6 }}
+                sx={{ color: '#fff', zIndex: 5 }}
                 open={visiable.smartMach}
                 onClick={() => hide("smartMach")}
             ></Backdrop>

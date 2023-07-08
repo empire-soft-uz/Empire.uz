@@ -123,7 +123,8 @@
   font-family: "FuturaPTMediumOblique";
   src: url("./assets/fonts/FuturaPTMediumOblique.otf") format("truetype");
 }
-/* @font-face {
-  font-family: "Gilroy";
-  src: url("./assets/Gilroy-Font/Radomir\ Tinkov\ -\ Gilroy-ExtraBold.otf") format("truetype");
-} */
+
+@font-face {
+  font-family: "BenzinBold";
+  src: url("./assets/benzinFonts/Benzin-Bold.ttf") format("truetype");
+}

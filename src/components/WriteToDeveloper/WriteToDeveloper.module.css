@@ -29,6 +29,9 @@
     cursor: pointer;
     z-index: 4;
 }
+.validation{
+    position: absolute;
+}
 
 @media (max-width: 576px){
     .container{

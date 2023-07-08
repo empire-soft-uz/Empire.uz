@@ -1,6 +1,6 @@
 import React from 'react'
 import { ArrowBackIcon } from '../../assets/icons/Icons'
-import useRootStore from '../../Hooks/useRootStore'
+import useRootStore from '../../hooks/useRootStore'
 import { ASSETS } from '../../utils/assetsRequires'
 import { COLORS } from '../../utils/color'
 import Text from '../Text/Text'

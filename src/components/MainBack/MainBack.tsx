@@ -12,9 +12,11 @@ const MainBack = () => {
             <div className={styles.textBox}>
                 <Text
                     text='We develop complex projects - simply. Sharing our team'
-                    textSize='sixty'
+                    textSize='fifty'
                     positon="relative"
+                    transform={"uppercase"}
                     zIndex='2'
+                    family='BenzinBold'
                 />
                 <a href="#our-advantages" className="href">
                     <div className={styles.DownBox}>

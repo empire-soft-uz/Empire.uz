@@ -24,7 +24,7 @@
     text-align: center;
     flex-direction: column;
     height: 100%;
-    padding: 220px 25% 0 25%;
+    padding: 30vh 20% 0 20%;
     z-index: 2;
 }
 
@@ -47,6 +47,7 @@
     background: linear-gradient(180deg, #167A60 0%, #29A7C3 100%);
     filter: blur(180px);
     z-index: 1;
+    top: 25%;
 }
 
 @media (min-width: 120px){
@@ -62,7 +63,7 @@
         height: 300px;
     }
     .textBox{
-        padding: 200px 5% 0 5%;
+        padding: 20vh 5% 0 5%;
     }
     .blur{
         width: 300px;
@@ -91,7 +92,7 @@
 }
 
 .textBox{
-    padding: 220px 20% 0 20%;
+    padding: 30vh 20% 0 20%;
 }
 
 .DownBox{
@@ -108,6 +109,6 @@
 }
 @media (min-width:1200px){
 .textBox{
-    padding: 220px 25% 0 25%;
+    padding: 30vh 20% 0 20%;
 }
 }
