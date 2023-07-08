@@ -1,7 +1,7 @@
 .container{
-    width: 75%;
-    height: 80%;
-    padding: 20px 60px;
+    width: 500px;
+    height: 350px;
+    padding: 20px 20px;
     background: #04110E;
     border-radius: 20px;
     position: fixed;
@@ -13,32 +13,33 @@
 
 .title{
     text-align: center;
-    padding: 20px 20%;
-    margin-top: 50px;
+    padding: 20px;
 }
 
 .blur{
     position: absolute;
     width: 300px;
     height: 250px;
-    top: 0;
-    left: 35%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    bottom: 0;
     background: linear-gradient(180deg, #167A60 0%, #29A7C3 100%);
-    filter: blur(250px);
+    filter: blur(180px);
     border-radius: 100px;
     z-index: 3;
 }
 .footer{
     display: flex;
     justify-content: center;
-    margin-top: 70px;
+    margin-top: 10px;
 }
 
 @media (max-width: 576px){
     .container{
         width: 100vw;
         height: 100vh;
-        padding: 20px 5%;
+        padding: 20px;
         border-radius: 0;
         overflow-x: auto;
     }

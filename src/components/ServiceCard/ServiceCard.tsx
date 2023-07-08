@@ -8,7 +8,7 @@ import styles from './ServiceCard.module.css'
 interface Props {
     name: string;
     text: string;
-    icon: React.FC,
+    icon: string,
     onPress?: () => void;
 }
 
@@ -20,7 +20,7 @@ const ServiceCard: React.FC<Props> = ({
 }) => {
     return (
         <div className={styles.container} onClick={onPress}>
-            <RowItem text={name} icon={icon} />
+            <RowItem text={name} imageUrl={icon} />
             <Text
                 textSize='sixteen'
                 margin='5px 0 0 0'

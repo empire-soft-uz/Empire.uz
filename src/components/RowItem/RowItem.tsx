@@ -4,25 +4,24 @@ import Text from '../Text/Text'
 import styles from "./RowItem.module.css"
 interface Props {
     text: string;
-    icon?: React.FC;
     imageUrl?: string;
     comment?: string;
 }
 
-const RowItem: React.FC<Props> = (props) => {
+const RowItem: React.FC<Props> = ({
+    text,
+    comment,
+    imageUrl
+}) => {
     return (
         <div className={styles.container}>
             <div className={styles.iconBox}>
-                {props.imageUrl ?
-                    <img className={styles.img} src={props.imageUrl} /> :
-                    null
-                }
-                {props.icon ? <props.icon /> : null}
+                <img className={styles.img} src={imageUrl} /> :
             </div>
             <div className={styles.textBox}>
-                <Text text={props.text} textSize='twenty' />
-                {props.comment ?
-                    <Text text={props.comment} color={COLORS.grey} textSize='sixteen' family="FuturaBook" />
+                <Text text={text} textSize='twenty' />
+                {comment ?
+                    <Text text={comment} color={COLORS.grey} textSize='sixteen' family="FuturaBook" />
                     : null
                 }
             </div>
