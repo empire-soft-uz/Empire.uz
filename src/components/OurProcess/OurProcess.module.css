@@ -1,0 +1,86 @@
+.container{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 0 18%;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15vh;
+}
+.content{
+    width: 100%;
+    overflow-x: scroll;
+}
+.cardsBox{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    min-width: 700px;
+    padding: 10px 0;
+}
+.cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 23%;
+    gap: 6px;
+    margin-top: 20px;
+    /* background-color: aqua; */
+}
+.Count{
+    color: #000;
+    font-size: 45px;
+    -webkit-text-stroke: 0.5px #1DAC87;
+    font-family: "FuturaPTDemi" !important;
+}
+.line{
+    position: absolute;
+    width: 76%;
+    height: 4px;
+    background-color: #1DAC87;
+    left: 12%;
+    right: 12%;
+    top: 6px;
+}
+.dot{
+    position: absolute;
+    top: 2px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #1DAC87;
+}
+@media (min-width: 120px) {
+    .container{
+        padding: 0 5%;
+    }
+}
+@media (min-width: 576px){
+}
+@media(min-width: 767px){
+
+}
+@media (min-width: 992px){
+.container{
+    position: relative;
+    height: 100%;
+    padding: 0 10%;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15vh;
+}
+}
+@media (min-width: 1200px){
+.container{
+    padding: 0 18%;
+}
+
+}

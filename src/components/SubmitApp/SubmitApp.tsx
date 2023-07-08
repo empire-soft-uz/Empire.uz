@@ -57,10 +57,11 @@ const SubmitApp = () => {
                     <Input
                         placeholder='Email'
                         value={form.email}
+                        type={"eanil"}
                         onChange={(e) => setForm(e.target.value, "email")}
                     />
-                    <div className={styles.submit} onClick={sendBot}>
-                        <ArrowRightButton />
+                    <div className={styles.submit}>
+                        <ArrowRightButton onClick={sendBot} />
                     </div>
                 </div>
             </div>

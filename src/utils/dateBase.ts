@@ -5,6 +5,8 @@ import {
   ProgrammingLanguagesType,
   ReviewDataType,
   ServicesDataType,
+  OurProcessType,
+  OurProcessInitial
 } from "../types/types";
 import { ASSETS } from "./assetsRequires";
 
@@ -13,38 +15,38 @@ export const ServicesData: ServicesDataType[] = [
     id: 1,
     name: "Mobile app development",
     text: "We can create a customized e-commerce solution that fits your business needs and helps you increase your online sales.",
-    icon: UiIcon,
+    icon: "./icons/phone.svg",
   },
 
   {
     id: 2,
     name: "Content Management System (CMS) Development",
     text: "The process, best practices and technologies used are both proven and practical.",
-    icon: UiIcon,
+    icon: "./icons/gr4.svg",
   },
   {
     id: 3,
     name: "UI/UX Design",
     text: "We focus on creating intuitive and visually appealing user interfaces (UI) and user experiences (UX) to ensure your website is easy to use and engages your audience.",
-    icon: UiIcon,
+    icon: "./icons/gr5.svg",
   },
   {
     id: 4,
     name: "Website Maintenance and Support",
     text: "We provide ongoing maintenance and support services to ensure your website stays up to date and secure, giving you peace of mind.",
-    icon: UiIcon,
+    icon: "./icons/gr3.svg",
   },
   {
     id: 5,
     name: "Custom Software Development",
     text: "We can build customized software solutions that address your unique business needs and help you streamline your operations.",
-    icon: UiIcon,
+    icon: "./icons/ux.svg",
   },
   {
     id: 6,
     name: "Search Engine Marketing (SEM)",
     text: "Our SEM services include pay-per-click advertising campaigns and remarketing strategies to drive more traffic and conversions to your website.",
-    icon: UiIcon,
+    icon: "./icons/gr2.svg",
   },
 ];
 
@@ -54,7 +56,7 @@ export const AdventagesData: AdventagesDataType[] = [
     name: "Streamlined Design Process",
     text: `Experience a seamless website creation journey with our streamlined design process. Our platform is tailored to ensure that you can effortlessly bring your vision to life, no matter your skill level. 
             We are always eager to hear your thoughts and ideas. Share your feedback and suggestions with us, and together we can create the perfect website for you.`,
-    icon: Adventage,
+    icon: "./icons/light.svg",
   },
 
   {
@@ -62,35 +64,35 @@ export const AdventagesData: AdventagesDataType[] = [
     name: "Personalized Customization",
     text: `Craft a distinctive online presence that reflects your unique style and personality. Our customizable templates and user-friendly tools empower you to create a website that showcases your individuality without any technical barriers.
             Take advantage of our versatile design features and make your website stand out from the crowd.`,
-    icon: Adventage,
+    icon: "./icons/setting.svg",
   },
   {
     id: 3,
     name: "Eco-conscious Approach",
     text: `Our team is dedicated to making a positive impact on the environment by minimizing our carbon footprint and promoting sustainable practices.
             By choosing to build your website with us, you are directly contributing to a greener future for our planet.`,
-    icon: Adventage,
+    icon: "./icons/gr6.svg",
   },
   {
     id: 4,
     name: "Mobile-Friendly Design",
     text: `In today's digital landscape, mobile compatibility is key. Our platform ensures that your website looks great and functions smoothly on all devices, providing an optimal browsing experience for your visitors.
             Stay ahead of the curve with our mobile-responsive designs and tools.`,
-    icon: Adventage,
+    icon: "./icons/phone.svg",
   },
   {
     id: 5,
     name: "Robust Data Protection",
     text: `We take the security of your website and the privacy of your visitors very seriously. With over a decade of experience in the industry, we provide a reliable and secure solution that keeps your data safe.
             Rest easy knowing that your website and its data are protected by our state-of-the-art security measures.`,
-    icon: Adventage,
+    icon: "./icons/gr7.svg",
   },
   {
     id: 6,
     name: "Attentive Customer Support",
     text: `Our dedicated customer support team is here to help you every step of the way. We believe in providing personalized, human assistance to ensure your website's success.
             When you create a website with us, you can count on our friendly and knowledgeable staff to guide you through the process and address any concerns you may have.`,
-    icon: Adventage,
+    icon: "./icons/group.svg",
   },
 ];
 
@@ -921,3 +923,26 @@ export const BlogData = [
       "https://calbizjournal.com/wp-content/uploads/2022/08/software-engineers.jpg",
   },
 ];
+
+export const OurProcessData: OurProcessType[] = [
+  {
+    id: "01.",
+    title: "Discovery:",
+    text: "We start our projects by understanding the scope and requirements. This is accomplished by working closely with you to make sure we are all on the same page."
+  },
+  {
+    id: "02.",
+    title: "Plan:",
+    text: "Following the initial kick-off meeting, we will outline your project, create milestones, and agree on project priorities."
+  },
+  {
+    id: "02.",
+    title: "Execute:",
+    text: "The final design takes shape and, at this stage, the idea comes to life representing the visual concepts."
+  },
+  {
+    id: "04.",
+    title: "Deliver:",
+    text: "Review and testing takes place, which ensures the quality of your project."
+  },
+]
