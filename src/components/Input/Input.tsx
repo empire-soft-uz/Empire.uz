@@ -3,17 +3,19 @@ import styles from "./Input.module.css"
 interface Props {
     placeholder?: string;
     value?: string;
-    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
+    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    type?: string;
 }
 
 const Input: React.FC<Props> = ({
     placeholder,
     value,
-    onChange
+    onChange,
+    type
 }) => {
     return (
         <>
-            <input value={value} onChange={onChange} className={styles.input} type="text" placeholder={placeholder} />
+            <input value={value} onChange={onChange} className={styles.input} type={type ? type : "text"} placeholder={placeholder} />
         </>
     )
 }

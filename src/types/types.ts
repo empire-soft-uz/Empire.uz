@@ -87,13 +87,13 @@ export type AdventagesDataType = {
     id: number,
     name: string,
     text: string,
-    icon: React.FC
+    icon: string
 }
 export type ServicesDataType = {
     id: number,
     name: string,
     text: string,
-    icon: React.FC
+    icon: string
 }
 export type ServiceSendDataType = {
     id: number,
@@ -106,4 +106,14 @@ export const ServiceSendDataInitial = {
     job: '',
     name: '',
     email: '',
+}
+export type OurProcessType = {
+    id: string,
+    title: string,
+    text: string
+}
+export const OurProcessInitial = {
+    id: "",
+    title: "",
+    text: ""
 }

@@ -8,7 +8,7 @@ import styles from './AdventagesCard.module.css'
 interface Props {
     name: string;
     text: string;
-    icon: React.FC
+    icon: string
 }
 
 const AdventagesCard: React.FC<Props> = ({
@@ -18,7 +18,7 @@ const AdventagesCard: React.FC<Props> = ({
 }) => {
     return (
         <div className={styles.container}>
-            <RowItem text={name} icon={icon} />
+            <RowItem text={name} imageUrl={icon} />
             <Text
                 color={COLORS.grey}
                 text={text}

@@ -4,6 +4,7 @@ interface Props {
     text: string;
     color?: string;
     margin?: string;
+    textAlign?: any;
     family?: string;
     positon?: any;
     zIndex?: string;
@@ -12,7 +13,8 @@ interface Props {
     cursor?: string;
     onPress?: () => void;
     lineHeight?: number;
-    id?: string
+    id?: string;
+    WebkitTextStroke?: string;
     textSize: 'fourteen' | 'sixteen' | 'eighteen' | 'twenty' | 'twentyTwo' | 'twentyEight' | 'thirtySix' | 'forty' | 'fifty' | 'sixty' | 'seventy'
 }
 
@@ -20,6 +22,7 @@ const Text: React.FC<Props> = ({
     text,
     color,
     margin,
+    textAlign,
     family,
     positon,
     zIndex,
@@ -29,7 +32,8 @@ const Text: React.FC<Props> = ({
     cursor,
     onPress,
     lineHeight,
-    textSize
+    textSize,
+    WebkitTextStroke
 }) => {
     return (
         <p
@@ -40,12 +44,14 @@ const Text: React.FC<Props> = ({
                 margin: margin,
                 color: color ? color : "#fff",
                 fontFamily: family,
+                textAlign: textAlign,
                 position: positon,
                 zIndex: zIndex,
                 textTransform: transform,
                 whiteSpace: whiteSpace,
                 cursor: cursor,
-                lineHeight: `${lineHeight}px`
+                lineHeight: `${lineHeight}px`,
+                WebkitTextStroke: WebkitTextStroke
             }}>
             {text}
         </p>

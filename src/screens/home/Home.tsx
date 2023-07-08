@@ -7,8 +7,8 @@ import Footer from '../../components/Footer/Footer'
 import Loading from '../../components/Loading/Loading'
 import MainBack from '../../components/MainBack/MainBack'
 import OurAdventages from '../../components/OurAdventages/OurAdventages'
+import OurProcess from '../../components/OurProcess/OurProcess'
 import OurServices from '../../components/OurServices/OurServices'
-import Reviews from '../../components/Reviews/Reviews'
 import StartMach from '../../components/StartMach/StartMach'
 import SubmitApp from '../../components/SubmitApp/SubmitApp'
 import ViewProfile from '../../components/ViewProfile/ViewProfile'
@@ -24,7 +24,7 @@ const Home = () => {
             <AboutUs />
             <OurAdventages />
             <SubmitApp />
-            <Reviews />
+            <OurProcess />
             <Footer />
             <FindDeveloper />
             <Calendly />
