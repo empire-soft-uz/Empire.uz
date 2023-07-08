@@ -427,7 +427,7 @@ components`,
     skills: [
       {
         id: 1,
-        skillsIcon: "./icons/Flutter.svg",
+        skillsIcon: "./icons/flutter.svg",
         skillsName: "Flutter",
         experience: "3+ years",
         expertise: true,
