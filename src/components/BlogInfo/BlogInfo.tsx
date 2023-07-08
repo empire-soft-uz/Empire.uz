@@ -1,7 +1,6 @@
 import React from 'react'
 import { ArrowBackIcon } from '../../assets/icons/Icons'
 import useRootStore from '../../hooks/useRootStore'
-import { ASSETS } from '../../utils/assetsRequires'
 import { COLORS } from '../../utils/color'
 import Text from '../Text/Text'
 import styles from "./BlogInfo.module.css"
@@ -39,8 +38,6 @@ const BlogInfo: React.FC<Props> = ({
             </div>
             <div className={styles.textBox}>
                 <Text margin='20px 0 0 0' textSize='eighteen' text={title} />
-                <Text margin='20px 0 0 0' color={COLORS.grey} family='FuturaBook' textSize='fourteen' text={text} />
-                <Text margin='20px 0 0 0' color={COLORS.grey} family='FuturaBook' textSize='fourteen' text={text} />
                 <Text margin='20px 0 0 0' color={COLORS.grey} family='FuturaBook' textSize='fourteen' text={text} />
             </div>
         </div>
