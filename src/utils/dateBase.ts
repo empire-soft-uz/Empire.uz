@@ -139,14 +139,14 @@ export const ReviewsData: ReviewDataType[] = [
       {
         id: 3,
         skillsIcon: "./icons/js.svg",
-        skillsName: "Js/Ts",
+        skillsName: "JS/TS",
         experience: "6+ years",
         expertise: true,
       },
       {
         id: 5,
         skillsIcon: "./icons/css.svg",
-        skillsName: "Html/Css",
+        skillsName: "HTML/CSS",
         experience: "4 years",
         expertise: false,
       },
@@ -166,56 +166,56 @@ export const ReviewsData: ReviewDataType[] = [
       },
     ],
     experience: [
-        {
-            title: "React Native/React developer",
-            type: "Freelance",
-            time: "1 year 11 months",
-            info: [
-              {
-                text: `Designed and developed the user interface of a ProjectNexus app using
+      {
+        title: "React Native/React developer",
+        type: "Freelance",
+        time: "1 year 11 months",
+        info: [
+          {
+            text: `Designed and developed the user interface of a ProjectNexus app using
 React Native.`,
-              },
-              {
-                text: `Integrated the Blockchain into the app, working with smart contracts,
+          },
+          {
+            text: `Integrated the Blockchain into the app, working with smart contracts,
 creating wallets, and integrating with various Blockchain protocols.`,
-              },
-              {
-                text: `Implemented security measures to protect user data and transactions`,
-              },
-              {
-                text: `Collaborated with other members of the development team, including
+          },
+          {
+            text: `Implemented security measures to protect user data and transactions`,
+          },
+          {
+            text: `Collaborated with other members of the development team, including
 designers, back-end developers, and project managers, to ensure that the
 project is on track and meets the requirements`,
-              },
-              {
-                text: `Stayed up-to-date with the latest developments and best practices in
+          },
+          {
+            text: `Stayed up-to-date with the latest developments and best practices in
 React Native development to ensure that the app is using the most current
 and efficient technologies`,
-              },
-            ],
-            skills: [
-              {
-                icon: "./icons/react.svg",
-                name: "React-native",
-              },
-              {
-                icon:'./icons/svelte.svg',
-                name:"Svelte"
-              },
-              {
-                icon: "./icons/react.svg",
-                name: "React",
-              },
-              {
-                icon: "./icons/js.svg",
-                name: "JavaScript",
-              },
-              {
-                icon: "./icons/ts.svg",
-                name: "TypeScript",
-              },
-            ],
-          },    
+          },
+        ],
+        skills: [
+          {
+            icon: "./icons/react.svg",
+            name: "React-native",
+          },
+          {
+            icon: "./icons/svelte.svg",
+            name: "Svelte",
+          },
+          {
+            icon: "./icons/react.svg",
+            name: "React",
+          },
+          {
+            icon: "./icons/js.svg",
+            name: "JavaScript",
+          },
+          {
+            icon: "./icons/ts.svg",
+            name: "TypeScript",
+          },
+        ],
+      },
       {
         title: "React Native/React developer",
         type: "Freelance",
@@ -248,12 +248,12 @@ enhance app functionality`,
             name: "React-native",
           },
           {
-            icon:'./icons/graph.svg',
-            name:"GraphQL"
+            icon: "./icons/graph.svg",
+            name: "GraphQL",
           },
           {
-            icon:'./icons/firebase.svg',
-            name:"Firebase"
+            icon: "./icons/firebase.svg",
+            name: "Firebase",
           },
           {
             icon: "./icons/react.svg",
@@ -495,7 +495,7 @@ components`,
             name: "JS",
           },
           {
-            icon: "./icons/React.svg",
+            icon: "./icons/react.svg",
             name: "React-Native",
           },
           {
@@ -581,6 +581,170 @@ components`,
     communication: 9,
     technicalSkill: 9,
   },
+  {
+    id: 3,
+    title: "The best developers only for you",
+    name: "Sergey Shaposhnik",
+    comment:
+      "Has participated and lead whole process of high load mobile application from structuring to auto deployment. Did code reviews and worked direclty with clients many times. Has great experience in configuring the app Accessibility.",
+    salary: "$28 /h",
+    whereFrom: "Krasnoyarsk Russia",
+    totalExperience: "4+ Years Of Experience",
+    expert: "Expert React-Native Developer",
+    expertSkill: "React-Native",
+    image: ASSETS.developer3,
+    job: "Senior React-Native Developer",
+    education: "Siberian Federal University",
+    eduBranch:
+      "Bachelor's degree, Computer Software Engineering, Master's degree, Computer Software Engineering",
+    strengths: [
+      {
+        item: "Excellent in frontend React apps",
+      },
+      {
+        item: "Great communicator",
+      },
+      {
+        item: "Good experience with new libraries like Next.js & Nuxt.js",
+      },
+    ],
+    skills: [
+      {
+        id: 2,
+        skillsIcon: "./icons/react.svg",
+        skillsName: "React-Native",
+        experience: "4+ years",
+        expertise: true,
+      },
+      {
+        id: 3,
+        skillsIcon: "./icons/react.svg",
+        skillsName: "React",
+        experience: "4+ years",
+        expertise: true,
+      },
+      {
+        id: 4,
+        skillsIcon: "./icons/js.svg",
+        skillsName: "JS/TS",
+        experience: "4+ years",
+        expertise: true,
+      },
+      {
+        id: 5,
+        skillsIcon: "./icons/css.svg",
+        skillsName: "HTML/CSS",
+        experience: "4 years",
+        expertise: false,
+      },
+      {
+        id: 6,
+        skillsIcon: "./icons/firebase.svg",
+        skillsName: "Firebase",
+        experience: "4 years",
+        expertise: false,
+      },
+      {
+        id: 6,
+        skillsIcon: "./icons/react-navigation.png",
+        skillsName: "React navigation",
+        experience: "4 years",
+        expertise: true,
+      },
+    ],
+    experience: [
+      {
+        title: "Senior Software Engineer",
+        type: "Agency",
+        time: "1 year 9 months",
+        info: [
+          {
+            text: "Development and support of mobile applications.",
+          },
+          {
+            text: `Participated in the development of new and existing solutions, for example: financial app – pension fund management; IoT-app – smart water bar control; find and book parking lots.`,
+          },
+          {
+            text: "Writing native code in obj-c, swift and java.",
+          },
+        ],
+        skills: [
+          {
+            icon: "./icons/React.svg",
+            name: "React-Native",
+          },
+          {
+            icon: "./icons/mobx.png",
+            name: "MobX",
+          },
+          {
+            icon: "./icons/react-navigation.png",
+            name: "React-navigation",
+          },
+          {
+            icon: "./icons/ts.svg",
+            name: "TS",
+          },
+          {
+            icon: "./icons/firebase.svg",
+            name: "Firebase",
+          },
+        ],
+      },
+      {
+        title: "React Native Developer",
+        type: "Agency",
+        time: "1 year 1 months",
+        info: [
+          {
+            text: "Development and support of a food delivery service.",
+          },
+          {
+            text: "Used Redux, SSR, SCSS, Node.js as well as setting up webpack from scratch in my pet projects",
+          },
+          {
+            text: "Development and further publication in the App Store / Google Play of an application for a recreation center (ordering food, ordering a bathhouse, signing up for activities, etc.)",
+          },
+        ],
+        skills: [
+          {
+            icon: "./icons/react.svg",
+            name: "React",
+          },
+          {
+            icon: "./icons/redux.svg",
+            name: "Reux",
+          },
+          {
+            icon: "./icons/sass.svg",
+            name: "SASS",
+          },
+          {
+            icon: "./icons/web.svg",
+            name: "Webpack",
+          },
+          {
+            icon: "./icons/mobx.png",
+            name: "MobX",
+          },
+          {
+            icon: "./icons/react.svg",
+            name: "React-Native",
+          },
+          {
+            icon: "./icons/react-navigation.png",
+            name: "React-navigation",
+          },
+          {
+            icon: "./icons/firebase.svg",
+            name: "Firebase",
+          },
+        ],
+      },
+    ],
+    communication: 7,
+    technicalSkill: 9,
+  },
 ];
 
 export const ProgrammingLanguages: ProgrammingLanguagesType[] = [
@@ -597,7 +761,7 @@ export const ProgrammingLanguages: ProgrammingLanguagesType[] = [
   {
     id: 3,
     image: "./icons/js.svg",
-    name: "Js ",
+    name: "JS",
   },
   {
     id: 4,
@@ -607,7 +771,7 @@ export const ProgrammingLanguages: ProgrammingLanguagesType[] = [
   {
     id: 5,
     image: "./icons/css.svg",
-    name: "Css",
+    name: "CSS",
   },
   {
     id: 6,
@@ -627,7 +791,7 @@ export const ProgrammingLanguages: ProgrammingLanguagesType[] = [
   {
     id: 9,
     image: "./icons/ts.svg",
-    name: "Ts",
+    name: "TS",
   },
   {
     id: 10,
@@ -637,12 +801,12 @@ export const ProgrammingLanguages: ProgrammingLanguagesType[] = [
   {
     id: 10,
     image: "./icons/node.svg",
-    name: "Node Js",
+    name: "NodeJS",
   },
   {
     id: 11,
     image: "./icons/html.svg",
-    name: "Html",
+    name: "HTML",
   },
   {
     id: 12,
