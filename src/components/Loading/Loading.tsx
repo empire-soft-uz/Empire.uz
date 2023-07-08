@@ -1,7 +1,7 @@
 import { Backdrop, CircularProgress } from '@mui/material'
 import { observer } from 'mobx-react-lite'
 import React from 'react'
-import useRootStore from '../../Hooks/useRootStore'
+import useRootStore from '../../hooks/useRootStore'
 
 const Loading = () => {
     const { visiable, hide } = useRootStore().visibleStore

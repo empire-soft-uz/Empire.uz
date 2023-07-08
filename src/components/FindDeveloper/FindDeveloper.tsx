@@ -3,9 +3,11 @@ import { message } from 'antd'
 import axios from 'axios'
 import { toJS } from 'mobx'
 import { observer } from 'mobx-react-lite'
-import React from 'react'
+import React, { useState } from 'react'
 import { CloseBig, CloseSmall } from '../../assets/icons/Icons'
-import useRootStore from '../../Hooks/useRootStore'
+import { isValidEmail } from '../../helper/ValidationHelper'
+import useRootStore from '../../hooks/useRootStore'
+import { COLORS } from '../../utils/color'
 import { ProgrammingLanguages } from '../../utils/dateBase'
 import ArrowRightButton from '../ArrowRightButton/ArrowRightButton'
 import Input from '../Input/Input'
@@ -16,6 +18,25 @@ import styles from "./FindDeveloper.module.css"
 const FindDeveloper = () => {
     const { visiable, hide, show } = useRootStore().visibleStore
     const { chooseTag, tags, removeTag, setfindDevForm, findDevForm, clearFindDevForm } = useRootStore().tagsStore
+
+    const [disabled, setDisabled] = useState(true);
+    const [error, setError] = useState(null);
+
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        event.preventDefault()
+        if (event.target.value.length === 0) {
+            setError(null)
+            setDisabled(true)
+        } else if (!isValidEmail(event.target.value)) {
+            setError('Email is invalid' as never);
+            setDisabled(true)
+        } else {
+            setError(null);
+            setDisabled(false)
+        }
+        setfindDevForm(event.target.value, "workEmail")
+    };
+
     const next = () => {
         show("smartMach")
         hide("findDeveloper")
@@ -41,16 +62,23 @@ const FindDeveloper = () => {
                 </div>
                 <div className={styles.blur}></div>
                 <div className={styles.inputBox}>
-                    <Input
-                        placeholder='Name'
-                        value={findDevForm.name}
-                        onChange={(e) => setfindDevForm(e.target.value, "name")}
-                    />
-                    <Input
-                        placeholder='Work Email Address'
-                        value={findDevForm.workEmail}
-                        onChange={(e) => setfindDevForm(e.target.value, "workEmail")}
-                    />
+                    <div className={styles.input}>
+                        <Input
+                            placeholder='Name'
+                            value={findDevForm.name}
+                            onChange={(e) => setfindDevForm(e.target.value, "name")}
+                        />
+                    </div>
+                    <div className={styles.input}>
+                        <Input
+                            placeholder='Work Email Address'
+                            value={findDevForm.workEmail}
+                            onChange={handleChange}
+                        />
+                        <div className={styles.validation}>
+                            {error ? <Text text={error} color={COLORS.red} textSize="fourteen" /> : null}
+                        </div>
+                    </div>
                 </div>
                 <div className={styles.tabs}>
                     {tags.map((e, index) => {
@@ -78,10 +106,7 @@ const FindDeveloper = () => {
                     })}
                 </div>
                 <div className={styles.footer}>
-                    <ArrowRightButton disabled={
-                        findDevForm.workEmail.length === 0 &&
-                            findDevForm.name.length === 0 &&
-                            findDevForm.job.length === 0 ? true : false}
+                    <ArrowRightButton disabled={disabled}
                         onClick={next}
                     />
                 </div>

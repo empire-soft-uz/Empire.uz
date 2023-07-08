@@ -43,7 +43,7 @@ const DevelopersCard: React.FC<Props> = ({
           marginTop: "15px",
         }}
       >
-        <Button padding="6px 50px" title="Expert in" btnType="primary" />
+        <Button cursor="text" padding="6px 50px" title="Expert in" btnType="primary" />
       </div>
       <div className={styles.skillsBox}>
         {data.slice(0, 4).map((i: any, index: any) => {

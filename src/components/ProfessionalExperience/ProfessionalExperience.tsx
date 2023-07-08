@@ -1,5 +1,5 @@
 import React from 'react'
-import useRootStore from '../../Hooks/useRootStore'
+import useRootStore from '../../hooks/useRootStore'
 import { COLORS } from '../../utils/color'
 import SkillIcon from '../SkillIcon/SkillIcon'
 import Text from '../Text/Text'
@@ -17,9 +17,11 @@ const ProfessionalExperience = () => {
                             <>
                                 <div className={styles.name}>
                                     <Text text={item.title} textSize='eighteen' />
-                                    <Text text={item.time} textSize='sixteen' color={COLORS.grey} />
+                                    <Text whiteSpace={"nowrap"} text={item.time} textSize='sixteen' color={COLORS.grey} />
                                 </div>
-                                <SkillIcon name={item.type} type={'outline'} />
+                                <div className={styles.skillType}>
+                                    <SkillIcon name={item.type} type={'outline'} />
+                                </div>
                             </>
                         </div>
                         <div className={styles.ul}>
@@ -29,12 +31,14 @@ const ProfessionalExperience = () => {
                                 )
                             })}
                         </div>
-                        <div className={styles.skills}>
-                            {item.skills.map((i, index) => {
-                                return (
-                                    <SkillIcon key={index} logo={i.icon} name={i.name} type={'outline'} />
-                                )
-                            })}
+                        <div className={styles.skillsBox}>
+                            <div className={styles.skills}>
+                                {item.skills.map((i, index) => {
+                                    return (
+                                        <SkillIcon key={index} logo={i.icon} name={i.name} type={'outline'} />
+                                    )
+                                })}
+                            </div>
                         </div>
                     </div>
                 )

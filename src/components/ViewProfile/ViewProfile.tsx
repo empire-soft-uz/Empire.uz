@@ -1,11 +1,8 @@
+import React, { useRef } from 'react'
 import { Backdrop } from '@mui/material'
-import { Pagination } from 'antd'
-import { toJS } from 'mobx'
 import { observer } from 'mobx-react-lite'
-import React, { useEffect, useState } from 'react'
-import { BackIcon, CloseBig } from '../../assets/icons/Icons'
-import useRootStore from '../../Hooks/useRootStore'
-import { ReviewDataType } from '../../types/types'
+import { CloseBig } from '../../assets/icons/Icons'
+import useRootStore from '../../hooks/useRootStore'
 import { ReviewsData } from '../../utils/dateBase'
 import Avatar from '../Avatar/Avatar'
 import PersonAbout from '../PersonAbout/PersonAbout'
@@ -13,19 +10,45 @@ import ProfessionalExperience from '../ProfessionalExperience/ProfessionalExperi
 import Skills from '../Skills/Skills'
 import ViewContent from '../ViewContent/ViewContent'
 import styles from "./ViewProfile.module.css"
+import { useState, useEffect } from 'react';
 
 const ViewProfile = () => {
+
+    const outerDiv = useRef<HTMLDivElement>(null)
+    const inerDiv = useRef<HTMLDivElement>(null)
+
+    const [currents, setCurrents] = useState(1)
+
     const { visiable, hide, show } = useRootStore().visibleStore
     const { userData, getUserData, } = useRootStore().userStore
+
+    useEffect(() => {
+        const outerWidth = outerDiv.current?.clientWidth
+        const inerWidth = inerDiv.current?.clientWidth
+    }, [ReviewsData])
+
     const NextUser = (id: number) => {
+        setCurrents(currents + 1)
         if (id < ReviewsData.length) {
             getUserData(userData.id + 1)
         }
+        outerDiv.current?.scrollTo({
+            left: inerDiv.current?.clientWidth! * currents,
+            top: 0,
+            behavior: 'smooth',
+        })
+
     }
     const BackUser = (id: number) => {
+        setCurrents(1)
         if (id > 1) {
             getUserData(userData.id - 1)
         }
+        outerDiv.current?.scrollTo({
+            left: -(inerDiv.current?.clientWidth! * currents),
+            top: 0,
+            behavior: 'smooth',
+        })
     }
     return (
         <>
@@ -42,11 +65,15 @@ const ViewProfile = () => {
                     <button className={styles.arrow} onClick={() => BackUser(userData.id)}>
                         {"<"}
                     </button>
-                    {ReviewsData.map((e, index) => {
-                        return (
-                            <Avatar active={e.id === userData.id} onPress={() => getUserData(index += 1)} key={index} imageUrl={e.image} />
-                        )
-                    })}
+                    <div className={styles.pageBox} ref={outerDiv}>
+                        {ReviewsData.map((e, index) => {
+                            return (
+                                <div key={index} className={styles.avatarBox} ref={inerDiv}>
+                                    <Avatar active={e.id === userData.id} onPress={() => getUserData(index += 1)} key={index} imageUrl={e.image} />
+                                </div>
+                            )
+                        })}
+                    </div>
                     <button className={styles.arrow} onClick={() => NextUser(userData.id)}>
                         {">"}
                     </button>

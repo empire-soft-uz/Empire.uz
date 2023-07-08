@@ -4,8 +4,10 @@ import { toJS } from 'mobx'
 import { observer } from 'mobx-react-lite'
 import React, { useState } from 'react'
 import { ArrowRight } from '../../assets/icons/Icons'
-import useRootStore from '../../Hooks/useRootStore'
+import { isValidEmail } from '../../helper/ValidationHelper'
+import useRootStore from '../../hooks/useRootStore'
 import { ASSETS } from '../../utils/assetsRequires'
+import { COLORS } from '../../utils/color'
 import ArrowRightButton from '../ArrowRightButton/ArrowRightButton'
 import Input from '../Input/Input'
 import Text from '../Text/Text'
@@ -16,31 +18,47 @@ const SubmitApp = () => {
     const { show, hide } = useRootStore().visibleStore
     const data = `${form.name} submitted his application%0A Name: ${form.name}%0A Email: ${form.email}%0A He wants to contact us%0A`
 
-    const sendBot = async () => {
-        show("loading")
-        if (form.name.length <= 1) {
-            message.error('Please enter your name')
-            return
+    const [disabled, setDisabled] = useState(true);
+    const [error, setError] = useState(null);
+
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        event.preventDefault()
+        if (event.target.value.length === 0) {
+            setError(null)
+            setDisabled(true)
+        } else if (!isValidEmail(event.target.value)) {
+            setError('Email is invalid' as never);
+            setDisabled(true)
+        } else {
+            setError(null);
+            setDisabled(false)
         }
-        await axios({
-            method: 'post',
-            url: `https://api.telegram.org/bot6257527521:AAGKNc12U7SmVDG-ulTTcoP1BQxDeGCoS-4/sendMessage?chat_id=-1001934192696&text=${data}`,
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        }).then(res => {
-            hide("loading")
-            clearForm()
-            message.success('We will contact you')
-        }).catch(err => {
-            message.error(`${err}`)
-        })
+        setForm(event.target.value, "email")
+    };
+
+    const sendBot = async () => {
+        if (!disabled) {
+            show("loading")
+            await axios({
+                method: 'post',
+                url: `https://api.telegram.org/bot6257527521:AAGKNc12U7SmVDG-ulTTcoP1BQxDeGCoS-4/sendMessage?chat_id=-1001934192696&text=${data}`,
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }).then(res => {
+                hide("loading")
+                clearForm()
+                message.success('We will contact you')
+            }).catch(err => {
+                message.error(`${err}`)
+            })
+        }
     }
 
     return (
         <div className={styles.container}>
             <div className={styles.header}>
-                <Text text='Submit your application' transform={"uppercase"} textSize='forty' />
+                <Text text='Submit your application' family="BenzinBold" transform={"uppercase"} textSize='thirtySix' />
             </div>
             <div className={styles.content}>
                 <div className={styles.leftBox}>
@@ -54,14 +72,19 @@ const SubmitApp = () => {
                         placeholder='Name Surname'
                         value={form.name}
                     />
-                    <Input
-                        placeholder='Email'
-                        value={form.email}
-                        type={"eanil"}
-                        onChange={(e) => setForm(e.target.value, "email")}
-                    />
+                    <div>
+                        <Input
+                            placeholder='Email'
+                            value={form.email}
+                            type={"eanil"}
+                            onChange={handleChange}
+                        />
+                        <div className={styles.validation}>
+                            {error ? <Text text={error} color={COLORS.red} textSize="fourteen" /> : null}
+                        </div>
+                    </div>
                     <div className={styles.submit}>
-                        <ArrowRightButton onClick={sendBot} />
+                        <ArrowRightButton disabled={disabled} onClick={sendBot} />
                     </div>
                 </div>
             </div>

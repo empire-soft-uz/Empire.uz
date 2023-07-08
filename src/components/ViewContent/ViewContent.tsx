@@ -1,5 +1,5 @@
 import React from 'react'
-import useRootStore from '../../Hooks/useRootStore'
+import useRootStore from '../../hooks/useRootStore'
 import { ASSETS } from '../../utils/assetsRequires'
 import { COLORS } from '../../utils/color'
 import { ReviewsData } from '../../utils/dateBase'
@@ -19,11 +19,12 @@ const ViewContent = () => {
 
     return (
         <div className={styles.container}>
+            <Text margin='0 0 15px 0' textAlign={"center"} text={userData.expert} textSize={'twentyTwo'} />
             <div className={styles.user}>
                 <div className={styles.skill}>
-                    <Text text={userData.expert} textSize={'twentyTwo'} />
                     <Text text={userData.expertSkill} textSize={'twenty'} color={COLORS.green} />
                     <Text text={userData.totalExperience} textSize={'fourteen'} />
+                    <Text text={userData.salary} textSize={'twenty'} />
                 </div>
                 <div className={styles.userImage}>
                     <img src={userData.image} alt="" />
@@ -32,7 +33,6 @@ const ViewContent = () => {
             <div className={styles.center}>
                 <Text text={userData.name} textSize={'twenty'} />
                 <Text text={userData.whereFrom} textSize={'eighteen'} color={COLORS.grey} />
-                <Text text={userData.salary} textSize={'twentyTwo'} />
             </div>
             <div className={styles.technical}>
                 <div className={styles.technicalBox}>
