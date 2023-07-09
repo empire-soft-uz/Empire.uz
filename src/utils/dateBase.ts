@@ -750,7 +750,7 @@ components`,
   {
     id: 4,
     title: "The best developers only for you",
-    name: "Turdimurodov Nurulloh",
+    name: "Nurulloh Turdimurodov",
     comment:
       "Nurullah has more than 1 and a half years of experience in frontend development. After graduating from empire it academy, he did many start ups of Empire-soft and participated in some big start ups.",
     salary: "$28 /h",
@@ -837,7 +837,7 @@ components`,
         skills: [
           {
             icon: "./icons/React.svg",
-            name: "React-Native",
+            name: "React",
           },
           {
             icon: "./icons/mobx.png",
@@ -858,7 +858,7 @@ components`,
         ],
       },
       {
-        title: "React Native Developer",
+        title: "React Developer",
         type: "Agency",
         time: "1 year 1 months",
         info: [
@@ -866,7 +866,7 @@ components`,
             text: "Development and support of a food delivery service.",
           },
           {
-            text: "Used Redux, SSR, SCSS, Node.js as well as setting up webpack from scratch in my pet projects",
+            text: "Used Redux, MobX, Css as well as setting up webpack from scratch in my pet projects",
           },
           {
             text: "Development and further publication in the App Store / Google Play of an application for a recreation center (ordering food, ordering a bathhouse, signing up for activities, etc.)",
@@ -880,14 +880,6 @@ components`,
           {
             icon: "./icons/redux.svg",
             name: "Reux",
-          },
-          {
-            icon: "./icons/sass.svg",
-            name: "SASS",
-          },
-          {
-            icon: "./icons/web.svg",
-            name: "Webpack",
           },
           {
             icon: "./icons/mobx.png",
@@ -917,12 +909,12 @@ export const ProgrammingLanguages: ProgrammingLanguagesType[] = [
   {
     id: 1,
     image: "./icons/react.svg",
-    name: "React ",
+    name: "React",
   },
   {
     id: 2,
     image: "./icons/android.svg",
-    name: "Android ",
+    name: "Android",
   },
   {
     id: 3,

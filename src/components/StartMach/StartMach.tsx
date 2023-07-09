@@ -1,9 +1,7 @@
 import { Backdrop, CircularProgress } from '@mui/material'
 import { message } from 'antd'
-import axios from 'axios'
-import { toJS } from 'mobx'
 import { observer } from 'mobx-react-lite'
-import React, { ChangeEvent, useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { ArrowBackIcon, CloseSmall, FileUpload, PlusIcon } from '../../assets/icons/Icons'
 import useRootStore from '../../Hooks/useRootStore'
 import { storage } from '../../services/Firebase'
@@ -13,16 +11,22 @@ import ArrowRightButton from '../ArrowRightButton/ArrowRightButton'
 import Button from '../Button/Button'
 import Text from '../Text/Text'
 import styles from "./StartMach.module.css"
+import dayjs, { Dayjs } from 'dayjs';
+import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 const StartMach = () => {
     const { visiable, hide, show } = useRootStore().visibleStore
     const { choseWorkRate, workRate, choseHowlong, howLong, findDevForm, setfindDevForm } = useRootStore().tagsStore
+    const [value, setValue] = React.useState<Dayjs | null>(null);
+    const today = dayjs()
     const next = () => {
         show("calendly")
         hide("smartMach")
         setFile(null)
     }
-
     const back = () => {
         show("findDeveloper")
         hide("smartMach")
@@ -146,13 +150,11 @@ const StartMach = () => {
                     </div>
                 </div>
                 <div className={styles.dateBox}>
-                    <input
-                        value={findDevForm.startDate}
-                        placeholder='Start Date'
-                        className={styles.date}
-                        type="date"
-                        onChange={(e) => setfindDevForm(e.target.value, "startDate")}
-                    />
+                    <LocalizationProvider dateAdapter={AdapterDayjs}>
+                        <DemoContainer components={['DatePicker']}>
+                            <DatePicker minDate={today} sx={{ color: "#fff" }} value={value} onChange={(newValue) => setValue(newValue)} />
+                        </DemoContainer>
+                    </LocalizationProvider>
                 </div>
                 <div className={styles.footer}>
                     <ArrowRightButton

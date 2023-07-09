@@ -36,7 +36,13 @@
   background-color: #1DAC87;
   border-radius: 20px;
 }
-
+.css-nxo287-MuiInputBase-input-MuiOutlinedInput-input{
+  color: #7F7F7F !important;
+  font-family: "FuturaPTDemi" !important;
+}
+.css-i4bv87-MuiSvgIcon-root{
+  fill: #7F7F7F !important;
+}
 
 @font-face {
   font-family: "FuturaBold";
