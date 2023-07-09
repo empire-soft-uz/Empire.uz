@@ -1,14 +1,12 @@
 import { Drawer } from 'antd'
 import { observer } from 'mobx-react-lite'
 import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 import { CloseSmall, MenuIcon } from '../../assets/icons/Icons'
 import useRootStore from '../../hooks/useRootStore'
 import { APP_ROUTES } from '../../routes/app-routes'
 import { COLORS } from '../../utils/color'
 import Button from '../Button/Button'
 import Text from '../Text/Text'
-import TranslationDrop from '../TranslationDrop/TranslationDrop'
 import styles from "./Header.module.css"
 
 const Header = () => {
@@ -44,7 +42,7 @@ const Header = () => {
                 <a href="/#about-us" className='href'>
                     <Text textSize='sixteen' cursor='pointer' text='About us' color={COLORS.white} />
                 </a>
-                <a href="/blog" className='href'>
+                <a href={APP_ROUTES.BLOG} className='href'>
                     <Text textSize='sixteen' cursor='pointer' text='Blog' color={COLORS.white} />
                 </a>
                 <Button onPress={() => show("findDeveloper")} btnType='outline' title='FIND A DEVELOPER' titleColor={COLORS.green} />

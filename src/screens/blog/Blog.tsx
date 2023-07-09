@@ -36,7 +36,7 @@ const Blog = () => {
     return (
         <>
             <Header />
-            <div className={styles.container}>
+            <div className={styles.container} id="blog">
                 <div className={styles.content}>
                     {setBlogsinfo ? <BlogInfo
                         date={blogsInfo.date ? "" : ""}
