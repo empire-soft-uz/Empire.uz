@@ -11,6 +11,7 @@
 }
 .userImage{
     min-width: 120px !important;
+    max-width: 120px !important;
     height: 120px !important;
     border-radius: 50%;
     overflow: hidden;

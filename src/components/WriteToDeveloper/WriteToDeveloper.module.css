@@ -41,4 +41,12 @@
         border-radius: 0;
         overflow-x: auto;
     }
+    .mediaCenter{
+        width: 100%;
+        padding: 5%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }

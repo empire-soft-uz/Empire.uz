@@ -47,9 +47,10 @@ const WriteToDeveloper = () => {
                     'Content-Type': 'application/json'
                 }
             }).then(res => {
-                hide("writeToDev")
                 clearServiceSendDevForm()
+                hide("writeToDev")
                 hide("loading")
+                show("weWillContact")
                 message.success('Thank you for contacting. We will reach you soon!')
             }).catch(err => {
                 message.error(`${err}`)
@@ -61,6 +62,7 @@ const WriteToDeveloper = () => {
         }
     }
     const closeModal = () => {
+        clearServiceSendDevForm()
         setError(null)
         hide("writeToDev")
     }
@@ -76,23 +78,25 @@ const WriteToDeveloper = () => {
                 <div className={styles.closeModal} onClick={closeModal}>
                     <CloseSmall />
                 </div>
-                <Text text={`Send To: ${serviceSendData.job}`} textSize={'twenty'} />
-                <div className={styles.title}>
-                    <div>
-                        <Input value={serviceSendData.name} onChange={(e) => setServiceSendMessage(e.target.value, "name")} placeholder='Enter your name' />
-                        <div className={styles.validation}>
-                            {nameError ? <Text text={nameError} color={COLORS.red} textSize="fourteen" /> : null}
+                <div className={styles.mediaCenter}>
+                    <Text text={`Send To: ${serviceSendData.job}`} textSize={'twenty'} />
+                    <div className={styles.title}>
+                        <div>
+                            <Input value={serviceSendData.name} onChange={(e) => setServiceSendMessage(e.target.value, "name")} placeholder='Enter your name' />
+                            <div className={styles.validation}>
+                                {nameError ? <Text text={nameError} color={COLORS.red} textSize="fourteen" /> : null}
+                            </div>
+                        </div>
+                        <div>
+                            <Input type='email' value={serviceSendData.email} onChange={handleChange} placeholder='Enter your email' />
+                            <div className={styles.validation}>
+                                {error ? <Text text={error} color={COLORS.red} textSize="fourteen" /> : null}
+                            </div>
                         </div>
                     </div>
-                    <div>
-                        <Input type='email' value={serviceSendData.email} onChange={handleChange} placeholder='Enter your email' />
-                        <div className={styles.validation}>
-                            {error ? <Text text={error} color={COLORS.red} textSize="fourteen" /> : null}
-                        </div>
+                    <div className={styles.footer}>
+                        <ArrowRightButton disabled={disabled} onClick={sendBot} />
                     </div>
-                </div>
-                <div className={styles.footer}>
-                    <ArrowRightButton disabled={disabled} onClick={sendBot} />
                 </div>
             </div>
         </>
