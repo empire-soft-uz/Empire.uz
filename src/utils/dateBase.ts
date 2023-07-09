@@ -146,14 +146,14 @@ export const ReviewsData: ReviewDataType[] = [
         expertise: true,
       },
       {
-        id: 5,
+        id: 4,
         skillsIcon: "./icons/css.svg",
         skillsName: "HTML/CSS",
         experience: "4 years",
         expertise: false,
       },
       {
-        id: 6,
+        id: 5,
         skillsIcon: "./icons/firebase.svg",
         skillsName: "Firebase",
         experience: "4 years",
@@ -468,7 +468,7 @@ components`,
         expertise: false,
       },
       {
-        id: 6,
+        id: 7,
         skillsIcon: "./icons/node.svg",
         skillsName: "NodeJs",
         experience: "1 years",
@@ -612,7 +612,7 @@ components`,
     ],
     skills: [
       {
-        id: 2,
+        id: 1,
         skillsIcon: "./icons/react.svg",
         skillsName: "React-Native",
         experience: "4+ years",
@@ -626,21 +626,21 @@ components`,
         expertise: true,
       },
       {
-        id: 4,
+        id: 3,
         skillsIcon: "./icons/js.svg",
         skillsName: "JS/TS",
         experience: "4+ years",
         expertise: true,
       },
       {
-        id: 5,
+        id: 4,
         skillsIcon: "./icons/css.svg",
         skillsName: "HTML/CSS",
         experience: "4 years",
         expertise: false,
       },
       {
-        id: 6,
+        id: 5,
         skillsIcon: "./icons/firebase.svg",
         skillsName: "Firebase",
         experience: "4 years",
@@ -746,6 +746,170 @@ components`,
     ],
     communication: 7,
     technicalSkill: 9,
+  },
+  {
+    id: 4,
+    title: "The best developers only for you",
+    name: "Turdimurodov Nurulloh",
+    comment:
+      "Nurullah has more than 1 and a half years of experience in frontend development. After graduating from empire it academy, he did many start ups of Empire-soft and participated in some big start ups.",
+    salary: "$28 /h",
+    whereFrom: "Tashkent Uzbekistan",
+    totalExperience: "1.5+ Years Of Experience",
+    expert: "React Developer",
+    expertSkill: "React",
+    image: ASSETS.developer4,
+    job: "React Developer",
+    education: "Empire It Academy",
+    eduBranch:
+      "Computer Science and Engineering(CSE)",
+    strengths: [
+      {
+        item: "Excellent in frontend React apps",
+      },
+      {
+        item: "Great communicator",
+      },
+      {
+        item: "Good experience with new libraries like Next.js & React.js",
+      },
+    ],
+    skills: [
+      {
+        id: 1,
+        skillsIcon: "./icons/react.svg",
+        skillsName: "React",
+        experience: "1.5+ years",
+        expertise: true,
+      },
+      {
+        id: 2,
+        skillsIcon: "./icons/react.svg",
+        skillsName: "React-Native",
+        experience: "2 month",
+        expertise: false,
+      },
+      {
+        id: 3,
+        skillsIcon: "./icons/js.svg",
+        skillsName: "JS/TS",
+        experience: "1.5 years",
+        expertise: true,
+      },
+      {
+        id: 4,
+        skillsIcon: "./icons/css.svg",
+        skillsName: "HTML/CSS",
+        experience: "2+ years",
+        expertise: true,
+      },
+      {
+        id: 5,
+        skillsIcon: "./icons/firebase.svg",
+        skillsName: "Firebase",
+        experience: "5 month",
+        expertise: true,
+      },
+      {
+        id: 6,
+        skillsIcon: "./icons/react-navigation.png",
+        skillsName: "React navigation",
+        experience: "1 years",
+        expertise: false,
+      },
+    ],
+    experience: [
+      {
+        title: "Software Engineer",
+        type: "Agency",
+        time: "1 year 3 months",
+        info: [
+          {
+            text: "Development and support of mobile applications.",
+          },
+          {
+            text: `Participated in the development of new and existing solutions, for example: financial app – pension fund management; IoT-app – smart water bar control; find and book parking lots.`,
+          },
+          {
+            text: "Writing native code in obj-c, swift and java.",
+          },
+        ],
+        skills: [
+          {
+            icon: "./icons/React.svg",
+            name: "React-Native",
+          },
+          {
+            icon: "./icons/mobx.png",
+            name: "MobX",
+          },
+          {
+            icon: "./icons/react-navigation.png",
+            name: "React-navigation",
+          },
+          {
+            icon: "./icons/ts.svg",
+            name: "TS",
+          },
+          {
+            icon: "./icons/firebase.svg",
+            name: "Firebase",
+          },
+        ],
+      },
+      {
+        title: "React Native Developer",
+        type: "Agency",
+        time: "1 year 1 months",
+        info: [
+          {
+            text: "Development and support of a food delivery service.",
+          },
+          {
+            text: "Used Redux, SSR, SCSS, Node.js as well as setting up webpack from scratch in my pet projects",
+          },
+          {
+            text: "Development and further publication in the App Store / Google Play of an application for a recreation center (ordering food, ordering a bathhouse, signing up for activities, etc.)",
+          },
+        ],
+        skills: [
+          {
+            icon: "./icons/react.svg",
+            name: "React",
+          },
+          {
+            icon: "./icons/redux.svg",
+            name: "Reux",
+          },
+          {
+            icon: "./icons/sass.svg",
+            name: "SASS",
+          },
+          {
+            icon: "./icons/web.svg",
+            name: "Webpack",
+          },
+          {
+            icon: "./icons/mobx.png",
+            name: "MobX",
+          },
+          {
+            icon: "./icons/react.svg",
+            name: "React-Native",
+          },
+          {
+            icon: "./icons/react-navigation.png",
+            name: "React-navigation",
+          },
+          {
+            icon: "./icons/firebase.svg",
+            name: "Firebase",
+          },
+        ],
+      },
+    ],
+    communication: 8,
+    technicalSkill: 7,
   },
 ];
 

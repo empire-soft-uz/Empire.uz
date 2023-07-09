@@ -3,9 +3,14 @@ import React from 'react'
 import BlogCard from '../../components/BlogCard/BlogCard'
 import BlogCardTwo from '../../components/BlogCardTwo/BlogCardTwo'
 import BlogInfo from '../../components/BlogInfo/BlogInfo'
+import Calendly from '../../components/Calendly/Calendly'
+import FindDeveloper from '../../components/FindDeveloper/FindDeveloper'
 import Footer from '../../components/Footer/Footer'
 import Header from '../../components/Header/Header'
+import Loading from '../../components/Loading/Loading'
+import StartMach from '../../components/StartMach/StartMach'
 import Text from '../../components/Text/Text'
+import WeWillContact from '../../components/WeWillContact/WeWillContact'
 import useRootStore from '../../Hooks/useRootStore'
 import { ASSETS } from '../../utils/assetsRequires'
 import { BlogData } from '../../utils/dateBase'
@@ -64,6 +69,11 @@ const Blog = () => {
             <div className={styles.footer}>
                 <Footer />
             </div>
+            <FindDeveloper />
+            <StartMach />
+            <Calendly />
+            <WeWillContact />
+            <Loading />
         </>
     )
 }

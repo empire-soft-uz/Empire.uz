@@ -55,4 +55,12 @@
         border-radius: 100px;
         z-index: 3;
     }
+    .mediaCenter{
+        width: 100%;
+        padding: 5%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
