@@ -1,7 +1,7 @@
 import { Backdrop } from '@mui/material'
 import { observer } from 'mobx-react-lite'
 import React from 'react'
-import useRootStore from '../../hooks/useRootStore'
+import useRootStore from '../../Hooks/useRootStore'
 import ArrowRightButton from '../ArrowRightButton/ArrowRightButton'
 import Text from '../Text/Text'
 import styles from "./WeWillContact.module.css"

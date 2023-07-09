@@ -8,7 +8,7 @@ import { ReviewsData, ServicesData } from "../../utils/dateBase";
 import { ASSETS } from "../../utils/assetsRequires";
 import { COLORS } from "../../utils/color";
 import DevelopersCard from "../DevelopersCard/DevelopersCard";
-import useRootStore from "../../hooks/useRootStore";
+import useRootStore from "../../Hooks/useRootStore";
 import { observer } from "mobx-react-lite";
 import { toJS } from "mobx";
 import { ReviewDataType } from "../../types/types";

@@ -1,6 +1,6 @@
 import React from 'react'
 import { ArrowBackIcon } from '../../assets/icons/Icons'
-import useRootStore from '../../hooks/useRootStore'
+import useRootStore from '../../Hooks/useRootStore'
 import { COLORS } from '../../utils/color'
 import Text from '../Text/Text'
 import styles from "./BlogInfo.module.css"

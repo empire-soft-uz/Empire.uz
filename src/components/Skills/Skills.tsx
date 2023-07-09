@@ -1,5 +1,5 @@
 import { observer } from "mobx-react-lite";
-import useRootStore from "../../hooks/useRootStore";
+import useRootStore from "../../Hooks/useRootStore";
 import { COLORS } from "../../utils/color";
 import SkillIcon from "../SkillIcon/SkillIcon";
 import Text from "../Text/Text";

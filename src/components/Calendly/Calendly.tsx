@@ -4,7 +4,7 @@ import axios from 'axios'
 import { observer } from 'mobx-react-lite'
 import React from 'react'
 import { ArrowBackIcon, ArrowRight, CloseBig } from '../../assets/icons/Icons'
-import useRootStore from '../../hooks/useRootStore'
+import useRootStore from '../../Hooks/useRootStore'
 import styles from "./Calendly.module.css"
 
 const Calendly = () => {
