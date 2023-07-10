@@ -13,13 +13,18 @@ const WeWillContact = () => {
         hide("smartMach")
         hide("weWillContact")
         hide("writeToDev")
+        hide("viewProfile")
+        hide("calendly")
+        if (visiable.weWillContact === false)
+            document.body.style.overflow = "auto"
     }
+
     return (
         <>
             <Backdrop
                 sx={{ color: '#fff', zIndex: 10 }}
                 open={visiable.weWillContact}
-                onClick={() => hide("weWillContact")}
+                onClick={next}
             ></Backdrop>
             <div className={styles.container} style={{ display: visiable.weWillContact ? "block" : "none" }}>
                 <div className={styles.mediaCenter}>

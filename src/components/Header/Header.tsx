@@ -8,8 +8,13 @@ import { COLORS } from '../../utils/color'
 import Button from '../Button/Button'
 import Text from '../Text/Text'
 import styles from "./Header.module.css"
+interface Props {
+    servicesLink: string;
+}
 
-const Header = () => {
+const Header: React.FC<Props> = ({
+    servicesLink
+}) => {
     const { show, hide, visiable } = useRootStore().visibleStore
 
     const [small, setSmall] = useState(false);
@@ -20,6 +25,13 @@ const Header = () => {
     const findDev = () => {
         show("findDeveloper")
         hide("drawer")
+        if (visiable.findDeveloper === true)
+            document.body.style.overflow = "hidden"
+    }
+    const showFindDev = () => {
+        show("findDeveloper")
+        if (visiable.findDeveloper === true)
+            document.body.style.overflow = "hidden"
     }
 
     useEffect(() => {
@@ -36,7 +48,7 @@ const Header = () => {
                 <img className={styles.logo} src="./icons/logo.svg" alt="Empire-soft" />
             </a>
             <div className={styles.rightBox}>
-                <a href="/#services" className="href">
+                <a href={servicesLink} className="href">
                     <Text textSize='sixteen' cursor='pointer' text='Services' color={COLORS.white} />
                 </a>
                 <a href="/#about-us" className='href'>
@@ -45,7 +57,7 @@ const Header = () => {
                 <a href={APP_ROUTES.BLOG} className='href'>
                     <Text textSize='sixteen' cursor='pointer' text='Blog' color={COLORS.white} />
                 </a>
-                <Button onPress={() => show("findDeveloper")} btnType='outline' title='FIND A DEVELOPER' titleColor={COLORS.green} />
+                <Button onPress={showFindDev} btnType='outline' title='FIND A DEVELOPER' titleColor={COLORS.green} />
             </div>
             <div className={styles.drawer}>
                 <div onClick={() => show("drawer")}>
@@ -77,7 +89,7 @@ const Header = () => {
                 open={visiable.drawer}
                 closeIcon={<CloseSmall />}
             >
-                <a href="/#services" className="href" onClick={closeDrawer}>
+                <a href={servicesLink} className="href" onClick={closeDrawer}>
                     <Text margin='20px 0 0 0' textSize='twentyTwo' cursor='pointer' text='Services' color={COLORS.white} />
                 </a>
                 <a href="/#about-us" className='href' onClick={closeDrawer}>

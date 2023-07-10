@@ -48,7 +48,7 @@ const SubmitApp = () => {
             }).then(res => {
                 hide("loading")
                 clearForm()
-                message.success('We will contact you')
+                message.success('Thank you for contacting. We will reach you soon!')
             }).catch(err => {
                 message.error(`${err}`)
             })
@@ -58,7 +58,7 @@ const SubmitApp = () => {
     return (
         <div className={styles.container}>
             <div className={styles.header}>
-                <Text text='Submit your application' family="BenzinBold" transform={"uppercase"} textSize='thirtySix' />
+                <Text textAlign={"center"} text='Submit your application' family="BenzinBold" transform={"uppercase"} textSize='thirtySix' />
             </div>
             <div className={styles.content}>
                 <div className={styles.leftBox}>
