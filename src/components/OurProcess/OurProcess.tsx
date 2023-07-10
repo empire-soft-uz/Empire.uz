@@ -12,7 +12,7 @@ const OurProcess = () => {
     return (
         <div className={styles.container}>
             <div className={styles.header}>
-                <Text text='OUR PROCESS' family="BenzinBold" textSize='thirtySix' />
+                <Text textAlign={"center"} text='OUR PROCESS' family="BenzinBold" textSize='thirtySix' />
             </div>
             <div className={styles.content}>
                 <div className={styles.cardsBox}>

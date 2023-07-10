@@ -40,10 +40,15 @@ const FindDeveloper = () => {
     const next = () => {
         show("smartMach")
         hide("findDeveloper")
+        if (visiable.smartMach === true)
+            document.body.style.overflow = "hidden"
     }
 
     const closeFind = () => {
         hide("findDeveloper")
+        if (visiable.findDeveloper === false)
+            document.body.style.overflow = "auto"
+
         clearFindDevForm()
     }
 
@@ -52,7 +57,7 @@ const FindDeveloper = () => {
             <Backdrop
                 sx={{ color: '#fff', zIndex: 6 }}
                 open={visiable.findDeveloper}
-                onClick={() => hide("findDeveloper")}></Backdrop>
+                onClick={closeFind}></Backdrop>
             <div className={styles.container} style={{ display: visiable.findDeveloper ? "block" : "none" }}>
                 <div className={styles.closeModal} onClick={closeFind}>
                     <CloseBig />

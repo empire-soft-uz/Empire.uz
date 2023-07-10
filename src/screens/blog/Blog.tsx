@@ -40,7 +40,7 @@ const Blog = () => {
     const { getBlogsInfo, blogsInfo, setBlogsinfo } = useRootStore().blogsStore
     return (
         <>
-            <Header />
+            <Header servicesLink='/#services' />
             <div className={styles.container} id="blog">
                 <div className={styles.content}>
                     {setBlogsinfo ? <BlogInfo

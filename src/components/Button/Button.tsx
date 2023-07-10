@@ -36,7 +36,7 @@ const Button: React.FC<Props> = ({
             }}
             className={`${styles[btnType]}`} onClick={onPress}
         >
-            <Text textSize={titleSize ? titleSize : "eighteen"} text={title} color={titleColor} />
+            {title}
         </button>
     )
 }

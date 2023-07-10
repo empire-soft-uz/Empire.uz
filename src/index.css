@@ -43,7 +43,9 @@
 .css-i4bv87-MuiSvgIcon-root{
   fill: #7F7F7F !important;
 }
-
+.ant-picker-clear{
+  background-color: #1DAC87;
+}
 @font-face {
   font-family: "FuturaBold";
   src: url("./assets/fonts/FuturaPTBold.otf") format("truetype");

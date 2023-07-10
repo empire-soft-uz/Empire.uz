@@ -8,7 +8,7 @@ const AboutUs = () => {
     return (
         <div className={styles.container} id="about-us">
             <div className={styles.header}>
-                <Text text='ABOUT US' family="BenzinBold" textSize={"thirtySix"} />
+                <Text text='ABOUT US' textAlign={"center"} family="BenzinBold" textSize={"thirtySix"} />
             </div>
             <div className={styles.content}>
                 <div className={styles.leftBox}>

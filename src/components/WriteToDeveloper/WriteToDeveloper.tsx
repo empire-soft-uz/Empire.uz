@@ -51,6 +51,8 @@ const WriteToDeveloper = () => {
                 hide("writeToDev")
                 hide("loading")
                 show("weWillContact")
+                if (visiable.weWillContact === true)
+                    document.body.style.overflow = "hidden"
                 message.success('Thank you for contacting. We will reach you soon!')
             }).catch(err => {
                 message.error(`${err}`)
@@ -62,9 +64,11 @@ const WriteToDeveloper = () => {
         }
     }
     const closeModal = () => {
+        hide("writeToDev")
         clearServiceSendDevForm()
         setError(null)
-        hide("writeToDev")
+        if (visiable.writeToDev === false)
+            document.body.style.overflow = "auto"
     }
 
     return (
@@ -72,7 +76,7 @@ const WriteToDeveloper = () => {
             <Backdrop
                 sx={{ color: '#fff', zIndex: 8 }}
                 open={visiable.writeToDev}
-                onClick={() => hide("writeToDev")}
+                onClick={closeModal}
             ></Backdrop>
             <div className={styles.container} style={{ display: visiable.writeToDev ? "block" : "none" }}>
                 <div className={styles.closeModal} onClick={closeModal}>

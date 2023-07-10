@@ -10,7 +10,7 @@ const ProfessionalExperience = () => {
     return (
         <div className={styles.container}>
             <Text text='Professional Experience' textSize='twenty' />
-            {userData.experience.map((item, index) => {
+            {userData?.experience.map((item, index) => {
                 return (
                     <div className={styles.content} key={index}>
                         <div className={styles.title}>
