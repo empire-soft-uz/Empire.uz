@@ -8,7 +8,7 @@ import styles from "./MainBack.module.css"
 const MainBack = () => {
     return (
         <div className={styles.container}>
-            <Header servicesLink='#services' />
+            <Header />
             <div className={styles.textBox}>
                 <Text
                     text='We develop complex projects - simply. Sharing our team'

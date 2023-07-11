@@ -8,15 +8,16 @@ import { COLORS } from '../../utils/color'
 import Button from '../Button/Button'
 import Text from '../Text/Text'
 import styles from "./Header.module.css"
+import { useNavigate } from 'react-router-dom';
 interface Props {
-    servicesLink: string;
+    servicesLink?: string;
 }
 
 const Header: React.FC<Props> = ({
     servicesLink
 }) => {
     const { show, hide, visiable } = useRootStore().visibleStore
-
+    const navigation = useNavigate()
     const [small, setSmall] = useState(false);
 
     const closeDrawer = () => {
@@ -48,9 +49,9 @@ const Header: React.FC<Props> = ({
                 <img className={styles.logo} src="./icons/logo.svg" alt="Empire-soft" />
             </a>
             <div className={styles.rightBox}>
-                <a href={servicesLink} className="href">
-                    <Text textSize='sixteen' cursor='pointer' text='Services' color={COLORS.white} />
-                </a>
+                {/* <a href={servicesLink} className="href"> */}
+                <Text onPress={() => navigation("/#services")} textSize='sixteen' cursor='pointer' text='Services' color={COLORS.white} />
+                {/* </a> */}
                 <a href="/#about-us" className='href'>
                     <Text textSize='sixteen' cursor='pointer' text='About us' color={COLORS.white} />
                 </a>

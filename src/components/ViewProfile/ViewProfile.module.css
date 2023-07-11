@@ -61,6 +61,7 @@
 }
 .info{
     display: flex;
+    justify-content: space-between;
     gap: 20px;
     padding: 20px 0;
     margin-top: 30px;
@@ -130,7 +131,7 @@
 .container{
     width: 90%;
     height: 90vh;
-    padding: 20px 60px;
+    padding: 20px 30px;
     background: #04110E;
     border-radius: 20px;
     position: fixed;
@@ -149,6 +150,7 @@
 }
 .rightBox{
     padding: 20px;
+    width: 65% !important;
 }
 
 .pagination{
@@ -189,6 +191,7 @@
 }
 .leftBox{
     flex-direction: column;
+    width: 35%;
 }
 .info{
     display: flex;
@@ -204,5 +207,12 @@
 .container{
     width: 80%;
     height: 80vh;
+    padding: 20px 50px;
+}
+.rightBox{
+    width: 70%;
+}
+.leftBox{
+    width: 30%;
 }
 }
