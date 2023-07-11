@@ -9,10 +9,11 @@ import { isValidEmail } from '../../helper/ValidationHelper'
 import useRootStore from '../../Hooks/useRootStore'
 import { COLORS } from '../../utils/color'
 import ArrowRightButton from '../ArrowRightButton/ArrowRightButton'
+import CloseBtn from '../CloseBtn/CloseBtn'
 import Input from '../Input/Input'
 import Text from '../Text/Text'
 import styles from "./WriteToDeveloper.module.css"
-
+import { IoCloseSharp } from "react-icons/io5"
 const WriteToDeveloper = () => {
     const { visiable, hide, show } = useRootStore().visibleStore
     const { setServiceSendMessage, serviceSendData, clearServiceSendDevForm } = useRootStore().userStore
@@ -80,7 +81,7 @@ const WriteToDeveloper = () => {
             ></Backdrop>
             <div className={styles.container} style={{ display: visiable.writeToDev ? "block" : "none" }}>
                 <div className={styles.closeModal} onClick={closeModal}>
-                    <CloseSmall />
+                    <CloseBtn icon={<IoCloseSharp size={24} />} />
                 </div>
                 <div className={styles.mediaCenter}>
                     <Text text={`Send To: ${serviceSendData.job}`} textSize={'twenty'} />

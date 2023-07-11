@@ -4,16 +4,18 @@ import RowItem from "../RowItem/RowItem";
 import styles from "./OurServices.module.css";
 import Text from "../Text/Text";
 import ServiceCard from "../ServiceCard/ServiceCard";
-import { ReviewsData, ServicesData } from "../../utils/dateBase";
+import { ServicesData } from "../../utils/dateBase";
 import { ASSETS } from "../../utils/assetsRequires";
-import { COLORS } from "../../utils/color";
-import DevelopersCard from "../DevelopersCard/DevelopersCard";
 import useRootStore from "../../Hooks/useRootStore";
 import { observer } from "mobx-react-lite";
-import { Fade } from "react-awesome-reveal";
-import { useNavigate } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const OurServices = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   const { show, visiable } = useRootStore().visibleStore;
   const { setServiceSendMessage } = useRootStore().userStore;
   const OpenForm = (name: string) => {
@@ -24,28 +26,26 @@ const OurServices = () => {
   };
   return (
     <div className={styles.container} id="services">
-      <div className={styles.top}>
-        <Fade cascade>
-          <Text text="OUR SERVICES" textAlign={"center"} family="BenzinBold" textSize="thirtySix" />
-        </Fade>
+      <div className={styles.top} data-aos="fade-up"
+        data-aos-duration="1500">
+        <Text text="OUR SERVICES" textAlign={"center"} family="BenzinBold" textSize="thirtySix" />
       </div>
-      <Fade className={styles.fade}>
-        <div className={styles.cardsBox}>
-          {ServicesData.map((e, index) => {
-            return (
-              <ServiceCard
-                key={index}
-                name={e.name}
-                text={e.text}
-                icon={e.icon}
-                onPress={() => OpenForm(e.name)}
-              />
-            );
-          })}
-        </div>
-      </Fade>
-      <img className={styles.backOne} src={ASSETS.back3} alt="back" />
-      <img className={styles.backTwo} src={ASSETS.back4} alt="back" />
+      <div className={styles.cardsBox} data-aos="fade-up"
+        data-aos-duration="1500">
+        {ServicesData.map((e, index) => {
+          return (
+            <ServiceCard
+              key={index}
+              name={e.name}
+              text={e.text}
+              icon={e.icon}
+              onPress={() => OpenForm(e.name)}
+            />
+          );
+        })}
+      </div>
+      <img data-aos="fade-down-right" data-aos-duration="1200" className={styles.backOne} src={ASSETS.back3} alt="back" />
+      <img data-aos="fade-down-left" data-aos-duration="1200" className={styles.backTwo} src={ASSETS.back4} alt="back" />
     </div>
   );
 };

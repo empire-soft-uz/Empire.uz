@@ -11,10 +11,12 @@
     border: none;
     color: #fff;
     border-radius: 50%;
-    transform: rotate(90deg) !important;
     cursor: pointer;
+    transition: 0.3s ease;
 }
 
 .btn:hover{
-    transform: scale(1.1);
+    transform: scale(1.2);
+    background-color: #fff !important;
+    color: #167A60 !important;
 }

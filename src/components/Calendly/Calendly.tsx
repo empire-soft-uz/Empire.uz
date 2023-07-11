@@ -5,7 +5,9 @@ import { observer } from 'mobx-react-lite'
 import React from 'react'
 import { ArrowBackIcon, ArrowRight, CloseBig } from '../../assets/icons/Icons'
 import useRootStore from '../../Hooks/useRootStore'
+import CloseBtn from '../CloseBtn/CloseBtn'
 import styles from "./Calendly.module.css"
+import { BiLeftArrowAlt } from "react-icons/bi";
 
 const Calendly = () => {
     const { visiable, hide, show } = useRootStore().visibleStore
@@ -46,7 +48,7 @@ const Calendly = () => {
             ></Backdrop>
             <div className={styles.container} style={{ display: visiable.calendly ? "block" : "none" }}>
                 <div className={styles.arrowRight} onClick={sendBot}>
-                    <ArrowBackIcon color="#1DAC87" />
+                    <CloseBtn icon={<BiLeftArrowAlt size={24} />} />
                 </div>
                 <div className={styles.calendlyBox}>
                     <iframe style={{

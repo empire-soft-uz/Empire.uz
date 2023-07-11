@@ -18,7 +18,7 @@ const SkillIcon: React.FC<Props> = ({
                 <img className={styles.logo} src={logo} /> :
                 null
             }
-            <Text whiteSpace={"nowrap"} textSize='fourteen' transform={"capitalize"} text={name.length > 10 ? `${name.slice(0, 8)}...` : name} />
+            <Text whiteSpace={"nowrap"} textSize='fourteen' transform={"capitalize"} text={name} />
         </div>
     )
 }
