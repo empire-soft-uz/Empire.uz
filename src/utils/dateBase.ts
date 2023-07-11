@@ -399,6 +399,395 @@ components`,
     technicalSkill: 9,
   },
   {
+    id: 7,
+    title: "The best developers only for you",
+    name: "Saidamir Botirov",
+    comment:
+      "Software Engineer with experience in developing web applications, microservices, and distributed systems participating in the complete product development lifecycle of successfully launched applications. An empathetic team player and mentor.",
+    salary: "$28 /h",
+    whereFrom: "Berlin, Germany",
+    totalExperience: "5+ Years Of Experience",
+    expert: "Expert Backend Developer",
+    expertSkill: "Golang",
+    image: ASSETS.developer4,
+    job: "Senior Backend Developer",
+    education: "Inha University",
+    eduBranch:
+      "Bachelor of Science, School of Computer and Information Engineering ",
+    strengths: [
+      {
+        item: "Excellent in frontend React apps",
+      },
+      {
+        item: "Great communicator",
+      },
+      {
+        item: "Good experience with new libraries like Next.js & Nuxt.js",
+      },
+    ],
+    skills: [
+      {
+        id: 2,
+        skillsIcon: "./icons/go.svg",
+        skillsName: "Golang",
+        experience: "5+ years",
+        expertise: true,
+      },
+      {
+        id: 3,
+        skillsIcon: "./icons/node.svg",
+        skillsName: "NodeJS",
+        experience: "5+ years",
+        expertise: true,
+      },
+      {
+        id: 4,
+        skillsIcon: "./icons/posgres.svg",
+        skillsName: "PostgreSQL",
+        experience: "4 years",
+        expertise: true,
+      },
+      {
+        id: 5,
+        skillsIcon: "./icons/docer.svg",
+        skillsName: "Docker",
+        experience: "3 years",
+        expertise: false,
+      },
+      {
+        id: 6,
+        skillsIcon: "./icons/mongo.svg",
+        skillsName: "MongoDB",
+        experience: "4 years",
+        expertise: false,
+      },
+      {
+        id: 6,
+        skillsIcon: "./icons/cassandra.png",
+        skillsName: "Cassandra",
+        experience: "4 years",
+        expertise: true,
+      },
+      {
+        id: 7,
+        skillsIcon: "./icons/elasticsearch.png",
+        skillsName: "Elastic Search",
+        experience: "4 years",
+        expertise: true,
+      },
+      {
+        id: 8,
+        skillsIcon: "./icons/gitt.svg",
+        skillsName: "Git",
+        experience: "4 years",
+        expertise: true,
+      },
+      {
+        id: 9,
+        skillsIcon: "./icons/linux.svg",
+        skillsName: "Linux",
+        experience: "4 years",
+        expertise: true,
+      },
+      {
+        id: 10,
+        skillsIcon: "./icons/kubernetes.svg",
+        skillsName: "Kubernetes",
+        experience: "4 years",
+        expertise: true,
+      },
+      {
+        id: 11,
+        skillsIcon: "./icons/rest.jpg",
+        skillsName: "REST",
+        experience: "4 years",
+        expertise: true,
+      },
+      {
+        id: 12,
+        skillsIcon: "",
+        skillsName: "TDD",
+        experience: "4 years",
+        expertise: true,
+      },
+      {
+        id: 13,
+        skillsIcon: "",
+        skillsName: "Microservices",
+        experience: "4 years",
+        expertise: true,
+      },
+      {
+        id: 14,
+        skillsIcon: "",
+        skillsName: "CI/CD",
+        experience: "4 years",
+        expertise: true,
+      },
+      {
+        id: 15,
+        skillsIcon: "./icons/rabbitmq.png",
+        skillsName: "RabbitMQ",
+        experience: "4 years",
+        expertise: true,
+      },
+      {
+        id: 16,
+        skillsIcon: "",
+        skillsName: "gRPC",
+        experience: "4 years",
+        expertise: true,
+      },
+    ],
+    experience: [
+      {
+        title: "Golang Engineer",
+        type: "Healthcare",
+        time: "1 year 2 months",
+        info: [
+          {
+            text: "Avoided dynamic RAM allocation by reading and writing files chunk by chunk from/to GCS while combining a list of PDF files.",
+          },
+        ],
+        skills: [
+          {
+            icon: "./icons/go.svg",
+            name: "Golang",
+          },
+          {
+            icon: "./icons/node.svg",
+            name: "NodeJS",
+          },
+          {
+            icon: "./icons/posgres.svg",
+            name: "PostgreSQL",
+          },
+          {
+            icon: "./icons/docer.svg",
+            name: "Docker",
+          },
+          {
+            icon: "./icons/mongo.svg",
+            name: "MongoDB",
+          },
+          {
+            icon: "./icons/cassandra.png",
+            name: "Cassandra",
+          },
+          {
+            icon: "./icons/elasticsearch.png",
+            name: "Elastic Search",
+          },
+          {
+            icon: "./icons/gitt.svg",
+            name: "Git",
+          },
+          {
+            icon: "./icons/linux.svg",
+            name: "Linux",
+          },
+          {
+            icon: "./icons/kubernetes.svg",
+            name: "Kubernetes",
+          },
+          {
+            icon: "./icons/rest.jpg",
+            name: "REST",
+          },
+          {
+            icon: "",
+            name: "TDD",
+          },
+          {
+            icon: "",
+            name: "Microservices",
+          },
+          {
+            icon: "",
+            name: "CI/CD",
+          },
+          {
+            icon: "./icons/rabbitmq.png",
+            name: "RabbitMQ",
+          },
+          {
+            icon: "",
+            name: "gRPC",
+          },
+        ],
+      },
+      {
+        title: "Lead Backend Engineer",
+        type: "Agency",
+        time: "1 year 9 months",
+        info: [
+          {
+            text: "Actively participated in the team forming process and interviewed 20+ engineers for backend positions",
+          },
+          {
+            text: "Provided leadership and direction for new hires, including mentoring, orientation, and training",
+          },
+          {
+            text: "Designed a solution for a real-life vehicle routing problem to distribute orders optimally using VROOM+Golang+Gin+RabbitMQ+PostgreSQL",
+          },
+          {
+            text: "Developed MRZ text scanner from passport photos using NodeJS+ExpressJS+TesseractOCR and achieved 2 times higher accuracy by training Tesseract using 5000+ Uzbek passport MRZ samples",
+          },
+        ],
+        skills: [
+          {
+            icon: "./icons/go.svg",
+            name: "Golang",
+          },
+          {
+            icon: "./icons/node.svg",
+            name: "NodeJS",
+          },
+          {
+            icon: "./icons/posgres.svg",
+            name: "PostgreSQL",
+          },
+          {
+            icon: "./icons/docer.svg",
+            name: "Docker",
+          },
+          {
+            icon: "./icons/mongo.svg",
+            name: "MongoDB",
+          },
+          {
+            icon: "./icons/cassandra.png",
+            name: "Cassandra",
+          },
+          {
+            icon: "./icons/elasticsearch.png",
+            name: "Elastic Search",
+          },
+          {
+            icon: "./icons/gitt.svg",
+            name: "Git",
+          },
+          {
+            icon: "./icons/linux.svg",
+            name: "Linux",
+          },
+          {
+            icon: "./icons/kubernetes.svg",
+            name: "Kubernetes",
+          },
+          {
+            icon: "./icons/rest.jpg",
+            name: "REST",
+          },
+          {
+            icon: "",
+            name: "TDD",
+          },
+          {
+            icon: "",
+            name: "Microservices",
+          },
+          {
+            icon: "",
+            name: "CI/CD",
+          },
+          {
+            icon: "./icons/rabbitmq.png",
+            name: "RabbitMQ",
+          },
+          {
+            icon: "",
+            name: "gRPC",
+          },
+        ],
+      },
+      {
+        title: "Backend Engineer",
+        type: "Agency",
+        time: "2 years 6 months",
+        info: [
+          {
+            text: "Built an application for distributing messages to connected phones to send mobile SMS using Golang+Gin+GORM(PostgreSQL)+TCP Socket",
+          },
+          {
+            text: "Developed REST API endpoints to apply online driving tests using Golang+Gin+GORM(PostgreSQL)",
+          },
+          {
+            text: "Developed a backend of an eCommerce website using NodeJS+GraphQL+Mongoose(MongoDB)",
+          },
+        ],
+        skills: [
+          {
+            icon: "./icons/go.svg",
+            name: "Golang",
+          },
+          {
+            icon: "./icons/node.svg",
+            name: "NodeJS",
+          },
+          {
+            icon: "./icons/posgres.svg",
+            name: "PostgreSQL",
+          },
+          {
+            icon: "./icons/docer.svg",
+            name: "Docker",
+          },
+          {
+            icon: "./icons/mongo.svg",
+            name: "MongoDB",
+          },
+          {
+            icon: "./icons/cassandra.png",
+            name: "Cassandra",
+          },
+          {
+            icon: "./icons/elasticsearch.png",
+            name: "Elastic Search",
+          },
+          {
+            icon: "./icons/gitt.svg",
+            name: "Git",
+          },
+          {
+            icon: "./icons/linux.svg",
+            name: "Linux",
+          },
+          {
+            icon: "./icons/kubernetes.svg",
+            name: "Kubernetes",
+          },
+          {
+            icon: "./icons/rest.jpg",
+            name: "REST",
+          },
+          {
+            icon: "",
+            name: "TDD",
+          },
+          {
+            icon: "",
+            name: "Microservices",
+          },
+          {
+            icon: "",
+            name: "CI/CD",
+          },
+          {
+            icon: "./icons/rabbitmq.png",
+            name: "RabbitMQ",
+          },
+          {
+            icon: "",
+            name: "gRPC",
+          },
+        ],
+      },
+    ],
+    communication: 7,
+    technicalSkill: 9,
+  },
+  {
     id: 2,
     title: "The best developers only for you",
     name: "Sarvar Abdurakhimov ",
@@ -583,170 +972,170 @@ components`,
     communication: 9,
     technicalSkill: 9,
   },
-  // {
-  //   id: 3,
-  //   title: "The best developers only for you",
-  //   name: "Sergey Shaposhnik",
-  //   comment:
-  //     "Has participated and lead whole process of high load mobile application from structuring to auto deployment. Did code reviews and worked direclty with clients many times. Has great experience in configuring the app Accessibility.",
-  //   salary: "$28 /h",
-  //   whereFrom: "Krasnoyarsk Russia",
-  //   totalExperience: "4+ Years Of Experience",
-  //   expert: "Expert React-Native Developer",
-  //   expertSkill: "React-Native",
-  //   image: ASSETS.developer3,
-  //   job: "Senior React-Native Developer",
-  //   education: "Siberian Federal University",
-  //   eduBranch:
-  //     "Bachelor's degree, Computer Software Engineering, Master's degree, Computer Software Engineering",
-  //   strengths: [
-  //     {
-  //       item: "Excellent in frontend React apps",
-  //     },
-  //     {
-  //       item: "Great communicator",
-  //     },
-  //     {
-  //       item: "Good experience with new libraries like Next.js & Nuxt.js",
-  //     },
-  //   ],
-  //   skills: [
-  //     {
-  //       id: 1,
-  //       skillsIcon: "./icons/react.svg",
-  //       skillsName: "React-Native",
-  //       experience: "4+ years",
-  //       expertise: true,
-  //     },
-  //     {
-  //       id: 3,
-  //       skillsIcon: "./icons/react.svg",
-  //       skillsName: "React",
-  //       experience: "4+ years",
-  //       expertise: true,
-  //     },
-  //     {
-  //       id: 3,
-  //       skillsIcon: "./icons/js.svg",
-  //       skillsName: "JS/TS",
-  //       experience: "4+ years",
-  //       expertise: true,
-  //     },
-  //     {
-  //       id: 4,
-  //       skillsIcon: "./icons/css.svg",
-  //       skillsName: "HTML/CSS",
-  //       experience: "4 years",
-  //       expertise: false,
-  //     },
-  //     {
-  //       id: 5,
-  //       skillsIcon: "./icons/firebase.svg",
-  //       skillsName: "Firebase",
-  //       experience: "4 years",
-  //       expertise: false,
-  //     },
-  //     {
-  //       id: 6,
-  //       skillsIcon: "./icons/react-navigation.png",
-  //       skillsName: "React navigation",
-  //       experience: "4 years",
-  //       expertise: true,
-  //     },
-  //   ],
-  //   experience: [
-  //     {
-  //       title: "Senior Software Engineer",
-  //       type: "Agency",
-  //       time: "1 year 9 months",
-  //       info: [
-  //         {
-  //           text: "Development and support of mobile applications.",
-  //         },
-  //         {
-  //           text: `Participated in the development of new and existing solutions, for example: financial app – pension fund management; IoT-app – smart water bar control; find and book parking lots.`,
-  //         },
-  //         {
-  //           text: "Writing native code in obj-c, swift and java.",
-  //         },
-  //       ],
-  //       skills: [
-  //         {
-  //           icon: "./icons/React.svg",
-  //           name: "React-Native",
-  //         },
-  //         {
-  //           icon: "./icons/mobx.png",
-  //           name: "MobX",
-  //         },
-  //         {
-  //           icon: "./icons/react-navigation.png",
-  //           name: "React-navigation",
-  //         },
-  //         {
-  //           icon: "./icons/ts.svg",
-  //           name: "TS",
-  //         },
-  //         {
-  //           icon: "./icons/firebase.svg",
-  //           name: "Firebase",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       title: "React Native Developer",
-  //       type: "Agency",
-  //       time: "1 year 1 months",
-  //       info: [
-  //         {
-  //           text: "Development and support of a food delivery service.",
-  //         },
-  //         {
-  //           text: "Used Redux, SSR, SCSS, Node.js as well as setting up webpack from scratch in my pet projects",
-  //         },
-  //         {
-  //           text: "Development and further publication in the App Store / Google Play of an application for a recreation center (ordering food, ordering a bathhouse, signing up for activities, etc.)",
-  //         },
-  //       ],
-  //       skills: [
-  //         {
-  //           icon: "./icons/react.svg",
-  //           name: "React",
-  //         },
-  //         {
-  //           icon: "./icons/redux.svg",
-  //           name: "Reux",
-  //         },
-  //         {
-  //           icon: "./icons/sass.svg",
-  //           name: "SASS",
-  //         },
-  //         {
-  //           icon: "./icons/web.svg",
-  //           name: "Webpack",
-  //         },
-  //         {
-  //           icon: "./icons/mobx.png",
-  //           name: "MobX",
-  //         },
-  //         {
-  //           icon: "./icons/react.svg",
-  //           name: "React-Native",
-  //         },
-  //         {
-  //           icon: "./icons/react-navigation.png",
-  //           name: "React-navigation",
-  //         },
-  //         {
-  //           icon: "./icons/firebase.svg",
-  //           name: "Firebase",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  //   communication: 7,
-  //   technicalSkill: 9,
-  // },
+  {
+    id: 3,
+    title: "The best developers only for you",
+    name: "Sergey Shaposhnik",
+    comment:
+      "Has participated and lead whole process of high load mobile application from structuring to auto deployment. Did code reviews and worked direclty with clients many times. Has great experience in configuring the app Accessibility.",
+    salary: "$28 /h",
+    whereFrom: "Krasnoyarsk Russia",
+    totalExperience: "4+ Years Of Experience",
+    expert: "Expert React-Native Developer",
+    expertSkill: "React-Native",
+    image: ASSETS.developer3,
+    job: "Senior React-Native Developer",
+    education: "Siberian Federal University",
+    eduBranch:
+      "Bachelor's degree, Computer Software Engineering, Master's degree, Computer Software Engineering",
+    strengths: [
+      {
+        item: "Excellent in frontend React apps",
+      },
+      {
+        item: "Great communicator",
+      },
+      {
+        item: "Good experience with new libraries like Next.js & Nuxt.js",
+      },
+    ],
+    skills: [
+      {
+        id: 1,
+        skillsIcon: "./icons/react.svg",
+        skillsName: "React-Native",
+        experience: "4+ years",
+        expertise: true,
+      },
+      {
+        id: 3,
+        skillsIcon: "./icons/react.svg",
+        skillsName: "React",
+        experience: "4+ years",
+        expertise: true,
+      },
+      {
+        id: 3,
+        skillsIcon: "./icons/js.svg",
+        skillsName: "JS/TS",
+        experience: "4+ years",
+        expertise: true,
+      },
+      {
+        id: 4,
+        skillsIcon: "./icons/css.svg",
+        skillsName: "HTML/CSS",
+        experience: "4 years",
+        expertise: false,
+      },
+      {
+        id: 5,
+        skillsIcon: "./icons/firebase.svg",
+        skillsName: "Firebase",
+        experience: "4 years",
+        expertise: false,
+      },
+      {
+        id: 6,
+        skillsIcon: "./icons/react-navigation.png",
+        skillsName: "React navigation",
+        experience: "4 years",
+        expertise: true,
+      },
+    ],
+    experience: [
+      {
+        title: "Senior Software Engineer",
+        type: "Agency",
+        time: "1 year 9 months",
+        info: [
+          {
+            text: "Development and support of mobile applications.",
+          },
+          {
+            text: `Participated in the development of new and existing solutions, for example: financial app – pension fund management; IoT-app – smart water bar control; find and book parking lots.`,
+          },
+          {
+            text: "Writing native code in obj-c, swift and java.",
+          },
+        ],
+        skills: [
+          {
+            icon: "./icons/React.svg",
+            name: "React-Native",
+          },
+          {
+            icon: "./icons/mobx.png",
+            name: "MobX",
+          },
+          {
+            icon: "./icons/react-navigation.png",
+            name: "React-navigation",
+          },
+          {
+            icon: "./icons/ts.svg",
+            name: "TS",
+          },
+          {
+            icon: "./icons/firebase.svg",
+            name: "Firebase",
+          },
+        ],
+      },
+      {
+        title: "React Native Developer",
+        type: "Agency",
+        time: "1 year 1 months",
+        info: [
+          {
+            text: "Development and support of a food delivery service.",
+          },
+          {
+            text: "Used Redux, SSR, SCSS, Node.js as well as setting up webpack from scratch in my pet projects",
+          },
+          {
+            text: "Development and further publication in the App Store / Google Play of an application for a recreation center (ordering food, ordering a bathhouse, signing up for activities, etc.)",
+          },
+        ],
+        skills: [
+          {
+            icon: "./icons/react.svg",
+            name: "React",
+          },
+          {
+            icon: "./icons/redux.svg",
+            name: "Reux",
+          },
+          {
+            icon: "./icons/sass.svg",
+            name: "SASS",
+          },
+          {
+            icon: "./icons/web.svg",
+            name: "Webpack",
+          },
+          {
+            icon: "./icons/mobx.png",
+            name: "MobX",
+          },
+          {
+            icon: "./icons/react.svg",
+            name: "React-Native",
+          },
+          {
+            icon: "./icons/react-navigation.png",
+            name: "React-navigation",
+          },
+          {
+            icon: "./icons/firebase.svg",
+            name: "Firebase",
+          },
+        ],
+      },
+    ],
+    communication: 7,
+    technicalSkill: 9,
+  },
   {
     id: 4,
     title: "The best developers only for you",
