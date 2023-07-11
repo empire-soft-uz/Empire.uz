@@ -12,21 +12,29 @@ const WeWillContact = () => {
         hide('findDeveloper')
         hide("smartMach")
         hide("weWillContact")
+        hide("writeToDev")
+        hide("viewProfile")
+        hide("calendly")
+        if (visiable.weWillContact === false)
+            document.body.style.overflow = "auto"
     }
+
     return (
         <>
             <Backdrop
-                sx={{ color: '#fff', zIndex: 4 }}
+                sx={{ color: '#fff', zIndex: 10 }}
                 open={visiable.weWillContact}
-                onClick={() => hide("weWillContact")}
+                onClick={next}
             ></Backdrop>
             <div className={styles.container} style={{ display: visiable.weWillContact ? "block" : "none" }}>
-                <div className={styles.title}>
-                    <Text text='Thank you for contacting. We will reach you soon!' lineHeight={40} textSize='forty' />
-                </div>
-                <div className={styles.blur}></div>
-                <div className={styles.footer}>
-                    <ArrowRightButton onClick={next} />
+                <div className={styles.mediaCenter}>
+                    <div className={styles.title}>
+                        <Text text='Thank you for contacting. We will reach you soon!' lineHeight={40} textSize='forty' />
+                    </div>
+                    <div className={styles.blur}></div>
+                    <div className={styles.footer}>
+                        <ArrowRightButton onClick={next} />
+                    </div>
                 </div>
             </div>
         </>

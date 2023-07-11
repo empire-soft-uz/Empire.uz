@@ -35,6 +35,9 @@
     border-radius: 100px;
     z-index: 3;
 }
+.validation{
+    position: absolute;
+}
 
 .blurPerson{
     position: absolute;

@@ -18,7 +18,7 @@ const Skills = () => {
           textSize="eighteen"
           color={COLORS.grey}
         />
-        {userData.skills
+        {userData?.skills
           .filter((e) => !!e.expertise)
           .map((i, index) => {
             return (
@@ -40,7 +40,7 @@ const Skills = () => {
       <div className={styles.allSkills}>
         <Text text="All Skills" textSize="eighteen" color={COLORS.grey} />
         <div className={styles.itemsTwo}>
-          {userData.skills.map((i, index) => {
+          {userData?.skills.map((i, index) => {
             return (
               <SkillIcon
                 key={index}

@@ -1,9 +1,8 @@
 import { Backdrop, CircularProgress } from '@mui/material'
-import { message } from 'antd'
-import axios from 'axios'
-import { toJS } from 'mobx'
+import { DatePicker, message } from 'antd'
+import { RangePickerProps } from 'antd/es/date-picker'
 import { observer } from 'mobx-react-lite'
-import React, { ChangeEvent, useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { ArrowBackIcon, CloseSmall, FileUpload, PlusIcon } from '../../assets/icons/Icons'
 import useRootStore from '../../Hooks/useRootStore'
 import { storage } from '../../services/Firebase'
@@ -13,20 +12,33 @@ import ArrowRightButton from '../ArrowRightButton/ArrowRightButton'
 import Button from '../Button/Button'
 import Text from '../Text/Text'
 import styles from "./StartMach.module.css"
+import dayjs, { Dayjs } from 'dayjs';
+import { FormatDate } from '../../helper/datePicker'
+import { toJS } from 'mobx'
 
 const StartMach = () => {
     const { visiable, hide, show } = useRootStore().visibleStore
-    const { choseWorkRate, workRate, choseHowlong, howLong, findDevForm, setfindDevForm } = useRootStore().tagsStore
+    const { choseWorkRate, workRate, choseHowlong, howLong, findDevForm, setfindDevForm, clearFindDevForm } = useRootStore().tagsStore
+
+
+    const disabledDate: RangePickerProps['disabledDate'] = (current) => {
+        return current && current < dayjs().endOf('day');
+    };
     const next = () => {
         show("calendly")
         hide("smartMach")
         setFile(null)
+        if (visiable.calendly === true)
+            document.body.style.overflow = "hidden"
     }
 
-    const back = () => {
-        show("findDeveloper")
+    const hideStartMatch = () => {
         hide("smartMach")
+        if (visiable.smartMach === false)
+            document.body.style.overflow = "auto"
+        clearFindDevForm()
     }
+
     const [file, setFile] = useState<File | null>(null);
     const [url, setUrl] = useState<string>('');
     const [loading, setLoading] = useState(false)
@@ -61,15 +73,12 @@ const StartMach = () => {
     return (
         <>
             <Backdrop
-                sx={{ color: '#fff', zIndex: 6 }}
+                sx={{ color: '#fff', zIndex: 5 }}
                 open={visiable.smartMach}
-                onClick={() => hide("smartMach")}
+                onClick={hideStartMatch}
             ></Backdrop>
             <div className={styles.container} style={{ display: visiable.smartMach ? "block" : "none" }}>
                 <div className={styles.title}>
-                    <div className={styles.arrowBack} onClick={back}>
-                        <ArrowBackIcon />
-                    </div>
                     <Text text='START MACHING NOW!' lineHeight={60} textSize='fifty' />
                 </div>
                 <div className={styles.blur}></div>
@@ -134,7 +143,6 @@ const StartMach = () => {
                         }
                         <Button disabled={file ? false : true} onPress={uploadFile} titleSize={"12px"} title='upload' btnType='primary' padding='5px 10px' />
                     </div>
-
                     <div className={styles.notesBox}>
                         <textarea
                             rows={4}
@@ -146,12 +154,15 @@ const StartMach = () => {
                     </div>
                 </div>
                 <div className={styles.dateBox}>
-                    <input
-                        value={findDevForm.startDate}
-                        placeholder='Start Date'
-                        className={styles.date}
-                        type="date"
-                        onChange={(e) => setfindDevForm(e.target.value, "startDate")}
+                    <DatePicker
+                        style={{
+                            backgroundColor: "#1DAC87",
+                            color: "#fff",
+                            border: "none"
+                        }}
+                        placeholder='Start date'
+                        disabledDate={disabledDate}
+                        onChange={(value) => setfindDevForm(FormatDate(value as never), "startDate")}
                     />
                 </div>
                 <div className={styles.footer}>

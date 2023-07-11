@@ -10,16 +10,18 @@ const ProfessionalExperience = () => {
     return (
         <div className={styles.container}>
             <Text text='Professional Experience' textSize='twenty' />
-            {userData.experience.map((item, index) => {
+            {userData?.experience.map((item, index) => {
                 return (
                     <div className={styles.content} key={index}>
                         <div className={styles.title}>
                             <>
                                 <div className={styles.name}>
                                     <Text text={item.title} textSize='eighteen' />
-                                    <Text text={item.time} textSize='sixteen' color={COLORS.grey} />
+                                    <Text whiteSpace={"nowrap"} text={item.time} textSize='sixteen' color={COLORS.grey} />
                                 </div>
-                                <SkillIcon name={item.type} type={'outline'} />
+                                <div className={styles.skillType}>
+                                    <SkillIcon name={item.type} type={'outline'} />
+                                </div>
                             </>
                         </div>
                         <div className={styles.ul}>
@@ -29,12 +31,14 @@ const ProfessionalExperience = () => {
                                 )
                             })}
                         </div>
-                        <div className={styles.skills}>
-                            {item.skills.map((i, index) => {
-                                return (
-                                    <SkillIcon key={index} logo={i.icon} name={i.name} type={'outline'} />
-                                )
-                            })}
+                        <div className={styles.skillsBox}>
+                            <div className={styles.skills}>
+                                {item.skills.map((i, index) => {
+                                    return (
+                                        <SkillIcon key={index} logo={i.icon} name={i.name} type={'outline'} />
+                                    )
+                                })}
+                            </div>
                         </div>
                     </div>
                 )

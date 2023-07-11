@@ -3,7 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "FuturaPTDemi";
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
 .href{
     text-decoration: none;
@@ -36,8 +36,16 @@
   background-color: #1DAC87;
   border-radius: 20px;
 }
-
-
+.css-nxo287-MuiInputBase-input-MuiOutlinedInput-input{
+  color: #7F7F7F !important;
+  font-family: "FuturaPTDemi" !important;
+}
+.css-i4bv87-MuiSvgIcon-root{
+  fill: #7F7F7F !important;
+}
+.ant-picker-clear{
+  background-color: #1DAC87;
+}
 @font-face {
   font-family: "FuturaBold";
   src: url("./assets/fonts/FuturaPTBold.otf") format("truetype");
@@ -123,7 +131,8 @@
   font-family: "FuturaPTMediumOblique";
   src: url("./assets/fonts/FuturaPTMediumOblique.otf") format("truetype");
 }
-/* @font-face {
-  font-family: "Gilroy";
-  src: url("./assets/Gilroy-Font/Radomir\ Tinkov\ -\ Gilroy-ExtraBold.otf") format("truetype");
-} */
+
+@font-face {
+  font-family: "BenzinBold";
+  src: url("./assets/benzinFonts/Benzin-Bold.ttf") format("truetype");
+}

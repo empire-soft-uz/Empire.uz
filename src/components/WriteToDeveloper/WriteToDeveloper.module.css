@@ -29,6 +29,9 @@
     cursor: pointer;
     z-index: 4;
 }
+.validation{
+    position: absolute;
+}
 
 @media (max-width: 576px){
     .container{
@@ -37,5 +40,13 @@
         padding: 20px 5%;
         border-radius: 0;
         overflow-x: auto;
+    }
+    .mediaCenter{
+        width: 100%;
+        padding: 5%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }

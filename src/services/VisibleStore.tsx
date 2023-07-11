@@ -1,3 +1,4 @@
+import _, { every } from "lodash";
 import { makeAutoObservable } from "mobx";
 
 type modal = {
@@ -9,6 +10,7 @@ type modal = {
     loading: boolean;
     viewProfile: boolean;
     writeToDev: boolean;
+    upBtn: boolean
 }
 
 export default class VisibleStore {
@@ -24,7 +26,8 @@ export default class VisibleStore {
         calendly: false,
         loading: false,
         viewProfile: false,
-        writeToDev: false
+        writeToDev: false,
+        upBtn: false
     }
 
     show = (key: keyof modal) => {
