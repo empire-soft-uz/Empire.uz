@@ -8,13 +8,13 @@ import { COLORS } from '../../utils/color'
 import Button from '../Button/Button'
 import Text from '../Text/Text'
 import styles from "./Header.module.css"
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 interface Props {
-    servicesLink?: string;
+    // servicesLink?: string;
 }
 
 const Header: React.FC<Props> = ({
-    servicesLink
+    // servicesLink
 }) => {
     const { show, hide, visiable } = useRootStore().visibleStore
     const navigation = useNavigate()
@@ -49,13 +49,13 @@ const Header: React.FC<Props> = ({
                 <img className={styles.logo} src="./icons/logo.svg" alt="Empire-soft" />
             </a>
             <div className={styles.rightBox}>
-                {/* <a href={servicesLink} className="href"> */}
-                <Text onPress={() => navigation("/#services")} textSize='sixteen' cursor='pointer' text='Services' color={COLORS.white} />
-                {/* </a> */}
-                <a href="/#about-us" className='href'>
-                    <Text textSize='sixteen' cursor='pointer' text='About us' color={COLORS.white} />
+                <a href="#services" className="href">
+                    <Text onPress={() => navigation("/#services")} textSize='sixteen' cursor='pointer' text='Services' color={COLORS.white} />
                 </a>
-                <a href={APP_ROUTES.BLOG} className='href'>
+                <a href="#aboutus" className='href'>
+                    <Text onPress={() => navigation("/#aboutus")} textSize='sixteen' cursor='pointer' text='About us' color={COLORS.white} />
+                </a>
+                <a className="href" onClick={() => navigation(APP_ROUTES.BLOG)}>
                     <Text textSize='sixteen' cursor='pointer' text='Blog' color={COLORS.white} />
                 </a>
                 <Button onPress={showFindDev} btnType='outline' title='FIND A DEVELOPER' titleColor={COLORS.green} />
@@ -90,7 +90,7 @@ const Header: React.FC<Props> = ({
                 open={visiable.drawer}
                 closeIcon={<CloseSmall />}
             >
-                <a href={servicesLink} className="href" onClick={closeDrawer}>
+                <a href="/#services" className="href" onClick={closeDrawer}>
                     <Text margin='20px 0 0 0' textSize='twentyTwo' cursor='pointer' text='Services' color={COLORS.white} />
                 </a>
                 <a href="/#about-us" className='href' onClick={closeDrawer}>

@@ -2,7 +2,7 @@ import { message } from 'antd'
 import axios from 'axios'
 import { toJS } from 'mobx'
 import { observer } from 'mobx-react-lite'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { ArrowRight } from '../../assets/icons/Icons'
 import { isValidEmail } from '../../helper/ValidationHelper'
 import useRootStore from '../../Hooks/useRootStore'
@@ -12,8 +12,14 @@ import ArrowRightButton from '../ArrowRightButton/ArrowRightButton'
 import Input from '../Input/Input'
 import Text from '../Text/Text'
 import styles from "./SubmitApp.module.css"
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const SubmitApp = () => {
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+    }, []);
     const { form, setForm, clearForm } = useRootStore().tagsStore
     const { show, hide } = useRootStore().visibleStore
     const data = `${form.name} submitted his application%0A Name: ${form.name}%0A Email: ${form.email}%0A He wants to contact us%0A`
@@ -57,10 +63,12 @@ const SubmitApp = () => {
 
     return (
         <div className={styles.container}>
-            <div className={styles.header}>
+            <div className={styles.header} data-aos="fade-up"
+                data-aos-duration="1500">
                 <Text textAlign={"center"} text='Submit your application' family="BenzinBold" transform={"uppercase"} textSize='thirtySix' />
             </div>
-            <div className={styles.content}>
+            <div className={styles.content} data-aos="fade-up"
+                data-aos-duration="1500">
                 <div className={styles.leftBox}>
                     <img src={ASSETS.man} />
                     <div className={styles.blur}></div>
@@ -88,7 +96,7 @@ const SubmitApp = () => {
                     </div>
                 </div>
             </div>
-            <img src={ASSETS.back2} className={styles.back} />
+            <img data-aos="fade-down-right" data-aos-duration="1200" src={ASSETS.back2} className={styles.back} />
         </div>
     )
 }

@@ -22,13 +22,6 @@ import styles from "./home.styles.module.css"
 const Home = () => {
     const { show, hide } = useRootStore().visibleStore
     useEffect(() => {
-        show("loading")
-        setTimeout(() => {
-            hide("loading")
-        }, 2000);
-
-    })
-    useEffect(() => {
         const handleScrollBtn = () => {
             window.pageYOffset > 300 ? show("upBtn") : hide("upBtn")
         }

@@ -12,6 +12,8 @@ import ViewContent from '../ViewContent/ViewContent'
 import styles from "./ViewProfile.module.css"
 import { useState, useEffect } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom'
+import CloseBtn from '../CloseBtn/CloseBtn'
+import { IoCloseSharp } from "react-icons/io5";
 
 const ViewProfile = () => {
     const outerDiv = useRef<HTMLDivElement>(null)
@@ -26,6 +28,10 @@ const ViewProfile = () => {
 
     useEffect(() => {
         if (userId) {
+            show("loading")
+            setTimeout(() => {
+                hide("loading")
+            }, 1500);
             show("viewProfile")
             getUserData(userId)
             document.body.style.overflow = "hidden"
@@ -38,29 +44,38 @@ const ViewProfile = () => {
     }, [ReviewsData])
 
     const NextUser = (id: number) => {
-        setCurrents(currents + 1)
+        console.log('currents', currents, ReviewsData.length);
+        console.log('currents', (inerDiv.current?.clientWidth! * currents));
+
         if (id < ReviewsData.length) {
             getUserData(userData.id + 1)
             router(`?programmer/${userData.id + 1}`)
         }
-        outerDiv.current?.scrollTo({
-            left: inerDiv.current?.clientWidth! * currents,
-            top: 0,
-            behavior: 'smooth',
-        })
+
+        if (ReviewsData.length > currents) {
+            setCurrents(currents + 1)
+            outerDiv.current?.scrollTo({
+                left: inerDiv.current?.clientWidth! * currents,
+                top: 0,
+                behavior: 'smooth',
+            })
+        }
 
     }
     const BackUser = (id: number) => {
-        setCurrents(1)
         if (id > 1) {
             getUserData(userData.id - 1)
             router(`?programmer/${userData.id - 1}`)
         }
-        outerDiv.current?.scrollTo({
-            left: -(inerDiv.current?.clientWidth! * currents),
-            top: 0,
-            behavior: 'smooth',
-        })
+        if (!!currents) {
+            setCurrents(currents - 1)
+
+            outerDiv.current?.scrollTo({
+                left: -(inerDiv.current?.clientWidth!) + (inerDiv.current?.clientWidth! * currents) - 70,
+                top: 0,
+                behavior: 'smooth',
+            })
+        }
     }
 
     const ClickAvatarGetUser = (id: number) => {
@@ -91,7 +106,7 @@ const ViewProfile = () => {
             ></Backdrop>
             <div className={styles.container} style={{ display: visiable.viewProfile ? "block" : "none" }}>
                 <div className={styles.closeModal} onClick={closeViewProfile}>
-                    <CloseBig />
+                    <CloseBtn icon={<IoCloseSharp size={24} />} />
                 </div>
                 <div className={styles.pagination}>
                     <button className={styles.arrow} onClick={() => BackUser(userData?.id)}>
@@ -110,7 +125,7 @@ const ViewProfile = () => {
                         {">"}
                     </button>
                 </div>
-                <div className={styles.info}>
+                <div className={styles.info} >
                     <div className={styles.leftBox}>
                         <ViewContent />
                         <Skills />

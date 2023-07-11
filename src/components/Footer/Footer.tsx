@@ -1,11 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { ASSETS } from '../../utils/assetsRequires'
 import { COLORS } from '../../utils/color'
 import Button from '../Button/Button'
 import Text from '../Text/Text'
 import styles from "./Footer.module.css"
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useNavigate } from 'react-router-dom'
+import { APP_ROUTES } from '../../routes/app-routes'
 
 const Footer = () => {
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+    }, []);
+    const navigation = useNavigate()
     return (
         <div className={styles.container}>
             <a href="/" className='href'>
@@ -13,16 +22,16 @@ const Footer = () => {
             </a>
             <div className={styles.rightBox}>
                 <a href="#services" className='href'>
-                    <Text textSize='sixteen' cursor='pointer' text='Services' color={COLORS.white} />
+                    <Text onPress={() => navigation("/#services")} textSize='sixteen' cursor='pointer' text='Services' color={COLORS.white} />
                 </a>
-                <a href="#about-us" className='href'>
-                    <Text textSize='sixteen' cursor='pointer' text='About us' color={COLORS.white} />
+                <a href="#aboutus" className='href'>
+                    <Text onPress={() => navigation("/#aboutus")} textSize='sixteen' cursor='pointer' text='About us' color={COLORS.white} />
                 </a>
-                <a href="/blog" className='href'>
+                <a onClick={() => navigation(APP_ROUTES.BLOG)} className='href'>
                     <Text textSize='sixteen' cursor='pointer' text='Blog' color={COLORS.white} />
                 </a>
             </div>
-            <img className={styles.back} src={ASSETS.back6} />
+            <img data-aos="fade-down-bottom" data-aos-duration="1200" className={styles.back} src={ASSETS.back6} />
         </div>
     )
 }
