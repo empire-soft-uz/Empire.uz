@@ -1,12 +1,9 @@
-import React, { FC } from "react";
-import { Adventage, PhpIcon, UiIcon } from "../assets/icons/Icons";
 import {
   AdventagesDataType,
+  OurProcessType,
   ProgrammingLanguagesType,
   ReviewDataType,
   ServicesDataType,
-  OurProcessType,
-  OurProcessInitial,
 } from "../types/types";
 import { ASSETS } from "./assetsRequires";
 
@@ -402,6 +399,7 @@ components`,
   {
     id: 7,
     title: "The best developers only for you",
+    aboutPerson: "",
     name: "Saidamir Botirov",
     comment:
       "Software Engineer with experience in developing web applications, microservices, and distributed systems participating in the complete product development lifecycle of successfully launched applications. An empathetic team player and mentor.",
@@ -976,6 +974,7 @@ components`,
   },
   {
     id: 3,
+    aboutPerson: "",
     title: "The best developers only for you",
     name: "Sergey Shaposhnik",
     comment:
@@ -1303,7 +1302,7 @@ components`,
           {
             icon: "./icons/mobx.png",
             name: "MobX",
-      },
+          },
         ],
       },
     ],
