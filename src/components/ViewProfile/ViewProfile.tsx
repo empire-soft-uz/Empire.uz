@@ -25,9 +25,11 @@ const ViewProfile = () => {
     const userId = Number(path.search.split("/")[1])
 
     useEffect(() => {
-        if (userId)
+        if (userId) {
             show("viewProfile")
-        getUserData(userId)
+            getUserData(userId)
+            document.body.style.overflow = "hidden"
+        }
     }, [])
 
     useEffect(() => {
@@ -117,7 +119,7 @@ const ViewProfile = () => {
                         <PersonAbout title={userData?.expert} text={userData?.comment} />
                         <ProfessionalExperience />
                         <PersonAbout margin='30px 0 0 0' title={userData?.education} text={userData?.eduBranch} />
-                        <PersonAbout margin='30px 0 0 0' title={'About Me'} text={userData?.comment} />
+                        <PersonAbout margin='30px 0 0 0' title={'About Me'} text={userData?.aboutPerson} />
                     </div>
                 </div>
             </div>
