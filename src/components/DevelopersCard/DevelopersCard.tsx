@@ -51,7 +51,7 @@ const DevelopersCard: React.FC<Props> = ({
             <SkillIcon
               key={index}
               logo={i.skillsIcon}
-              name={i.skillsName}
+              name={i.skillsName.length > 10 ? `${i.skillsName.slice(0, 8)}...` : i.skillsName}
               type={"outline"}
             />
           );

@@ -1,0 +1,110 @@
+.container{
+    height: 100% !important;
+    padding: 20px 18%;
+    position: relative;
+}
+
+.fade {
+    position: relative;
+    z-index: 2;
+}
+
+.top{
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardsBox{
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.backOne{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 20vh;
+    left: 20px;
+}
+
+.backTwo{
+    position: absolute;
+    bottom: 30vh;
+    right: 0;
+    height: 400px;
+}
+
+
+@media (min-width: 120px){
+    .container{
+        padding: 50px 5% 20px 5%;
+    }
+    .backTwo{
+        width: 200px;
+        height: 300px;
+    }
+}
+
+@media (min-width: 576px){
+    .container{
+        padding: 20px 10%;
+    }
+    .backTwo{
+        width: 200px;
+        height: 350px;
+    }
+}
+
+@media (min-width:992px){
+.container{
+    height: 100% !important;
+    padding: 20px 10%;
+    position: relative;
+}
+
+.top{
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardsBox{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.backTwo{
+    position: absolute;
+    bottom: 30vh;
+    right: 0;
+    height: 400px;
+    width: 400px;
+}
+
+.tabBox{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+    height: 12vh;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+    border-bottom: 1px solid #2E2E2E;
+}
+}
+@media (min-width: 1200px){
+    .container{
+        padding: 20px 18%;
+    }
+}

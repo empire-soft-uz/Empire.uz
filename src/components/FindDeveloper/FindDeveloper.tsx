@@ -10,10 +10,12 @@ import useRootStore from '../../Hooks/useRootStore'
 import { COLORS } from '../../utils/color'
 import { ProgrammingLanguages } from '../../utils/dateBase'
 import ArrowRightButton from '../ArrowRightButton/ArrowRightButton'
+import CloseBtn from '../CloseBtn/CloseBtn'
 import Input from '../Input/Input'
 import PLanguage from '../PLangugae/PLanguage'
 import Text from '../Text/Text'
 import styles from "./FindDeveloper.module.css"
+import { IoCloseSharp } from "react-icons/io5";
 
 const FindDeveloper = () => {
     const { visiable, hide, show } = useRootStore().visibleStore
@@ -60,7 +62,7 @@ const FindDeveloper = () => {
                 onClick={closeFind}></Backdrop>
             <div className={styles.container} style={{ display: visiable.findDeveloper ? "block" : "none" }}>
                 <div className={styles.closeModal} onClick={closeFind}>
-                    <CloseBig />
+                    <CloseBtn icon={<IoCloseSharp size={24} />} />
                 </div>
                 <div className={styles.title}>
                     <Text text='Time To Build The Future' lineHeight={60} textSize="fifty" />

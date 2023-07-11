@@ -7,6 +7,7 @@ import Footer from '../../components/Footer/Footer'
 import Loading from '../../components/Loading/Loading'
 import MainBack from '../../components/MainBack/MainBack'
 import OurAdventages from '../../components/OurAdventages/OurAdventages'
+import OurDevelopers from '../../components/OurDevelopers/OurDevelopers'
 import OurProcess from '../../components/OurProcess/OurProcess'
 import OurServices from '../../components/OurServices/OurServices'
 import StartMach from '../../components/StartMach/StartMach'
@@ -24,7 +25,6 @@ const Home = () => {
         const handleScrollBtn = () => {
             window.pageYOffset > 300 ? show("upBtn") : hide("upBtn")
         }
-
         window.addEventListener("scroll", handleScrollBtn)
 
         return () => {
@@ -35,6 +35,7 @@ const Home = () => {
         <div className={styles.container}>
             <MainBack />
             <OurServices />
+            <OurDevelopers />
             <AboutUs />
             <OurAdventages />
             <SubmitApp />
