@@ -835,7 +835,7 @@ components`,
         ],
         skills: [
           {
-            icon: "./icons/React.svg",
+            icon: "./icons/react.svg",
             name: "React",
           },
           {
