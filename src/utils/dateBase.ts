@@ -583,170 +583,170 @@ components`,
     communication: 9,
     technicalSkill: 9,
   },
-  {
-    id: 3,
-    title: "The best developers only for you",
-    name: "Sergey Shaposhnik",
-    comment:
-      "Has participated and lead whole process of high load mobile application from structuring to auto deployment. Did code reviews and worked direclty with clients many times. Has great experience in configuring the app Accessibility.",
-    salary: "$28 /h",
-    whereFrom: "Krasnoyarsk Russia",
-    totalExperience: "4+ Years Of Experience",
-    expert: "Expert React-Native Developer",
-    expertSkill: "React-Native",
-    image: ASSETS.developer3,
-    job: "Senior React-Native Developer",
-    education: "Siberian Federal University",
-    eduBranch:
-      "Bachelor's degree, Computer Software Engineering, Master's degree, Computer Software Engineering",
-    strengths: [
-      {
-        item: "Excellent in frontend React apps",
-      },
-      {
-        item: "Great communicator",
-      },
-      {
-        item: "Good experience with new libraries like Next.js & Nuxt.js",
-      },
-    ],
-    skills: [
-      {
-        id: 1,
-        skillsIcon: "./icons/react.svg",
-        skillsName: "React-Native",
-        experience: "4+ years",
-        expertise: true,
-      },
-      {
-        id: 3,
-        skillsIcon: "./icons/react.svg",
-        skillsName: "React",
-        experience: "4+ years",
-        expertise: true,
-      },
-      {
-        id: 3,
-        skillsIcon: "./icons/js.svg",
-        skillsName: "JS/TS",
-        experience: "4+ years",
-        expertise: true,
-      },
-      {
-        id: 4,
-        skillsIcon: "./icons/css.svg",
-        skillsName: "HTML/CSS",
-        experience: "4 years",
-        expertise: false,
-      },
-      {
-        id: 5,
-        skillsIcon: "./icons/firebase.svg",
-        skillsName: "Firebase",
-        experience: "4 years",
-        expertise: false,
-      },
-      {
-        id: 6,
-        skillsIcon: "./icons/react-navigation.png",
-        skillsName: "React navigation",
-        experience: "4 years",
-        expertise: true,
-      },
-    ],
-    experience: [
-      {
-        title: "Senior Software Engineer",
-        type: "Agency",
-        time: "1 year 9 months",
-        info: [
-          {
-            text: "Development and support of mobile applications.",
-          },
-          {
-            text: `Participated in the development of new and existing solutions, for example: financial app – pension fund management; IoT-app – smart water bar control; find and book parking lots.`,
-          },
-          {
-            text: "Writing native code in obj-c, swift and java.",
-          },
-        ],
-        skills: [
-          {
-            icon: "./icons/React.svg",
-            name: "React-Native",
-          },
-          {
-            icon: "./icons/mobx.png",
-            name: "MobX",
-          },
-          {
-            icon: "./icons/react-navigation.png",
-            name: "React-navigation",
-          },
-          {
-            icon: "./icons/ts.svg",
-            name: "TS",
-          },
-          {
-            icon: "./icons/firebase.svg",
-            name: "Firebase",
-          },
-        ],
-      },
-      {
-        title: "React Native Developer",
-        type: "Agency",
-        time: "1 year 1 months",
-        info: [
-          {
-            text: "Development and support of a food delivery service.",
-          },
-          {
-            text: "Used Redux, SSR, SCSS, Node.js as well as setting up webpack from scratch in my pet projects",
-          },
-          {
-            text: "Development and further publication in the App Store / Google Play of an application for a recreation center (ordering food, ordering a bathhouse, signing up for activities, etc.)",
-          },
-        ],
-        skills: [
-          {
-            icon: "./icons/react.svg",
-            name: "React",
-          },
-          {
-            icon: "./icons/redux.svg",
-            name: "Reux",
-          },
-          {
-            icon: "./icons/sass.svg",
-            name: "SASS",
-          },
-          {
-            icon: "./icons/web.svg",
-            name: "Webpack",
-          },
-          {
-            icon: "./icons/mobx.png",
-            name: "MobX",
-          },
-          {
-            icon: "./icons/react.svg",
-            name: "React-Native",
-          },
-          {
-            icon: "./icons/react-navigation.png",
-            name: "React-navigation",
-          },
-          {
-            icon: "./icons/firebase.svg",
-            name: "Firebase",
-          },
-        ],
-      },
-    ],
-    communication: 7,
-    technicalSkill: 9,
-  },
+  // {
+  //   id: 3,
+  //   title: "The best developers only for you",
+  //   name: "Sergey Shaposhnik",
+  //   comment:
+  //     "Has participated and lead whole process of high load mobile application from structuring to auto deployment. Did code reviews and worked direclty with clients many times. Has great experience in configuring the app Accessibility.",
+  //   salary: "$28 /h",
+  //   whereFrom: "Krasnoyarsk Russia",
+  //   totalExperience: "4+ Years Of Experience",
+  //   expert: "Expert React-Native Developer",
+  //   expertSkill: "React-Native",
+  //   image: ASSETS.developer3,
+  //   job: "Senior React-Native Developer",
+  //   education: "Siberian Federal University",
+  //   eduBranch:
+  //     "Bachelor's degree, Computer Software Engineering, Master's degree, Computer Software Engineering",
+  //   strengths: [
+  //     {
+  //       item: "Excellent in frontend React apps",
+  //     },
+  //     {
+  //       item: "Great communicator",
+  //     },
+  //     {
+  //       item: "Good experience with new libraries like Next.js & Nuxt.js",
+  //     },
+  //   ],
+  //   skills: [
+  //     {
+  //       id: 1,
+  //       skillsIcon: "./icons/react.svg",
+  //       skillsName: "React-Native",
+  //       experience: "4+ years",
+  //       expertise: true,
+  //     },
+  //     {
+  //       id: 3,
+  //       skillsIcon: "./icons/react.svg",
+  //       skillsName: "React",
+  //       experience: "4+ years",
+  //       expertise: true,
+  //     },
+  //     {
+  //       id: 3,
+  //       skillsIcon: "./icons/js.svg",
+  //       skillsName: "JS/TS",
+  //       experience: "4+ years",
+  //       expertise: true,
+  //     },
+  //     {
+  //       id: 4,
+  //       skillsIcon: "./icons/css.svg",
+  //       skillsName: "HTML/CSS",
+  //       experience: "4 years",
+  //       expertise: false,
+  //     },
+  //     {
+  //       id: 5,
+  //       skillsIcon: "./icons/firebase.svg",
+  //       skillsName: "Firebase",
+  //       experience: "4 years",
+  //       expertise: false,
+  //     },
+  //     {
+  //       id: 6,
+  //       skillsIcon: "./icons/react-navigation.png",
+  //       skillsName: "React navigation",
+  //       experience: "4 years",
+  //       expertise: true,
+  //     },
+  //   ],
+  //   experience: [
+  //     {
+  //       title: "Senior Software Engineer",
+  //       type: "Agency",
+  //       time: "1 year 9 months",
+  //       info: [
+  //         {
+  //           text: "Development and support of mobile applications.",
+  //         },
+  //         {
+  //           text: `Participated in the development of new and existing solutions, for example: financial app – pension fund management; IoT-app – smart water bar control; find and book parking lots.`,
+  //         },
+  //         {
+  //           text: "Writing native code in obj-c, swift and java.",
+  //         },
+  //       ],
+  //       skills: [
+  //         {
+  //           icon: "./icons/React.svg",
+  //           name: "React-Native",
+  //         },
+  //         {
+  //           icon: "./icons/mobx.png",
+  //           name: "MobX",
+  //         },
+  //         {
+  //           icon: "./icons/react-navigation.png",
+  //           name: "React-navigation",
+  //         },
+  //         {
+  //           icon: "./icons/ts.svg",
+  //           name: "TS",
+  //         },
+  //         {
+  //           icon: "./icons/firebase.svg",
+  //           name: "Firebase",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       title: "React Native Developer",
+  //       type: "Agency",
+  //       time: "1 year 1 months",
+  //       info: [
+  //         {
+  //           text: "Development and support of a food delivery service.",
+  //         },
+  //         {
+  //           text: "Used Redux, SSR, SCSS, Node.js as well as setting up webpack from scratch in my pet projects",
+  //         },
+  //         {
+  //           text: "Development and further publication in the App Store / Google Play of an application for a recreation center (ordering food, ordering a bathhouse, signing up for activities, etc.)",
+  //         },
+  //       ],
+  //       skills: [
+  //         {
+  //           icon: "./icons/react.svg",
+  //           name: "React",
+  //         },
+  //         {
+  //           icon: "./icons/redux.svg",
+  //           name: "Reux",
+  //         },
+  //         {
+  //           icon: "./icons/sass.svg",
+  //           name: "SASS",
+  //         },
+  //         {
+  //           icon: "./icons/web.svg",
+  //           name: "Webpack",
+  //         },
+  //         {
+  //           icon: "./icons/mobx.png",
+  //           name: "MobX",
+  //         },
+  //         {
+  //           icon: "./icons/react.svg",
+  //           name: "React-Native",
+  //         },
+  //         {
+  //           icon: "./icons/react-navigation.png",
+  //           name: "React-navigation",
+  //         },
+  //         {
+  //           icon: "./icons/firebase.svg",
+  //           name: "Firebase",
+  //         },
+  //       ],
+  //     },
+  //   ],
+  //   communication: 7,
+  //   technicalSkill: 9,
+  // },
   {
     id: 4,
     title: "The best developers only for you",
@@ -761,8 +761,7 @@ components`,
     image: ASSETS.developer4,
     job: "React Developer",
     education: "Empire It Academy",
-    eduBranch:
-      "Computer Science and Engineering(CSE)",
+    eduBranch: "Computer Science and Engineering(CSE)",
     strengths: [
       {
         item: "Excellent in frontend React apps",
@@ -902,6 +901,353 @@ components`,
     ],
     communication: 8,
     technicalSkill: 7,
+  },
+  {
+    id: 5,
+    title: "The best developers only for you",
+    name: "Abdurakhmon Ziyodov",
+    comment: `Abdurahman is 23 years old and from Samarkand. He studies computer engineering at theSamarkand branch of the Tashkent University of Information Technologies.
+      He is React/React-Native developer. He is interested in mobile programming and has been working React/React-Native developer for more than 3 years.`,
+    salary: "$18 /h",
+    whereFrom: "Toshkent Uzbekistan",
+    totalExperience: "3+ Years Of Experience",
+    expert: "Expert React-Native Developer",
+    expertSkill: "React-Native",
+    image: ASSETS.developer6,
+    job: "Middle react-native developer",
+    education: "TUIT OF SAMARKAND",
+    eduBranch: "Computer engineer(CE)",
+    strengths: [
+      {
+        item: "Excellent in frontend React apps",
+      },
+      {
+        item: "Great communicator",
+      },
+      {
+        item: "Good experience with new libraries like Next.js & Nuxt.js",
+      },
+    ],
+    skills: [
+      {
+        id: 1,
+        skillsIcon: "./icons/react.svg",
+        skillsName: "React-Native",
+        experience: "3+ years",
+        expertise: true,
+      },
+      {
+        id: 2,
+        skillsIcon: "./icons/react.svg",
+        skillsName: "React",
+        experience: "3+ years",
+        expertise: true,
+      },
+      {
+        id: 3,
+        skillsIcon: "./icons/js.svg",
+        skillsName: "JS/TS",
+        experience: "3+ years",
+        expertise: true,
+      },
+      {
+        id: 4,
+        skillsIcon: "./icons/css.svg",
+        skillsName: "HTML/CSS",
+        experience: "3 years",
+        expertise: false,
+      },
+      {
+        id: 5,
+        skillsIcon: "./icons/firebase.svg",
+        skillsName: "Firebase",
+        experience: "1 year",
+        expertise: false,
+      },
+      {
+        id: 6,
+        skillsIcon: "./icons/react-navigation.png",
+        skillsName: "React-navigation",
+        experience: "3 years",
+        expertise: false,
+      },
+      {
+        id: 14,
+        skillsIcon: "./icons/fastlane.png",
+        skillsName: "Fastlane",
+        experience: "3 years",
+        expertise: false,
+      },
+      {
+        id: 7,
+        skillsIcon: "",
+        skillsName: "React-native-reanimated",
+        experience: "3 years",
+        expertise: false,
+      },
+      {
+        id: 8,
+        skillsIcon: "./icons/redux.svg",
+        skillsName: "Redux",
+        experience: "3 years",
+        expertise: false,
+      },
+      {
+        id: 9,
+        skillsIcon: "./icons/mobx.png",
+        skillsName: "MobX",
+        experience: "3 years",
+        expertise: false,
+      },
+      {
+        id: 10,
+        skillsIcon: "./icons/graph.svg",
+        skillsName: "GraphQL",
+        experience: "3 years",
+        expertise: false,
+      },
+      {
+        id: 11,
+        skillsIcon: "./icons/gitt.svg",
+        skillsName: "Git",
+        experience: "3 years",
+        expertise: false,
+      },
+      {
+        id: 12,
+        skillsIcon: "./icons/gitlab.svg",
+        skillsName: "Gitlab",
+        experience: "3 years",
+        expertise: false,
+      },
+      {
+        id: 13,
+        skillsIcon: "./icons/git.svg",
+        skillsName: "Github",
+        experience: "3 years",
+        expertise: false,
+      },
+    ],
+    experience: [
+      {
+        title: "React Native/React developer",
+        type: "Agency",
+        time: "2 years",
+        info: [
+          {
+            text: "Participated in creating the app from scratch and designing the structure",
+          },
+          {
+            text: "Wrote unit and e2e tests",
+          },
+          {
+            text: "Auto deployed the apps to Play market and AppStore using Fastlane",
+          },
+        ],
+        skills: [
+          {
+            icon: "./icons/react.svg",
+            name: "React-native",
+          },
+          {
+            icon: "./icons/react.svg",
+            name: "React",
+          },
+          {
+            icon: "./icons/js.svg",
+            name: "JavaScript",
+          },
+          {
+            icon: "./icons/ts.svg",
+            name: "TypeScript",
+          },
+          {
+            icon: "./icons/fastlane.png",
+            name: "Fastlane",
+          },
+        ],
+      },
+      {
+        title: "React Native/React developer",
+        type: "Agency",
+        time: "1 year",
+        info: [
+          { text: "Worked on creating reusable UI components" },
+          { text: "Implemented automatic CI/CD using Gitlab actions" },
+        ],
+        skills: [
+          {
+            icon: "./icons/react.svg",
+            name: "React-native",
+          },
+          {
+            icon: "./icons/graph.svg",
+            name: "GraphQL",
+          },
+          {
+            icon: "./icons/firebase.svg",
+            name: "Firebase",
+          },
+          {
+            icon: "./icons/react.svg",
+            name: "React",
+          },
+          {
+            icon: "./icons/js.svg",
+            name: "JavaScript",
+          },
+          {
+            icon: "./icons/ts.svg",
+            name: "TypeScript",
+          },
+        ],
+      },
+    ],
+    communication: 6,
+    technicalSkill: 9,
+  },
+  {
+    id: 6,
+    title: "The best developers only for you",
+    name: "Malikov Shukhrat",
+    comment: `Shukhrat is a cross platform mobile developer with a good communication skills. He has participated in creating one of the biggest e-commerce websites of Uzbekistan`,
+    salary: "$16 /h",
+    whereFrom: "Toshkent Uzbekistan",
+    totalExperience: "2+ Years Of Experience",
+    expert: "React-Native Developer",
+    expertSkill: "React-Native",
+    image: ASSETS.developer5,
+    job: "Middle react-native developer",
+    education: "TUIT OF SAMARKAND",
+    eduBranch: "Computer engineer(CE)",
+    strengths: [
+      {
+        item: "Excellent in frontend React apps",
+      },
+      {
+        item: "Great communicator",
+      },
+      {
+        item: "Good experience with new libraries like Next.js & Nuxt.js",
+      },
+    ],
+    skills: [
+      {
+        id: 1,
+        skillsIcon: "./icons/react.svg",
+        skillsName: "React-Native",
+        experience: "2+ years",
+        expertise: true,
+      },
+      {
+        id: 2,
+        skillsIcon: "./icons/react.svg",
+        skillsName: "React",
+        experience: "2+ years",
+        expertise: true,
+      },
+      {
+        id: 3,
+        skillsIcon: "./icons/js.svg",
+        skillsName: "JS/TS",
+        experience: "2+ years",
+        expertise: true,
+      },
+      {
+        id: 4,
+        skillsIcon: "./icons/css.svg",
+        skillsName: "HTML/CSS",
+        experience: "2 years",
+        expertise: false,
+      },
+      {
+        id: 5,
+        skillsIcon: "./icons/firebase.svg",
+        skillsName: "Firebase",
+        experience: "1 year",
+        expertise: false,
+      },
+      {
+        id: 6,
+        skillsIcon: "./icons/react-navigation.png",
+        skillsName: "React-navigation",
+        experience: "2 years",
+        expertise: false,
+      },
+      {
+        id: 8,
+        skillsIcon: "./icons/redux.svg",
+        skillsName: "Redux",
+        experience: "3 years",
+        expertise: false,
+      },
+      {
+        id: 9,
+        skillsIcon: "./icons/mobx.png",
+        skillsName: "MobX",
+        experience: "3 years",
+        expertise: false,
+      },
+      {
+        id: 11,
+        skillsIcon: "./icons/gitt.svg",
+        skillsName: "Git",
+        experience: "3 years",
+        expertise: false,
+      },
+      {
+        id: 12,
+        skillsIcon: "./icons/gitlab.svg",
+        skillsName: "Gitlab",
+        experience: "3 years",
+        expertise: false,
+      },
+      {
+        id: 13,
+        skillsIcon: "./icons/git.svg",
+        skillsName: "Github",
+        experience: "3 years",
+        expertise: false,
+      },
+    ],
+    experience: [
+      {
+        title: "React Native/React developer",
+        type: "Agency",
+        time: "2 years",
+        info: [
+          {
+            text: "Participated in creating the app from scratch and designing the structure",
+          },
+          {
+            text: "Wrote unit and e2e tests",
+          },
+          {
+            text: "Auto deployed the apps to Play market and AppStore using Fastlane",
+          },
+        ],
+        skills: [
+          {
+            icon: "./icons/react.svg",
+            name: "React-native",
+          },
+          {
+            icon: "./icons/react.svg",
+            name: "React",
+          },
+          {
+            icon: "./icons/js.svg",
+            name: "JavaScript",
+          },
+          {
+            icon: "./icons/ts.svg",
+            name: "TypeScript",
+          },
+        ],
+      },
+    ],
+    communication: 6,
+    technicalSkill: 9,
   },
 ];
 
