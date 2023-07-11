@@ -6,7 +6,7 @@ import {
   ReviewDataType,
   ServicesDataType,
   OurProcessType,
-  OurProcessInitial
+  OurProcessInitial,
 } from "../types/types";
 import { ASSETS } from "./assetsRequires";
 
@@ -928,21 +928,21 @@ export const OurProcessData: OurProcessType[] = [
   {
     id: "01.",
     title: "Discovery:",
-    text: "We start our projects by understanding the scope and requirements. This is accomplished by working closely with you to make sure we are all on the same page."
+    text: "We start our projects by understanding the scope and requirements. This is accomplished by working closely with you to make sure we are all on the same page.",
   },
   {
     id: "02.",
     title: "Plan:",
-    text: "Following the initial kick-off meeting, we will outline your project, create milestones, and agree on project priorities."
+    text: "Following the initial kick-off meeting, we will outline your project, create milestones, and agree on project priorities.",
   },
   {
     id: "02.",
     title: "Execute:",
-    text: "The final design takes shape and, at this stage, the idea comes to life representing the visual concepts."
+    text: "The final design takes shape and, at this stage, the idea comes to life representing the visual concepts.",
   },
   {
     id: "04.",
     title: "Deliver:",
-    text: "Review and testing takes place, which ensures the quality of your project."
+    text: "Review and testing takes place, which ensures the quality of your project.",
   },
-]
+];
