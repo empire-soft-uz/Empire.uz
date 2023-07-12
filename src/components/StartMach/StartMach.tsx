@@ -88,7 +88,8 @@ const StartMach = () => {
                         {WorkRate.map((e, index) => {
                             return (
                                 <button style={{
-                                    border: workRate.id === e.id ? "1px solid #1DAC87" : "1px solid #2E2E2E"
+                                    border: workRate.id === e.id ? "1px solid #1DAC87" : "1px solid #2E2E2E",
+                                    color: workRate.id === e.id ? "#1DAC87" : "#7F7F7F",
                                 }}
                                     onClick={() => choseWorkRate(e)}
                                     key={index}
@@ -105,7 +106,8 @@ const StartMach = () => {
                             return (
                                 <button
                                     style={{
-                                        border: howLong.id === e.id ? "1px solid #1DAC87" : "1px solid #2E2E2E"
+                                        border: howLong.id === e.id ? "1px solid #1DAC87" : "1px solid #2E2E2E",
+                                        color: howLong.id === e.id ? "#1DAC87" : "#7F7F7F",
                                     }}
                                     key={index}
                                     onClick={() => choseHowlong(e)}

@@ -3,15 +3,17 @@ import { styled } from 'styled-components';
 interface Props {
     onPress?: () => void;
     icon: any;
+    backgraound?: string
 }
 
 const CloseBtn: React.FC<Props> = ({
     onPress,
-    icon
+    icon,
+    backgraound
 }) => {
     return (
         <Contianer>
-            <button onClick={onPress} className={"btn"}>
+            <button style={{ backgroundColor: backgraound ? backgraound : "#04110E" }} onClick={onPress} className={"btn"}>
                 {icon}
             </button>
         </Contianer>
@@ -27,7 +29,6 @@ const Contianer = styled.div`
         height: 40px;
         border-radius: 50%;
         color: #fff !important;
-        background-color: #04110E !important;
         box-shadow: 0 0 10px #3f4947;
         outline: none;
         border: none;
