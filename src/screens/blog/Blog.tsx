@@ -18,6 +18,7 @@ import styles from './Blog.module.css'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import WriteToDeveloper from '../../components/WriteToDeveloper/WriteToDeveloper'
+import { useLocation } from 'react-router-dom'
 
 const container = {
     hidden: { opacity: 1, scale: 0 },
@@ -40,9 +41,12 @@ const item = {
 };
 
 const Blog = () => {
+    const location = useLocation()
     useEffect(() => {
         AOS.init();
         AOS.refresh();
+        if (location.pathname == "/blog")
+            document.documentElement.scrollTo(0, 0);
     }, []);
     const { getBlogsInfo, blogsInfo, setBlogsinfo } = useRootStore().blogsStore
     return (
@@ -75,7 +79,7 @@ const Blog = () => {
                 <img data-aos="fade-down-right" data-aos-duration="1200" className={styles.backTwo} src={ASSETS.back2} alt="back" />
             </div>
             <div className={styles.footer}>
-                <Footer blog={false} />
+                <Footer />
             </div>
             <FindDeveloper />
             <StartMach />

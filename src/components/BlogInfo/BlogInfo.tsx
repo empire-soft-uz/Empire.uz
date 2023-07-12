@@ -44,7 +44,7 @@ const BlogInfo: React.FC<Props> = ({
                 </div>
             </div>
             <div className={styles.textBox}>
-                <Text margin='20px 0 0 0' textSize='eighteen' text={title} />
+                <Text margin='20px 0 0 0' textSize='twentyEight' text={title} />
                 <Text margin='20px 0 0 0' color={COLORS.grey} family='FuturaBook' textSize='fourteen' text={text} />
             </div>
         </div>
