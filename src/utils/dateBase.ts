@@ -1806,9 +1806,7 @@ export const BlogData = [
   {
     id: 1,
     title: "Advantages of Hiring Software Engineers from Uzbekistan",
-    text: `<h1>Advantages of Hiring Software Engineers from Uzbekistan</h1>
-
-        <h2>Introduction</h2>
+    text: `<h2>Introduction</h2>
         <p>
           The software development industry has witnessed tremendous growth globally, with a rising demand for skilled and talented engineers. One country that has emerged as a significant player in the field is Uzbekistan. Situated at the crossroads of Central Asia, Uzbekistan has quickly gained recognition for its pool of highly skilled software engineers. In this blog post, we will explore the advantages of hiring software engineers from Uzbekistan and why it is a smart choice for businesses looking to expand their technical teams.
         </p>

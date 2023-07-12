@@ -8,7 +8,7 @@ import { COLORS } from '../../utils/color'
 import Button from '../Button/Button'
 import Text from '../Text/Text'
 import styles from "./Header.module.css"
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 interface Props {
     // servicesLink?: string;
 }
@@ -18,6 +18,7 @@ const Header: React.FC<Props> = ({
 }) => {
     const { show, hide, visiable } = useRootStore().visibleStore
     const navigation = useNavigate()
+    const location = useLocation()
     const [small, setSmall] = useState(false);
 
     const closeDrawer = () => {
@@ -43,6 +44,11 @@ const Header: React.FC<Props> = ({
         }
     }, []);
 
+    const OpenBlog = () => {
+        if (location.pathname != "/blog")
+            navigation(APP_ROUTES.BLOG)
+    }
+
     return (
         <div className={`${styles.container} ${small ? styles.changeOn : styles.changeOff}`}>
             <a href="/" className='href'>
@@ -58,7 +64,7 @@ const Header: React.FC<Props> = ({
                 <a href="#aboutus" className='href'>
                     <Text onPress={() => navigation("/#aboutus")} textSize='sixteen' cursor='pointer' text='About us' color={COLORS.white} />
                 </a>
-                <a className="href" onClick={() => navigation(APP_ROUTES.BLOG)}>
+                <a className="href" onClick={OpenBlog}>
                     <Text textSize='sixteen' cursor='pointer' text='Blog' color={COLORS.white} />
                 </a>
                 <Button onPress={showFindDev} btnType='outline' title='FIND A DEVELOPER' titleColor={COLORS.green} />

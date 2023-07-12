@@ -40,6 +40,7 @@ const Text: React.FC<Props> = ({
             id={id}
             className={`${styles.text} ${styles[textSize]}`}
             onClick={onPress}
+            dangerouslySetInnerHTML={{ __html: text }}
             style={{
                 margin: margin,
                 color: color ? color : "#fff",
@@ -53,7 +54,6 @@ const Text: React.FC<Props> = ({
                 lineHeight: `${lineHeight}px`,
                 WebkitTextStroke: WebkitTextStroke
             }}>
-            {text}
         </p>
     )
 }

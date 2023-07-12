@@ -46,6 +46,9 @@
 .ant-picker-clear{
   background-color: #1DAC87;
 }
+h2{
+  margin: 20px 0 5px 0;
+}
 @font-face {
   font-family: "FuturaBold";
   src: url("./assets/fonts/FuturaPTBold.otf") format("truetype");
