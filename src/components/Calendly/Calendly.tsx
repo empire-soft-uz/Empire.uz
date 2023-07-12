@@ -48,16 +48,13 @@ const Calendly = () => {
             ></Backdrop>
             <div className={styles.container} style={{ display: visiable.calendly ? "block" : "none" }}>
                 <div className={styles.arrowRight} onClick={sendBot}>
-                    <CloseBtn icon={<BiLeftArrowAlt size={24} />} />
+                    <CloseBtn backgraound='#1DAC87' icon={<BiLeftArrowAlt size={24} />} />
                 </div>
-                <div className={styles.calendlyBox}>
-                    <iframe style={{
-                        width: "100%",
-                        height: "100%",
-                        backgroundColor: "#000",
-                        border: "none"
-                    }} className={styles.iframe} src="https://calendly.com/empire-soft-net?background_color=ffffff&text_color=000000&primary_color=1dac87" frameBorder={0}></iframe>
-                </div>
+                <iframe style={{
+                    width: "100%",
+                    height: "100%",
+                    border: "none"
+                }} className={styles.iframe} src="https://calendly.com/empire-soft-net/meeting?primary_color=1dac87&hide_gdpr_banner=1&back=1" frameBorder={0}></iframe>
             </div>
         </>
     )
