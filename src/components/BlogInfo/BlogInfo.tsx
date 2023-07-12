@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { ArrowBackIcon } from '../../assets/icons/Icons'
 import useRootStore from '../../Hooks/useRootStore'
 import { COLORS } from '../../utils/color'
 import Text from '../Text/Text'
 import styles from "./BlogInfo.module.css"
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 interface Props {
     imageUrl: string;
@@ -19,8 +21,13 @@ const BlogInfo: React.FC<Props> = ({
     title
 }) => {
     const { blogInfoExit } = useRootStore().blogsStore
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+    }, []);
     return (
-        <div className={styles.container}>
+        <div className={styles.container} data-aos="fade-up"
+            data-aos-duration="1500">
             <div
                 onClick={blogInfoExit}
                 style={{

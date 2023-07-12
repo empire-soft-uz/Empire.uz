@@ -1,4 +1,5 @@
 import React from 'react'
+import { useLocation, useNavigate } from 'react-router-dom'
 import useRootStore from '../../Hooks/useRootStore'
 import { ASSETS } from '../../utils/assetsRequires'
 import { COLORS } from '../../utils/color'
@@ -10,12 +11,15 @@ import styles from "./ViewContent.module.css"
 const ViewContent = () => {
     const { userData, setServiceSendMessage } = useRootStore().userStore
     const { show, hide, visiable } = useRootStore().visibleStore
+    const router = useNavigate()
+    const location = useLocation();
     const OpenForm = (name: string) => {
         show("writeToDev")
         setServiceSendMessage(name, "job")
         hide("viewProfile")
         if (visiable.writeToDev === true)
             document.body.style.overflow = "hidden"
+        router(location.state, { replace: true });
     }
 
     const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]

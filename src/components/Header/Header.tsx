@@ -52,6 +52,9 @@ const Header: React.FC<Props> = ({
                 <a href="#services" className="href">
                     <Text onPress={() => navigation("/#services")} textSize='sixteen' cursor='pointer' text='Services' color={COLORS.white} />
                 </a>
+                <a href="#developers" className="href">
+                    <Text onPress={() => navigation("/#developers")} textSize='sixteen' cursor='pointer' text='Developers' color={COLORS.white} />
+                </a>
                 <a href="#aboutus" className='href'>
                     <Text onPress={() => navigation("/#aboutus")} textSize='sixteen' cursor='pointer' text='About us' color={COLORS.white} />
                 </a>

@@ -27,7 +27,7 @@ const DevelopersCard: React.FC<Props> = ({
   return (
     <div className={styles.container}>
       <div className={styles.imageBox}>
-        <img style={{ borderRadius: "100px" }} src={avatar} />
+        <img src={avatar} />
       </div>
       <div className={styles.title}>
         <Text text={name} textSize="twenty" />

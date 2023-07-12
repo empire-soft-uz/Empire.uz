@@ -31,14 +31,12 @@ const ProfessionalExperience = () => {
                                 )
                             })}
                         </div>
-                        <div className={styles.skillsBox}>
-                            <div className={styles.skills}>
-                                {item.skills.map((i, index) => {
-                                    return (
-                                        <SkillIcon key={index} logo={i.icon} name={i.name} type={'outline'} />
-                                    )
-                                })}
-                            </div>
+                        <div className={styles.skills}>
+                            {item.skills.map((i, index) => {
+                                return (
+                                    <SkillIcon key={index} logo={i.icon} name={i.name} type={'outline'} />
+                                )
+                            })}
                         </div>
                     </div>
                 )

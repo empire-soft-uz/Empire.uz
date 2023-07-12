@@ -11,8 +11,10 @@ export type ReviewDataType = {
     expertSkill: string;
     image: string,
     job: string,
-    education: string,
-    eduBranch: string,
+    education: {
+        edu: string,
+        branch: string
+    }[],
     communication: number,
     technicalSkill: number,
     strengths: {
@@ -51,8 +53,10 @@ export const ReviewDataInitial = {
     expertSkill: "",
     image: "",
     job: "",
-    education: "",
-    eduBranch: "",
+    education: [{
+        edu: "",
+        branch: ""
+    }],
     communication: 0,
     technicalSkill: 0,
     strengths: [{
