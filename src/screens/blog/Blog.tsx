@@ -1,5 +1,5 @@
 import { observer } from 'mobx-react-lite'
-import React from 'react'
+import React, { useEffect } from 'react'
 import BlogCard from '../../components/BlogCard/BlogCard'
 import BlogCardTwo from '../../components/BlogCardTwo/BlogCardTwo'
 import BlogInfo from '../../components/BlogInfo/BlogInfo'
@@ -15,6 +15,9 @@ import useRootStore from '../../Hooks/useRootStore'
 import { ASSETS } from '../../utils/assetsRequires'
 import { BlogData } from '../../utils/dateBase'
 import styles from './Blog.module.css'
+import AOS from "aos";
+import "aos/dist/aos.css";
+import WriteToDeveloper from '../../components/WriteToDeveloper/WriteToDeveloper'
 
 const container = {
     hidden: { opacity: 1, scale: 0 },
@@ -37,12 +40,17 @@ const item = {
 };
 
 const Blog = () => {
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+    }, []);
     const { getBlogsInfo, blogsInfo, setBlogsinfo } = useRootStore().blogsStore
     return (
         <>
             <Header />
             <div className={styles.container} id="blog">
-                <div className={styles.content}>
+                <div className={styles.content} data-aos="fade-up"
+                    data-aos-duration="1500">
                     {setBlogsinfo ? <BlogInfo
                         date={blogsInfo.date ? "" : ""}
                         imageUrl={blogsInfo.infoImage}
@@ -63,16 +71,17 @@ const Blog = () => {
                         </>
                     }
                 </div>
-                <img className={styles.backOne} src={ASSETS.back1} alt="back" />
-                <img className={styles.backTwo} src={ASSETS.back2} alt="back" />
+                <img data-aos="fade-down-left" data-aos-duration="1200" className={styles.backOne} src={ASSETS.back1} alt="back" />
+                <img data-aos="fade-down-right" data-aos-duration="1200" className={styles.backTwo} src={ASSETS.back2} alt="back" />
             </div>
             <div className={styles.footer}>
-                <Footer />
+                <Footer blog={false} />
             </div>
             <FindDeveloper />
             <StartMach />
             <Calendly />
             <WeWillContact />
+            <WriteToDeveloper />
             <Loading />
         </>
     )

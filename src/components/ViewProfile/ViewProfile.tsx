@@ -14,6 +14,7 @@ import { useState, useEffect } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom'
 import CloseBtn from '../CloseBtn/CloseBtn'
 import { IoCloseSharp } from "react-icons/io5";
+import Text from '../Text/Text'
 
 const ViewProfile = () => {
     const outerDiv = useRef<HTMLDivElement>(null)
@@ -60,7 +61,6 @@ const ViewProfile = () => {
                 behavior: 'smooth',
             })
         }
-
     }
     const BackUser = (id: number) => {
         if (id > 1) {
@@ -81,13 +81,6 @@ const ViewProfile = () => {
     const ClickAvatarGetUser = (id: number) => {
         getUserData(id)
         router(`?programmer/${id}`)
-    }
-
-    const sendMessage = () => {
-        show("writeToDev")
-        hide("viewProfile")
-        if (visiable.writeToDev === true)
-            document.body.style.overflow = "hidden"
     }
 
     const closeViewProfile = () => {
@@ -133,7 +126,7 @@ const ViewProfile = () => {
                     <div className={styles.rightBox}>
                         <PersonAbout title={userData?.expert} text={userData?.comment} />
                         <ProfessionalExperience />
-                        <PersonAbout margin='30px 0 0 0' title={userData?.education} text={userData?.eduBranch} />
+                        <PersonAbout name='Education' margin='30px 0 0 0' eduData={userData?.education} title={''} text={''} />
                         <PersonAbout margin='30px 0 0 0' title={'About Me'} text={userData?.aboutPerson} />
                     </div>
                 </div>

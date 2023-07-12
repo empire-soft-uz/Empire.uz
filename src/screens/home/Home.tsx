@@ -40,7 +40,7 @@ const Home = () => {
             <OurAdventages />
             <SubmitApp />
             <OurProcess />
-            <Footer />
+            <Footer blog={true} />
             <FindDeveloper />
             <Calendly />
             <StartMach />

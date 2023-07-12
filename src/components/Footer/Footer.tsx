@@ -8,8 +8,13 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useNavigate } from 'react-router-dom'
 import { APP_ROUTES } from '../../routes/app-routes'
+interface Props {
+    blog?: boolean;
+}
 
-const Footer = () => {
+const Footer: React.FC<Props> = ({
+    blog
+}) => {
     useEffect(() => {
         AOS.init();
         AOS.refresh();
@@ -27,9 +32,11 @@ const Footer = () => {
                 <a href="#aboutus" className='href'>
                     <Text onPress={() => navigation("/#aboutus")} textSize='sixteen' cursor='pointer' text='About us' color={COLORS.white} />
                 </a>
-                <a onClick={() => navigation(APP_ROUTES.BLOG)} className='href'>
-                    <Text textSize='sixteen' cursor='pointer' text='Blog' color={COLORS.white} />
-                </a>
+                {blog ?
+                    <a onClick={() => navigation(APP_ROUTES.BLOG)} className='href'>
+                        <Text textSize='sixteen' cursor='pointer' text='Blog' color={COLORS.white} />
+                    </a> : null
+                }
             </div>
             <img data-aos="fade-down-bottom" data-aos-duration="1200" className={styles.back} src={ASSETS.back6} />
         </div>

@@ -14,15 +14,10 @@
     gap: 20px;
     align-items: center;
 }
-.skillsBox{
-    position: relative;
-    overflow-x: auto;
-    width: 100%;
-}
-
 .skills{
     position: relative;
     display: flex;
+    overflow-x: auto !important;
     padding: 5px 0;
     gap: 10px; 
     width: 100%;

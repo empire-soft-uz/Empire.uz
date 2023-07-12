@@ -5,3 +5,8 @@
     background-color: #1DAC87;
     border-radius: 10px;
 }
+.eduBox{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

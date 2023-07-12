@@ -97,7 +97,7 @@ export const ReviewsData: ReviewDataType[] = [
   {
     id: 1,
     title: "The best developers only for you",
-    name: "Kamronbek Juraev    ",
+    name: "Kamronbek Juraev",
     comment:
       "Kamronbek has more than 6 years of experience in software development. After graduating from INHA university he helped more than 20 startups to implement their ideas in the form of cross-platform mobile apps",
     aboutPerson: "",
@@ -108,8 +108,12 @@ export const ReviewsData: ReviewDataType[] = [
     expertSkill: "React-Native",
     image: ASSETS.developer1,
     job: "Fullstack Developer",
-    education: "INHA university in Tashkent",
-    eduBranch: "Computer Science and Engineering(CSE)",
+    education: [
+      {
+        edu: "INHA university in Tashkent",
+        branch: "Computer Science and Engineering(CSE)"
+      }
+    ],
     strengths: [
       {
         item: "Excellent in frontend React apps",
@@ -397,7 +401,7 @@ components`,
     technicalSkill: 9,
   },
   {
-    id: 7,
+    id: 2,
     title: "The best developers only for you",
     aboutPerson: "",
     name: "Saidamir Botirov",
@@ -408,11 +412,14 @@ components`,
     totalExperience: "5+ Years Of Experience",
     expert: "Expert Backend Developer",
     expertSkill: "Golang",
-    image: ASSETS.developer4,
+    image: ASSETS.developer2,
     job: "Senior Backend Developer",
-    education: "Inha University",
-    eduBranch:
-      "Bachelor of Science, School of Computer and Information Engineering ",
+    education:[
+      {
+        edu: "Inha University",
+        branch: "Bachelor of Science, School of Computer and Information Engineering"
+      }
+    ],
     strengths: [
       {
         item: "Excellent in frontend React apps",
@@ -787,9 +794,9 @@ components`,
     technicalSkill: 9,
   },
   {
-    id: 2,
+    id: 3,
     title: "The best developers only for you",
-    name: "Sarvar Abdurakhimov ",
+    name: "Sarvar Abdurakhimov",
     comment:
       "Great experience with React Native and its ecosystem for over 4 years Hands-on knowledge of UX/UI concepts and practical experience in implementing design principles and rules in the web and mobile application development process  Hard working, responsible, punctual, and result-oriented  Able to perform multiple tasks, set priorities, and meet deadlines Strong debugging, analytical, and problem-solving abilities Ability to participate in individual or team software development process",
     aboutPerson: "",
@@ -800,8 +807,12 @@ components`,
     expertSkill: "React-Native",
     image: ASSETS.developer2,
     job: "Senior React-Native Developer",
-    education: "Tashkent university of information technologies",
-    eduBranch: "Computer Science and Engineering(CSE)",
+    education:[
+      {
+        edu: "Tashkent university of information technologies",
+        branch: "Computer Science and Engineering(CSE)"
+      }
+    ],
     strengths: [
       {
         item: "Excellent in frontend React apps",
@@ -973,7 +984,7 @@ components`,
     technicalSkill: 9,
   },
   {
-    id: 3,
+    id: 4,
     aboutPerson: "",
     title: "The best developers only for you",
     name: "Sergey Shaposhnik",
@@ -986,9 +997,12 @@ components`,
     expertSkill: "React-Native",
     image: ASSETS.developer3,
     job: "Senior React-Native Developer",
-    education: "Siberian Federal University",
-    eduBranch:
-      "Bachelor's degree, Computer Software Engineering, Master's degree, Computer Software Engineering",
+    education:[
+      {
+        edu: "Siberian Federal University",
+        branch: "Bachelor's degree, Computer Software Engineering, Master's degree, Computer Software Engineering"
+      }
+    ],
     strengths: [
       {
         item: "Excellent in frontend React apps",
@@ -1138,7 +1152,7 @@ components`,
     technicalSkill: 9,
   },
   {
-    id: 3,
+    id: 5,
     title: "The best developers only for you",
     name: "Nurulloh Turdimurodov",
     comment:
@@ -1151,8 +1165,12 @@ components`,
     expertSkill: "React",
     image: ASSETS.developer4,
     job: "React Developer",
-    education: "Empire It Academy",
-    eduBranch: "Computer Science and Engineering(CSE)",
+    education:[
+      {
+        edu: "Empire It Academy",
+        branch: "Computer Science and Engineering(CSE)"
+      }
+    ],
     strengths: [
       {
         item: "Excellent in frontend React apps",
@@ -1310,7 +1328,7 @@ components`,
     technicalSkill: 7,
   },
   {
-    id: 4,
+    id: 6,
     title: "The best developers only for you",
     name: "Abdurakhmon Ziyodov",
     comment: `Abdurahman is 23 years old and from Samarkand. He studies computer engineering at theSamarkand branch of the Tashkent University of Information Technologies.
@@ -1323,8 +1341,12 @@ components`,
     expertSkill: "React-Native",
     image: ASSETS.developer6,
     job: "Middle react-native developer",
-    education: "TUIT OF SAMARKAND",
-    eduBranch: "Computer engineer(CE)",
+    education:[
+      {
+        edu: "TUIT OF SAMARKAND",
+        branch: "Computer engineer(CE)"
+      }
+    ],
     strengths: [
       {
         item: "Excellent in frontend React apps",
@@ -1515,7 +1537,7 @@ components`,
     technicalSkill: 9,
   },
   {
-    id: 5,
+    id: 7,
     title: "The best developers only for you",
     name: "Malikov Shukhrat",
     comment: `Shukhrat is a cross platform mobile developer with a good communication skills. He has participated in creating one of the biggest e-commerce websites of Uzbekistan`,
@@ -1527,8 +1549,16 @@ components`,
     expertSkill: "React-Native",
     image: ASSETS.developer5,
     job: "Middle react-native developer",
-    education: "TUIT OF SAMARKAND",
-    eduBranch: "Computer engineer(CE)",
+    education:[
+      {
+        edu: "TUIT OF SAMARKAND",
+        branch: "Computer engineer(CE)"
+      },
+      {
+        edu: "TUIT OF SAMARKAND",
+        branch: "Computer engineer(CE)"
+      }
+    ],
     strengths: [
       {
         item: "Excellent in frontend React apps",

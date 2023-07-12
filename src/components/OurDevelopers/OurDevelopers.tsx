@@ -27,7 +27,7 @@ const OurDevelopers = () => {
             document.body.style.overflow = "hidden"
     };
     return (
-        <div className={styles.container} id="services">
+        <div className={styles.container} id="developers">
             <div className={styles.top} data-aos="fade-up"
                 data-aos-duration="1500">
                 <Text text="Developers for your business" textAlign={"center"} family="BenzinBold" textSize="thirtySix" />
