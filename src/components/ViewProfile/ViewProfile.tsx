@@ -93,7 +93,7 @@ const ViewProfile = () => {
     return (
         <>
             <Backdrop
-                sx={{ color: '#fff', zIndex: 6 }}
+                sx={{ color: '#fff', zIndex: 6, backgroundColor: "rgba(0,0,0, 0.8)" }}
                 open={visiable.viewProfile}
                 onClick={closeViewProfile}
             ></Backdrop>
