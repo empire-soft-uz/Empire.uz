@@ -7,7 +7,7 @@ const Loading = () => {
     const { visiable, hide } = useRootStore().visibleStore
     return (
         <Backdrop
-            sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+            sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1, }}
             open={visiable.loading}
             onClick={() => hide("loading")}
         >

@@ -16,7 +16,7 @@ const RowItem: React.FC<Props> = ({
     return (
         <div className={styles.container}>
             <div className={styles.iconBox}>
-                <img className={styles.img} src={imageUrl} /> :
+                <img className={styles.img} src={imageUrl} />
             </div>
             <div className={styles.textBox}>
                 <Text text={text} textSize='twenty' />

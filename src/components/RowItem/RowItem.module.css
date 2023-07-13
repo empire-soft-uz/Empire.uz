@@ -6,6 +6,7 @@
 .iconBox{
     display: flex;
     align-items: center;
+    position: relative;
 }
 .img{
     width: 40px;

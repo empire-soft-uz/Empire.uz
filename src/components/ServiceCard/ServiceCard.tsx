@@ -4,6 +4,7 @@ import { COLORS } from '../../utils/color'
 import RowItem from '../RowItem/RowItem'
 import Text from '../Text/Text'
 import styles from './ServiceCard.module.css'
+import { RiSendPlaneFill } from "react-icons/ri"
 
 interface Props {
     name: string;
@@ -21,13 +22,12 @@ const ServiceCard: React.FC<Props> = ({
     return (
         <div className={styles.container} onClick={onPress}>
             <RowItem text={name} imageUrl={icon} />
-            <Text
-                textSize='sixteen'
-                margin='5px 0 0 0'
-                color={COLORS.grey}
-                text={text}
-                family="FuturaBook"
-            />
+            <p className={styles.text}>
+                {text}
+            </p>
+            <div className={styles.rightHoverBtn}>
+                <RiSendPlaneFill className={styles.sendIcon} size={24} color='#1DAC87' />
+            </div>
         </div>
     )
 }

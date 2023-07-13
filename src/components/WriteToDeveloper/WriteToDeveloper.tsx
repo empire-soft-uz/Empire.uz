@@ -75,7 +75,7 @@ const WriteToDeveloper = () => {
     return (
         <>
             <Backdrop
-                sx={{ color: '#fff', zIndex: 8 }}
+                sx={{ color: '#fff', zIndex: 8, backgroundColor: "rgba(0,0,0, 0.8)" }}
                 open={visiable.writeToDev}
                 onClick={closeModal}
             ></Backdrop>

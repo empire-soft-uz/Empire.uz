@@ -43,7 +43,7 @@ const Calendly = () => {
     return (
         <>
             <Backdrop
-                sx={{ color: '#fff', zIndex: 5 }}
+                sx={{ color: '#fff', zIndex: 5, backgroundColor: "rgba(0,0,0, 0.8)" }}
                 open={visiable.calendly}
             ></Backdrop>
             <div className={styles.container} style={{ display: visiable.calendly ? "block" : "none" }}>
