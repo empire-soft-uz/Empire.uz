@@ -412,7 +412,7 @@ components`,
     totalExperience: "5+ Years Of Experience",
     expert: "Expert Backend Developer",
     expertSkill: "Golang",
-    image: ASSETS.developer2,
+    image: ASSETS.developer8,
     job: "Senior Backend Developer",
     education:[
       {
