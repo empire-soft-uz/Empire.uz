@@ -1,5 +1,5 @@
 .container{
-    width: 30%;
+    width: 31.5%;
     padding: 25px 20px;
     border: 1px solid #2E2E2E;
     display: flex;
@@ -77,7 +77,7 @@
 }
 @media (min-width: 1200px) {
     .container{
-        width: 31%;
+        width: 31.5%;
     }
     .viewBtn{
         width: 100%;

@@ -4,7 +4,6 @@ export type ReviewDataType = {
     name: string,
     comment: string,
     aboutPerson: string,
-    salary: string,
     whereFrom: string,
     totalExperience: string,
     expert: string;
@@ -46,7 +45,6 @@ export const ReviewDataInitial = {
     name: "",
     comment: "",
     aboutPerson: "",
-    salary: "",
     whereFrom: "",
     totalExperience: "",
     expert: "",

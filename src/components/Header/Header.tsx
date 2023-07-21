@@ -10,11 +10,9 @@ import Text from '../Text/Text'
 import styles from "./Header.module.css"
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 interface Props {
-    // servicesLink?: string;
 }
 
 const Header: React.FC<Props> = ({
-    // servicesLink
 }) => {
     const { show, hide, visiable } = useRootStore().visibleStore
     const navigation = useNavigate()
@@ -37,14 +35,20 @@ const Header: React.FC<Props> = ({
     }
 
     useEffect(() => {
-        if (typeof window !== "undefined") {
+        if (window.location.pathname == "/developers")
+            setSmall(true)
+        if (window.location.pathname == "/blog")
+            setSmall(true)
+        if (window.location.pathname == "/") {
             window.addEventListener("scroll", () =>
-                setSmall(window.pageYOffset > 50)
+                setSmall(window.pageYOffset > 30)
             );
         }
+        console.log("window", window.location.pathname);
     }, []);
 
     const OpenBlog = () => {
+        hide('drawer')
         if (location.pathname != "/blog")
             navigation(APP_ROUTES.BLOG)
     }
@@ -58,11 +62,11 @@ const Header: React.FC<Props> = ({
                 <a href="#services" className="href">
                     <Text onPress={() => navigation("/#services")} textSize='sixteen' cursor='pointer' text='Services' color={COLORS.white} />
                 </a>
-                <a href="#developers" className="href">
-                    <Text onPress={() => navigation("/#developers")} textSize='sixteen' cursor='pointer' text='Developers' color={COLORS.white} />
+                <a href="#our-developers" className="href">
+                    <Text onPress={() => navigation("/#our-developers")} textSize='sixteen' cursor='pointer' text='Developers' color={COLORS.white} />
                 </a>
-                <a href="#aboutus" className='href'>
-                    <Text onPress={() => navigation("/#aboutus")} textSize='sixteen' cursor='pointer' text='About us' color={COLORS.white} />
+                <a href="#about-us" className='href'>
+                    <Text onPress={() => navigation("/#about-us")} textSize='sixteen' cursor='pointer' text='About us' color={COLORS.white} />
                 </a>
                 <a className="href" onClick={OpenBlog}>
                     <Text textSize='sixteen' cursor='pointer' text='Blog' color={COLORS.white} />
@@ -100,12 +104,15 @@ const Header: React.FC<Props> = ({
                 closeIcon={<CloseSmall />}
             >
                 <a href="/#services" className="href" onClick={closeDrawer}>
-                    <Text margin='20px 0 0 0' textSize='twentyTwo' cursor='pointer' text='Services' color={COLORS.white} />
+                    <Text onPress={() => navigation("/#services")} margin='20px 0 0 0' textSize='twentyTwo' cursor='pointer' text='Services' color={COLORS.white} />
+                </a>
+                <a href="/#our-developers" className="href" onClick={closeDrawer}>
+                    <Text onPress={() => navigation("/#our-developers")} margin='20px 0 0 0' textSize='twentyTwo' cursor='pointer' text='Developers' color={COLORS.white} />
                 </a>
                 <a href="/#about-us" className='href' onClick={closeDrawer}>
-                    <Text margin='20px 0 0 0' textSize='twentyTwo' cursor='pointer' text='About us' color={COLORS.white} />
+                    <Text onPress={() => navigation("/#about-us")} margin='20px 0 0 0' textSize='twentyTwo' cursor='pointer' text='About us' color={COLORS.white} />
                 </a>
-                <a href="/blog" className='href' onClick={closeDrawer}>
+                <a className='href' onClick={OpenBlog}>
                     <Text margin='20px 0 0 0' textSize='twentyTwo' cursor='pointer' text='Blog' color={COLORS.white} />
                 </a>
                 <div className={styles.btnBox}>

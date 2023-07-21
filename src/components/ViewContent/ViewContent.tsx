@@ -32,7 +32,7 @@ const ViewContent = () => {
                 <div className={styles.skill}>
                     <Text text={userData?.expertSkill} textSize={'twenty'} color={COLORS.green} />
                     <Text text={userData?.totalExperience} textSize={'fourteen'} />
-                    <Text text={userData?.salary} textSize={'twenty'} />
+                    {/* <Text text={userData?.salary} textSize={'twenty'} /> */}
                 </div>
                 <div className={styles.userImage}>
                     <img src={userData?.image} alt="" />

@@ -36,11 +36,25 @@
 }
 .rightBox a{
     transition: all 0.2s ease;
-    padding: 5px;
+    padding: 6px 0;
+    position: relative;
 }
-.rightBox a:hover {
+.rightBox a::after{
+    content: "";
+    height: 3px; 
+    width: 0;
+    background-color: #1DAC87;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s;
+}
+.rightBox a:hover::after{
+   width: 100%;
+}
+/* .rightBox a:hover {
     margin-bottom: 5px;
-}
+} */
 @media (min-width: 120px){
     .container{
         padding: 0 5%;

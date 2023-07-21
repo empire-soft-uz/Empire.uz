@@ -4,6 +4,7 @@ import { ASSETS } from '../../utils/assetsRequires'
 import Header from '../Header/Header'
 import Text from '../Text/Text'
 import styles from "./MainBack.module.css"
+import { HiOutlineArrowDown } from "react-icons/hi"
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -27,7 +28,8 @@ const MainBack = () => {
                 />
                 <a href="#our-advantages" className="href">
                     <div className={styles.DownBox}>
-                        <ArrowFall />
+                        <span className={styles.span}></span>
+                        <HiOutlineArrowDown size={36} className={styles.downIcon} />
                     </div>
                 </a>
                 <div className={styles.blur}></div>

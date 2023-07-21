@@ -10,6 +10,8 @@ import Text from '../Text/Text'
 import styles from "./OurDeveloper.module.css"
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Button from '../Button/Button'
+import { APP_ROUTES } from '../../routes/app-routes'
 
 const OurDevelopers = () => {
     useEffect(() => {
@@ -27,14 +29,14 @@ const OurDevelopers = () => {
             document.body.style.overflow = "hidden"
     };
     return (
-        <div className={styles.container} id="developers">
+        <div className={styles.container} id="our-developers">
             <div className={styles.top} data-aos="fade-up"
                 data-aos-duration="1500">
                 <Text text="Developers for your business" textAlign={"center"} family="BenzinBold" textSize="thirtySix" />
             </div>
             <div className={styles.cardsBox} data-aos="fade-up"
                 data-aos-duration="1500">
-                {ReviewsData.map((e, index) => {
+                {ReviewsData.slice(0, 6).map((e, index) => {
                     return (
                         <DevelopersCard
                             key={index}
@@ -46,6 +48,9 @@ const OurDevelopers = () => {
                         />
                     );
                 })}
+            </div>
+            <div className={styles.seeAll}>
+                <Button onPress={() => router(APP_ROUTES.DEVELOPERS)} titleSize={18} title={'See All Developers'} btnType={'primary'} />
             </div>
             <img data-aos="fade-down-left" data-aos-duration="1200" className={styles.backTwo} src={ASSETS.back3} alt="back" />
             {/* <img className={styles.backTwo} src={ASSETS.back4} alt="back" /> */}

@@ -75,11 +75,11 @@ const Blog = () => {
                         </>
                     }
                 </div>
-                <img data-aos="fade-down-left" data-aos-duration="1200" className={styles.backOne} src={ASSETS.back1} alt="back" />
+                <img data-aos="fade-down-left" data-aos-duration="1200" className={styles.backOne} src={ASSETS.back3} alt="back" />
                 <img data-aos="fade-down-right" data-aos-duration="1200" className={styles.backTwo} src={ASSETS.back2} alt="back" />
             </div>
             <div className={styles.footer}>
-                <Footer />
+                <Footer blog={false} />
             </div>
             <FindDeveloper />
             <StartMach />
