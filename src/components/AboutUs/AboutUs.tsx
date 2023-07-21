@@ -12,7 +12,7 @@ const AboutUs = () => {
         AOS.refresh();
     }, []);
     return (
-        <div className={styles.container} id="aboutus">
+        <div className={styles.container} id="about-us">
             <div className={styles.header} data-aos="fade-up"
                 data-aos-duration="1500">
                 <Text text='ABOUT US' textAlign={"center"} family="BenzinBold" textSize={"thirtySix"} />

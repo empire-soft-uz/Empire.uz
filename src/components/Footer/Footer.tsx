@@ -34,14 +34,19 @@ const Footer: React.FC<Props> = ({
                 <a href="#services" className='href'>
                     <Text onPress={() => navigation("/#services")} textSize='sixteen' cursor='pointer' text='Services' color={COLORS.white} />
                 </a>
-                <a href="#aboutus" className='href'>
-                    <Text onPress={() => navigation("/#aboutus")} textSize='sixteen' cursor='pointer' text='About us' color={COLORS.white} />
+                <a href="#our-developers" className='href'>
+                    <Text onPress={() => navigation("/#our-developers")} textSize='sixteen' cursor='pointer' text='Developers' color={COLORS.white} />
                 </a>
-                <a onClick={OpenBlog} className='href'>
-                    <Text textSize='sixteen' cursor='pointer' text='Blog' color={COLORS.white} />
+                <a href="#about-us" className='href'>
+                    <Text onPress={() => navigation("/#about-us")} textSize='sixteen' cursor='pointer' text='About us' color={COLORS.white} />
                 </a>
+                {blog ?
+                    <a onClick={OpenBlog} className='href'>
+                        <Text textSize='sixteen' cursor='pointer' text='Blog' color={COLORS.white} />
+                    </a> : null
+                }
             </div>
-            <img data-aos="fade-down-bottom" data-aos-duration="1200" className={styles.back} src={ASSETS.back6} />
+            <img className={styles.back} src={ASSETS.back6} />
         </div>
     )
 }

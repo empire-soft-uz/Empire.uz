@@ -32,7 +32,9 @@ const Button: React.FC<Props> = ({
                 padding: padding,
                 width: width,
                 margin: margin,
-                cursor: disabled ? "not-allowed" : cursor ? cursor : "pointer"
+                fontSize: titleSize,
+                cursor: disabled ? "not-allowed" : cursor ? cursor : "pointer",
+                color: titleColor
             }}
             className={`${styles[btnType]}`} onClick={onPress}
         >

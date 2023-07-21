@@ -3,7 +3,8 @@
     background-color: #010100;
     position: relative;
     padding: 20px 18%;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .content{
@@ -23,8 +24,8 @@
 
 .backOne{
     position: absolute;
-    right: 0;
-    top: 0;
+    right: -40px !important;
+    top: 100px !important;
     z-index: 1;
     height: 400px;
 }
@@ -90,7 +91,7 @@
 .backOne{
     position: absolute;
     right: 0;
-    top: 0;
+    top: 100px;
     z-index: 1;
     height: 400px;
 }

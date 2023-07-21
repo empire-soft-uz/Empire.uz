@@ -40,6 +40,11 @@
     height: 400px;
 }
 
+.seeAll {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 10px 0;
+}
 
 @media (min-width: 120px){
     .container{

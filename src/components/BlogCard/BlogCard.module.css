@@ -34,7 +34,7 @@
         width: 100%;
     }
 }
-@media(min-width: 576px) {
+@media(min-width: 767px) {
     .container{
         width: 48%;
     }

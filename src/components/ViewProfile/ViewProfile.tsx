@@ -26,7 +26,6 @@ const ViewProfile = () => {
     const { userData, getUserData, } = useRootStore().userStore
     const path = window.location
     const userId = Number(path.search.split("/")[1])
-
     useEffect(() => {
         if (userId) {
             show("loading")
@@ -71,7 +70,7 @@ const ViewProfile = () => {
             setCurrents(currents - 1)
 
             outerDiv.current?.scrollTo({
-                left: -(inerDiv.current?.clientWidth!) + (inerDiv.current?.clientWidth! * currents) - 70,
+                left: -(inerDiv.current?.clientWidth!) + (inerDiv.current?.clientWidth! * currents) - 200,
                 top: 0,
                 behavior: 'smooth',
             })
