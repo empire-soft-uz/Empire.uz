@@ -110,8 +110,8 @@ export const ReviewsData: ReviewDataType[] = [
     education: [
       {
         edu: "INHA university in Tashkent",
-        branch: "Computer Science and Engineering(CSE)"
-      }
+        branch: "Computer Science and Engineering(CSE)",
+      },
     ],
     strengths: [
       {
@@ -412,11 +412,12 @@ components`,
     expertSkill: "Golang",
     image: ASSETS.developer8,
     job: "Senior Backend Developer",
-    education:[
+    education: [
       {
         edu: "Inha University",
-        branch: "Bachelor of Science, School of Computer and Information Engineering"
-      }
+        branch:
+          "Bachelor of Science, School of Computer and Information Engineering",
+      },
     ],
     strengths: [
       {
@@ -804,11 +805,11 @@ components`,
     expertSkill: "React-Native",
     image: ASSETS.developer2,
     job: "Senior React-Native Developer",
-    education:[
+    education: [
       {
         edu: "Tashkent university of information technologies",
-        branch: "Computer Science and Engineering(CSE)"
-      }
+        branch: "Computer Science and Engineering(CSE)",
+      },
     ],
     strengths: [
       {
@@ -993,11 +994,12 @@ components`,
     expertSkill: "React-Native",
     image: ASSETS.developer3,
     job: "Senior React-Native Developer",
-    education:[
+    education: [
       {
         edu: "Siberian Federal University",
-        branch: "Bachelor's degree, Computer Software Engineering, Master's degree, Computer Software Engineering"
-      }
+        branch:
+          "Bachelor's degree, Computer Software Engineering, Master's degree, Computer Software Engineering",
+      },
     ],
     strengths: [
       {
@@ -1160,11 +1162,11 @@ components`,
     expertSkill: "React",
     image: ASSETS.developer4,
     job: "React Developer",
-    education:[
+    education: [
       {
         edu: "Empire It Academy",
-        branch: "Computer Science and Engineering(CSE)"
-      }
+        branch: "Computer Science and Engineering(CSE)",
+      },
     ],
     strengths: [
       {
@@ -1335,11 +1337,11 @@ components`,
     expertSkill: "React-Native",
     image: ASSETS.developer6,
     job: "Middle react-native developer",
-    education:[
+    education: [
       {
         edu: "TUIT OF SAMARKAND",
-        branch: "Computer engineer(CE)"
-      }
+        branch: "Computer engineer(CE)",
+      },
     ],
     strengths: [
       {
@@ -1542,15 +1544,15 @@ components`,
     expertSkill: "React-Native",
     image: ASSETS.developer5,
     job: "Middle react-native developer",
-    education:[
+    education: [
       {
         edu: "TUIT OF SAMARKAND",
-        branch: "Computer engineer(CE)"
+        branch: "Computer engineer(CE)",
       },
       {
         edu: "TUIT OF SAMARKAND",
-        branch: "Computer engineer(CE)"
-      }
+        branch: "Computer engineer(CE)",
+      },
     ],
     strengths: [
       {
@@ -1674,6 +1676,210 @@ components`,
           {
             icon: "./icons/ts.svg",
             name: "TypeScript",
+          },
+        ],
+      },
+    ],
+    communication: 6,
+    technicalSkill: 9,
+  },
+  {
+    id: 8,
+    title: "The best developers only for you",
+    name: "Farrukh N",
+    comment:
+      "Farrukh has 3.5 years of experience in React/React-Native software. Has developed more than 10 applications",
+    aboutPerson: "",
+    whereFrom: "Toshkent Uzbekistan",
+    totalExperience: "3.5 Years Of Experience",
+    expert: "Expert React-Native Developer",
+    expertSkill: "React-Native",
+    image: ASSETS.developer2,
+    job: "Middle React-Native Developer",
+    education: [
+      {
+        edu: "Tashkent university of information technologies",
+        branch: "Computer Science and Engineering(CSE)",
+      },
+    ],
+    strengths: [
+      {
+        item: "Excellent in frontend React apps",
+      },
+      {
+        item: "Great communicator",
+      },
+      {
+        item: "Good experience with new libraries like Next.js & Nuxt.js",
+      },
+    ],
+    skills: [
+      {
+        id: 2,
+        skillsIcon: "./icons/react.svg",
+        skillsName: "React-Native",
+        experience: "3.5 years",
+        expertise: true,
+      },
+      {
+        id: 3,
+        skillsIcon: "./icons/react.svg",
+        skillsName: "React",
+        experience: "3 years",
+        expertise: true,
+      },
+      {
+        id: 4,
+        skillsIcon: "./icons/js.svg",
+        skillsName: "JS/TS",
+        experience: "2 years",
+        expertise: true,
+      },
+      {
+        id: 5,
+        skillsIcon: "./icons/css.svg",
+        skillsName: "HTML/CSS",
+        experience: "2 years",
+        expertise: true,
+      },
+      {
+        id: 6,
+        skillsIcon: "./icons/firebase.svg",
+        skillsName: "Firebase",
+        experience: "1 years",
+        expertise: true,
+      },
+    ],
+    experience: [
+      {
+        title: "Software Engineer",
+        type: "Agency",
+        time: "3 year 3 months",
+        info: [
+          {
+            text: "Responsible for full app life-cycle: design, build, test, deploy, release to the app store and play market.",
+          },
+          {
+            text: "Collaborating with the product management, marketing, designers, and technology and architecture teams.",
+          },
+          {
+            text: " Using external data sources and APIs.",
+          },
+        ],
+        skills: [
+          {
+            icon: "./icons/js.svg",
+            name: "JS",
+          },
+          {
+            icon: "./icons/react.svg",
+            name: "React-Native",
+          },
+          {
+            icon: "./icons/firebase.svg",
+            name: "Firebase",
+          },
+        ],
+      },
+    ],
+    communication: 6,
+    technicalSkill: 9,
+  },
+  {
+    id: 8,
+    title: "The best developers only for you",
+    name: "Fakhriddin Y",
+    comment:
+      "Farrukh has 3.5 years of experience in React/React-Native software. Has developed more than 10 applications",
+    aboutPerson: "",
+    whereFrom: "Toshkent Uzbekistan",
+    totalExperience: "3.5 Years Of Experience",
+    expert: "Expert React-Native Developer",
+    expertSkill: "React-Native",
+    image: ASSETS.developer8,
+    job: "Middle React-Native Developer",
+    education: [
+      {
+        edu: "Tashkent university of information technologies",
+        branch: "Computer Science and Engineering(CSE)",
+      },
+    ],
+    strengths: [
+      {
+        item: "Excellent in frontend React apps",
+      },
+      {
+        item: "Great communicator",
+      },
+      {
+        item: "Good experience with new libraries like Next.js & Nuxt.js",
+      },
+    ],
+    skills: [
+      {
+        id: 2,
+        skillsIcon: "./icons/react.svg",
+        skillsName: "React-Native",
+        experience: "3.5 years",
+        expertise: true,
+      },
+      {
+        id: 3,
+        skillsIcon: "./icons/react.svg",
+        skillsName: "React",
+        experience: "3 years",
+        expertise: true,
+      },
+      {
+        id: 4,
+        skillsIcon: "./icons/js.svg",
+        skillsName: "JS/TS",
+        experience: "2 years",
+        expertise: true,
+      },
+      {
+        id: 5,
+        skillsIcon: "./icons/css.svg",
+        skillsName: "HTML/CSS",
+        experience: "2 years",
+        expertise: true,
+      },
+      {
+        id: 6,
+        skillsIcon: "./icons/firebase.svg",
+        skillsName: "Firebase",
+        experience: "1 years",
+        expertise: true,
+      },
+    ],
+    experience: [
+      {
+        title: "Software Engineer",
+        type: "Agency",
+        time: "3 year 3 months",
+        info: [
+          {
+            text: "Responsible for full app life-cycle: design, build, test, deploy, release to the app store and play market.",
+          },
+          {
+            text: "Collaborating with the product management, marketing, designers, and technology and architecture teams.",
+          },
+          {
+            text: " Using external data sources and APIs.",
+          },
+        ],
+        skills: [
+          {
+            icon: "./icons/js.svg",
+            name: "JS",
+          },
+          {
+            icon: "./icons/react.svg",
+            name: "React-Native",
+          },
+          {
+            icon: "./icons/firebase.svg",
+            name: "Firebase",
           },
         ],
       },
