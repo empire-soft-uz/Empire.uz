@@ -28,7 +28,7 @@ const UpBtn = () => {
 const Contianer = styled.div`
     .btn{
         position: fixed;
-        bottom: 20px;
+        bottom: 100px;
         right: 20px;
         top: auto;
         left: auto;
