@@ -1796,7 +1796,7 @@ components`,
     totalExperience: "3.5 Years Of Experience",
     expert: "Expert React-Native Developer",
     expertSkill: "React-Native",
-    image: ASSETS.developer8,
+    image: ASSETS.developer9,
     job: "Middle React-Native Developer",
     education: [
       {

@@ -19,6 +19,6 @@ export const ASSETS = {
   developer5: require("../assets/images/developer5.jpg"),
   developer6: require("../assets/images/developer6.jpg"),
   developer7: require("../assets/images/developer7.jpg"),
-  developer8: require("../assets/images/developer4.jpg"),
-  developer9: require("../assets/images/developer4.jpg"),
+  developer8: require("../assets/images/developer8.jpg"),
+  developer9: require("../assets/images/developer9.jpg"),
 };
