@@ -56,7 +56,7 @@ const Header: React.FC<Props> = ({
     return (
         <div className={`${styles.container} ${small ? styles.changeOn : styles.changeOff}`}>
             <a href="/" className='href'>
-                <img className={styles.logo} src="./icons/logo.svg" alt="Empire-soft" />
+                <img className={styles.logo} src="./icons/logo1.png" alt="Empire-soft" />
             </a>
             <div className={styles.rightBox}>
                 <a href="#services" className="href">
@@ -97,7 +97,7 @@ const Header: React.FC<Props> = ({
                 onClose={() => hide("drawer")}
                 title={
                     <a href="/" className={`href ${styles.drawerLogo}`} onClick={closeDrawer}>
-                        <img className={styles.logo} src="./icons/logo.svg" alt="Empire-soft" />
+                        <img className={styles.logo} src="./icons/logo1.png" alt="Empire-soft" />
                     </a>
                 }
                 open={visiable.drawer}
