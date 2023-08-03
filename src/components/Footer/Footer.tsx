@@ -59,7 +59,7 @@ const Footer: React.FC<Props> = ({
                     <a target={"_blank"} href="https://T.me/+998994480500" className='href'>
                         <img className={styles.socialIcon} src="/telegram.png" alt="" />        
                     </a>
-                    <a target={"_blank"} href="" className='href'>
+                    <a target={"_blank"} href="https://wa.me/+998994480500" className='href'>
                         <img className={styles.socialIcon} src="/whatsapp.png" alt="" />
                     </a>
                 </div>
