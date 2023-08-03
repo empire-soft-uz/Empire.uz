@@ -53,7 +53,7 @@ const Footer: React.FC<Props> = ({
                     <Text textSize='sixteen' cursor='pointer' text='+998 99 448 05 00' color={COLORS.green} />
                 </a>
                 <a target={"_blank"} href="mailto:empire.soft.net@gmail.com" className='href'>
-                    <Text textSize='sixteen' cursor='pointer' text='Empire.soft.net@gmail.com' color={COLORS.green} />
+                    <Text textSize='sixteen' cursor='pointer' text='empire.soft.net@gmail.com' color={COLORS.green} />
                 </a>
                 <div className={styles.socialIconB}>
                     <a target={"_blank"} href="https://T.me/+998994480500" className='href'>
