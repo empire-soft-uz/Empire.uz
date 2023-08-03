@@ -1694,7 +1694,7 @@ components`,
     totalExperience: "3.5 Years Of Experience",
     expert: "Expert React-Native Developer",
     expertSkill: "React-Native",
-    image: ASSETS.developer2,
+    image: ASSETS.developer7,
     job: "Middle React-Native Developer",
     education: [
       {
@@ -1786,7 +1786,7 @@ components`,
     technicalSkill: 9,
   },
   {
-    id: 8,
+    id: 9,
     title: "The best developers only for you",
     name: "Fakhriddin Y",
     comment:
