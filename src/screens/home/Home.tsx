@@ -10,6 +10,8 @@ import OurAdventages from '../../components/OurAdventages/OurAdventages'
 import OurDevelopers from '../../components/OurDevelopers/OurDevelopers'
 import OurProcess from '../../components/OurProcess/OurProcess'
 import OurServices from '../../components/OurServices/OurServices'
+import RateCards from '../../components/RateCards/RateCards'
+import Social from '../../components/Social/Social'
 import StartMach from '../../components/StartMach/StartMach'
 import SubmitApp from '../../components/SubmitApp/SubmitApp'
 import UpBtn from '../../components/UpBtn/UpBtn'
@@ -34,6 +36,7 @@ const Home = () => {
     return (
         <div className={styles.container}>
             <MainBack />
+            <RateCards />
             <OurServices />
             <OurDevelopers />
             <AboutUs />
@@ -49,6 +52,7 @@ const Home = () => {
             <WriteToDeveloper />
             <Loading />
             <UpBtn />
+            <Social />
         </div>
     )
 }

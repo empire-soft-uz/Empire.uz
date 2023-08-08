@@ -26,5 +26,5 @@
 
 .outline:hover{
     background-color: #1DAC87;
-    color: #fff;
+    color: #fff !important;
 }

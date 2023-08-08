@@ -19,9 +19,9 @@ const OurServices = () => {
   const { show, visiable } = useRootStore().visibleStore;
   const { setServiceSendMessage } = useRootStore().userStore;
   const OpenForm = (name: string) => {
-    show("writeToDev");
+    show("social");
     setServiceSendMessage(name, "job");
-    if (visiable.writeToDev === true)
+    if (visiable.social === true)
       document.body.style.overflow = "hidden"
   };
   return (
