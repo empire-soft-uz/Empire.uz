@@ -10,7 +10,8 @@ type modal = {
     loading: boolean;
     viewProfile: boolean;
     writeToDev: boolean;
-    upBtn: boolean
+    upBtn: boolean;
+    social: boolean
 }
 
 export default class VisibleStore {
@@ -27,7 +28,8 @@ export default class VisibleStore {
         loading: false,
         viewProfile: false,
         writeToDev: false,
-        upBtn: false
+        upBtn: false,
+        social: false
     }
 
     show = (key: keyof modal) => {

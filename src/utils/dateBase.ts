@@ -7,6 +7,93 @@ import {
 } from "../types/types";
 import { ASSETS } from "./assetsRequires";
 
+export const RateData = [
+  {
+    id: 1,
+    title: "Starter",
+    name: "Individual",
+    icon: ASSETS.openBoxG,
+    price: "$4500",
+    period: "infinity",
+    info: [
+      {
+        name: "The point of using lorem offer"
+      },
+      {
+        name: "Lorem Ipsum is simply dummy"
+      },
+      {
+        name: "Premium Phone Support"
+      },
+      {
+        name: "Unlimited Bandwidth"
+      },
+      {
+        name: "Lorem Ipsum is simply dummy"
+      },
+      {
+        name: "The point of using lorem"
+      }
+    ]
+  },
+  {
+    id: 2,
+    title: "Premium",
+    name: "Business",
+    icon: ASSETS.increaseG,
+    price: "$6500",
+    period: "infinity",
+    info: [
+      {
+        name: "The point of using lorem offer"
+      },
+      {
+        name: "Lorem Ipsum is simply dummy"
+      },
+      {
+        name: "Premium Phone Support"
+      },
+      {
+        name: "Unlimited Bandwidth"
+      },
+      {
+        name: "Lorem Ipsum is simply dummy"
+      },
+      {
+        name: "The point of using lorem"
+      }
+    ]
+  },
+  {
+    id: 3,
+    title: "Ultimate",
+    name: "Enterprise",
+    icon: ASSETS.diamondG,
+    price: "$7500",
+    period: "infinity",
+    info: [
+      {
+        name: "The point of using lorem offer"
+      },
+      {
+        name: "Lorem Ipsum is simply dummy"
+      },
+      {
+        name: "Premium Phone Support"
+      },
+      {
+        name: "Unlimited Bandwidth"
+      },
+      {
+        name: "Lorem Ipsum is simply dummy"
+      },
+      {
+        name: "The point of using lorem"
+      }
+    ]
+  }
+]
+
 export const ServicesData: ServicesDataType[] = [
   {
     id: 1,
