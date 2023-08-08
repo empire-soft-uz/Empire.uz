@@ -44,6 +44,9 @@
     overflow-x: auto;
     overflow-y: hidden;
 }
+.pageBox::-webkit-scrollbar {
+    display: none;
+  }
 .arrow{
     display: flex;
     align-items: center;
