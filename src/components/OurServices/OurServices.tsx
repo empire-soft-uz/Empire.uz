@@ -12,42 +12,64 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const OurServices = () => {
-  useEffect(() => {
-    AOS.init();
-    AOS.refresh();
-  }, []);
-  const { show, visiable } = useRootStore().visibleStore;
-  const { setServiceSendMessage } = useRootStore().userStore;
-  const OpenForm = (name: string) => {
-    show("social");
-    setServiceSendMessage(name, "job");
-    if (visiable.social === true)
-      document.body.style.overflow = "hidden"
-  };
-  return (
-    <div className={styles.container} id="services">
-      <div className={styles.top} data-aos="fade-up"
-        data-aos-duration="1500">
-        <Text text="OUR SERVICES" textAlign={"center"} family="BenzinBold" textSize="thirtySix" />
-      </div>
-      <div className={styles.cardsBox} data-aos="fade-up"
-        data-aos-duration="1500">
-        {ServicesData.map((e, index) => {
-          return (
-            <ServiceCard
-              key={index}
-              name={e.name}
-              text={e.text}
-              icon={e.icon}
-              onPress={() => OpenForm(e.name)}
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+    }, []);
+    const { show, visiable } = useRootStore().visibleStore;
+    const { setServiceSendMessage } = useRootStore().userStore;
+    const OpenForm = (name: string) => {
+        show("writeToDev");
+        setServiceSendMessage(name, "job");
+        if (visiable.social === true) document.body.style.overflow = "hidden";
+    };
+    return (
+        <div className={styles.container} id="services">
+            <div
+                className={styles.top}
+                data-aos="fade-up"
+                data-aos-duration="1500"
+            >
+                <Text
+                    text="OUR SERVICES"
+                    textAlign={"center"}
+                    family="BenzinBold"
+                    textSize="thirtySix"
+                />
+            </div>
+            <div
+                className={styles.cardsBox}
+                data-aos="fade-up"
+                data-aos-duration="1500"
+            >
+                {ServicesData.map((e, index) => {
+                    return (
+                        <ServiceCard
+                            key={index}
+                            name={e.name}
+                            text={e.text}
+                            icon={e.icon}
+                            onPress={() => OpenForm(e.name)}
+                        />
+                    );
+                })}
+            </div>
+            <img
+                data-aos="fade-down-right"
+                data-aos-duration="1200"
+                className={styles.backOne}
+                src={ASSETS.back3}
+                alt="back"
             />
-          );
-        })}
-      </div>
-      <img data-aos="fade-down-right" data-aos-duration="1200" className={styles.backOne} src={ASSETS.back3} alt="back" />
-      <img data-aos="fade-down-left" data-aos-duration="1200" className={styles.backTwo} src={ASSETS.back4} alt="back" />
-    </div>
-  );
+            <img
+                data-aos="fade-down-left"
+                data-aos-duration="1200"
+                className={styles.backTwo}
+                src={ASSETS.back4}
+                alt="back"
+            />
+        </div>
+    );
 };
 
 export default observer(OurServices);
