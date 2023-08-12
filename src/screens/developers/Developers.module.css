@@ -1,4 +1,4 @@
-.container{
+.container {
     max-height: 100vh;
     min-height: 100vh;
     background-color: #010100;
@@ -8,14 +8,14 @@
     overflow-x: hidden;
 }
 
-.top{
+.top {
     height: 15vh;
     display: flex;
     align-items: center;
     margin-top: 50px;
 }
 
-.cardsBox{
+.cardsBox {
     height: 100%;
     position: relative;
     z-index: 2;
@@ -24,7 +24,7 @@
     gap: 20px;
 }
 
-.backOne{
+.backOne {
     width: 300px;
     height: 300px;
     position: absolute;
@@ -33,7 +33,7 @@
     right: auto;
 }
 
-.backTwo{
+.backTwo {
     position: absolute;
     bottom: 30vh;
     right: 0;
