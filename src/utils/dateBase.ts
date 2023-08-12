@@ -60,7 +60,7 @@ export const RateData = [
   },
   {
     id: 3,
-    title: "Custon",
+    title: "Custom",
     name: "Enterprise",
     icon: ASSETS.diamondG,
     price: "TBD",
