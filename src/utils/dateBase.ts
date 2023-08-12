@@ -17,82 +17,76 @@ export const RateData = [
     period: "infinity",
     info: [
       {
-        name: "The point of using lorem offer"
+        name: "Full design of your app with up to 15 pages",
       },
       {
-        name: "Lorem Ipsum is simply dummy"
+        name: "Mobile app for both Android/IOS platforms",
       },
       {
-        name: "Premium Phone Support"
+        name: "Fully functioning features backed with Firebase and/or Custom backend",
       },
       {
-        name: "Unlimited Bandwidth"
+        name: "Publishing apps to your or our App store and Play market",
       },
       {
-        name: "Lorem Ipsum is simply dummy"
+        name: "One month free advertising in Google search ads or on Facebook/Instagram",
       },
       {
-        name: "The point of using lorem"
-      }
-    ]
+        name: "One month support after development finishes",
+      },
+    ],
   },
   {
     id: 2,
     title: "Premium",
     name: "Business",
     icon: ASSETS.increaseG,
-    price: "$6500",
+    price: "$7000",
     period: "infinity",
     info: [
       {
-        name: "The point of using lorem offer"
+        name: "Everything that starter plan includes",
       },
       {
-        name: "Lorem Ipsum is simply dummy"
+        name: "Full design of your app with up to 25 page",
       },
       {
-        name: "Premium Phone Support"
+        name: "Two months free advertisement on Search engines and social media",
       },
       {
-        name: "Unlimited Bandwidth"
+        name: "Two months support after development finishes",
       },
-      {
-        name: "Lorem Ipsum is simply dummy"
-      },
-      {
-        name: "The point of using lorem"
-      }
-    ]
+    ],
   },
   {
     id: 3,
-    title: "Ultimate",
+    title: "Custon",
     name: "Enterprise",
     icon: ASSETS.diamondG,
-    price: "$7500",
+    price: "TBD",
     period: "infinity",
     info: [
       {
-        name: "The point of using lorem offer"
+        name: "Creating Technical Requrements of your idea or system",
       },
       {
-        name: "Lorem Ipsum is simply dummy"
+        name: "Creating complete designs of apps, websites and admin panes",
       },
       {
-        name: "Premium Phone Support"
+        name: "Automotization of your current business or implementation of your idea",
       },
       {
-        name: "Unlimited Bandwidth"
+        name: "Implementing custom Admin panel for managing the whole system",
       },
       {
-        name: "Lorem Ipsum is simply dummy"
+        name: "Coaching your staff and partners with the system that we built",
       },
       {
-        name: "The point of using lorem"
-      }
-    ]
-  }
-]
+        name: "Install and support your system",
+      },
+    ],
+  },
+];
 
 export const ServicesData: ServicesDataType[] = [
   {
