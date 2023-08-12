@@ -1,4 +1,4 @@
-.container{
+.container {
     display: flex;
     height: 100% !important;
     padding: 20px 18%;
@@ -6,105 +6,113 @@
     gap: 30px;
     flex-wrap: wrap;
 }
-.card{
+.card {
     width: 31%;
-    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
     /* border: 1px solid grey; */
-    box-shadow: 0 0 10px #1DAC87;
+    box-shadow: 0 0 10px #1dac87;
     border-radius: 40px 40px 0 40px;
     padding: 30px 30px 20px 30px;
-    background-color: #1DAC87;
+    background-color: #1dac87;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.bottomBx {
+    width: 100%;
 }
 
-.rowItem{
+.rowItem {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-.iconBox{
+.iconBox {
     display: flex;
-    border: 1px solid #1DAC87;
+    border: 1px solid #1dac87;
     border-radius: 50%;
     align-items: center;
     position: relative;
     padding: 10px;
     background-color: #fff;
 }
-.img{
+.img {
     width: 30px;
     height: 30px;
     object-fit: contain;
 }
-.textBox{
+.textBox {
     display: flex;
     flex-direction: column;
 }
 
-.infoBox{
+.infoBox {
     display: flex;
     flex-direction: column;
     padding: 15px 0;
     gap: 10px;
 }
-.item{
+.item {
     display: flex;
     gap: 6px;
 }
 
-.btn{
+.btn {
     background-color: #fff;
     border: 1px solid #fff;
-    color: #1DAC87;
+    color: #1dac87;
     font-size: 20px;
     padding: 10px 0;
     border-radius: 15px 15px 0 15px;
     cursor: pointer;
     transition: 0.3s ease-in-out;
+    width: 100%;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: transparent;
     color: #fff;
 }
 
-.priceBox{
+.priceBox {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 @media (min-width: 120px) {
-    .container{
+    .container {
         padding: 50px 5% 20px 5%;
     }
-    .card{
+    .card {
         width: 100%;
     }
 }
 
-@media(min-width: 576px) {
-    .container{
+@media (min-width: 576px) {
+    .container {
         padding: 20px 10%;
     }
 }
 
 @media (min-width: 767px) {
-    .card{
-        width: 48%;
+    .card {
+        width: 47%;
     }
 }
 
-@media(min-width: 992px){
-    .container{
+@media (min-width: 992px) {
+    .container {
         padding: 20px 10%;
     }
 }
 
 @media (min-width: 1200px) {
-    .container{
+    .container {
         padding: 20px 18%;
     }
-    .card{
+    .card {
         width: 31%;
     }
 }
