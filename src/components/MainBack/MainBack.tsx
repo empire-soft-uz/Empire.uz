@@ -22,7 +22,7 @@ const MainBack = () => {
                 data-aos-duration="1200"
             >
                 <Text
-                    text="We develop complex projects simply. Sharing our team"
+                    text="We develop complex projects - simply. Sharing our team"
                     textSize="fifty"
                     positon="relative"
                     transform={"uppercase"}
