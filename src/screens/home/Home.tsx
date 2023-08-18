@@ -1,9 +1,10 @@
 import { observer } from "mobx-react-lite";
 import React, { useEffect, useState, Suspense } from "react";
 import AboutUs from "../../components/AboutUs/AboutUs";
-import Calendly from "../../components/Calendly/Calendly";
+// import Calendly from "../../components/Calendly/Calendly";
 import FindDeveloper from "../../components/FindDeveloper/FindDeveloper";
 import Footer from "../../components/Footer/Footer";
+import InitialLoading from "../../components/InitialLoading/InitialLoading";
 import Loading from "../../components/Loading/Loading";
 import MainBack from "../../components/MainBack/MainBack";
 import OurAdventages from "../../components/OurAdventages/OurAdventages";
@@ -24,9 +25,9 @@ import styles from "./home.styles.module.css";
 const Home = () => {
     const { show, hide } = useRootStore().visibleStore;
     useEffect(() => {
-        show("loading");
+        show("initialLoading");
         window.onload = function () {
-            hide("loading");
+            hide("initialLoading");
         };
         const handleScrollBtn = () => {
             window.pageYOffset > 300 ? show("upBtn") : hide("upBtn");
@@ -49,7 +50,7 @@ const Home = () => {
             <OurProcess />
             <Footer blog />
             <FindDeveloper />
-            <Calendly />
+            {/* <Calendly /> */}
             <StartMach />
             <WeWillContact />
             <ViewProfile />
@@ -57,6 +58,7 @@ const Home = () => {
             <Loading />
             <UpBtn />
             <Social />
+            <InitialLoading />
         </div>
     );
 };
