@@ -21,7 +21,6 @@ const WriteToDeveloper = () => {
         useRootStore().userStore;
 
     const data = `Services%0A Name: ${serviceSendData.name}%0A Email: ${serviceSendData.email}%0A To: ${serviceSendData.job}`;
-
     const [disabled, setDisabled] = useState(true);
     const [error, setError] = useState(null);
     const [nameError, setNameError] = useState(null);
