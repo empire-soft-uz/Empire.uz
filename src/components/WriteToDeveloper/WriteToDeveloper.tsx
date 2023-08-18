@@ -31,7 +31,7 @@ const WriteToDeveloper = () => {
         if (event.target.value.length === 0) {
             setError(null);
             setDisabled(true);
-        } else if (!isValidEmail(event.target.value)) {
+        } else if (event.target.value.length < 2) {
             setError("Email is invalid" as never);
             setDisabled(true);
         } else {
@@ -41,6 +41,10 @@ const WriteToDeveloper = () => {
         setServiceSendMessage(event.target.value, "email");
     };
     const sendBot = async () => {
+        if (disabled) {
+            setError("Email is invalid" as never);
+            return;
+        }
         if (!disabled) {
             show("loading");
             await axios({
@@ -52,6 +56,7 @@ const WriteToDeveloper = () => {
             })
                 .then((res) => {
                     clearServiceSendDevForm();
+                    setDisabled(true);
                     hide("writeToDev");
                     hide("loading");
                     show("weWillContact");
@@ -186,7 +191,7 @@ const WriteToDeveloper = () => {
                     </div>
                     <div className={styles.footer}>
                         <ArrowRightButton
-                            disabled={disabled}
+                            // disabled={disabled}
                             onClick={sendBot}
                         />
                     </div>
