@@ -2,21 +2,22 @@ import _, { every } from "lodash";
 import { makeAutoObservable } from "mobx";
 
 type modal = {
-    findDeveloper: boolean
-    smartMach: boolean
-    weWillContact: boolean
-    drawer: boolean
+    findDeveloper: boolean;
+    smartMach: boolean;
+    weWillContact: boolean;
+    drawer: boolean;
     calendly: boolean;
     loading: boolean;
     viewProfile: boolean;
     writeToDev: boolean;
     upBtn: boolean;
-    social: boolean
-}
+    social: boolean;
+    initialLoading: boolean;
+};
 
 export default class VisibleStore {
     constructor() {
-        makeAutoObservable(this)
+        makeAutoObservable(this);
     }
 
     visiable: modal = {
@@ -29,19 +30,19 @@ export default class VisibleStore {
         viewProfile: false,
         writeToDev: false,
         upBtn: false,
-        social: false
-    }
+        social: false,
+        initialLoading: false,
+    };
 
     show = (key: keyof modal) => {
-        this.visiable[key] = true
-    }
+        this.visiable[key] = true;
+    };
 
     hide = (key: keyof modal) => {
-        this.visiable[key] = false
-    }
+        this.visiable[key] = false;
+    };
 
     toggle = (key: keyof modal) => {
-        this.visiable[key] = !this.visiable[key]
-    }
-
+        this.visiable[key] = !this.visiable[key];
+    };
 }
