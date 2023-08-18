@@ -53,7 +53,10 @@ const RateCards = () => {
                             <div className={styles.infoBox}>
                                 {item.info.map((e, index) => {
                                     return (
-                                        <div className={styles.item}>
+                                        <div
+                                            className={styles.item}
+                                            key={index}
+                                        >
                                             <img
                                                 width={20}
                                                 height={20}
@@ -61,7 +64,6 @@ const RateCards = () => {
                                                 alt=""
                                             />
                                             <Text
-                                                key={index}
                                                 text={e.name}
                                                 textSize={"fourteen"}
                                             />

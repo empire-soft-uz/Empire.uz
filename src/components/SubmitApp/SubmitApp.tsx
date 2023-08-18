@@ -32,7 +32,7 @@ const SubmitApp = () => {
         if (event.target.value.length === 0) {
             setError(null);
             setDisabled(true);
-        } else if (!isValidEmail(event.target.value)) {
+        } else if (event.target.value.length < 2) {
             setError("Email is invalid" as never);
             setDisabled(true);
         } else {
@@ -43,6 +43,10 @@ const SubmitApp = () => {
     };
 
     const sendBot = async () => {
+        if (disabled) {
+            setError("Email is invalid" as never);
+            return;
+        }
         if (!disabled) {
             show("loading");
             await axios({
@@ -54,6 +58,7 @@ const SubmitApp = () => {
             })
                 .then((res) => {
                     hide("loading");
+                    setDisabled(true);
                     clearForm();
                     message.success(
                         "Thank you for contacting. We will reach you soon!"
@@ -115,7 +120,7 @@ const SubmitApp = () => {
                     </div>
                     <div className={styles.submit}>
                         <ArrowRightButton
-                            disabled={disabled}
+                            // disabled={disabled}
                             onClick={sendBot}
                         />
                     </div>
