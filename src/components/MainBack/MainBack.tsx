@@ -7,12 +7,23 @@ import styles from "./MainBack.module.css";
 import { HiOutlineArrowDown } from "react-icons/hi";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Button from "../Button/Button";
+import useRootStore from "../../Hooks/useRootStore";
+import { observer } from "mobx-react-lite";
 
 const MainBack = () => {
     useEffect(() => {
         AOS.init();
         AOS.refresh();
     }, []);
+    const { show, visiable } = useRootStore().visibleStore;
+    const { setServiceSendMessage } = useRootStore().userStore;
+    const contactUs = () => {
+        show("writeToDev");
+        setServiceSendMessage("the administrator of the empire-soft", "job");
+        if (visiable.writeToDev === true)
+            document.body.style.overflow = "hidden";
+    };
     return (
         <div className={styles.container}>
             <Header />
@@ -29,7 +40,7 @@ const MainBack = () => {
                     zIndex="2"
                     family="BenzinBold"
                 />
-                <a href="#submit-app" className="href">
+                {/* <a href="#submit-app" className="href">
                     <div className={styles.DownBox}>
                         <span className={styles.span}></span>
                         <HiOutlineArrowDown
@@ -37,7 +48,15 @@ const MainBack = () => {
                             className={styles.downIcon}
                         />
                     </div>
-                </a>
+                </a> */}
+                <div className={styles.contactBtn}>
+                    <Button
+                        title={"Contact us"}
+                        btnType={"outline"}
+                        titleSize={"22px"}
+                        onPress={contactUs}
+                    />
+                </div>
                 <div className={styles.blur}></div>
             </div>
             <img
@@ -58,4 +77,4 @@ const MainBack = () => {
     );
 };
 
-export default MainBack;
+export default observer(MainBack);
