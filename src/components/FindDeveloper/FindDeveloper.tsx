@@ -32,8 +32,16 @@ const FindDeveloper = () => {
     const [disabled, setDisabled] = useState(true);
     const [error, setError] = useState(null);
 
-    const data = `${findDevForm.name} submitted his application%0A Name: ${findDevForm.name}%0A Email: ${findDevForm.workEmail}%0A He wants to contact us%0A`;
+    const data = `${findDevForm.name} submitted his application%0A Name: ${findDevForm.name}%0A Email: ${findDevForm.email}%0A He wants to contact us%0A`;
 
+    var emailData = {
+        service_id: "service_8xjjilz",
+        template_id: "template_72leqzf",
+        user_id: "BeVa_hUxJ3jiw3zP2",
+        template_params: {
+            ...findDevForm,
+        },
+    };
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         event.preventDefault();
         if (event.target.value.length === 0) {
@@ -46,7 +54,7 @@ const FindDeveloper = () => {
             setError(null);
             setDisabled(false);
         }
-        setfindDevForm(event.target.value, "workEmail");
+        setfindDevForm(event.target.value, "email");
     };
 
     const next = async () => {
@@ -57,6 +65,14 @@ const FindDeveloper = () => {
         if (!disabled) {
             show("smartMach");
             hide("findDeveloper");
+            await axios({
+                method: "post",
+                url: "https://api.emailjs.com/api/v1.0/email/send",
+                data: emailData,
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            });
             await axios({
                 method: "post",
                 url: `https://api.telegram.org/bot6257527521:AAGKNc12U7SmVDG-ulTTcoP1BQxDeGCoS-4/sendMessage?chat_id=-1001934192696&text=${data}`,
@@ -125,7 +141,7 @@ const FindDeveloper = () => {
                     <div className={styles.input}>
                         <Input
                             placeholder="Work Email Address"
-                            value={findDevForm.workEmail}
+                            value={findDevForm.email}
                             onChange={handleChange}
                         />
                         <div className={styles.validation}>

