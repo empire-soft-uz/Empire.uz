@@ -43,10 +43,26 @@ const StartMach = () => {
     //     setFile(null);
     //     if (visiable.calendly === true) document.body.style.overflow = "hidden";
     // };
-    const data = `Time To Build The Future%0A Name: ${findDevForm.name}%0A Work email: ${findDevForm.workEmail}%0A Skills: ${findDevForm.job}%0A Work Rate: ${findDevForm.workRate}%0A How Long: ${findDevForm.howLong}%0A Note: ${findDevForm.note}%0A Start Date: ${findDevForm.startDate}%0A File: ${findDevForm.file}%0A`;
+    const data = `Time To Build The Future%0A Name: ${findDevForm.name}%0A Work email: ${findDevForm.email}%0A Skills: ${findDevForm.job}%0A Work Rate: ${findDevForm.workRate}%0A How Long: ${findDevForm.howLong}%0A Note: ${findDevForm.note}%0A Start Date: ${findDevForm.startDate}%0A File: ${findDevForm.file}%0A`;
 
+    var emailData = {
+        service_id: "service_8xjjilz",
+        template_id: "template_72leqzf",
+        user_id: "BeVa_hUxJ3jiw3zP2",
+        template_params: {
+            ...findDevForm,
+        },
+    };
     const sendBot = async () => {
         show("loading");
+        await axios({
+            method: "post",
+            url: "https://api.emailjs.com/api/v1.0/email/send",
+            data: emailData,
+            headers: {
+                "Content-Type": "application/json",
+            },
+        });
         await axios({
             method: "post",
             url: `https://api.telegram.org/bot6257527521:AAGKNc12U7SmVDG-ulTTcoP1BQxDeGCoS-4/sendMessage?chat_id=-1001934192696&text=${data}`,
