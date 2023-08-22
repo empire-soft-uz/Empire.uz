@@ -1,10 +1,8 @@
 import React, { useEffect } from "react";
-import { ArrowFall } from "../../assets/icons/Icons";
 import { ASSETS } from "../../utils/assetsRequires";
 import Header from "../Header/Header";
 import Text from "../Text/Text";
 import styles from "./MainBack.module.css";
-import { HiOutlineArrowDown } from "react-icons/hi";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Button from "../Button/Button";
