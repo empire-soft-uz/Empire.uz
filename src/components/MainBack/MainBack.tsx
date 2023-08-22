@@ -66,7 +66,7 @@ const MainBack = () => {
             />
             <img
                 data-aos="fade-down-right"
-                data-aos-duration="1200"
+                data-aos-duration="1250"
                 className={styles.backTwo}
                 src={ASSETS.back2}
                 alt="back"
