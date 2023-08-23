@@ -1,4 +1,4 @@
-.container{ 
+.container {
     display: flex;
     width: 100%;
     padding: 30px 18%;
@@ -7,7 +7,7 @@
     bottom: 0;
     justify-content: space-between;
 }
-.logo{
+.logo {
     width: 120px;
     height: 55px;
     object-fit: cover;
@@ -15,7 +15,7 @@
     cursor: pointer;
 }
 
-.rightBox{
+.rightBox {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -23,7 +23,7 @@
     z-index: 2;
 }
 
-.back{
+.back {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -31,92 +31,94 @@
     width: 200px;
     height: 200px;
 }
-.social{
+.social {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    position: relative;
+    z-index: 2;
 }
 
-.socialIconB{
+.socialIconB {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-.socialIcon{
+.socialIcon {
     width: 30px;
     height: 30px;
     object-fit: cover;
 }
 
-@media(max-width: 576px){
-    .container{
+@media (max-width: 576px) {
+    .container {
         gap: 20px;
     }
-   .rightBox{
-    width: 35%;
-   }
-   .social{
-    width: 45%;
-   }
-   .logoBox{
-    width: 100%;
-   }
+    .rightBox {
+        width: 35%;
+    }
+    .social {
+        width: 45%;
+    }
+    .logoBox {
+        width: 100%;
+    }
 }
 
 @media (min-width: 120px) {
-    .container{
+    .container {
         padding: 20px 5%;
         justify-content: flex-start;
         flex-wrap: wrap;
     }
-    .logo{
+    .logo {
         width: 80px;
         height: 50px;
     }
-    .rightBox{
+    .rightBox {
         gap: 15px;
     }
-    .back{
+    .back {
         width: 100px;
         height: 100px;
     }
 }
-@media (min-width: 576px){
-    .container{
+@media (min-width: 576px) {
+    .container {
         padding: 20px 10%;
         justify-content: space-between;
     }
-    .logo{
+    .logo {
         width: 120px;
         height: 55px;
     }
 }
 
-@media (min-width: 992px){
-.container{ 
-    display: flex;
-    width: 100%;
-    /* margin-top: 50px; */
-    position: relative;
-    bottom: 0;
-}
+@media (min-width: 992px) {
+    .container {
+        display: flex;
+        width: 100%;
+        /* margin-top: 50px; */
+        position: relative;
+        bottom: 0;
+    }
 
-.rightBox{
-    display: flex;
-    gap: 10px;
-}
+    .rightBox {
+        display: flex;
+        gap: 10px;
+    }
 
-.back{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-    width: 200px;
-    height: 200px;
+    .back {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        width: 200px;
+        height: 200px;
+    }
 }
-}
-@media (min-width: 1200px){
-    .container{
+@media (min-width: 1200px) {
+    .container {
         padding: 30px 18%;
     }
 }

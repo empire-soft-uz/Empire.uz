@@ -1,0 +1,78 @@
+.container {
+    width: 70px;
+    height: 30px;
+}
+.language {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 10px;
+    background-color: transparent;
+    border: 1px solid #1dac87;
+    transition: 0.2s ease-in-out;
+}
+.languageBtn {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #1dac87;
+    font-size: 20px;
+}
+
+.language:hover {
+    background-color: #1dac87;
+}
+.language:hover .languageBtn {
+    color: #fff;
+}
+
+.worldIcon {
+    color: #1dac87;
+}
+.language:hover .worldIcon {
+    color: #fff;
+}
+.languageModal {
+    width: 70px;
+    position: absolute;
+    z-index: 12;
+    border: 1px solid #1dac87;
+    border-radius: 0 0 6px 6px;
+    cursor: pointer;
+    animation: animate 0.5s;
+}
+@keyframes animate {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.languageBtnModal:nth-child(3) {
+    border-bottom: none;
+    border-radius: 0 0 5px 5px;
+}
+.languageBtnModal {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    padding: 2px 10px;
+    font-size: 18px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #1dac87;
+    color: #1dac87;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.languageBtnModal:hover {
+    background-color: #1dac87;
+    color: #fff;
+}

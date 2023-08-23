@@ -10,79 +10,79 @@ import { ASSETS } from "./assetsRequires";
 export const RateData = [
     {
         id: 1,
-        title: "Starter",
-        name: "Individual",
+        title: "starter",
+        name: "individual",
         icon: ASSETS.openBoxG,
         price: "$4500",
-        period: "infinity",
+        period: "starter_price_time",
         info: [
             {
-                name: "Full design of your app with up to 15 pages",
+                name: "starter_info_one",
             },
             {
-                name: "Mobile app for both Android/IOS platforms",
+                name: "starter_info_two",
             },
             {
-                name: "Fully functioning features backed with Firebase and/or Custom backend",
+                name: "starter_info_three",
             },
             {
-                name: "Publishing apps to your or our App store and Play market",
+                name: "starter_info_four",
             },
             {
-                name: "One month free advertising in Google search ads or on Facebook/Instagram",
+                name: "starter_info_five",
             },
             {
-                name: "One month support after development finishes",
+                name: "starter_info_six",
             },
         ],
     },
     {
         id: 2,
-        title: "Premium",
-        name: "Business",
+        title: "premium",
+        name: "business",
         icon: ASSETS.increaseG,
         price: "$7000",
-        period: "infinity",
+        period: "premium_price_time",
         info: [
             {
-                name: "Everything that starter plan includes",
+                name: "premium_info_one",
             },
             {
-                name: "Full design of your app with up to 25 page",
+                name: "premium_info_two",
             },
             {
-                name: "Two months free advertisement on Search engines and social media",
+                name: "premium_info_three",
             },
             {
-                name: "Two months support after development finishes",
+                name: "premium_info_four",
             },
         ],
     },
     {
         id: 3,
-        title: "Custom",
-        name: "Enterprise",
+        title: "custom",
+        name: "enterprise",
         icon: ASSETS.diamondG,
         price: "TBD",
-        period: "infinity",
+        period: "custom_price_time",
         info: [
             {
-                name: "Creating Technical Requrements of your idea or system",
+                name: "custom_info_one",
             },
             {
-                name: "Creating complete designs of apps, websites and admin panes",
+                name: "custom_info_two",
             },
             {
-                name: "Automotization of your current business or implementation of your idea",
+                name: "custom_info_three",
             },
             {
-                name: "Implementing custom Admin panel for managing the whole system",
+                name: "custom_info_four",
             },
             {
-                name: "Coaching your staff and partners with the system that we built",
+                name: "custom_info_five",
             },
             {
-                name: "Install and support your system",
+                name: "custom_info_six",
             },
         ],
     },
@@ -91,39 +91,39 @@ export const RateData = [
 export const ServicesData: ServicesDataType[] = [
     {
         id: 1,
-        name: "Mobile app development",
-        text: "We can create a customized e-commerce solution that fits your business needs and helps you increase your online sales.",
+        name: "mobile_app_development",
+        text: "mobile_app_info",
         icon: "./icons/phone.svg",
     },
 
     {
         id: 2,
-        name: "Content Management System (CMS) Development",
-        text: "The process, best practices and technologies used are both proven and practical.",
+        name: "cms",
+        text: "cms_info",
         icon: "./icons/gr4.svg",
     },
     {
         id: 3,
-        name: "UI/UX Design",
-        text: "We focus on creating intuitive and visually appealing user interfaces (UI) and user experiences (UX) to ensure your website is easy to use and engages your audience.",
+        name: "ui_ux",
+        text: "ui_ux_info",
         icon: "./icons/gr5.svg",
     },
     {
         id: 4,
-        name: "Website Maintenance and Support",
-        text: "We provide ongoing maintenance and support services to ensure your website stays up to date and secure, giving you peace of mind.",
+        name: "website",
+        text: "website_info",
         icon: "./icons/gr3.svg",
     },
     {
         id: 5,
-        name: "Custom Software Development",
-        text: "We can build customized software solutions that address your unique business needs and help you streamline your operations.",
+        name: "software",
+        text: "software_info",
         icon: "./icons/ux.svg",
     },
     {
         id: 6,
-        name: "Search Engine Marketing (SEM)",
-        text: "Our SEM services include pay-per-click advertising campaigns and remarketing strategies to drive more traffic and conversions to your website.",
+        name: "sem",
+        text: "sem_info",
         icon: "./icons/gr2.svg",
     },
 ];
@@ -131,45 +131,39 @@ export const ServicesData: ServicesDataType[] = [
 export const AdventagesData: AdventagesDataType[] = [
     {
         id: 1,
-        name: "Streamlined Design Process",
-        text: `Experience a seamless website creation journey with our streamlined design process. Our platform is tailored to ensure that you can effortlessly bring your vision to life, no matter your skill level. 
-            We are always eager to hear your thoughts and ideas. Share your feedback and suggestions with us, and together we can create the perfect website for you.`,
+        name: "design_process",
+        text: `design_process_info`,
         icon: "./icons/light.svg",
     },
 
     {
         id: 2,
-        name: "Personalized Customization",
-        text: `Craft a distinctive online presence that reflects your unique style and personality. Our customizable templates and user-friendly tools empower you to create a website that showcases your individuality without any technical barriers.
-            Take advantage of our versatile design features and make your website stand out from the crowd.`,
+        name: "personalized_customization",
+        text: `personalized_customization_info`,
         icon: "./icons/setting.svg",
     },
     {
         id: 3,
-        name: "Eco-conscious Approach",
-        text: `Our team is dedicated to making a positive impact on the environment by minimizing our carbon footprint and promoting sustainable practices.
-            By choosing to build your website with us, you are directly contributing to a greener future for our planet.`,
+        name: "eco_conscious",
+        text: `eco_conscious_info`,
         icon: "./icons/gr6.svg",
     },
     {
         id: 4,
-        name: "Mobile-Friendly Design",
-        text: `In today's digital landscape, mobile compatibility is key. Our platform ensures that your website looks great and functions smoothly on all devices, providing an optimal browsing experience for your visitors.
-            Stay ahead of the curve with our mobile-responsive designs and tools.`,
+        name: "mobile_friendly",
+        text: `mobile_friendly_info`,
         icon: "./icons/phone.svg",
     },
     {
         id: 5,
-        name: "Robust Data Protection",
-        text: `We take the security of your website and the privacy of your visitors very seriously. With over a decade of experience in the industry, we provide a reliable and secure solution that keeps your data safe.
-            Rest easy knowing that your website and its data are protected by our state-of-the-art security measures.`,
+        name: "robust_data",
+        text: `robust_data_info`,
         icon: "./icons/gr7.svg",
     },
     {
         id: 6,
-        name: "Attentive Customer Support",
-        text: `Our dedicated customer support team is here to help you every step of the way. We believe in providing personalized, human assistance to ensure your website's success.
-            When you create a website with us, you can count on our friendly and knowledgeable staff to guide you through the process and address any concerns you may have.`,
+        name: "attentive_customer",
+        text: `attentive_customer_info`,
         icon: "./icons/group.svg",
     },
 ];
@@ -2166,22 +2160,22 @@ export const BlogData = [
 export const OurProcessData: OurProcessType[] = [
     {
         id: "01.",
-        title: "Discovery:",
-        text: "We start our projects by understanding the scope and requirements. This is accomplished by working closely with you to make sure we are all on the same page.",
+        title: "discovery",
+        text: "discovery_info",
     },
     {
         id: "02.",
-        title: "Plan:",
-        text: "Following the initial kick-off meeting, we will outline your project, create milestones, and agree on project priorities.",
+        title: "plan",
+        text: "plan_info",
     },
     {
         id: "03.",
-        title: "Execute:",
-        text: "The final design takes shape and, at this stage, the idea comes to life representing the visual concepts.",
+        title: "execute",
+        text: "execute_info",
     },
     {
         id: "04.",
-        title: "Deliver:",
-        text: "Review and testing takes place, which ensures the quality of your project.",
+        title: "deliver",
+        text: "deliver_info",
     },
 ];

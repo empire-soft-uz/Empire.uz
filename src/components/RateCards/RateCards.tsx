@@ -9,6 +9,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import useRootStore from "../../Hooks/useRootStore";
 import { observer } from "mobx-react-lite";
+import { useTranslation } from "react-i18next";
 
 const RateCards = () => {
     useEffect(() => {
@@ -17,6 +18,7 @@ const RateCards = () => {
     }, []);
     const { show, visiable } = useRootStore().visibleStore;
     const { setServiceSendMessage } = useRootStore().userStore;
+    const { t } = useTranslation();
     const OpenForm = (name: string) => {
         show("writeToDev");
         setServiceSendMessage(name, "job");
@@ -42,9 +44,12 @@ const RateCards = () => {
                                     />
                                 </div>
                                 <div className={styles.textBox}>
-                                    <Text text={item.title} textSize="twenty" />
                                     <Text
-                                        text={item.name}
+                                        text={t(item.title)}
+                                        textSize="twenty"
+                                    />
+                                    <Text
+                                        text={t(item.name)}
                                         textSize="sixteen"
                                         family="FuturaBook"
                                     />
@@ -64,7 +69,7 @@ const RateCards = () => {
                                                 alt=""
                                             />
                                             <Text
-                                                text={e.name}
+                                                text={t(e.name)}
                                                 textSize={"fourteen"}
                                             />
                                         </div>
@@ -83,7 +88,7 @@ const RateCards = () => {
                                 <Text
                                     margin="10px 0"
                                     textAlign={"center"}
-                                    text={`/${item.period}`}
+                                    text={`/${t(item.period)}`}
                                     textSize={"fourteen"}
                                 />
                             </div>
@@ -91,7 +96,7 @@ const RateCards = () => {
                                 onClick={() => OpenForm(item.title)}
                                 className={styles.btn}
                             >
-                                Contact
+                                {t("contact")}
                             </button>
                         </div>
                     </div>

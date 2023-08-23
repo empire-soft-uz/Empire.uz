@@ -10,6 +10,7 @@ import useRootStore from "../../Hooks/useRootStore";
 import { observer } from "mobx-react-lite";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
 
 const OurServices = () => {
     useEffect(() => {
@@ -18,6 +19,7 @@ const OurServices = () => {
     }, []);
     const { show, visiable } = useRootStore().visibleStore;
     const { setServiceSendMessage } = useRootStore().userStore;
+    const { t } = useTranslation();
     const OpenForm = (name: string) => {
         show("writeToDev");
         setServiceSendMessage(name, "job");
@@ -31,7 +33,8 @@ const OurServices = () => {
                 data-aos-duration="1500"
             >
                 <Text
-                    text="OUR SERVICES"
+                    text={t("our_services")}
+                    transform="uppercase"
                     textAlign={"center"}
                     family="BenzinBold"
                     textSize="thirtySix"
@@ -46,8 +49,8 @@ const OurServices = () => {
                     return (
                         <ServiceCard
                             key={index}
-                            name={e.name}
-                            text={e.text}
+                            name={t(e.name)}
+                            text={t(e.text)}
                             icon={e.icon}
                             onPress={() => OpenForm(e.name)}
                         />

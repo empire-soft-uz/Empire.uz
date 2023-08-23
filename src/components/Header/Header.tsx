@@ -9,6 +9,8 @@ import Button from "../Button/Button";
 import Text from "../Text/Text";
 import styles from "./Header.module.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import Translation from "../Translation/Translation";
+import { useTranslation } from "react-i18next";
 interface Props {}
 
 const Header: React.FC<Props> = ({}) => {
@@ -16,6 +18,7 @@ const Header: React.FC<Props> = ({}) => {
     const navigation = useNavigate();
     const location = useLocation();
     const [small, setSmall] = useState(false);
+    const { t } = useTranslation();
 
     const closeDrawer = () => {
         hide("drawer");
@@ -66,7 +69,7 @@ const Header: React.FC<Props> = ({}) => {
                         onPress={() => navigation("/#services")}
                         textSize="sixteen"
                         cursor="pointer"
-                        text="Services"
+                        text={t("services")}
                         color={COLORS.white}
                     />
                 </a>
@@ -75,7 +78,7 @@ const Header: React.FC<Props> = ({}) => {
                         onPress={() => navigation("/#our-developers")}
                         textSize="sixteen"
                         cursor="pointer"
-                        text="Developers"
+                        text={t("developers")}
                         color={COLORS.white}
                     />
                 </a>
@@ -84,7 +87,7 @@ const Header: React.FC<Props> = ({}) => {
                         onPress={() => navigation("/#about-us")}
                         textSize="sixteen"
                         cursor="pointer"
-                        text="About us"
+                        text={t("about_us")}
                         color={COLORS.white}
                     />
                 </a>
@@ -92,14 +95,15 @@ const Header: React.FC<Props> = ({}) => {
                     <Text
                         textSize="sixteen"
                         cursor="pointer"
-                        text="Blog"
+                        text={t("blog")}
                         color={COLORS.white}
                     />
                 </a>
+                <Translation />
                 <Button
                     onPress={showFindDev}
                     btnType="outline"
-                    title="FIND A DEVELOPER"
+                    title={t("find_a_developer")}
                     titleColor={COLORS.green}
                 />
             </div>
@@ -147,7 +151,7 @@ const Header: React.FC<Props> = ({}) => {
                         margin="20px 0 0 0"
                         textSize="twentyTwo"
                         cursor="pointer"
-                        text="Services"
+                        text={t("services")}
                         color={COLORS.white}
                     />
                 </a>
@@ -161,7 +165,7 @@ const Header: React.FC<Props> = ({}) => {
                         margin="20px 0 0 0"
                         textSize="twentyTwo"
                         cursor="pointer"
-                        text="Developers"
+                        text={t("developers")}
                         color={COLORS.white}
                     />
                 </a>
@@ -171,7 +175,7 @@ const Header: React.FC<Props> = ({}) => {
                         margin="20px 0 0 0"
                         textSize="twentyTwo"
                         cursor="pointer"
-                        text="About us"
+                        text={t("about_us")}
                         color={COLORS.white}
                     />
                 </a>
@@ -180,16 +184,19 @@ const Header: React.FC<Props> = ({}) => {
                         margin="20px 0 0 0"
                         textSize="twentyTwo"
                         cursor="pointer"
-                        text="Blog"
+                        text={t("blog")}
                         color={COLORS.white}
                     />
                 </a>
+                <div style={{ marginTop: "20px" }}>
+                    <Translation />
+                </div>
                 <div className={styles.btnBox}>
                     <Button
                         margin="20px 0 0 0"
                         onPress={findDev}
                         btnType="outline"
-                        title="FIND A DEVELOPER"
+                        title={t("find_a_developer")}
                         titleColor={COLORS.green}
                     />
                 </div>
