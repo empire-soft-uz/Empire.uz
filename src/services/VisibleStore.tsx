@@ -1,5 +1,5 @@
 import _, { every } from "lodash";
-import { makeAutoObservable } from "mobx";
+import { makeAutoObservable, runInAction } from "mobx";
 
 type modal = {
     findDeveloper: boolean;
@@ -35,14 +35,20 @@ export default class VisibleStore {
     };
 
     show = (key: keyof modal) => {
-        this.visiable[key] = true;
+        runInAction(() => {
+            this.visiable[key] = true;
+        });
     };
 
     hide = (key: keyof modal) => {
-        this.visiable[key] = false;
+        runInAction(() => {
+            this.visiable[key] = false;
+        });
     };
 
     toggle = (key: keyof modal) => {
-        this.visiable[key] = !this.visiable[key];
+        runInAction(() => {
+            this.visiable[key] = !this.visiable[key];
+        });
     };
 }
