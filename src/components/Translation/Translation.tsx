@@ -26,7 +26,7 @@ const Translation = () => {
             >
                 <MdLanguage className={styles.worldIcon} size={30} />
                 <button className={styles.languageBtn}>
-                    <p>{i18n.language}</p>
+                    <p>{i18n.language.slice(0, 2)}</p>
                 </button>
             </div>
             {visiable.languageDropdown ? (
