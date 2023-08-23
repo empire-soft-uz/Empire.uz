@@ -1,5 +1,6 @@
 import { observer } from "mobx-react-lite";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { PhpIcon } from "../../assets/icons/Icons";
 import useRootStore from "../../Hooks/useRootStore";
 import { ASSETS } from "../../utils/assetsRequires";
@@ -26,6 +27,7 @@ const DevelopersCard: React.FC<Props> = ({
     avatar,
 }) => {
     const { show } = useRootStore().visibleStore;
+    const { t } = useTranslation();
     return (
         <div className={styles.container}>
             <div className={styles.imageBox}>
@@ -49,7 +51,7 @@ const DevelopersCard: React.FC<Props> = ({
                     onPress={() => show("writeToDev")}
                     cursor="pointer"
                     padding="6px 50px"
-                    title="Message me"
+                    title={t("message_me")}
                     btnType="primary"
                 />
             </div>
@@ -70,7 +72,7 @@ const DevelopersCard: React.FC<Props> = ({
                 })}
             </div>
             <button className={styles.viewBtn} onClick={onPress}>
-                View Profile
+                {t("view_profile")}
             </button>
         </div>
     );

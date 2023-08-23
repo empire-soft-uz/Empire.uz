@@ -8,6 +8,7 @@ import "aos/dist/aos.css";
 import Button from "../Button/Button";
 import useRootStore from "../../Hooks/useRootStore";
 import { observer } from "mobx-react-lite";
+import { useTranslation } from "react-i18next";
 
 const MainBack = () => {
     useEffect(() => {
@@ -16,6 +17,7 @@ const MainBack = () => {
     }, []);
     const { show, visiable } = useRootStore().visibleStore;
     const { setServiceSendMessage } = useRootStore().userStore;
+    const { t } = useTranslation();
     const contactUs = () => {
         show("writeToDev");
         setServiceSendMessage("the administrator of the empire-soft", "job");
@@ -31,7 +33,7 @@ const MainBack = () => {
                 data-aos-duration="1200"
             >
                 <Text
-                    text="We develop complex projects - simply. Sharing our team"
+                    text={t("what_do_we_do")}
                     textSize="fifty"
                     positon="relative"
                     transform={"uppercase"}
@@ -49,7 +51,7 @@ const MainBack = () => {
                 </a> */}
                 <div className={styles.contactBtn}>
                     <Button
-                        title={"Contact us"}
+                        title={t("contact_us")}
                         btnType={"outline"}
                         titleSize={"22px"}
                         onPress={contactUs}

@@ -11,6 +11,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Button from "../Button/Button";
 import { APP_ROUTES } from "../../routes/app-routes";
+import { useTranslation } from "react-i18next";
 
 const OurDevelopers = () => {
     useEffect(() => {
@@ -19,6 +20,7 @@ const OurDevelopers = () => {
     }, []);
     const { show, visiable } = useRootStore().visibleStore;
     const { getUserData, userData } = useRootStore().userStore;
+    const { t } = useTranslation();
     const router = useNavigate();
     const Click = (id: number) => {
         show("viewProfile");
@@ -35,7 +37,7 @@ const OurDevelopers = () => {
                 data-aos-duration="1500"
             >
                 <Text
-                    text="Developers for your business"
+                    text={t("developer_for")}
                     textAlign={"center"}
                     family="BenzinBold"
                     textSize="thirtySix"
@@ -63,7 +65,7 @@ const OurDevelopers = () => {
                 <Button
                     onPress={() => router(APP_ROUTES.DEVELOPERS)}
                     titleSize={18}
-                    title={"See All Developers"}
+                    title={t("see_all_developers")}
                     btnType={"primary"}
                 />
             </div>

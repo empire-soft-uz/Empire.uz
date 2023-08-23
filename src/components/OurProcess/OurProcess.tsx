@@ -7,12 +7,14 @@ import _ from "lodash";
 import { COLORS } from "../../utils/color";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
 
 const OurProcess = () => {
     useEffect(() => {
         AOS.init();
         AOS.refresh();
     }, []);
+    const { t } = useTranslation();
     return (
         <div className={styles.container}>
             <div
@@ -22,7 +24,8 @@ const OurProcess = () => {
             >
                 <Text
                     textAlign={"center"}
-                    text="OUR PROCESS"
+                    transform={"uppercase"}
+                    text={t("our_process")}
                     family="BenzinBold"
                     textSize="thirtySix"
                 />
@@ -39,11 +42,11 @@ const OurProcess = () => {
                             <div key={index} className={styles.cards}>
                                 <div className={styles.dot}></div>
                                 <h2 className={styles.Count}>{e.id}</h2>
-                                <Text text={e.title} textSize={"twenty"} />
+                                <Text text={t(e.title)} textSize={"twenty"} />
                                 <Text
                                     family="FuturaBook"
                                     textAlign={"center"}
-                                    text={e.text}
+                                    text={t(e.text)}
                                     textSize={"fourteen"}
                                     color={COLORS.grey}
                                 />

@@ -14,12 +14,14 @@ import Text from "../Text/Text";
 import styles from "./SubmitApp.module.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
 
 const SubmitApp = () => {
     useEffect(() => {
         AOS.init();
         AOS.refresh();
     }, []);
+    const { t } = useTranslation();
     const { form, setForm, clearForm } = useRootStore().tagsStore;
     const { show, hide } = useRootStore().visibleStore;
     const data = `${form.name} submitted his application%0A Name: ${form.name}%0A Email: ${form.email}%0A He wants to contact us%0A`;
@@ -42,7 +44,7 @@ const SubmitApp = () => {
             setError(null);
             setDisabled(true);
         } else if (event.target.value.length < 2) {
-            setError("Email is invalid" as never);
+            setError(t("email_is_invalid") as never);
             setDisabled(true);
         } else {
             setError(null);
@@ -53,7 +55,7 @@ const SubmitApp = () => {
 
     const sendBot = async () => {
         if (disabled) {
-            setError("Email is invalid" as never);
+            setError(t("email_is_invalid") as never);
             return;
         }
         if (!disabled) {
@@ -77,9 +79,7 @@ const SubmitApp = () => {
                     hide("loading");
                     setDisabled(true);
                     clearForm();
-                    message.success(
-                        "Thank you for contacting. We will reach you soon!"
-                    );
+                    message.success(t("thank_you"));
                 })
                 .catch((err) => {
                     message.error(`${err}`);
@@ -96,7 +96,7 @@ const SubmitApp = () => {
             >
                 <Text
                     textAlign={"center"}
-                    text="Submit your application"
+                    text={t("submit_your_app")}
                     family="BenzinBold"
                     transform={"uppercase"}
                     textSize="thirtySix"
@@ -115,12 +115,12 @@ const SubmitApp = () => {
                 <div className={styles.rightBox}>
                     <Input
                         onChange={(e) => setForm(e.target.value, "name")}
-                        placeholder="Name Surname"
+                        placeholder={t("input_name")}
                         value={form.name}
                     />
                     <div>
                         <Input
-                            placeholder="Email"
+                            placeholder={t("input_email")}
                             value={form.email}
                             type={"email"}
                             onChange={handleChange}

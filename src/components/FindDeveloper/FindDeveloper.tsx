@@ -16,6 +16,7 @@ import PLanguage from "../PLangugae/PLanguage";
 import Text from "../Text/Text";
 import styles from "./FindDeveloper.module.css";
 import { IoCloseSharp } from "react-icons/io5";
+import { useTranslation } from "react-i18next";
 
 const FindDeveloper = () => {
     const { visiable, hide, show } = useRootStore().visibleStore;
@@ -31,6 +32,7 @@ const FindDeveloper = () => {
 
     const [disabled, setDisabled] = useState(true);
     const [error, setError] = useState(null);
+    const { t } = useTranslation();
 
     const data = `${findDevForm.name} submitted his application%0A Name: ${findDevForm.name}%0A Email: ${findDevForm.email}%0A He wants to contact us%0A`;
 
@@ -48,7 +50,7 @@ const FindDeveloper = () => {
             setError(null);
             setDisabled(true);
         } else if (event.target.value.length < 2) {
-            setError("Email is invalid" as never);
+            setError(t("email_is_invalid") as never);
             setDisabled(true);
         } else {
             setError(null);
@@ -59,7 +61,7 @@ const FindDeveloper = () => {
 
     const next = async () => {
         if (disabled) {
-            setError("Email is invalid" as never);
+            setError(t("email_is_invalid") as never);
             return;
         }
         if (!disabled) {
@@ -81,9 +83,7 @@ const FindDeveloper = () => {
                 },
             })
                 .then((res) => {
-                    message.success(
-                        "Thank you for contacting. We will reach you soon!"
-                    );
+                    message.success("thank_you");
                     setDisabled(true);
                 })
                 .catch((err) => {

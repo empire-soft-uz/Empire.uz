@@ -15,6 +15,7 @@ import Text from "../Text/Text";
 import styles from "./WriteToDeveloper.module.css";
 import { IoCloseSharp } from "react-icons/io5";
 import Button from "../Button/Button";
+import { useTranslation } from "react-i18next";
 const WriteToDeveloper = () => {
     const { visiable, hide, show } = useRootStore().visibleStore;
     const { setServiceSendMessage, serviceSendData, clearServiceSendDevForm } =
@@ -24,6 +25,7 @@ const WriteToDeveloper = () => {
     const [disabled, setDisabled] = useState(true);
     const [error, setError] = useState(null);
     const [nameError, setNameError] = useState(null);
+    const { t } = useTranslation();
 
     var emailData = {
         service_id: "service_8xjjilz",
@@ -40,7 +42,7 @@ const WriteToDeveloper = () => {
             setError(null);
             setDisabled(true);
         } else if (event.target.value.length < 2) {
-            setError("Email is invalid" as never);
+            setError(t("email_is_invalid") as never);
             setDisabled(true);
         } else {
             setError(null);
@@ -50,7 +52,7 @@ const WriteToDeveloper = () => {
     };
     const sendBot = async () => {
         if (disabled) {
-            setError("Email is invalid" as never);
+            setError(t("email_is_invalid") as never);
             return;
         }
         if (!disabled) {
@@ -78,16 +80,14 @@ const WriteToDeveloper = () => {
                     show("weWillContact");
                     if (visiable.weWillContact === true)
                         document.body.style.overflow = "hidden";
-                    message.success(
-                        "Thank you for contacting. We will reach you soon!"
-                    );
+                    message.success(t("thank_you"));
                 })
                 .catch((err) => {
                     message.error(`${err}`);
                     hide("loading");
                 });
         } else {
-            message.error("Email is invalid");
+            message.error(t("email_is_invalid"));
             hide("loading");
         }
     };
@@ -120,7 +120,7 @@ const WriteToDeveloper = () => {
                 <div className={styles.mediaCenter}>
                     <div className={styles.mediaTop}>
                         <div className={styles.title}>
-                            <Text text={`Contact us`} textSize={"twenty"} />
+                            <Text text={t(`contact_us`)} textSize={"twenty"} />
                         </div>
                         <div className={styles.socialIconB}>
                             <a
@@ -161,7 +161,7 @@ const WriteToDeveloper = () => {
                     </div>
                     <div className={styles.mediaBottom}>
                         <Text
-                            text={`Send To: ${serviceSendData.job}`}
+                            text={`Send To: ${t(serviceSendData.job)}`}
                             textSize={"twenty"}
                         />
                         <div className={styles.title}>
@@ -174,7 +174,7 @@ const WriteToDeveloper = () => {
                                             "name"
                                         )
                                     }
-                                    placeholder="Enter your name"
+                                    placeholder={t("input_name")}
                                 />
                                 <div className={styles.validation}>
                                     {nameError ? (
@@ -191,7 +191,7 @@ const WriteToDeveloper = () => {
                                     type="email"
                                     value={serviceSendData.email}
                                     onChange={handleChange}
-                                    placeholder="Enter your email"
+                                    placeholder={t("input_email")}
                                 />
                                 <div className={styles.validation}>
                                     {error ? (
