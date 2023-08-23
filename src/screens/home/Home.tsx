@@ -28,6 +28,7 @@ const Home = () => {
         show("initialLoading");
         window.onload = function () {
             hide("initialLoading");
+            console.log("loaded");
         };
         const handleScrollBtn = () => {
             window.pageYOffset > 300 ? show("upBtn") : hide("upBtn");

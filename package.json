@@ -29,6 +29,7 @@
         "dompurify": "^3.0.5",
         "firebase": "^9.23.0",
         "lodash": "^4.17.21",
+        "lottie-react": "^2.4.0",
         "mobx": "^6.9.0",
         "mobx-react": "^7.6.0",
         "mobx-react-lite": "^3.4.3",

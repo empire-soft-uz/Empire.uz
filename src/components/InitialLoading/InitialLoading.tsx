@@ -1,6 +1,6 @@
-import { Backdrop, CircularProgress } from "@mui/material";
-import { observer } from "mobx-react-lite";
 import React from "react";
+import { Backdrop } from "@mui/material";
+import { observer } from "mobx-react-lite";
 import useRootStore from "../../Hooks/useRootStore";
 import Lottie from "react-lottie";
 import animationData from "./codingLoading.json";
