@@ -26,10 +26,9 @@ const Home = () => {
     const { show, hide } = useRootStore().visibleStore;
     useEffect(() => {
         show("initialLoading");
-        window.onload = function () {
+        setTimeout(() => {
             hide("initialLoading");
-            console.log("loaded");
-        };
+        }, 1000);
         const handleScrollBtn = () => {
             window.pageYOffset > 300 ? show("upBtn") : hide("upBtn");
         };
