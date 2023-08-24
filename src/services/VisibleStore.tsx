@@ -14,6 +14,7 @@ type modal = {
     social: boolean;
     initialLoading: boolean;
     languageDropdown: boolean;
+    scroll: boolean;
 };
 
 export default class VisibleStore {
@@ -34,6 +35,7 @@ export default class VisibleStore {
         social: false,
         initialLoading: false,
         languageDropdown: false,
+        scroll: false,
     };
 
     show = (key: keyof modal) => {

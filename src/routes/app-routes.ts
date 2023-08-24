@@ -1,5 +1,5 @@
 export const APP_ROUTES = {
-    HOME: "/",
-    BLOG: "/blog",
-    DEVELOPERS: "/developers"
-}
+    HOME: "/:lng",
+    BLOG: "/:lng/blog",
+    DEVELOPERS: "/:lng/developers",
+};

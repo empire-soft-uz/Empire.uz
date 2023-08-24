@@ -5,13 +5,36 @@ import useRootStore from "../../Hooks/useRootStore";
 import i18n from "../../translations";
 import styles from "./Translation.module.css";
 import { MdLanguage } from "react-icons/md";
+import { generatePath, useNavigate } from "react-router-dom";
+import { APP_ROUTES } from "../../routes/app-routes";
 
 const Translation = () => {
     const { hide, visiable, toggle } = useRootStore().visibleStore;
+    const navigate = useNavigate();
+    const path = window.location.pathname.slice(1, 3);
 
-    const onCloseModal = (name: string) => {
-        i18n.changeLanguage(name);
+    const lngs = [
+        {
+            name: "en",
+            url: "en",
+            icon: "/en.png",
+        },
+        {
+            name: "ru",
+            url: "ru",
+            icon: "/ru.png",
+        },
+        {
+            name: "uz",
+            url: "uz",
+            icon: "/uz.png",
+        },
+    ];
+
+    const onCloseModal = (e: any) => {
+        i18n.changeLanguage(e.name);
         hide("languageDropdown");
+        navigate(`/${e.name}`);
     };
     return (
         <div className={styles.container}>
@@ -26,32 +49,23 @@ const Translation = () => {
             >
                 <MdLanguage className={styles.worldIcon} size={30} />
                 <button className={styles.languageBtn}>
-                    <p>{i18n.language.slice(0, 2)}</p>
+                    <p>{path}</p>
                 </button>
             </div>
             {visiable.languageDropdown ? (
                 <div className={styles.languageModal}>
-                    <button
-                        className={styles.languageBtnModal}
-                        onClick={() => onCloseModal("en")}
-                    >
-                        <img width={20} src="/en.png" alt="" />
-                        <p>en</p>
-                    </button>
-                    <button
-                        className={styles.languageBtnModal}
-                        onClick={() => onCloseModal("uz")}
-                    >
-                        <img width={20} src="/uz.png" alt="" />
-                        <p>uz</p>
-                    </button>
-                    <button
-                        className={styles.languageBtnModal}
-                        onClick={() => onCloseModal("ru")}
-                    >
-                        <img width={20} src="/ru.png" alt="" />
-                        <p>ru</p>
-                    </button>
+                    {lngs.map((item, index) => {
+                        return (
+                            <button
+                                key={index}
+                                className={styles.languageBtnModal}
+                                onClick={() => onCloseModal(item)}
+                            >
+                                <img width={20} src={item.icon} alt="" />
+                                <p>{item.name}</p>
+                            </button>
+                        );
+                    })}
                 </div>
             ) : null}
         </div>

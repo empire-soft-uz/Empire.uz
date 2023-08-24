@@ -19,6 +19,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import WriteToDeveloper from "../../components/WriteToDeveloper/WriteToDeveloper";
 import { useLocation } from "react-router-dom";
+import i18n from "../../translations";
 
 const container = {
     hidden: { opacity: 1, scale: 0 },
@@ -45,7 +46,7 @@ const Blog = () => {
     useEffect(() => {
         AOS.init();
         AOS.refresh();
-        if (location.pathname == "/blog")
+        if (location.pathname == `${i18n.language}/blog`)
             document.documentElement.scrollTo(0, 0);
     }, []);
     const { getBlogsInfo, blogsInfo, setBlogsinfo } = useRootStore().blogsStore;
@@ -117,7 +118,6 @@ const Blog = () => {
             </div>
             <FindDeveloper />
             <StartMach />
-            {/* <Calendly />  */}
             <WeWillContact />
             <WriteToDeveloper />
             <Loading />
