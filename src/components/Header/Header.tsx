@@ -11,13 +11,14 @@ import styles from "./Header.module.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Translation from "../Translation/Translation";
 import { useTranslation } from "react-i18next";
+import i18n from "../../translations";
 interface Props {}
 
 const Header: React.FC<Props> = ({}) => {
     const { show, hide, visiable } = useRootStore().visibleStore;
     const navigation = useNavigate();
     const location = useLocation();
-    const [small, setSmall] = useState(false);
+    // const [small, setSmall] = useState(false);
     const { t } = useTranslation();
 
     const closeDrawer = () => {
@@ -36,37 +37,42 @@ const Header: React.FC<Props> = ({}) => {
     };
 
     useEffect(() => {
-        if (window.location.pathname == "/developers") setSmall(true);
-        if (window.location.pathname == "/blog") setSmall(true);
-        if (window.location.pathname == "/") {
-            window.addEventListener("scroll", () =>
-                setSmall(window.pageYOffset > 30)
-            );
+        if (location.pathname == `/${i18n.language}/developers`) show("scroll");
+        if (location.pathname == `/${i18n.language}/blog`) show("scroll");
+        if (location.pathname != `/${i18n.language}/developers`) {
+            window.addEventListener("scroll", () => {
+                if (window.pageYOffset > 30) show("scroll");
+            });
+        }
+        if (window.location.pathname != `/${i18n.language}/blog`) {
+            window.addEventListener("scroll", () => {
+                if (window.pageYOffset > 30) show("scroll");
+            });
         }
     }, []);
 
     const OpenBlog = () => {
         hide("drawer");
-        if (location.pathname != "/blog") navigation(APP_ROUTES.BLOG);
+        navigation(`/${i18n.language}/blog`);
     };
 
     return (
         <div
             className={`${styles.container} ${
-                small ? styles.changeOn : styles.changeOff
+                visiable.scroll ? styles.changeOn : styles.changeOff
             }`}
         >
-            <a href="/" className="href">
+            <a href={`/${i18n.language}`} className="href">
                 <img
                     className={styles.logo}
-                    src="./icons/logo1.png"
+                    src={process.env.PUBLIC_URL + "/icons/logo1.png"}
                     alt="Empire-soft"
                 />
             </a>
             <div className={styles.rightBox}>
                 <a href="#services" className="href">
                     <Text
-                        onPress={() => navigation("/#services")}
+                        onPress={() => navigation(`/${i18n.language}#services`)}
                         textSize="sixteen"
                         cursor="pointer"
                         text={t("services")}
@@ -75,7 +81,9 @@ const Header: React.FC<Props> = ({}) => {
                 </a>
                 <a href="#our-developers" className="href">
                     <Text
-                        onPress={() => navigation("/#our-developers")}
+                        onPress={() =>
+                            navigation(`/${i18n.language}#our-developers`)
+                        }
                         textSize="sixteen"
                         cursor="pointer"
                         text={t("developers")}
@@ -84,7 +92,7 @@ const Header: React.FC<Props> = ({}) => {
                 </a>
                 <a href="#about-us" className="href">
                     <Text
-                        onPress={() => navigation("/#about-us")}
+                        onPress={() => navigation(`/${i18n.language}#about-us`)}
                         textSize="sixteen"
                         cursor="pointer"
                         text={t("about_us")}
@@ -137,7 +145,7 @@ const Header: React.FC<Props> = ({}) => {
                     >
                         <img
                             className={styles.logo}
-                            src="./icons/logo1.png"
+                            src={process.env.PUBLIC_URL + "/icons/logo1.png"}
                             alt="Empire-soft"
                         />
                     </a>
@@ -145,9 +153,9 @@ const Header: React.FC<Props> = ({}) => {
                 open={visiable.drawer}
                 closeIcon={<CloseSmall />}
             >
-                <a href="/#services" className="href" onClick={closeDrawer}>
+                <a href="#services" className="href" onClick={closeDrawer}>
                     <Text
-                        onPress={() => navigation("/#services")}
+                        onPress={() => navigation(`/${i18n.language}#services`)}
                         margin="20px 0 0 0"
                         textSize="twentyTwo"
                         cursor="pointer"
@@ -156,12 +164,14 @@ const Header: React.FC<Props> = ({}) => {
                     />
                 </a>
                 <a
-                    href="/#our-developers"
+                    href="#our-developers"
                     className="href"
                     onClick={closeDrawer}
                 >
                     <Text
-                        onPress={() => navigation("/#our-developers")}
+                        onPress={() =>
+                            navigation(`/${i18n.language}#our-developers`)
+                        }
                         margin="20px 0 0 0"
                         textSize="twentyTwo"
                         cursor="pointer"
@@ -169,9 +179,9 @@ const Header: React.FC<Props> = ({}) => {
                         color={COLORS.white}
                     />
                 </a>
-                <a href="/#about-us" className="href" onClick={closeDrawer}>
+                <a href="#about-us" className="href" onClick={closeDrawer}>
                     <Text
-                        onPress={() => navigation("/#about-us")}
+                        onPress={() => navigation(`/${i18n.language}#about-us`)}
                         margin="20px 0 0 0"
                         textSize="twentyTwo"
                         cursor="pointer"

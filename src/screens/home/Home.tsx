@@ -1,5 +1,6 @@
 import { observer } from "mobx-react-lite";
 import React, { useEffect, useState, Suspense } from "react";
+import { useNavigate } from "react-router-dom";
 import AboutUs from "../../components/AboutUs/AboutUs";
 // import Calendly from "../../components/Calendly/Calendly";
 import FindDeveloper from "../../components/FindDeveloper/FindDeveloper";
@@ -24,6 +25,7 @@ import styles from "./home.styles.module.css";
 
 const Home = () => {
     const { show, hide } = useRootStore().visibleStore;
+
     useEffect(() => {
         const handleScrollBtn = () => {
             window.pageYOffset > 300 ? show("upBtn") : hide("upBtn");
@@ -34,6 +36,7 @@ const Home = () => {
             window.removeEventListener("scroll", handleScrollBtn);
         };
     }, []);
+
     return (
         <div className={styles.container}>
             <MainBack />

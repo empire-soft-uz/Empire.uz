@@ -12,6 +12,7 @@ import "aos/dist/aos.css";
 import Button from "../Button/Button";
 import { APP_ROUTES } from "../../routes/app-routes";
 import { useTranslation } from "react-i18next";
+import i18n from "../../translations";
 
 const OurDevelopers = () => {
     useEffect(() => {
@@ -63,7 +64,7 @@ const OurDevelopers = () => {
             </div>
             <div className={styles.seeAll}>
                 <Button
-                    onPress={() => router(APP_ROUTES.DEVELOPERS)}
+                    onPress={() => router(`/${i18n.language}/developers`)}
                     titleSize={18}
                     title={t("see_all_developers")}
                     btnType={"primary"}

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import DevelopersCard from "../../components/DevelopersCard/DevelopersCard";
 import Header from "../../components/Header/Header";
 import Text from "../../components/Text/Text";
@@ -12,15 +12,24 @@ import { ASSETS } from "../../utils/assetsRequires";
 import ViewProfile from "../../components/ViewProfile/ViewProfile";
 import WriteToDeveloper from "../../components/WriteToDeveloper/WriteToDeveloper";
 import Footer from "../../components/Footer/Footer";
+import { useTranslation } from "react-i18next";
+import i18n from "../../translations";
 
 const Developers = () => {
+    const location = useLocation();
+
     useEffect(() => {
         AOS.init();
         AOS.refresh();
+        if (location.pathname === `/${i18n.language}/developers`)
+            document.documentElement.scrollTo(0, 0);
     }, []);
+
     const { show, visiable } = useRootStore().visibleStore;
     const { getUserData, userData } = useRootStore().userStore;
     const router = useNavigate();
+    const { t } = useTranslation();
+
     const Click = (id: number) => {
         show("viewProfile");
         getUserData(id);
@@ -38,7 +47,7 @@ const Developers = () => {
                     data-aos-duration="1500"
                 >
                     <Text
-                        text="Developers for your business"
+                        text={t("developer_for")}
                         textAlign={"flex-start"}
                         family="BenzinBold"
                         textSize="thirtySix"

@@ -25,14 +25,14 @@ const ViewProfile = () => {
     const { visiable, hide, show } = useRootStore().visibleStore;
     const { userData, getUserData } = useRootStore().userStore;
     const path = window.location;
-    const userId = Number(path.search.split("/")[1]);
-    useEffect(() => {
-        if (userId) {
-            show("viewProfile");
-            getUserData(userId);
-            document.body.style.overflow = "hidden";
-        }
-    }, []);
+    // const userId = Number(path.search.split("/")[1]);
+    // useEffect(() => {
+    //     if (userId) {
+    //         show("viewProfile");
+    //         getUserData(userId);
+    //         document.body.style.overflow = "hidden";
+    //     }
+    // }, []);
 
     useEffect(() => {
         const outerWidth = outerDiv.current?.clientWidth;
