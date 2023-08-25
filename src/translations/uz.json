@@ -80,5 +80,7 @@
     "deliver_info": "Ko'rib chiqish va sinovdan o'tkaziladi, bu sizning loyihangiz sifatini ta'minlaydi.",
     "email_is_invalid": "Elektron pochta manzili yaroqsiz",
     "build_the_future": "Kelajakni qurish vaqti",
-    "thank_you": "Aloqa uchun rahmat. Tez orada siz bilan bog'lanamiz!"
+    "thank_you": "Aloqa uchun rahmat. Tez orada siz bilan bog'lanamiz!",
+    "send": "Yuborish",
+    "send_to": "Empire-soft adminiga"
 }

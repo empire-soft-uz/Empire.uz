@@ -161,7 +161,7 @@ const WriteToDeveloper = () => {
                     </div>
                     <div className={styles.mediaBottom}>
                         <Text
-                            text={`Send To: ${t(serviceSendData.job)}`}
+                            text={`${t("send")}: ${t(serviceSendData.job)}`}
                             textSize={"twenty"}
                         />
                         <div className={styles.title}>

@@ -20,7 +20,7 @@ const MainBack = () => {
     const { t } = useTranslation();
     const contactUs = () => {
         show("writeToDev");
-        setServiceSendMessage("the administrator of the empire-soft", "job");
+        setServiceSendMessage(t("send_to"), "job");
         if (visiable.writeToDev === true)
             document.body.style.overflow = "hidden";
     };
