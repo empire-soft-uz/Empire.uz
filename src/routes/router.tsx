@@ -13,7 +13,6 @@ const Router = () => {
     const path = window.location.pathname;
     const { show } = useRootStore().visibleStore;
     const { getUserData } = useRootStore().userStore;
-    console.log("path", path);
     const pathSearch = window.location;
     const userId = Number(pathSearch.search.split("/")[1]);
     useEffect(() => {

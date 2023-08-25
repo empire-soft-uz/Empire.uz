@@ -30,7 +30,7 @@ const Footer: React.FC<Props> = ({ blog }) => {
                 <a href="/" className="href">
                     <img
                         className={styles.logo}
-                        src={process.env.PUBLIC_URL + "/icons/logo.svg"}
+                        src={process.env.PUBLIC_URL + "/logo.svg"}
                         alt="Empire-soft"
                     />
                 </a>
