@@ -80,5 +80,7 @@
     "deliver_info": "Review and testing takes place, which ensures the quality of your project.",
     "email_is_invalid": "Email is invalid",
     "build_the_future": "Time To Build The Future",
-    "thank_you": "Thank you for contacting. We will reach you soon!"
+    "thank_you": "Thank you for contacting. We will reach you soon!",
+    "send": "Send to",
+    "send_to": "the administrator of the empire-soft"
 }
