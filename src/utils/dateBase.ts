@@ -878,7 +878,7 @@ components`,
         comment:
             "Great experience with React Native and its ecosystem for over 4 years Hands-on knowledge of UX/UI concepts and practical experience in implementing design principles and rules in the web and mobile application development process  Hard working, responsible, punctual, and result-oriented  Able to perform multiple tasks, set priorities, and meet deadlines Strong debugging, analytical, and problem-solving abilities Ability to participate in individual or team software development process",
         salary: "$34 /h",
-        aboutPerson: "",
+        aboutPerson: " ",
         whereFrom: "Toshkent Uzbekistan",
         totalExperience: "4+ Years Of Experience",
         expert: "Expert React-Native Developer",
