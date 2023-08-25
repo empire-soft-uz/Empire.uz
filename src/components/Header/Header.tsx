@@ -65,7 +65,7 @@ const Header: React.FC<Props> = ({}) => {
             <a href={`/${i18n.language}`} className="href">
                 <img
                     className={styles.logo}
-                    src={process.env.PUBLIC_URL + "/icons/logo1.png"}
+                    src={process.env.PUBLIC_URL + "/logo1.png"}
                     alt="Empire-soft"
                 />
             </a>
@@ -145,7 +145,7 @@ const Header: React.FC<Props> = ({}) => {
                     >
                         <img
                             className={styles.logo}
-                            src={process.env.PUBLIC_URL + "/icons/logo1.png"}
+                            src={process.env.PUBLIC_URL + "/logo1.png"}
                             alt="Empire-soft"
                         />
                     </a>
