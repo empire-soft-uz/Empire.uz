@@ -37,18 +37,10 @@ const Header: React.FC<Props> = ({}) => {
     };
 
     useEffect(() => {
-        if (location.pathname == `/${i18n.language}/developers`) show("scroll");
-        if (location.pathname == `/${i18n.language}/blog`) show("scroll");
-        if (location.pathname != `/${i18n.language}/developers`) {
-            window.addEventListener("scroll", () => {
-                if (window.pageYOffset > 30) show("scroll");
-            });
-        }
-        if (window.location.pathname != `/${i18n.language}/blog`) {
-            window.addEventListener("scroll", () => {
-                if (window.pageYOffset > 30) show("scroll");
-            });
-        }
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 20) show("scroll");
+            else hide("scroll");
+        });
     }, []);
 
     const OpenBlog = () => {
