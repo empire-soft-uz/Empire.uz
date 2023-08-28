@@ -14,6 +14,7 @@ import WriteToDeveloper from "../../components/WriteToDeveloper/WriteToDeveloper
 import Footer from "../../components/Footer/Footer";
 import { useTranslation } from "react-i18next";
 import i18n from "../../translations";
+import { observer } from "mobx-react-lite";
 
 const Developers = () => {
     const location = useLocation();
@@ -86,10 +87,13 @@ const Developers = () => {
                     alt="back"
                 />
             </div>
+            <div className={styles.footer}>
+                <Footer />
+            </div>
             <ViewProfile />
             <WriteToDeveloper />
         </>
     );
 };
 
-export default Developers;
+export default observer(Developers);

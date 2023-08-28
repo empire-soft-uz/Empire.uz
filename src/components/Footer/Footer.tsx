@@ -9,6 +9,7 @@ import "aos/dist/aos.css";
 import { useLocation, useNavigate } from "react-router-dom";
 import { APP_ROUTES } from "../../routes/app-routes";
 import { useTranslation } from "react-i18next";
+import i18n from "../../translations";
 interface Props {
     blog?: boolean;
 }
@@ -22,7 +23,8 @@ const Footer: React.FC<Props> = ({ blog }) => {
     const location = useLocation();
     const { t } = useTranslation();
     const OpenBlog = () => {
-        if (location.pathname != "/blog") navigation(APP_ROUTES.BLOG);
+        if (location.pathname != `/${i18n.language}/blog`)
+            navigation(`/${i18n.language}/blog`);
     };
     return (
         <div className={styles.container}>
@@ -38,7 +40,7 @@ const Footer: React.FC<Props> = ({ blog }) => {
             <div className={styles.rightBox}>
                 <a href="#services" className="href">
                     <Text
-                        onPress={() => navigation("/#services")}
+                        onPress={() => navigation(`/${i18n.language}#services`)}
                         textSize="sixteen"
                         cursor="pointer"
                         text={t("services")}
@@ -47,7 +49,9 @@ const Footer: React.FC<Props> = ({ blog }) => {
                 </a>
                 <a href="#our-developers" className="href">
                     <Text
-                        onPress={() => navigation("/#our-developers")}
+                        onPress={() =>
+                            navigation(`/${i18n.language}#our-developers`)
+                        }
                         textSize="sixteen"
                         cursor="pointer"
                         text={t("developers")}
@@ -56,7 +60,7 @@ const Footer: React.FC<Props> = ({ blog }) => {
                 </a>
                 <a href="#about-us" className="href">
                     <Text
-                        onPress={() => navigation("/#about-us")}
+                        onPress={() => navigation(`/${i18n.language}#about-us`)}
                         textSize="sixteen"
                         cursor="pointer"
                         text={t("about_us")}

@@ -3,7 +3,6 @@ import React, { useEffect } from "react";
 import BlogCard from "../../components/BlogCard/BlogCard";
 import BlogCardTwo from "../../components/BlogCardTwo/BlogCardTwo";
 import BlogInfo from "../../components/BlogInfo/BlogInfo";
-// import Calendly from '../../components/Calendly/Calendly'
 import FindDeveloper from "../../components/FindDeveloper/FindDeveloper";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
@@ -46,7 +45,7 @@ const Blog = () => {
     useEffect(() => {
         AOS.init();
         AOS.refresh();
-        if (location.pathname == `${i18n.language}/blog`)
+        if (location.pathname == `/${i18n.language}/blog`)
             document.documentElement.scrollTo(0, 0);
     }, []);
     const { getBlogsInfo, blogsInfo, setBlogsinfo } = useRootStore().blogsStore;
