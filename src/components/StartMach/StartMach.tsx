@@ -21,6 +21,9 @@ import dayjs, { Dayjs } from "dayjs";
 import { FormatDate } from "../../helper/datePicker";
 import { toJS } from "mobx";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import i18n from "../../translations";
+import { useTranslation } from "react-i18next";
 
 const StartMach = () => {
     const { visiable, hide, show } = useRootStore().visibleStore;
@@ -33,16 +36,12 @@ const StartMach = () => {
         setfindDevForm,
         clearFindDevForm,
     } = useRootStore().tagsStore;
+    const navigation = useNavigate();
+    const { t } = useTranslation();
 
     const disabledDate: RangePickerProps["disabledDate"] = (current) => {
         return current && current < dayjs().endOf("day");
     };
-    // const next = () => {
-    //     show("calendly");
-    //     hide("smartMach");
-    //     setFile(null);
-    //     if (visiable.calendly === true) document.body.style.overflow = "hidden";
-    // };
     const data = `Time To Build The Future%0A Name: ${findDevForm.name}%0A Work email: ${findDevForm.email}%0A Skills: ${findDevForm.job}%0A Work Rate: ${findDevForm.workRate}%0A How Long: ${findDevForm.howLong}%0A Note: ${findDevForm.note}%0A Start Date: ${findDevForm.startDate}%0A File: ${findDevForm.file}%0A`;
 
     var emailData = {
@@ -72,10 +71,12 @@ const StartMach = () => {
         })
             .then((res) => {
                 hide("smartMach");
-                show("weWillContact");
-                clearFindDevForm();
                 hide("loading");
-                message.success("We will contact you");
+                clearFindDevForm();
+                hideStartMatch();
+                navigation(`/${i18n.language}/thank-you`);
+                show("weWillContact");
+                message.success(t("thank_you"));
             })
             .catch((err) => {
                 message.error(`${err}`);
@@ -128,7 +129,7 @@ const StartMach = () => {
             <Backdrop
                 sx={{ color: "#fff", zIndex: 5 }}
                 open={visiable.smartMach}
-                onClick={hideStartMatch}
+                // onClick={hideStartMatch}
             ></Backdrop>
             <div
                 className={styles.container}

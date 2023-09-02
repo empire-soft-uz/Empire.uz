@@ -16,10 +16,13 @@ import styles from "./WriteToDeveloper.module.css";
 import { IoCloseSharp } from "react-icons/io5";
 import Button from "../Button/Button";
 import { useTranslation } from "react-i18next";
+import i18n from "../../translations";
+import { useNavigate } from "react-router-dom";
 const WriteToDeveloper = () => {
     const { visiable, hide, show } = useRootStore().visibleStore;
     const { setServiceSendMessage, serviceSendData, clearServiceSendDevForm } =
         useRootStore().userStore;
+    const navigation = useNavigate();
 
     const data = `Services%0A Name: ${serviceSendData.name}%0A Email: ${serviceSendData.email}%0A To: ${serviceSendData.job}`;
     const [disabled, setDisabled] = useState(true);
@@ -77,9 +80,8 @@ const WriteToDeveloper = () => {
                     setDisabled(true);
                     hide("writeToDev");
                     hide("loading");
+                    navigation(`/${i18n.language}/thank-you`);
                     show("weWillContact");
-                    if (visiable.weWillContact === true)
-                        document.body.style.overflow = "hidden";
                     message.success(t("thank_you"));
                 })
                 .catch((err) => {

@@ -9,7 +9,7 @@ import Header from "../../components/Header/Header";
 import Loading from "../../components/Loading/Loading";
 import StartMach from "../../components/StartMach/StartMach";
 import Text from "../../components/Text/Text";
-import WeWillContact from "../../components/WeWillContact/WeWillContact";
+// import WeWillContact from "../../components/WeWillContact/WeWillContact";
 import useRootStore from "../../Hooks/useRootStore";
 import { ASSETS } from "../../utils/assetsRequires";
 import { BlogData } from "../../utils/dateBase";
@@ -117,7 +117,7 @@ const Blog = () => {
             </div>
             <FindDeveloper />
             <StartMach />
-            <WeWillContact />
+            {/* <WeWillContact /> */}
             <WriteToDeveloper />
             <Loading />
         </>

@@ -20,7 +20,8 @@ const OurDevelopers = () => {
         AOS.refresh();
     }, []);
     const { show, visiable } = useRootStore().visibleStore;
-    const { getUserData, userData } = useRootStore().userStore;
+    const { getUserData, userData, setServiceSendMessage } =
+        useRootStore().userStore;
     const { t } = useTranslation();
     const router = useNavigate();
     const Click = (id: number) => {
@@ -29,6 +30,10 @@ const OurDevelopers = () => {
         router(`?programmer/${id}`);
         if (visiable.viewProfile === true)
             document.body.style.overflow = "hidden";
+    };
+    const messageMe = (name: string) => {
+        show("writeToDev");
+        setServiceSendMessage(name, "job");
     };
     return (
         <div className={styles.container} id="our-developers">
@@ -57,6 +62,7 @@ const OurDevelopers = () => {
                             data={e.skills}
                             job={e.job}
                             avatar={e.image}
+                            messageMe={() => messageMe(e.name)}
                             onPress={() => Click(e.id)}
                         />
                     );

@@ -1,8 +1,6 @@
 import { observer } from "mobx-react-lite";
-import React, { useEffect, useState, Suspense } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect } from "react";
 import AboutUs from "../../components/AboutUs/AboutUs";
-// import Calendly from "../../components/Calendly/Calendly";
 import FindDeveloper from "../../components/FindDeveloper/FindDeveloper";
 import Footer from "../../components/Footer/Footer";
 import InitialLoading from "../../components/InitialLoading/InitialLoading";
@@ -18,14 +16,13 @@ import StartMach from "../../components/StartMach/StartMach";
 import SubmitApp from "../../components/SubmitApp/SubmitApp";
 import UpBtn from "../../components/UpBtn/UpBtn";
 import ViewProfile from "../../components/ViewProfile/ViewProfile";
-import WeWillContact from "../../components/WeWillContact/WeWillContact";
+// import WeWillContact from "../../components/WeWillContact/WeWillContact";
 import WriteToDeveloper from "../../components/WriteToDeveloper/WriteToDeveloper";
 import useRootStore from "../../Hooks/useRootStore";
 import styles from "./home.styles.module.css";
 
 const Home = () => {
     const { show, hide } = useRootStore().visibleStore;
-
     useEffect(() => {
         const handleScrollBtn = () => {
             window.pageYOffset > 300 ? show("upBtn") : hide("upBtn");
@@ -50,7 +47,7 @@ const Home = () => {
             <Footer blog />
             <FindDeveloper />
             <StartMach />
-            <WeWillContact />
+            {/* <WeWillContact /> */}
             <ViewProfile />
             <WriteToDeveloper />
             <Loading />

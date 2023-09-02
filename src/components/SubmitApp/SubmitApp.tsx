@@ -15,6 +15,8 @@ import styles from "./SubmitApp.module.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
+import i18n from "../../translations";
 
 const SubmitApp = () => {
     useEffect(() => {
@@ -24,6 +26,7 @@ const SubmitApp = () => {
     const { t } = useTranslation();
     const { form, setForm, clearForm } = useRootStore().tagsStore;
     const { show, hide } = useRootStore().visibleStore;
+    const navigation = useNavigate();
     const data = `${form.name} submitted his application%0A Name: ${form.name}%0A Email: ${form.email}%0A He wants to contact us%0A`;
 
     const [disabled, setDisabled] = useState(true);
@@ -79,6 +82,8 @@ const SubmitApp = () => {
                     hide("loading");
                     setDisabled(true);
                     clearForm();
+                    show("weWillContact");
+                    navigation(`/${i18n.language}/thank-you`);
                     message.success(t("thank_you"));
                 })
                 .catch((err) => {
