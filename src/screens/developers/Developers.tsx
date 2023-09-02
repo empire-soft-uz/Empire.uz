@@ -27,9 +27,16 @@ const Developers = () => {
     }, []);
 
     const { show, visiable } = useRootStore().visibleStore;
-    const { getUserData, userData } = useRootStore().userStore;
+    const { getUserData, userData, setServiceSendMessage } =
+        useRootStore().userStore;
     const router = useNavigate();
     const { t } = useTranslation();
+    const messageMe = (name: string) => {
+        show("writeToDev");
+        setServiceSendMessage(name, "job");
+        if (visiable.writeToDev === true)
+            document.body.style.overflow = "hidden";
+    };
 
     const Click = (id: number) => {
         show("viewProfile");
@@ -67,6 +74,7 @@ const Developers = () => {
                                 data={e.skills}
                                 job={e.job}
                                 avatar={e.image}
+                                messageMe={() => messageMe(e.name)}
                                 onPress={() => Click(e.id)}
                             />
                         );

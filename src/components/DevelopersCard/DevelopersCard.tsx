@@ -17,6 +17,7 @@ interface Props {
     onPress?: () => void;
     data?: any;
     avatar: string;
+    messageMe?: () => void;
 }
 
 const DevelopersCard: React.FC<Props> = ({
@@ -25,6 +26,7 @@ const DevelopersCard: React.FC<Props> = ({
     onPress,
     data,
     avatar,
+    messageMe,
 }) => {
     const { show } = useRootStore().visibleStore;
     const { t } = useTranslation();
@@ -48,7 +50,7 @@ const DevelopersCard: React.FC<Props> = ({
                 }}
             >
                 <Button
-                    onPress={() => show("writeToDev")}
+                    onPress={messageMe}
                     cursor="pointer"
                     padding="6px 50px"
                     title={t("message_me")}

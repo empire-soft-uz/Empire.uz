@@ -83,7 +83,7 @@ const FindDeveloper = () => {
                 },
             })
                 .then((res) => {
-                    message.success("thank_you");
+                    message.success(t("thank_you"));
                     setDisabled(true);
                 })
                 .catch((err) => {

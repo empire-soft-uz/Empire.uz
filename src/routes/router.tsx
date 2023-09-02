@@ -8,6 +8,7 @@ import i18n from "../translations";
 import { observer } from "mobx-react-lite";
 import useRootStore from "../Hooks/useRootStore";
 import NotFound from "../screens/notFound/NotFound";
+import ThankYou from "../screens/thankYou/ThankYou";
 
 const Router = () => {
     const path = window.location.pathname;
@@ -58,6 +59,7 @@ const Router = () => {
                 <Route path="/:lang" element={<Home />} />
                 <Route path="/:lang/blog" element={<Blog />} />
                 <Route path="/:lang/developers" element={<Developers />} />
+                <Route path="/:lang/thank-you" element={<ThankYou />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </BrowserRouter>
