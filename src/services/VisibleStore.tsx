@@ -33,7 +33,7 @@ export default class VisibleStore {
         writeToDev: false,
         upBtn: false,
         social: false,
-        initialLoading: false,
+        initialLoading: true,
         languageDropdown: false,
         scroll: false,
     };

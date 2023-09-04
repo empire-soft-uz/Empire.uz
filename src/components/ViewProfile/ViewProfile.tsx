@@ -40,9 +40,6 @@ const ViewProfile = () => {
     }, [ReviewsData]);
 
     const NextUser = (id: number) => {
-        console.log("currents", currents, ReviewsData.length);
-        console.log("currents", inerDiv.current?.clientWidth! * currents);
-
         if (id < ReviewsData.length) {
             getUserData(userData.id + 1);
             router(`?programmer/${userData.id + 1}`);

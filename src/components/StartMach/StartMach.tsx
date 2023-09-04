@@ -101,7 +101,6 @@ const StartMach = () => {
             "state_changed",
             (snapshot) => {
                 setLoading(true);
-                console.log(snapshot.state);
             },
             (error) => {
                 message.error(error.message);
