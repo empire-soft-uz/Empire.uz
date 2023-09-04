@@ -22,7 +22,20 @@ import useRootStore from "../../Hooks/useRootStore";
 import styles from "./home.styles.module.css";
 
 const Home = () => {
-    const { show, hide } = useRootStore().visibleStore;
+    const { show, hide, visiable } = useRootStore().visibleStore;
+    useEffect(() => {
+        const onPageLoad = () => {
+            hide("initialLoading");
+        };
+
+        if (document.readyState === "complete") {
+            onPageLoad();
+        } else {
+            window.addEventListener("load", onPageLoad);
+            return () => window.removeEventListener("load", onPageLoad);
+        }
+    }, []);
+
     useEffect(() => {
         const handleScrollBtn = () => {
             window.pageYOffset > 300 ? show("upBtn") : hide("upBtn");
