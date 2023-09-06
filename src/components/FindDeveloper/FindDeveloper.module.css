@@ -1,48 +1,48 @@
-.container{
+.container {
     width: 75%;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px 60px;
-    background: #04110E;
+    background: #04110e;
     border-radius: 20px;
     z-index: 7;
 }
-.closeModal{
+.closeModal {
     position: absolute;
     right: 30px;
     top: 30px;
     cursor: pointer;
 }
 
-.validation{
+.validation {
     position: absolute;
 }
-.close{
+.close {
     padding-top: 5px;
 }
 
-.title{
+.title {
     position: relative;
     text-align: center;
     padding: 20px 18%;
     z-index: 4;
 }
 
-.blur{
+.blur {
     position: absolute;
     width: 300px;
     height: 250px;
     top: 0;
     left: 35%;
-    background: linear-gradient(180deg, #167A60 0%, #29A7C3 100%);
+    background: linear-gradient(180deg, #167a60 0%, #29a7c3 100%);
     filter: blur(250px);
     border-radius: 100px;
     z-index: 3;
 }
 
-.inputBox{
+.inputBox {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
@@ -50,11 +50,11 @@
     z-index: 4;
 }
 
-.input{
-    width: 48%;
+.input {
+    width: 32%;
 }
 
-.languagesBox{
+.languagesBox {
     display: flex;
     overflow-x: scroll;
     overflow-y: hidden;
@@ -64,22 +64,22 @@
     padding: 15px 0;
 }
 
-.footer{
+.footer {
     display: flex;
     justify-content: center;
 }
 
-.tabs{
+.tabs {
     display: flex;
     height: 50px;
     margin-top: 50px;
     padding: 10px 0;
-    border-bottom: 1px solid #2E2E2E;
+    border-bottom: 1px solid #2e2e2e;
     gap: 10px;
     flex-wrap: wrap;
 }
 
-.item{
+.item {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -87,131 +87,137 @@
 }
 
 @media (min-width: 120px) {
-    .container{
+    .container {
         width: 100vw;
         height: 100vh;
         padding: 20px 5%;
         border-radius: 0;
         overflow-x: auto;
     }
-    .blur{
+    .blur {
         position: absolute;
         width: 300px;
         height: 250px;
         top: 0;
         left: 0;
         right: 0;
-        background: linear-gradient(180deg, #167A60 0%, #29A7C3 100%);
+        background: linear-gradient(180deg, #167a60 0%, #29a7c3 100%);
         filter: blur(250px);
         border-radius: 100px;
         z-index: 3;
     }
-    .languagesBox{
+    .languagesBox {
         overflow-x: scroll;
         overflow-y: hidden;
         flex-wrap: nowrap;
     }
-    .title{
+    .title {
         padding: 0 10%;
         margin-top: 30px;
     }
-    .closeModal{
+    .closeModal {
         right: 15px;
         top: 15px;
     }
-    .tabs{
+    .tabs {
         margin-top: 10px;
     }
     .inputBox {
         flex-direction: column;
         gap: 20px;
     }
-    .input{
+    .input {
         width: 100%;
     }
 }
-@media (min-width: 767px){
-.container{
-    width: 75%;
-    height: auto;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px 60px;
-    background: #04110E;
-    border-radius: 20px;
-    z-index: 7;
-}
-.closeModal{
-    position: absolute;
-    right: 30px;
-    top: 30px;
-    cursor: pointer;
+@media (min-width: 767px) {
+    .container {
+        width: 90%;
+        height: auto;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px 60px;
+        background: #04110e;
+        border-radius: 20px;
+        z-index: 7;
+    }
+    .closeModal {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        cursor: pointer;
+    }
+
+    .close {
+        padding-top: 5px;
+    }
+
+    .title {
+        text-align: center;
+        padding: 20px 18%;
+    }
+
+    .blur {
+        position: absolute;
+        width: 300px;
+        height: 250px;
+        top: 0;
+        left: 35%;
+        background: linear-gradient(180deg, #167a60 0%, #29a7c3 100%);
+        filter: blur(250px);
+        border-radius: 100px;
+        z-index: 3;
+    }
+
+    .inputBox {
+        display: flex;
+        gap: 20px;
+        margin-top: 30px;
+        position: relative;
+        flex-direction: row;
+        z-index: 4;
+    }
+    .input {
+        width: 32%;
+    }
+
+    .languagesBox {
+        display: flex;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        flex-wrap: nowrap;
+        gap: 20px;
+        margin-top: 20px;
+        padding: 15px 0;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .tabs {
+        display: flex;
+        height: 50px;
+        margin-top: 50px;
+        padding: 10px 0;
+        border-bottom: 1px solid #2e2e2e;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+    }
 }
 
-.close{
-    padding-top: 5px;
-}
-
-.title{
-    text-align: center;
-    padding: 20px 18%;
-}
-
-.blur{
-    position: absolute;
-    width: 300px;
-    height: 250px;
-    top: 0;
-    left: 35%;
-    background: linear-gradient(180deg, #167A60 0%, #29A7C3 100%);
-    filter: blur(250px);
-    border-radius: 100px;
-    z-index: 3;
-}
-
-.inputBox{
-    display: flex;
-    gap: 20px;
-    margin-top: 30px;
-    position: relative;
-    flex-direction: row;
-    z-index: 4;
-}
-.input{
-    width: 48%;
-}
-
-.languagesBox{
-    display: flex;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    flex-wrap: nowrap;
-    gap: 20px;
-    margin-top: 20px;
-    padding: 15px 0;
-}
-
-.footer{
-    display: flex;
-    justify-content: center;
-}
-
-.tabs{
-    display: flex;
-    height: 50px;
-    margin-top: 50px;
-    padding: 10px 0;
-    border-bottom: 1px solid #2E2E2E;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.item{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-}
+@media (min-width: 1200px) {
+    .container {
+        width: 75%;
+    }
 }

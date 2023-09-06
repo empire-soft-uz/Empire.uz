@@ -18,17 +18,35 @@ import Button from "../Button/Button";
 import { useTranslation } from "react-i18next";
 import i18n from "../../translations";
 import { useNavigate } from "react-router-dom";
+import PhoneInputComp from "../PhoneInput/PhoneInput";
+import PhoneInput, {
+    formatPhoneNumber,
+    formatPhoneNumberIntl,
+    isValidPhoneNumber,
+} from "react-phone-number-input";
 const WriteToDeveloper = () => {
     const { visiable, hide, show } = useRootStore().visibleStore;
     const { setServiceSendMessage, serviceSendData, clearServiceSendDevForm } =
         useRootStore().userStore;
     const navigation = useNavigate();
 
-    const data = `Services%0A Name: ${serviceSendData.name}%0A Email: ${serviceSendData.email}%0A To: ${serviceSendData.job}`;
+    const data = `Services%0A Name: ${serviceSendData.name}%0A Email: ${serviceSendData.email}%0A Phone Number: ${serviceSendData.pNumber}%0A To: ${serviceSendData.job}`;
     const [disabled, setDisabled] = useState(true);
     const [error, setError] = useState(null);
     const [nameError, setNameError] = useState(null);
+    const [numberError, setNumberError] = useState(null);
+    console.log("numberErro", numberError);
     const { t } = useTranslation();
+
+    const onChangeNumber = (value: string) => {
+        if (value && isValidPhoneNumber(value)) {
+            setNumberError(null);
+            setServiceSendMessage(value, "pNumber");
+        } else {
+            setNumberError(t("number_is_invalid") as never);
+            return;
+        }
+    };
 
     var emailData = {
         service_id: "service_8xjjilz",
@@ -56,6 +74,12 @@ const WriteToDeveloper = () => {
     const sendBot = async () => {
         if (disabled) {
             setError(t("email_is_invalid") as never);
+            return;
+        }
+        if (isValidPhoneNumber(serviceSendData.pNumber)) {
+            setNumberError(null);
+        } else {
+            setNumberError(t("number_is_invalid") as never);
             return;
         }
         if (!disabled) {
@@ -199,6 +223,22 @@ const WriteToDeveloper = () => {
                                     {error ? (
                                         <Text
                                             text={error}
+                                            color={COLORS.red}
+                                            textSize="fourteen"
+                                        />
+                                    ) : null}
+                                </div>
+                            </div>
+                            <div>
+                                <PhoneInputComp
+                                    value={serviceSendData.pNumber}
+                                    onChange={(e) => onChangeNumber(e)}
+                                    placeholder={t("input_phone")}
+                                />
+                                <div className={styles.validation}>
+                                    {numberError ? (
+                                        <Text
+                                            text={numberError}
                                             color={COLORS.red}
                                             textSize="fourteen"
                                         />

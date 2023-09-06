@@ -118,12 +118,14 @@ export type ServiceSendDataType = {
     job: string;
     name: string;
     email: string;
+    pNumber: string;
 };
 export const ServiceSendDataInitial = {
     id: 0,
     job: "",
     name: "",
     email: "",
+    pNumber: "",
 };
 export type OurProcessType = {
     id: string;

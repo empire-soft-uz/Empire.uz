@@ -1,25 +1,25 @@
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "FuturaPTDemi";
-  scroll-behavior: smooth !important;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "FuturaPTDemi";
+    scroll-behavior: smooth !important;
 }
-.href{
+.href {
     text-decoration: none;
 }
 
-.ant-drawer-title{
-  color: #fff;
-  text-align: start;
+.ant-drawer-title {
+    color: #fff;
+    text-align: start;
 }
 
-.ant-drawer-header{
-  color: #fff;
+.ant-drawer-header {
+    color: #fff;
 }
 
 .lmtWIHO_gkbTeeyuvoJC {
-  background-color: #000;
+    background-color: #000;
 }
 .lmtWIHO_gkbTeeyuvoJC.mOUYF5ZmuNL6I7t0mSFg {
     background-color: #000;
@@ -27,119 +27,143 @@
 }
 
 ::-webkit-scrollbar {
-  width: 4px;
-  background-color: #000;
-  height: 2px;
+    width: 4px;
+    background-color: #000;
+    height: 2px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #1DAC87;
-  border-radius: 20px;
+    background-color: #1dac87;
+    border-radius: 20px;
 }
-.css-nxo287-MuiInputBase-input-MuiOutlinedInput-input{
-  color: #7F7F7F !important;
-  font-family: "FuturaPTDemi" !important;
+.css-nxo287-MuiInputBase-input-MuiOutlinedInput-input {
+    color: #7f7f7f !important;
+    font-family: "FuturaPTDemi" !important;
 }
 ._3efP_GeH5kyBAzqnLzL._kN_bCa3VNYpqFLH311L {
     width: 100% !important;
     height: 100%;
 }
-.css-i4bv87-MuiSvgIcon-root{
-  fill: #7F7F7F !important;
+.css-i4bv87-MuiSvgIcon-root {
+    fill: #7f7f7f !important;
 }
-.ant-picker-clear{
-  background-color: #1DAC87;
+.ant-picker-clear {
+    background-color: #1dac87;
 }
-h2{
-  margin: 20px 0 5px 0;
-}
-@font-face {
-  font-family: "FuturaBold";
-  src: url("./assets/fonts/FuturaPTBold.otf") format("truetype");
+h2 {
+    margin: 20px 0 5px 0;
 }
 @font-face {
-  font-family: "FuturaBoldOblique";
-  src: url("./assets/fonts/FuturaPTBoldOblique.otf") format("truetype");
+    font-family: "FuturaBold";
+    src: url("./assets/fonts/FuturaPTBold.otf") format("truetype");
 }
 @font-face {
-  font-family: "FuturaBook";
-  src: url("./assets/fonts/FuturaPTBook.otf") format("truetype");
+    font-family: "FuturaBoldOblique";
+    src: url("./assets/fonts/FuturaPTBoldOblique.otf") format("truetype");
 }
 @font-face {
-  font-family: "FuturaBookOblique";
-  src: url("./assets/fonts/FuturaPTBookOblique.otf") format("truetype");
+    font-family: "FuturaBook";
+    src: url("./assets/fonts/FuturaPTBook.otf") format("truetype");
 }
 @font-face {
-  font-family: "FuturaCondBold";
-  src: url("./assets/fonts/FuturaPTCondBold.otf") format("truetype");
+    font-family: "FuturaBookOblique";
+    src: url("./assets/fonts/FuturaPTBookOblique.otf") format("truetype");
+}
+@font-face {
+    font-family: "FuturaCondBold";
+    src: url("./assets/fonts/FuturaPTCondBold.otf") format("truetype");
 }
 
 @font-face {
-  font-family: "FuturaCondBoldOblique";
-  src: url("./assets/fonts/FuturaPTCondBoldOblique.otf") format("truetype");
+    font-family: "FuturaCondBoldOblique";
+    src: url("./assets/fonts/FuturaPTCondBoldOblique.otf") format("truetype");
 }
 @font-face {
-  font-family: "FuturaCondBook";
-  src: url("./assets/fonts/FuturaPTCondBook.otf") format("truetype");
+    font-family: "FuturaCondBook";
+    src: url("./assets/fonts/FuturaPTCondBook.otf") format("truetype");
 }
 @font-face {
-  font-family: "FuturaCondBookOblique";
-  src: url("./assets/fonts/FuturaPTCondBookOblique.otf") format("truetype");
+    font-family: "FuturaCondBookOblique";
+    src: url("./assets/fonts/FuturaPTCondBookOblique.otf") format("truetype");
 }
 @font-face {
-  font-family: "FuturaCondExtraBold";
-  src: url("./assets/fonts/FuturaPTCondExtraBold.otf") format("truetype");
+    font-family: "FuturaCondExtraBold";
+    src: url("./assets/fonts/FuturaPTCondExtraBold.otf") format("truetype");
 }
 @font-face {
-  font-family: "FuturaCondExtraBoldOblique";
-  src: url("./assets/fonts/FuturaPTCondExtraBoldOblique.otf") format("truetype");
+    font-family: "FuturaCondExtraBoldOblique";
+    src: url("./assets/fonts/FuturaPTCondExtraBoldOblique.otf")
+        format("truetype");
 }
 @font-face {
-  font-family: "FuturaCondMedium";
-  src: url("./assets/fonts/FuturaPTCondMedium.otf") format("truetype");
+    font-family: "FuturaCondMedium";
+    src: url("./assets/fonts/FuturaPTCondMedium.otf") format("truetype");
 }
 @font-face {
-  font-family: "FuturaCondMediumOblique";
-  src: url("./assets/fonts/FuturaPTCondMediumOblique.otf") format("truetype");
+    font-family: "FuturaCondMediumOblique";
+    src: url("./assets/fonts/FuturaPTCondMediumOblique.otf") format("truetype");
 }
 @font-face {
-  font-family: "FuturaPTDemi";
-  src: url("./assets/fonts/FuturaPTDemi.otf") format("truetype");
+    font-family: "FuturaPTDemi";
+    src: url("./assets/fonts/FuturaPTDemi.otf") format("truetype");
 }
 @font-face {
-  font-family: "FuturaPTDemiOblique";
-  src: url("./assets/fonts/FuturaPTDemiOblique.otf") format("truetype");
+    font-family: "FuturaPTDemiOblique";
+    src: url("./assets/fonts/FuturaPTDemiOblique.otf") format("truetype");
 }
 @font-face {
-  font-family: "FuturaPTExtraBold";
-  src: url("./assets/fonts/FuturaPTExtraBold.otf") format("truetype");
+    font-family: "FuturaPTExtraBold";
+    src: url("./assets/fonts/FuturaPTExtraBold.otf") format("truetype");
 }
 @font-face {
-  font-family: "FuturaPTExtraBoldOblique";
-  src: url("./assets/fonts/FuturaPTExtraBoldOblique.otf") format("truetype");
+    font-family: "FuturaPTExtraBoldOblique";
+    src: url("./assets/fonts/FuturaPTExtraBoldOblique.otf") format("truetype");
 }
 @font-face {
-  font-family: "FuturaPTHeavy";
-  src: url("./assets/fonts/FuturaPTHeavy.otf") format("truetype");
+    font-family: "FuturaPTHeavy";
+    src: url("./assets/fonts/FuturaPTHeavy.otf") format("truetype");
 }
 @font-face {
-  font-family: "FuturaPTLight";
-  src: url("./assets/fonts/FuturaPTLight.otf") format("truetype");
+    font-family: "FuturaPTLight";
+    src: url("./assets/fonts/FuturaPTLight.otf") format("truetype");
 }
 @font-face {
-  font-family: "FuturaPTLightOblique";
-  src: url("./assets/fonts/FuturaPTLightOblique.otf") format("truetype");
+    font-family: "FuturaPTLightOblique";
+    src: url("./assets/fonts/FuturaPTLightOblique.otf") format("truetype");
 }
 @font-face {
-  font-family: "FuturaPTMedium";
-  src: url("./assets/fonts/FuturaPTMedium.otf") format("truetype");
+    font-family: "FuturaPTMedium";
+    src: url("./assets/fonts/FuturaPTMedium.otf") format("truetype");
 }
 @font-face {
-  font-family: "FuturaPTMediumOblique";
-  src: url("./assets/fonts/FuturaPTMediumOblique.otf") format("truetype");
+    font-family: "FuturaPTMediumOblique";
+    src: url("./assets/fonts/FuturaPTMediumOblique.otf") format("truetype");
 }
 
 @font-face {
-  font-family: "BenzinBold";
-  src: url("./assets/benzinFonts/Benzin-Bold.ttf") format("truetype");
+    font-family: "BenzinBold";
+    src: url("./assets/benzinFonts/Benzin-Bold.ttf") format("truetype");
+}
+
+.PhoneInputInput {
+    color: #7f7f7f;
+    padding: 8px 0;
+    font-size: 18px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #2e2e2e;
+    outline: none;
+    font-family: "FuturaBook";
+    border-radius: 0 !important;
+}
+
+.PhoneInputCountrySelect {
+    color: #fff !important;
+}
+
+.PhoneInputCountryIconImg {
+    color: #fff !important;
+}
+.PhoneInputCountrySelectArrow {
+    color: #fff !important;
 }

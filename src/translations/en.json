@@ -82,5 +82,6 @@
     "build_the_future": "Time To Build The Future",
     "thank_you": "Thank you for contacting. We will reach you soon!",
     "send": "Send to",
-    "send_to": "the administrator of the empire-soft"
+    "send_to": "the administrator of the empire-soft",
+    "number_is_invalid": "Number is invalid"
 }

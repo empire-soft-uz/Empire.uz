@@ -21,11 +21,13 @@ type findDevFormType = {
     note: string;
     startDate: string;
     fileName: string;
+    pNumber: string;
 };
 
 type formType = {
     name: string;
     email: string;
+    pNumber: string;
 };
 
 export default class TagStore {
@@ -55,6 +57,7 @@ export default class TagStore {
         startDate: "",
         file: "",
         fileName: "",
+        pNumber: "",
     };
 
     findDeveloper = (item: findDevFormType) => {
@@ -76,6 +79,7 @@ export default class TagStore {
             note: "",
             startDate: "",
             fileName: "",
+            pNumber: "",
         };
         this.tags = [];
         this.howLong = {
@@ -121,6 +125,7 @@ export default class TagStore {
     form: formType = {
         name: "",
         email: "",
+        pNumber: "",
     };
 
     setForm = (value: string, key: keyof formType) => {
@@ -131,6 +136,7 @@ export default class TagStore {
         this.form = {
             name: "",
             email: "",
+            pNumber: "",
         };
     };
 

@@ -1063,6 +1063,194 @@ components`,
     },
     {
         id: 4,
+        title: "The best developers only for you",
+        name: "Diyor A",
+        comment:
+            "Great experience with React Native and its ecosystem for over 3 years Hands-on knowledge of UX/UI concepts and practical experience in implementing design principles and rules in the web and mobile application development process  Hard working, responsible, punctual, and result-oriented  Able to perform multiple tasks, set priorities, and meet deadlines Strong debugging, analytical, and problem-solving abilities Ability to participate in individual or team software development process",
+        salary: "$21 /h",
+        aboutPerson:
+            "Hello, my name is Diyor, I am 22 years old and I'm from Samarkand. I graduated from Samarkand branch of Tashkent University of Information Technologies in software engineering. I'm a Full Stack and React-Native developer. I have been working with programming for 4 years. I've been working mobile React-Native programming for 2+ years now.",
+        whereFrom: "Tashkent Uzbekistan",
+        totalExperience: "4+ Years Of Experience",
+        expert: "Expert React-Native Developer",
+        expertSkill: "React / React-Native",
+        image: ASSETS.developer10,
+        job: "React-Native and Full stack Developer",
+        education: [
+            {
+                edu: "Tashkent university of information technologies",
+                branch: "Software Engineering(CSE)",
+            },
+        ],
+        strengths: [
+            {
+                item: "Excellent in frontend React apps",
+            },
+            {
+                item: "Great communicator",
+            },
+            {
+                item: "Good experience with new libraries like Next.js & Node.js",
+            },
+        ],
+        skills: [
+            {
+                id: 2,
+                skillsIcon: process.env.PUBLIC_URL + "/icons/react.svg",
+                skillsName: "React-Native",
+                experience: "2+ years",
+                expertise: true,
+            },
+            {
+                id: 3,
+                skillsIcon: process.env.PUBLIC_URL + "/icons/react.svg",
+                skillsName: "React",
+                experience: "3+ years",
+                expertise: true,
+            },
+            {
+                id: 4,
+                skillsIcon: process.env.PUBLIC_URL + "/icons/js.svg",
+                skillsName: "JS/TS",
+                experience: "4+ years",
+                expertise: true,
+            },
+            {
+                id: 5,
+                skillsIcon: process.env.PUBLIC_URL + "/icons/css.svg",
+                skillsName: "HTML/CSS",
+                experience: "4 years",
+                expertise: false,
+            },
+            {
+                id: 6,
+                skillsIcon: process.env.PUBLIC_URL + "/icons/firebase.svg",
+                skillsName: "Firebase",
+                experience: "1+ years",
+                expertise: false,
+            },
+            {
+                id: 7,
+                skillsIcon: process.env.PUBLIC_URL + "/icons/node.svg",
+                skillsName: "NodeJs",
+                experience: "1+ years",
+                expertise: false,
+            },
+        ],
+        experience: [
+            {
+                title: "React Developer",
+                type: "Agency",
+                time: "1 year 3 months",
+                info: [
+                    {
+                        text: "Responsible for full app life-cycle: design, build, test, deploy",
+                    },
+                    {
+                        text: " Collaborating with the product management, marketing, designers, and technology and architecture teams.",
+                    },
+                    {
+                        text: " Using external data sources and APIs.",
+                    },
+                ],
+                skills: [
+                    {
+                        icon: process.env.PUBLIC_URL + "/icons/js.svg",
+                        name: "JS",
+                    },
+                    {
+                        icon: process.env.PUBLIC_URL + "/icons/react.svg",
+                        name: "React",
+                    },
+                ],
+            },
+            {
+                title: "Full Stack Developer",
+                type: "Qosmoocom",
+                time: "1 year 6 months",
+                info: [
+                    {
+                        text: "Built reusable components for the future use",
+                    },
+                    {
+                        text: "Developed a well-structured, maintainable, and easy-to-understand applications while adhering to the defined coding standards",
+                    },
+                    {
+                        text: "Collaborate with the design team, providing creative input and technical feasibility",
+                    },
+                    {
+                        text: "Working with outside data sources and APIs",
+                    },
+                    {
+                        text: "Working on creation of e-commerce, where the users can browse through the products, search for products and make a purchase easily using credit card payments using this app",
+                    },
+                ],
+                skills: [
+                    {
+                        icon: process.env.PUBLIC_URL + "/icons/js.svg",
+                        name: "JS",
+                    },
+                    {
+                        icon: process.env.PUBLIC_URL + "/icons/React.svg",
+                        name: "React JS",
+                    },
+                    {
+                        icon: process.env.PUBLIC_URL + "/icons/node.svg",
+                        name: "Node JS",
+                    },
+                ],
+            },
+            {
+                title: "React / React Native Developer",
+                type: "Empire Soft",
+                time: "1 year 9 months",
+                info: [
+                    {
+                        text: "Managing several projects while working in a fast-paced atmosphere.",
+                    },
+                    {
+                        text: "Created mobile applications for mobile devices and TV",
+                    },
+                    {
+                        text: "Training, mentoring and collaborating with Junior Engineers while developing applications.",
+                    },
+                    {
+                        text: "Third party integration with Saga, Crashlytics, Google Maps, Sentry, and CodePush.",
+                    },
+                ],
+                skills: [
+                    {
+                        icon: process.env.PUBLIC_URL + "/icons/react.svg",
+                        name: "React-Native",
+                    },
+                    {
+                        icon: process.env.PUBLIC_URL + "/icons/react.svg",
+                        name: "React",
+                    },
+                    {
+                        icon: process.env.PUBLIC_URL + "/icons/js.svg",
+                        name: "JS/TS",
+                    },
+                    {
+                        icon: process.env.PUBLIC_URL + "/icons/css.svg",
+                        name: "HTML/CSS",
+                    },
+                    {
+                        icon: process.env.PUBLIC_URL + "/icons/node.svg",
+                        name: "Node JS",
+                    },
+                    {
+                        icon: process.env.PUBLIC_URL + "/icons/firebase.svg",
+                        name: "Firebase",
+                    },
+                ],
+            },
+        ],
+        communication: 9,
+        technicalSkill: 9,
+    },
+    {
+        id: 5,
         aboutPerson: "",
         title: "The best developers only for you",
         name: "Sergey Sh",
@@ -1235,7 +1423,7 @@ components`,
         technicalSkill: 9,
     },
     {
-        id: 5,
+        id: 6,
         title: "The best developers only for you",
         name: "Nurulloh T",
         comment:
@@ -1414,7 +1602,7 @@ components`,
         technicalSkill: 7,
     },
     {
-        id: 6,
+        id: 7,
         title: "The best developers only for you",
         name: "Abdurakhmon Z",
         comment: `Abdurahman is 23 years old and from Samarkand. He studies computer engineering at theSamarkand branch of the Tashkent University of Information Technologies.
@@ -1626,7 +1814,7 @@ components`,
         technicalSkill: 9,
     },
     {
-        id: 7,
+        id: 8,
         title: "The best developers only for you",
         name: "Malikov Sh",
         comment: `Shukhrat is a cross platform mobile developer with a good communication skills. He has participated in creating one of the biggest e-commerce websites of Uzbekistan`,
@@ -1779,7 +1967,7 @@ components`,
         technicalSkill: 9,
     },
     {
-        id: 8,
+        id: 9,
         title: "The best developers only for you",
         name: "Farrukh N",
         comment:
@@ -1882,7 +2070,7 @@ components`,
         technicalSkill: 9,
     },
     {
-        id: 9,
+        id: 10,
         title: "The best developers only for you",
         name: "Fakhriddin Y",
         comment:
