@@ -17,6 +17,12 @@ import "aos/dist/aos.css";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import i18n from "../../translations";
+import PhoneInput, {
+    formatPhoneNumber,
+    formatPhoneNumberIntl,
+    isValidPhoneNumber,
+} from "react-phone-number-input";
+import PhoneInputComp from "../PhoneInput/PhoneInput";
 
 const SubmitApp = () => {
     useEffect(() => {
@@ -27,10 +33,21 @@ const SubmitApp = () => {
     const { form, setForm, clearForm } = useRootStore().tagsStore;
     const { show, hide } = useRootStore().visibleStore;
     const navigation = useNavigate();
-    const data = `${form.name} submitted his application%0A Name: ${form.name}%0A Email: ${form.email}%0A He wants to contact us%0A`;
+    const data = `${form.name} submitted his application%0A Name: ${form.name}%0A Email: ${form.email}%0A Phone number: ${form.pNumber}%0A He wants to contact us%0A`;
 
     const [disabled, setDisabled] = useState(true);
     const [error, setError] = useState(null);
+    const [numberError, setNumberError] = useState(null);
+
+    const onChangeNumber = (value: string) => {
+        if (value && isValidPhoneNumber(value)) {
+            setNumberError(null);
+            setForm(value, "pNumber");
+        } else {
+            setNumberError(t("number_is_invalid") as never);
+            return;
+        }
+    };
 
     var emailData = {
         service_id: "service_8xjjilz",
@@ -59,6 +76,12 @@ const SubmitApp = () => {
     const sendBot = async () => {
         if (disabled) {
             setError(t("email_is_invalid") as never);
+            return;
+        }
+        if (isValidPhoneNumber(form.pNumber)) {
+            setNumberError(null);
+        } else {
+            setNumberError(t("number_is_invalid") as never);
             return;
         }
         if (!disabled) {
@@ -134,6 +157,22 @@ const SubmitApp = () => {
                             {error ? (
                                 <Text
                                     text={error}
+                                    color={COLORS.red}
+                                    textSize="fourteen"
+                                />
+                            ) : null}
+                        </div>
+                    </div>
+                    <div>
+                        <PhoneInputComp
+                            value={form.pNumber}
+                            onChange={(e) => onChangeNumber(e)}
+                            placeholder={t("input_phone")}
+                        />
+                        <div className={styles.validation}>
+                            {numberError ? (
+                                <Text
+                                    text={numberError}
                                     color={COLORS.red}
                                     textSize="fourteen"
                                 />

@@ -82,5 +82,6 @@
     "build_the_future": "Kelajakni qurish vaqti",
     "thank_you": "Aloqa uchun rahmat. Tez orada siz bilan bog'lanamiz!",
     "send": "Yuborish",
-    "send_to": "Empire-soft adminiga"
+    "send_to": "Empire-soft adminiga",
+    "number_is_invalid": "Telefon raqami yaroqsiz"
 }

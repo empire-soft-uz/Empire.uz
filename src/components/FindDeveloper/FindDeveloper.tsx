@@ -17,6 +17,12 @@ import Text from "../Text/Text";
 import styles from "./FindDeveloper.module.css";
 import { IoCloseSharp } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
+import PhoneInput, {
+    formatPhoneNumber,
+    formatPhoneNumberIntl,
+    isValidPhoneNumber,
+} from "react-phone-number-input";
+import PhoneInputComp from "../PhoneInput/PhoneInput";
 
 const FindDeveloper = () => {
     const { visiable, hide, show } = useRootStore().visibleStore;
@@ -33,9 +39,19 @@ const FindDeveloper = () => {
     const [disabled, setDisabled] = useState(true);
     const [error, setError] = useState(null);
     const { t } = useTranslation();
+    const [numberError, setNumberError] = useState(null);
 
-    const data = `${findDevForm.name} submitted his application%0A Name: ${findDevForm.name}%0A Email: ${findDevForm.email}%0A He wants to contact us%0A`;
+    const data = `${findDevForm.name} submitted his application%0A Name: ${findDevForm.name}%0A Email: ${findDevForm.email}%0A Phone Number: ${findDevForm.pNumber}%0A  He wants to contact us%0A`;
 
+    const onChangeNumber = (value: string) => {
+        if (value && isValidPhoneNumber(value)) {
+            setNumberError(null);
+            setfindDevForm(value, "pNumber");
+        } else {
+            setNumberError(t("number_is_invalid") as never);
+            return;
+        }
+    };
     var emailData = {
         service_id: "service_8xjjilz",
         template_id: "template_72leqzf",
@@ -62,6 +78,12 @@ const FindDeveloper = () => {
     const next = async () => {
         if (disabled) {
             setError(t("email_is_invalid") as never);
+            return;
+        }
+        if (isValidPhoneNumber(findDevForm.pNumber)) {
+            setNumberError(null);
+        } else {
+            setNumberError(t("number_is_invalid") as never);
             return;
         }
         if (!disabled) {
@@ -148,6 +170,22 @@ const FindDeveloper = () => {
                             {error ? (
                                 <Text
                                     text={error}
+                                    color={COLORS.red}
+                                    textSize="fourteen"
+                                />
+                            ) : null}
+                        </div>
+                    </div>
+                    <div className={styles.input}>
+                        <PhoneInputComp
+                            value={findDevForm.pNumber}
+                            onChange={(e) => onChangeNumber(e)}
+                            placeholder={t("input_phone")}
+                        />
+                        <div className={styles.validation}>
+                            {numberError ? (
+                                <Text
+                                    text={numberError}
                                     color={COLORS.red}
                                     textSize="fourteen"
                                 />
