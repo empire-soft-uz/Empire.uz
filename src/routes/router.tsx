@@ -60,7 +60,7 @@ const Router = () => {
                 <Route path="/:lang/blog" element={<Blog />} />
                 <Route path="/:lang/developers" element={<Developers />} />
                 <Route path="/:lang/thank-you" element={<ThankYou />} />
-                <Route path="*" element={<NotFound />} />
+                <Route path="/:lang/*" element={<NotFound />} />
             </Routes>
         </BrowserRouter>
     );

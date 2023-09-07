@@ -16,7 +16,7 @@ const NotFound = () => {
                 margin="15px 0 0 0"
                 title={"Open site"}
                 btnType={"outline"}
-                onPress={() => navigate(`${i18n.language}`)}
+                onPress={() => navigate(`/${i18n.language}`)}
             />
         </div>
     );
