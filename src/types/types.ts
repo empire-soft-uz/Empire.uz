@@ -137,3 +137,19 @@ export const OurProcessInitial = {
     title: "",
     text: "",
 };
+
+export type CountryStateType = {
+    ip: string;
+    countryName: string;
+    countryCode: string;
+    city: string;
+    timezone: string;
+};
+
+export const CountryStateInitial: CountryStateType = {
+    ip: "",
+    countryName: "",
+    countryCode: "",
+    city: "",
+    timezone: "",
+};

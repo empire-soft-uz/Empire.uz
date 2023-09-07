@@ -4,6 +4,9 @@ import { useTranslation } from "react-i18next";
 
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
+import useRootStore from "../../Hooks/useRootStore";
+import { toJS } from "mobx";
+import { observer } from "mobx-react-lite";
 
 interface Props {
     value: string;
@@ -13,26 +16,18 @@ interface Props {
 
 const PhoneInputComp: React.FC<Props> = ({ value, onChange, error }) => {
     const { t } = useTranslation();
-    const [state, setState] = useState({
-        ip: "",
-        countryName: "",
-        countryCode: "",
-        city: "",
-        timezone: "",
-    });
+    const { setCountryData, countryData } = useRootStore().userStore;
+
     useEffect(() => {
         axios
             .get("https://ipapi.co/json/")
             .then((response) => {
                 let data = response.data;
-                setState({
-                    ...state,
-                    ip: data.ip,
-                    countryName: data.country,
-                    countryCode: data.country_calling_code,
-                    city: data.city,
-                    timezone: data.timezone,
-                });
+                setCountryData(data.ip, "ip");
+                setCountryData(data.country, "countryName");
+                setCountryData(data.country_calling_code, "countryCode");
+                setCountryData(data.city, "city");
+                setCountryData(data.timezone, "timezone");
             })
             .catch((error) => {
                 console.log(error);
@@ -42,11 +37,12 @@ const PhoneInputComp: React.FC<Props> = ({ value, onChange, error }) => {
         <PhoneInput
             placeholder={t("enter_phone_number")}
             value={value}
-            defaultCountry={state.countryName as never}
+            international={true}
+            defaultCountry={countryData.countryName as never}
             onChange={onChange}
             error={error}
         />
     );
 };
 
-export default PhoneInputComp;
+export default observer(PhoneInputComp);
