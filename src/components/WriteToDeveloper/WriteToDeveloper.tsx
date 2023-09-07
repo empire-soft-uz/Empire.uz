@@ -35,7 +35,6 @@ const WriteToDeveloper = () => {
     const [error, setError] = useState(null);
     const [nameError, setNameError] = useState(null);
     const [numberError, setNumberError] = useState(null);
-    console.log("numberErro", numberError);
     const { t } = useTranslation();
 
     const onChangeNumber = (value: string) => {
@@ -233,7 +232,6 @@ const WriteToDeveloper = () => {
                                 <PhoneInputComp
                                     value={serviceSendData.pNumber}
                                     onChange={(e) => onChangeNumber(e)}
-                                    placeholder={t("input_phone")}
                                 />
                                 <div className={styles.validation}>
                                     {numberError ? (

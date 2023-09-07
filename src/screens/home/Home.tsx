@@ -16,7 +16,6 @@ import StartMach from "../../components/StartMach/StartMach";
 import SubmitApp from "../../components/SubmitApp/SubmitApp";
 import UpBtn from "../../components/UpBtn/UpBtn";
 import ViewProfile from "../../components/ViewProfile/ViewProfile";
-// import WeWillContact from "../../components/WeWillContact/WeWillContact";
 import WriteToDeveloper from "../../components/WriteToDeveloper/WriteToDeveloper";
 import useRootStore from "../../Hooks/useRootStore";
 import styles from "./home.styles.module.css";
@@ -27,7 +26,6 @@ const Home = () => {
         const onPageLoad = () => {
             hide("initialLoading");
         };
-
         if (document.readyState === "complete") {
             onPageLoad();
         } else {
@@ -60,7 +58,6 @@ const Home = () => {
             <Footer blog />
             <FindDeveloper />
             <StartMach />
-            {/* <WeWillContact /> */}
             <ViewProfile />
             <WriteToDeveloper />
             <Loading />

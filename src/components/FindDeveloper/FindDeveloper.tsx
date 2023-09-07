@@ -180,7 +180,6 @@ const FindDeveloper = () => {
                         <PhoneInputComp
                             value={findDevForm.pNumber}
                             onChange={(e) => onChangeNumber(e)}
-                            placeholder={t("input_phone")}
                         />
                         <div className={styles.validation}>
                             {numberError ? (

@@ -167,7 +167,6 @@ const SubmitApp = () => {
                         <PhoneInputComp
                             value={form.pNumber}
                             onChange={(e) => onChangeNumber(e)}
-                            placeholder={t("input_phone")}
                         />
                         <div className={styles.validation}>
                             {numberError ? (

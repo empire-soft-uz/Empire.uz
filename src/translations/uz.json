@@ -83,5 +83,6 @@
     "thank_you": "Aloqa uchun rahmat. Tez orada siz bilan bog'lanamiz!",
     "send": "Yuborish",
     "send_to": "Empire-soft adminiga",
-    "number_is_invalid": "Telefon raqami yaroqsiz"
+    "number_is_invalid": "Telefon raqami yaroqsiz",
+    "enter_phone_number": "Telefon raqamini kiriting"
 }
