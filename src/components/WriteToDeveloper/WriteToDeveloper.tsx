@@ -145,7 +145,10 @@ const WriteToDeveloper = () => {
                 <div className={styles.mediaCenter}>
                     <div className={styles.mediaTop}>
                         <div className={styles.title}>
-                            <Text text={t(`contact_us`)} textSize={"twenty"} />
+                            <Text
+                                text={t(`contact_us_via`)}
+                                textSize={"twenty"}
+                            />
                         </div>
                         <div className={styles.socialIconB}>
                             <a
@@ -183,10 +186,14 @@ const WriteToDeveloper = () => {
                                 </div>
                             </a>
                         </div>
+                        <div className={styles.orText}>
+                            <Text text={"or"} textSize={"thirtySix"} />
+                        </div>
                     </div>
+                    <span className={styles.line}></span>
                     <div className={styles.mediaBottom}>
                         <Text
-                            text={`${t("send")}: ${t(serviceSendData.job)}`}
+                            text={t(serviceSendData.job)}
                             textSize={"twenty"}
                         />
                         <div className={styles.title}>
@@ -244,12 +251,18 @@ const WriteToDeveloper = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div className={styles.footer}>
-                        <ArrowRightButton
-                            // disabled={disabled}
-                            onClick={sendBot}
-                        />
+                        <div className={styles.footer}>
+                            <Button
+                                // disabled={disabled}
+                                onPress={sendBot}
+                                title={t("submit_your_app")}
+                                btnType={"outline"}
+                                width={"100%"}
+                                padding="5px 0"
+                                titleSize="18px"
+                                margin="10px 0 0 0"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>

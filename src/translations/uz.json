@@ -6,6 +6,7 @@
     "find_a_developer": "Dasturchi toping",
     "what_do_we_do": "Biz jamoamizni ulashib murakkab loyihalarni oson amalga oshiramiz",
     "contact_us": "Biz bilan bog'lanish",
+    "contact_us_via": "Biz bilan bog'lanish",
     "starter": "Boshlovchi",
     "premium": "Premium",
     "custom": "Custom",
@@ -82,7 +83,7 @@
     "build_the_future": "Kelajakni qurish vaqti",
     "thank_you": "Aloqa uchun rahmat. Tez orada siz bilan bog'lanamiz!",
     "send": "Yuborish",
-    "send_to": "Empire-soft adminiga",
+    "send_to": "Kontaktlaringizni qoldiring, biz siz bilan bog'lanamiz:",
     "number_is_invalid": "Telefon raqami yaroqsiz",
     "enter_phone_number": "Telefon raqamini kiriting"
 }
