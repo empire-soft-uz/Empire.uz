@@ -2176,8 +2176,8 @@ components`,
         id: 11,
         title: "The best developers only for you",
         name: "Rustamov Jakhongir",
-        comment:
-            "Kamronbek has more than 6 years of experience in software development. After graduating from INHA university he helped more than 20 startups to implement their ideas in the form of cross-platform mobile apps",
+        comment: `I am an experienced Dart and Flutter developer with 1.5+ years of expertise in building robust and scalable mobile applications. My technical skills include Dart and Flutter, Git, REST API and Socket.io, Firebase, SOLID Principles, Material UI, Android SDK, Code Review, Locations.
+            With a proven track record of delivering high-quality solutions, I excel in problem-solving and thrive in agile environments. My strong collaboration and communication skills make me an effective team player. I am dedicated to delivering projects on time, ensuring attention to detail and code quality.`,
         salary: "$20 /h",
         whereFrom: "Toshkent Uzbekistan",
         totalExperience: "1.5+ Years Of Experience",
