@@ -2172,6 +2172,155 @@ components`,
         communication: 6,
         technicalSkill: 9,
     },
+    {
+        id: 11,
+        title: "The best developers only for you",
+        name: "Rustamov Jakhongir",
+        comment:
+            "Kamronbek has more than 6 years of experience in software development. After graduating from INHA university he helped more than 20 startups to implement their ideas in the form of cross-platform mobile apps",
+        salary: "$20 /h",
+        whereFrom: "Toshkent Uzbekistan",
+        totalExperience: "1.5+ Years Of Experience",
+        expert: "Expert Flutter Developer",
+        expertSkill: "Flutter",
+        image: ASSETS.developer11,
+        job: "Mobile Developer",
+        education: [
+            {
+                edu: "Tashkent University of Information Technologies",
+                branch: "Software Engineering",
+            },
+        ],
+        aboutPerson: "",
+        strengths: [
+            {
+                item: "Creative approach",
+            },
+            {
+                item: "Excellent in Flutter",
+            },
+            {
+                item: "Teamwork and Adaptibilty",
+            },
+        ],
+        skills: [
+            {
+                id: 1,
+                skillsIcon: process.env.PUBLIC_URL + "/icons/flutter.svg",
+                skillsName: "Flutter",
+                experience: "1.5+ years",
+                expertise: true,
+            },
+            {
+                id: 2,
+                skillsIcon: process.env.PUBLIC_URL + "/icons/dart.svg",
+                skillsName: "Dart",
+                experience: "1.5+ years",
+                expertise: true,
+            },
+
+            {
+                id: 3,
+                skillsIcon: process.env.PUBLIC_URL + "/icons/firebase.svg",
+                skillsName: "Firebase",
+                experience: "1.5+ years",
+                expertise: false,
+            },
+        ],
+        experience: [
+            {
+                title: "Flutter developer",
+                type: "IT-maker",
+                time: "6 months",
+                info: [
+                    {
+                        text: `Designed and developed the user interface of a Online Shop app using
+    Flutter`,
+                    },
+
+                    {
+                        text: `Implemented security measures to protect user data and transactions`,
+                    },
+                    {
+                        text: `Collaborated with other members of the development team, including
+    designers, back-end developers, and project managers, to ensure that the
+    project is on track and meets the requirements`,
+                    },
+                    {
+                        text: `Close communication with Back-end teams to achieve a more
+                    preferable results`,
+                    },
+
+                    {
+                        text: `Implementing app's features such as:
+                    static and animated UIs elements
+                    REST API back-end interaction
+                    web-socket based features`,
+                    },
+                ],
+                skills: [
+                    {
+                        icon: process.env.PUBLIC_URL + "/icons/flutter.svg",
+                        name: "Flutter",
+                    },
+                    {
+                        icon: process.env.PUBLIC_URL + "/icons/dart.svg",
+                        name: "Dart",
+                    },
+                    {
+                        icon: process.env.PUBLIC_URL + "/icons/firebase.svg",
+                        name: "Firebase",
+                    },
+                ],
+            },
+            {
+                title: "Flutter developer",
+                type: "Empire-Soft",
+                time: "1+ years",
+                info: [
+                    {
+                        text: `Developed and maintained cross-platform mobile applications using
+    React Native, Redux, and other modern technologies for iOS and Android`,
+                    },
+                    {
+                        text: `Implemented complex UI components, animations, and user interactions
+    following design guidelines and best practices`,
+                    },
+                    {
+                        text: `Close communication with Back-end teams to achieve a more
+                preferable results`,
+                    },
+                    {
+                        text: `Wrote and maintained unit tests using Jest and Enzyme to ensure code
+                stability and quality`,
+                    },
+                    {
+                        text: `Participated in code reviews, providing and receiving constructive
+                feedback to improve overall code quality`,
+                    },
+                    {
+                        text: `Establishing a connection with the socket and fully working with it`,
+                    },
+                ],
+                skills: [
+                    {
+                        icon: process.env.PUBLIC_URL + "/icons/flutter.svg",
+                        name: "Flutter",
+                    },
+                    {
+                        icon: process.env.PUBLIC_URL + "/icons/dart.svg",
+                        name: "Dart",
+                    },
+                    {
+                        icon: process.env.PUBLIC_URL + "/icons/firebase.svg",
+                        name: "Firebase",
+                    },
+                ],
+            },
+        ],
+        communication: 9,
+        technicalSkill: 9,
+    },
 ];
 
 export const ProgrammingLanguages: ProgrammingLanguagesType[] = [
