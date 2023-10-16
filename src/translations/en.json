@@ -85,5 +85,6 @@
     "send": "Send to",
     "send_to": "Leave your contacts we will reach you:",
     "number_is_invalid": "Number is invalid",
-    "enter_phone_number": "Enter phone number"
+    "enter_phone_number": "Enter phone number",
+    "privacy": "Privacy policy"
 }

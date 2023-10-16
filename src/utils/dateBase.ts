@@ -2536,3 +2536,59 @@ export const OurProcessData: OurProcessType[] = [
         text: "deliver_info",
     },
 ];
+
+export const PrivacyPolicyData = {
+    text: `<h1>Privacy Policy</h1>
+
+    <p>Empire-soft.net ("Empire-soft", "we", or "us") is committed to protecting the privacy of our users. This privacy policy explains what information we collect, how we use it, and how we share it.</p>
+  
+    <h2>Information We Collect</h2>
+  
+    <p>We collect information from you in a variety of ways, including:</p>
+  
+    <ul>
+      <li>When you visit our website, we collect your IP address, browser type, and operating system.</li>
+      <li>When you contact us, we collect your name, email address, and any other information you provide.</li>
+      <li>When you purchase a product or service from us, we collect your name, billing address, shipping address, and payment information.</li>
+    </ul>
+  
+    <h2>How We Use Your Information</h2>
+  
+    <p>We use the information we collect to:</p>
+  
+    <ul>
+      <li>Provide you with the products and services you have requested.</li>
+      <li>Improve our website and services.</li>
+      <li>Communicate with you about our products and services.</li>
+      <li>Market our products and services to you.</li>
+    </ul>
+  
+    <h2>How We Share Your Information</h2>
+  
+    <p>We may share your information with third-party service providers who help us operate our website and provide our products and services. We may also share your information with third-party marketing partners if you have given us permission to do so.</p>
+  
+    <p>We will not sell your information to third parties for their own marketing purposes without your permission.</p>
+  
+    <h2>Your Choices</h2>
+  
+    <p>You have a number of choices regarding the information we collect and how we use it. You can:</p>
+  
+    <ul>
+      <li>Opt out of receiving marketing emails from us by clicking the unsubscribe link in any marketing email we send you.</li>
+      <li>Request access to your personal information by contacting us at <a href="mailto:admin@empire-soft.net">admin@empire-soft.net</a>.</li>
+      <li>Request that we delete your personal information by contacting us at <a href="mailto:admin@empire-soft.net">admin@empire-soft.net</a>.</li>
+    </ul>
+  
+    <h2>Data Security</h2>
+  
+    <p>We take reasonable steps to protect your personal information from unauthorized access, use, or disclosure. However, no security method is perfect, and we cannot guarantee the absolute security of your personal information.</p>
+  
+    <h2>Changes to This Privacy Policy</h2>
+  
+    <p>We may update this privacy policy from time to time. If we make any changes, we will post the updated privacy policy on our website.</p>
+  
+    <h2>Contact Us</h2>
+  
+    <p>If you have any questions about this privacy policy, please contact us at <a href="mailto:admin@empire-soft.net">admin@empire-soft.net</a>.</p>
+  `,
+};
