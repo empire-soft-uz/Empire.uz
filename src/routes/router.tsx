@@ -9,6 +9,7 @@ import { observer } from "mobx-react-lite";
 import useRootStore from "../Hooks/useRootStore";
 import NotFound from "../screens/notFound/NotFound";
 import ThankYou from "../screens/thankYou/ThankYou";
+import PrivacyPolicy from "../screens/privacy/PrivacyPolicy";
 
 const Router = () => {
     const path = window.location.pathname;
@@ -60,6 +61,10 @@ const Router = () => {
                 <Route path="/:lang/blog" element={<Blog />} />
                 <Route path="/:lang/developers" element={<Developers />} />
                 <Route path="/:lang/thank-you" element={<ThankYou />} />
+                <Route
+                    path="/:lang/privacy-policy"
+                    element={<PrivacyPolicy />}
+                />
                 <Route path="/:lang/*" element={<NotFound />} />
             </Routes>
         </BrowserRouter>

@@ -1,5 +1,4 @@
 .container {
-    min-height: 100vh;
     background-color: #010100;
     position: relative;
     padding: 20px 18%;
@@ -7,19 +6,18 @@
     overflow-x: hidden;
 }
 
+.footer {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    background-color: #010100;
+    padding-top: 50px;
+}
+
 .content {
     position: relative;
     padding-top: 10vh;
     z-index: 3;
-}
-
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 22px;
-    margin-top: 30px;
-    position: relative;
-    z-index: 2;
 }
 
 .backOne {
@@ -37,14 +35,6 @@
     height: 400px;
 }
 
-.footer {
-    width: 100%;
-    position: relative;
-    bottom: 0;
-    background-color: #010100;
-    padding-top: 50px;
-}
-
 @media (min-width: 120px) {
     .container {
         padding: 20px 5%;
@@ -52,11 +42,9 @@
     .backOne {
         height: 300px;
     }
-    .cards {
-        margin-top: 20px;
-    }
     .backTwo {
         height: 300px;
+        top: 600px;
     }
 }
 @media (min-width: 576px) {
@@ -76,16 +64,6 @@
         position: relative;
         padding-top: 10vh;
     }
-
-    .cards {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 22px;
-        margin-top: 30px;
-        position: relative;
-        z-index: 2;
-    }
-
     .backOne {
         position: absolute;
         right: 0;

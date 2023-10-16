@@ -26,6 +26,10 @@ const Footer: React.FC<Props> = ({ blog }) => {
         if (location.pathname != `/${i18n.language}/blog`)
             navigation(`/${i18n.language}/blog`);
     };
+    const OpenPrivacy = () => {
+        if (location.pathname != `/${i18n.language}/privacy-policy`)
+            navigation(`/${i18n.language}/privacy-policy`);
+    };
     return (
         <div className={styles.container}>
             <div className={styles.logoBox}>
@@ -67,16 +71,22 @@ const Footer: React.FC<Props> = ({ blog }) => {
                         color={COLORS.white}
                     />
                 </a>
-                {blog ? (
-                    <a onClick={OpenBlog} className="href">
-                        <Text
-                            textSize="sixteen"
-                            cursor="pointer"
-                            text={t("blog")}
-                            color={COLORS.white}
-                        />
-                    </a>
-                ) : null}
+                <a onClick={OpenBlog} className="href">
+                    <Text
+                        textSize="sixteen"
+                        cursor="pointer"
+                        text={t("blog")}
+                        color={COLORS.white}
+                    />
+                </a>
+                <a onClick={OpenPrivacy} className="href">
+                    <Text
+                        textSize="sixteen"
+                        cursor="pointer"
+                        text={t("privacy")}
+                        color={COLORS.white}
+                    />
+                </a>
             </div>
             <div className={styles.social}>
                 <a href="tel:+998994480500" className="href">
