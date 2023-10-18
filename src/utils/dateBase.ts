@@ -13,7 +13,7 @@ export const RateData = [
         title: "starter",
         name: "individual",
         icon: ASSETS.openBoxG,
-        price: "$4500",
+        price: "$3500",
         period: "starter_price_time",
         info: [
             {
